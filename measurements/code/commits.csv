@@ -1,0 +1,6 @@
+method,repository,commit,source
+CDPruner,https://github.com/Theia-4869/CDPruner,9541616c40,latest commit on or before the clone date 2026-10-01 (GitHub API commits?until=2026-10-01); local copy has no .git
+VisPruner,https://github.com/Theia-4869/VisPruner,aefa01adc7,same
+SparseVLM,https://github.com/Gumpest/SparseVLMs,a9e7142722,same
+DART,https://github.com/ZichenWen1/DART,0c88867319,same
+FastV,https://github.com/pkunlp-icler/FastV,d1659729b5,same

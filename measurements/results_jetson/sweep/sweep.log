@@ -1,0 +1,24 @@
+== microbench 23:14
+{'tokens': 1, 'fp16_ms': 1.6568, 'nf4_ms': 2.7793, 'overhead_ms': 1.1224}
+{'tokens': 16, 'fp16_ms': 1.7061, 'nf4_ms': 6.0405, 'overhead_ms': 4.3344}
+{'tokens': 64, 'fp16_ms': 1.2925, 'nf4_ms': 5.5177, 'overhead_ms': 4.2252}
+{'tokens': 128, 'fp16_ms': 1.6363, 'nf4_ms': 5.9047, 'overhead_ms': 4.2685}
+{'tokens': 256, 'fp16_ms': 2.9943, 'nf4_ms': 7.1264, 'overhead_ms': 4.1321}
+{'tokens': 384, 'fp16_ms': 4.1457, 'nf4_ms': 8.6299, 'overhead_ms': 4.4841}
+{'tokens': 512, 'fp16_ms': 5.4749, 'nf4_ms': 9.6645, 'overhead_ms': 4.1897}
+{'tokens': 640, 'fp16_ms': 6.8667, 'nf4_ms': 11.1469, 'overhead_ms': 4.2802}
+{'tokens': 1024, 'fp16_ms': 10.6014, 'nf4_ms': 14.9481, 'overhead_ms': 4.3466}
+saved /home/lab/vlmbench/results_jetson/microbench_nf4.json
+== base4 sweep576 23:15
+SUMMARY {'n': 100, 'ttft_ms_median': 1954.066, 'ttft_ms_p90': 2129.32, 'total_ms_median': 2340.867, 'peak_alloc_gb': 5.022, 'peak_sys_used_gb': 7.2, 'energy_j_per_sample': 45.71, 'mean_power_w': 19.383, 'n_vis_tokens': 576.0, 'method': 'base4', 'setting': 'sweep576', 'device': 'Orin', 'torch': '2.11.0', 'idle_power_w': 3.623, 'load_s': 190.81, 'power_mode': 'NV Power Mode: MAXN_SUPER'}
+== vispruner4 t384 23:30
+SUMMARY {'n': 100, 'ttft_ms_median': 1629.535, 'ttft_ms_p90': 1638.425, 'total_ms_median': 1868.974, 'peak_alloc_gb': 4.811, 'peak_sys_used_gb': 7.074, 'energy_j_per_sample': 37.424, 'mean_power_w': 18.934, 'n_vis_tokens': 384.0, 'method': 'vispruner4', 'setting': 't384', 'device': 'Orin', 'torch': '2.11.0', 'idle_power_w': 3.819, 'load_s': 191.085, 'power_mode': 'NV Power Mode: MAXN_SUPER'}
+== vispruner4 t256 23:43
+SUMMARY {'n': 100, 'ttft_ms_median': 1398.175, 'ttft_ms_p90': 1411.402, 'total_ms_median': 1627.763, 'peak_alloc_gb': 4.669, 'peak_sys_used_gb': 6.899, 'energy_j_per_sample': 31.872, 'mean_power_w': 18.408, 'n_vis_tokens': 256.0, 'method': 'vispruner4', 'setting': 't256', 'device': 'Orin', 'torch': '2.11.0', 'idle_power_w': 3.857, 'load_s': 188.551, 'power_mode': 'NV Power Mode: MAXN_SUPER'}
+== vispruner4 default 23:55
+SUMMARY {'n': 100, 'ttft_ms_median': 1187.477, 'ttft_ms_p90': 1197.755, 'total_ms_median': 1416.832, 'peak_alloc_gb': 4.593, 'peak_sys_used_gb': 6.898, 'energy_j_per_sample': 26.548, 'mean_power_w': 17.489, 'n_vis_tokens': 128.0, 'method': 'vispruner4', 'setting': 'default', 'device': 'Orin', 'torch': '2.11.0', 'idle_power_w': 3.88, 'load_s': 189.215, 'power_mode': 'NV Power Mode: MAXN_SUPER'}
+== vispruner4 r889 00:06
+SUMMARY {'n': 100, 'ttft_ms_median': 966.271, 'ttft_ms_p90': 1140.519, 'total_ms_median': 1350.584, 'peak_alloc_gb': 4.593, 'peak_sys_used_gb': 7.004, 'energy_j_per_sample': 23.108, 'mean_power_w': 16.894, 'n_vis_tokens': 64.0, 'method': 'vispruner4', 'setting': 'r889', 'device': 'Orin', 'torch': '2.11.0', 'idle_power_w': 3.857, 'load_s': 188.615, 'power_mode': 'NV Power Mode: MAXN_SUPER'}
+== vispruner4 t32 00:16
+SUMMARY {'n': 100, 'ttft_ms_median': 945.886, 'ttft_ms_p90': 958.173, 'total_ms_median': 1173.546, 'peak_alloc_gb': 4.593, 'peak_sys_used_gb': 6.954, 'energy_j_per_sample': 21.042, 'mean_power_w': 16.456, 'n_vis_tokens': 32.0, 'method': 'vispruner4', 'setting': 't32', 'device': 'Orin', 'torch': '2.11.0', 'idle_power_w': 3.822, 'load_s': 188.457, 'power_mode': 'NV Power Mode: MAXN_SUPER'}
+== sweep done 00:26

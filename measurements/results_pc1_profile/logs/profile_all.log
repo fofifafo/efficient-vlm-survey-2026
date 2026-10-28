@@ -1,0 +1,25 @@
+== smoke base default 16:58
+SUMMARY {"method": "base", "setting": "default", "n": 5, "wall_ms": 129.6, "gpu_busy_ms": 113.16, "host_ms": 17.17, "host_share": 0.13, "kernels": 1910, "gpu": "NVIDIA GeForce RTX 5080", "torch": "2.11.0+cu128", "note": "wall = TTFT without profiler (max_new_tokens=1, same window as harness); gpu_busy = union of CUDA kernel/memcpy intervals in a second, profiled run"}
+== base default 16:58
+SUMMARY {"method": "base", "setting": "default", "n": 95, "wall_ms": 133.55, "gpu_busy_ms": 121.12, "host_ms": 10.38, "host_share": 0.08, "kernels": 1910, "gpu": "NVIDIA GeForce RTX 5080", "torch": "2.11.0+cu128", "note": "wall = TTFT without profiler (max_new_tokens=1, same window as harness); gpu_
+== vispruner default 16:59
+SUMMARY {"method": "vispruner", "setting": "default", "n": 95, "wall_ms": 66.2, "gpu_busy_ms": 39.62, "host_ms": 21.73, "host_share": 0.35, "kernels": 2856, "gpu": "NVIDIA GeForce RTX 5080", "torch": "2.11.0+cu128", "note": "wall = TTFT without profiler (max_new_tokens=1, same window as harness); gp
+== vispruner r889 17:00
+SUMMARY {"method": "vispruner", "setting": "r889", "n": 95, "wall_ms": 58.38, "gpu_busy_ms": 31.08, "host_ms": 22.89, "host_share": 0.41, "kernels": 2828, "gpu": "NVIDIA GeForce RTX 5080", "torch": "2.11.0+cu128", "note": "wall = TTFT without profiler (max_new_tokens=1, same window as harness); gpu_
+== cdpruner_fix default 17:01
+SUMMARY {"method": "cdpruner_fix", "setting": "default", "n": 95, "wall_ms": 80.73, "gpu_busy_ms": 42.48, "host_ms": 33.74, "host_share": 0.45, "kernels": 4336, "gpu": "NVIDIA GeForce RTX 5080", "torch": "2.11.0+cu128", "note": "wall = TTFT without profiler (max_new_tokens=1, same window as harness)
+== cdpruner_fix r889 17:02
+SUMMARY {"method": "cdpruner_fix", "setting": "r889", "n": 95, "wall_ms": 60.93, "gpu_busy_ms": 32.06, "host_ms": 25.42, "host_share": 0.44, "kernels": 3312, "gpu": "NVIDIA GeForce RTX 5080", "torch": "2.11.0+cu128", "note": "wall = TTFT without profiler (max_new_tokens=1, same window as harness); g
+== sparsevlm default 17:03
+SUMMARY {"method": "sparsevlm", "setting": "default", "n": 95, "wall_ms": 84.25, "gpu_busy_ms": 52.9, "host_ms": 30.93, "host_share": 0.37, "kernels": 2635, "gpu": "NVIDIA GeForce RTX 5080", "torch": "2.11.0+cu128", "note": "wall = TTFT without profiler (max_new_tokens=1, same window as harness); gp
+== sparsevlm r889 17:04
+SUMMARY {"method": "sparsevlm", "setting": "r889", "n": 95, "wall_ms": 67.7, "gpu_busy_ms": 37.9, "host_ms": 30.08, "host_share": 0.44, "kernels": 2542, "gpu": "NVIDIA GeForce RTX 5080", "torch": "2.11.0+cu128", "note": "wall = TTFT without profiler (max_new_tokens=1, same window as harness); gpu_bu
+== dart default 17:05
+SUMMARY {"method": "dart", "setting": "default", "n": 95, "wall_ms": 74.99, "gpu_busy_ms": 49.5, "host_ms": 25.36, "host_share": 0.35, "kernels": 2307, "gpu": "NVIDIA GeForce RTX 5080", "torch": "2.11.0+cu128", "note": "wall = TTFT without profiler (max_new_tokens=1, same window as harness); gpu_bus
+== dart r889 17:06
+SUMMARY {"method": "dart", "setting": "r889", "n": 95, "wall_ms": 61.68, "gpu_busy_ms": 40.08, "host_ms": 21.58, "host_share": 0.35, "kernels": 2353, "gpu": "NVIDIA GeForce RTX 5080", "torch": "2.11.0+cu128", "note": "wall = TTFT without profiler (max_new_tokens=1, same window as harness); gpu_busy 
+== fastv default 17:07
+SUMMARY {"method": "fastv", "setting": "default", "n": 95, "wall_ms": 86.79, "gpu_busy_ms": 70.2, "host_ms": 16.93, "host_share": 0.19, "kernels": 2179, "gpu": "NVIDIA GeForce RTX 5080", "torch": "2.11.0+cu128", "note": "wall = TTFT without profiler (max_new_tokens=1, same window as harness); gpu_bu
+== fastv r889 17:08
+SUMMARY {"method": "fastv", "setting": "r889", "n": 95, "wall_ms": 61.6, "gpu_busy_ms": 38.76, "host_ms": 17.25, "host_share": 0.3, "kernels": 2121, "gpu": "NVIDIA GeForce RTX 5080", "torch": "2.11.0+cu128", "note": "wall = TTFT without profiler (max_new_tokens=1, same window as harness); gpu_busy =
+== profile done 17:09

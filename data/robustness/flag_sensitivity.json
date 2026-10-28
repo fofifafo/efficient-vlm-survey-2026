@@ -1,0 +1,28 @@
+{
+ "flagged_kept_cards": 25,
+ "flagged_final_papers": 26,
+ "all": {
+  "n": 71,
+  "A": 46,
+  "B": 13,
+  "C": 12,
+  "A_pct": 65,
+  "C_pct": 17
+ },
+ "without_flagged": {
+  "n": 43,
+  "A": 26,
+  "B": 8,
+  "C": 9,
+  "A_pct": 60,
+  "C_pct": 21
+ },
+ "flagged_only": {
+  "n": 28,
+  "A": 20,
+  "B": 5,
+  "C": 3,
+  "A_pct": 71,
+  "C_pct": 11
+ }
+}

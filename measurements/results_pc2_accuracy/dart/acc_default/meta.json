@@ -1,0 +1,11 @@
+{
+ "meta": {
+  "name": "DART",
+  "setting": "default",
+  "reduction_ratio": 0.778,
+  "max_num_trunction": 128,
+  "attn": "sdpa"
+ },
+ "max_new_tokens": 16,
+ "prompt": "vicuna_v1+single-word; textvqa with OCR reference tokens"
+}

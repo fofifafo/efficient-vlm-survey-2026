@@ -1,0 +1,16 @@
+{
+ "torch": "2.11.0+cu128",
+ "cuda": "12.8",
+ "gpu": "NVIDIA GeForce RTX 5070 Ti",
+ "sm": [
+  12,
+  0
+ ],
+ "vram_gb": 15.9,
+ "power_w_idle": 26.797,
+ "load_s": 123.3,
+ "vram_after_load_gb": 13.22,
+ "gen_s": 1.499,
+ "peak_gb": 13.89,
+ "answer": "Blue"
+}

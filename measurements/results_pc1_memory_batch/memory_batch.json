@@ -1,0 +1,109 @@
+{
+ "model": "LLaVA-1.5-7B FP16",
+ "gpu": "NVIDIA GeForce RTX 5080",
+ "torch": "2.11.0+cu128",
+ "text_tokens": 68,
+ "weights_gb": 13.233,
+ "rows": [
+  {
+   "batch": 1,
+   "visual_tokens": 576,
+   "seq_len": 644,
+   "peak_gb": 13.674,
+   "extra_gb": 0.436,
+   "kv_cache_gb": 0.314,
+   "seconds": 1.43,
+   "error": null
+  },
+  {
+   "batch": 1,
+   "visual_tokens": 64,
+   "seq_len": 132,
+   "peak_gb": 13.326,
+   "extra_gb": 0.092,
+   "kv_cache_gb": 0.064,
+   "seconds": 0.22,
+   "error": null
+  },
+  {
+   "batch": 2,
+   "visual_tokens": 576,
+   "seq_len": 644,
+   "peak_gb": 14.113,
+   "extra_gb": 0.87,
+   "kv_cache_gb": 0.629,
+   "seconds": 2.19,
+   "error": null
+  },
+  {
+   "batch": 2,
+   "visual_tokens": 64,
+   "seq_len": 132,
+   "peak_gb": 13.413,
+   "extra_gb": 0.178,
+   "kv_cache_gb": 0.129,
+   "seconds": 0.43,
+   "error": null
+  },
+  {
+   "batch": 4,
+   "visual_tokens": 576,
+   "seq_len": 644,
+   "peak_gb": 14.991,
+   "extra_gb": 1.739,
+   "kv_cache_gb": 1.258,
+   "seconds": 10.61,
+   "error": null
+  },
+  {
+   "batch": 4,
+   "visual_tokens": 64,
+   "seq_len": 132,
+   "peak_gb": 13.593,
+   "extra_gb": 0.356,
+   "kv_cache_gb": 0.258,
+   "seconds": 0.97,
+   "error": null
+  },
+  {
+   "batch": 8,
+   "visual_tokens": 576,
+   "seq_len": 644,
+   "peak_gb": 16.748,
+   "extra_gb": 3.476,
+   "kv_cache_gb": 2.516,
+   "seconds": 93.0,
+   "error": null
+  },
+  {
+   "batch": 8,
+   "visual_tokens": 64,
+   "seq_len": 132,
+   "peak_gb": 13.954,
+   "extra_gb": 0.713,
+   "kv_cache_gb": 0.516,
+   "seconds": 0.26,
+   "error": null
+  },
+  {
+   "batch": 16,
+   "visual_tokens": 576,
+   "seq_len": 644,
+   "peak_gb": 20.267,
+   "extra_gb": 6.955,
+   "kv_cache_gb": 5.031,
+   "seconds": 68.23,
+   "error": null
+  },
+  {
+   "batch": 16,
+   "visual_tokens": 64,
+   "seq_len": 132,
+   "peak_gb": 14.677,
+   "extra_gb": 1.428,
+   "kv_cache_gb": 1.031,
+   "seconds": 0.64,
+   "error": null
+  }
+ ]
+}

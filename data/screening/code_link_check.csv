@@ -1,0 +1,72 @@
+﻿branch,id,name,code,status,repo_ok,archived,size_kb,pushed_at
+4.1,2403.14520,Cobra,https://github.com/OpenHelix-Team/cobra,200,True,False,11007,2025-01-08
+4.1,2502.13145,mmMamba,https://github.com/hustvl/mmMamba,200,True,False,2869,2025-05-19
+4.1,2412.10302,DeepSeek-VL2,https://github.com/deepseek-ai/DeepSeek-VL2,200,True,False,23986,2025-02-26
+4.1,2504.07491,Kimi-VL,https://github.com/MoonshotAI/Kimi-VL,200,True,False,13611,2025-07-15
+4.1,2405.11273,Uni-MoE,https://github.com/HITsz-TMG/UMOE-Scaling-Unified-Multimodal-LLMs,200,True,False,138630,2026-08-06
+4.1,2408.15881,LLaVA-MoD,https://github.com/shufangxun/LLaVA-MoD,200,True,False,3576,2025-03-31
+4.1,2608.17402,MoE-ViE,https://github.com/facebookresearch/moe_vie,200,True,False,1396,2026-08-19
+4.1,2509.18154,MiniCPM-V 4.5,https://github.com/OpenBMB/MiniCPM-V,200,True,False,812590,2026-10-13
+4.1,2603.06569,Penguin-VL,https://github.com/tencent-ailab/Penguin-VL,200,True,False,56067,2026-03-30
+4.1,2510.01795,Nav-EE,,,,,,
+4.1,2409.07267,MiniDrive,,,,,,
+4.2,2402.09353,DoRA,https://github.com/NVlabs/DoRA,200,True,False,3153,2026-03-24
+4.2,2406.11909,MoSLoRA,https://github.com/wutaiqiang/MoSLoRA,200,True,False,3244,2024-07-06
+4.2,2405.18541,CLIP-LoRA,https://github.com/MaxZanella/CLIP-LoRA,200,True,False,15412,2025-06-06
+4.2,2407.03056,KDPL,https://github.com/miccunifi/KDPL,200,True,False,5308,2026-02-20
+4.2,2411.15232,BiomedCoOp,https://github.com/HealthX-Lab/BiomedCoOp,200,True,False,13036,2026-05-17
+4.2,2504.07934,ThinkLite-VL(MCTS),https://github.com/si0wang/ThinkLite-VL,200,True,False,67,2025-06-10
+4.2,2601.22828,Rank-1 Expert Pool LoRA,https://github.com/Fazhan-cs/DAC,200,True,False,2210,2026-02-10
+4.2,2405.01413,MiniGPT-3D,https://github.com/TangYuan96/MiniGPT-3D,200,True,False,25043,2026-03-20
+4.2,2508.00230,KRAdapter,,,,,,
+4.2,2401.16420,InternLM-XComposer2,https://github.com/InternLM/InternLM-XComposer,200,True,False,209248,2025-05-26
+4.2,2605.06175,VLA-GSE,https://github.com/YuhuaJiang2002/VLA-GSE,200,True,False,731,2026-07-11
+4.3,2410.08119,Q-VLM,https://github.com/ChangyuanWang17/QVLM,200,True,False,11018,2025-01-03
+4.3,2412.19509,MBQ,https://github.com/thu-nics/MBQ,200,True,False,133,2025-03-17
+4.3,2502.00425,MQuant,https://github.com/StiphyJay/MQuant,200,True,False,6740,2025-08-13
+4.3,2603.04800,MASQuant,https://github.com/alibaba/EfficientAI,200,True,False,48019,2026-05-09
+4.3,2603.17809,QA-IG PTQ,https://github.com/ucas-xiang/QIG,200,True,False,647,2026-06-21
+4.3,2511.08914,SPEED-Q,https://github.com/antgroup/SPEED-Q,200,True,False,6055,2026-01-20
+4.3,2601.22709,GRACE,https://github.com/ForeverBlue816/GRACE,200,True,False,87698,2026-10-01
+4.3,2510.16292,QSVD,https://github.com/SAI-Lab-NYU/QSVD,200,True,False,44362,2026-05-16
+4.3,2604.24380,구조 프루닝 연구,https://github.com/YiranHuangIrene/VLMCompression.git,200,True,False,36517,2026-05-06
+4.3,2408.03735,QSLAW,https://github.com/xjjxmu/QSLAW,200,True,False,1864,2024-12-07
+4.3,2408.15881,LLaVA-MoD,https://github.com/shufangxun/LLaVA-MoD,200,True,False,3576,2025-03-31
+4.3,2407.19409,LLAVADI,,,,,,
+4.3,2501.01709,MoVE-KD,https://github.com/hey-cjj/MoVE-KD,200,True,False,1930,2025-06-07
+4.3,2506.07530,BitVLA,https://github.com/ustcwhy/BitVLA,200,True,False,21460,2026-09-06
+4.3,2602.24059,Quant Experts,,,,,,
+4.3,2404.14047,LLaMA3 양자화 실증,https://github.com/Macaronlin/LLaMA3-Quantization,200,True,False,2708,2025-01-14
+4.3,2509.23729,LUQ,,,,,,
+4.3,2602.03782,QVLA,,,,,,
+4.3,2607.12787,Light-MER,https://github.com/GAIR-Lab/Light-MER,200,True,False,4809,2026-08-12
+4.3,2408.05517,SWIFT,https://github.com/modelscope/ms-swift,200,True,False,87446,2026-10-13
+4.4,2403.06764,FastV,https://github.com/pkunlp-icler/FastV,200,True,False,130612,2025-01-04
+4.4,2409.10197,FitPrune,https://github.com/ywh187/FitPrune,200,True,False,31718,2026-01-23
+4.4,2410.04417,SparseVLM,https://github.com/Gumpest/SparseVLMs,200,True,False,64644,2026-07-30
+4.4,2412.01818,VisPruner,https://github.com/Theia-4869/VisPruner,200,True,False,8217,2025-07-01
+4.4,2503.18278,TopV,,,,,,
+4.4,2603.07135,AutoSelect,https://github.com/MedHK23/AutoSelect,200,True,False,0,2026-03-07
+4.4,2502.11494,DART,https://github.com/ZichenWen1/DART,200,True,False,33520,2025-10-12
+4.4,2506.10967,CDPruner,https://github.com/Theia-4869/CDPruner,200,True,False,20845,2025-09-20
+4.4,2602.23699,HiDrop,https://github.com/EIT-NLP/HiDrop,200,True,False,172986,2026-04-05
+4.4,2406.18139,LOOK-M,https://github.com/SUSTechBruce/LOOK-M,200,True,False,44674,2024-11-09
+4.4,2410.17434,LongVU,https://github.com/Vision-CAIR/LongVU,200,True,False,16431,2025-05-08
+4.4,2501.00574,VideoChat-Flash,https://github.com/OpenGVLab/VideoChat-Flash,200,True,False,7099,2026-07-19
+4.4,2501.12386,InternVideo2.5,https://github.com/OpenGVLab/InternVideo/tree/main/InternVideo2.5,200,True,False,59923,2026-07-02
+4.4,2412.13303,FastVLM,https://github.com/apple/ml-fastvlm,200,True,False,10878,2026-09-11
+4.4,2403.18293,TDA,,,,,,
+4.4,2506.17218,Mirage(잠재 시각 토큰),https://github.com/UMass-Embodied-AGI/Mirage,200,True,False,102637,2025-08-02
+4.4,2509.22548,JanusVLN,,,,,,
+4.4,2505.21594,Edge-Cloud SD+EE,,,,,,
+4.4,2503.10501,TokenCarve,https://github.com/ShawnTan86/TokenCarve,200,True,False,11617,2026-01-23
+4.4,2510.16598,VisionSelector,https://github.com/JulietChoo/VisionSelector,200,True,False,3621,2026-08-09
+4.5,2408.01800,MiniCPM-V,https://github.com/OpenBMB/MiniCPM-V,200,True,False,812590,2026-10-13
+4.5,2511.08914,SPEED-Q,https://github.com/antgroup/SPEED-Q,200,True,False,6055,2026-01-20
+4.5,2501.04322,Eve,https://github.com/rangmiao/Eve,200,True,False,678,2025-01-24
+4.5,2507.14049,EdgeVLA,https://github.com/kscalelabs/evla,200,True,False,265,2025-04-29
+4.5,2607.12659,Jetson-PI,https://github.com/PKU-SEC-Lab/Jetson-PI,200,True,False,71151,2026-10-02
+4.5,2411.10640,BlueLM-V-3B,,,,,,
+4.5,2604.27393,MiniCPM-o 4.5,https://github.com/OpenBMB/MiniCPM-V,200,True,False,812590,2026-10-13
+4.5,2509.21259,Edge-Cloud 교통 감시,,,,,,
+4.5,2510.25122,NanoVLA,,,,,,

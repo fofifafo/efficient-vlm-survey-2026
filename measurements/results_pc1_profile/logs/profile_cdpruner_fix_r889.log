@@ -1,0 +1,8 @@
+You are using a model of type llava to instantiate a model of type llava_llama. This is not supported for all configurations of models and can yield errors.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.94s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  1.85s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.01s/it]
+0/100 wall 1884.7 ms busy 916.7 ms
+20/100 wall 62.4 ms busy 38.0 ms
+40/100 wall 67.6 ms busy 38.0 ms
+60/100 wall 115.0 ms busy 32.0 ms
+80/100 wall 57.1 ms busy 31.8 ms
+SUMMARY {"method": "cdpruner_fix", "setting": "r889", "n": 95, "wall_ms": 60.93, "gpu_busy_ms": 32.06, "host_ms": 25.42, "host_share": 0.44, "kernels": 3312, "gpu": "NVIDIA GeForce RTX 5080", "torch": "2.11.0+cu128", "note": "wall = TTFT without profiler (max_new_tokens=1, same window as harness); gpu_busy = union of CUDA kernel/memcpy intervals in a second, profiled run"}

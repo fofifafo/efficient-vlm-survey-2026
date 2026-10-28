@@ -1,0 +1,1202 @@
+[
+ {
+  "id": "2403.14520",
+  "title": "Cobra: Extending Mamba to Multi-Modal Large Language Model for Efficient Inference",
+  "mark": "keep",
+  "chars": 33646,
+  "counts": {
+   "SPEED": 2,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 2,
+   "ACC": 1,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 2,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "NVIDIA A100",
+    "Nvidia A100"
+   ],
+   "BASE": [
+    "BLIP-2",
+    "IDEFICS",
+    "LLaVA",
+    "Qwen-VL"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "GQA",
+    "POPE",
+    "RefCOCO",
+    "RefCOCOg",
+    "TextVQA",
+    "VizWiz"
+   ]
+  },
+  "evidence": {
+   "SPEED": [
+    "Exper- iments across various multi-modal benchmarks demonstrate that: (i) Cobra performs 3× ∼4× faster than the most com- putationally efficient state-of-the-art methods, e.g., LLaVA- Phi and MobileVLM v2.",
+    "In Figure 1 (c), Cobra performs 3× ∼4× faster than MobileVLM v2-3B."
+   ],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "The model is trained using 8 NVIDIA A100 80GB GPUs.",
+    "All the evaluations were done on the hardware with a sin- gle Nvidia A100 PCIe 80GB GPU."
+   ],
+   "ACC": [
+    "On other benchmarks, the differences were not significant with accuracy gaps within 1%."
+   ],
+   "FREE": [],
+   "BASE": [
+    "Exper- iments across various multi-modal benchmarks demonstrate that: (i) Cobra performs 3× ∼4× faster than the most com- putationally efficient state-of-the-art methods, e.g., LLaVA- Phi and MobileVLM v2.",
+    "Additionally, its performance is sig- nificantly enhanced thanks to the implementation of linear se- quential modeling. (ii) Cobra fine-tunes a small parameter (∼ 48% of model parameters), leading to a significant improve- ment in overall performance compared to LLaVA.",
+    "As shown in Figure 1 (d), the MoE- LLaVA (Lin et al.",
+    "For exam- ple, LLaVA-Phi (Zhu et al.",
+    "Even compared to the much larger LLaVA v1.5 model with 7 billion parameters, Cobra still performs com- parably on several specific benchmarks with about 48% of the parameters.",
+    "Notably, Cobra-3.5B even achieves comparable performance to LLaVA with fewer parame- ters, underscoring its efficiency.",
+    "Cobra-8B surpasses the LLaVA v1.5 model of similar size on all tested bench- marks, achieving an average accuracy improvement of approximately 6%.",
+    "For example, LLaVA-Phi (Zhu et al."
+   ],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [
+    "Even compared to the much larger LLaVA v1.5 model with 7 billion parameters, Cobra still performs com- parably on several specific benchmarks with about 48% of the parameters.",
+    "It is noteworthy that Cobra-3.5B, with only 48% of the total parameters of LLaVA v1.5-7B, achieves comparable results on open-ended VQA benchmarks and shows signif- icant improvements in the challenging closed-set prediction tasks of VSR and POPE."
+   ],
+   "BENCH": [
+    "VQA-v2 GQA VizWiz TextVQA VSR POPE Large Scale MLLMs OpenFlamingo (Awadalla et al.",
+    "2017), GQA (Hudson and Manning 2019), VizWiz (Gu- rari et al.",
+    "2018) and TextVQA (Singh et al.",
+    "2019). (2) two closed-set visual question answering (VQA), i.e., VSR (Liu, Emerson, and Collier 2023) and POPE (Li et al.",
+    "2023b). (3) three visual grounding, i.e., RefCOCO, RefCOCO+ and Re- fCOCOg (Kazemzadeh et al.",
+    "GQA (Hudson and Manning 2019) assesses spatial un- derstanding and multi-step inference in real-world images.",
+    "VizWiz (Gurari et al.",
+    "TextVQA (Singh et al."
+   ]
+  }
+ },
+ {
+  "id": "2405.11273",
+  "title": "Uni-MoE: Scaling Unified Multimodal LLMs with Mixture of Experts",
+  "mark": "keep",
+  "chars": 74557,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 2,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 1,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "A100",
+    "A800"
+   ],
+   "BASE": [
+    "BLIP-2",
+    "IDEFICS",
+    "LLaVA",
+    "LLaVA-1.5",
+    "Qwen-VL",
+    "llava"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "ActivityNet",
+    "MMBench",
+    "MSVD",
+    "POPE",
+    "SEED-Bench",
+    "VQAv2"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "In the cross-modality alignment phase, we utilize 2 A100 GPUs to separately process 1.7 million short-speech data and 194K short audio captioning data with a global batch size of 32 and a base learning rate of 2e-5.",
+    "Transitioning to the MoE training stage, we utilize a single, eight, or sixteen (two nodes) A800 GPU to train our models."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "Index Terms—Mixture of Experts, Multimodal Large Language Model, Unified Framework, Training Strategy, Benchmark. ✦ 1 INTRODUCTION R ECENT advancements in open-source Multimodal Large Language Models (MLLMs) [1] such as InstructBLIP [2] and LLaVA [3] present notable successes in image-text understanding tasks [4], [5].",
+    "Lin et al. [20] developed an MoE- enhanced image-text MLLM, MoE-LLaVA, which utilizes about 3 billion activated parameters yet achieves comparable results to the dense 7B model on a variety of image-text understanding benchmarks.",
+    "This field has seen the emergence of notable models like LLaVA [34], MiniGPT-4 [35], InstructBLIP [2], Qwen-VL [36], and LMEye [15].",
+    "To facilitate the efficient transformation of diverse modal inputs into a linguistic format, our Uni-MoE model is built upon the pretrained visual-language frame- work LLaVA [45].",
+    "8, AUGUST 2015 6 TABLE 1 Detailed Architecture of Uni-MoE and Comparison with Visual-Language MoE-LLaVA.",
+    "Portions of this table are reported by the MoE-LLaVA model [20]. ”Width” represents the dimension of the hidden states. ”FFN” denotes the dimension of the feed-forward network’s intermediate layer. ”FFN Factor” represents the quantity of linear layers in the FFN. ”Activated” or ”Total Param” refers to the activated or total number of parameters. ”7B×4-Top2” denotes a dense foundation model with 7B parameters, which is designed to incorporate a total of four experts, with two of them being activated. ”†” indicates all layers are equipped with the MoE layer.",
+    "4 EXPERIMENTS 4.1 Uni-MoE Settings The Uni-MoE’s architectural specifications are presented in Table 1, exhibited along with the recently proposed MoE- LLaVA.",
+    "Subsequently, we develop a tri-modal dataset derived from LLaVA-Instruct-150K [45], converting user queries into auditory format utilizing sophisticated Text-to-Speech (TTS) technologies from Microsoft Azure [54]."
+   ],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [
+    "Portions of this table are reported by the MoE-LLaVA model [20]. ”Width” represents the dimension of the hidden states. ”FFN” denotes the dimension of the feed-forward network’s intermediate layer. ”FFN Factor” represents the quantity of linear layers in the FFN. ”Activated” or ”Total Param” refers to the activated or total number of parameters. ”7B×4-Top2” denotes a dense foundation model with 7B parameters, which is designed to incorporate a total of four experts, with two of them being activated. ”†” indicates all layers are equipped with the MoE layer."
+   ],
+   "BENCH": [
+    "To evaluate our models’ proficiency in short speech recognition and image understanding, we em- ploy modified versions of the A-OKVQA [63], OKVQA [64], and VQAv2 [65] benchmarks, utilizing speech synthesis technologies TTS to convert questions into human speeches.",
+    "To design tasks with long speech, we leverage the image-text reasoning dataset MMBench [5] and utilize TTS to transform contextual hints into long audios, called MMBench-Audio, along with the speech version of the RACE evaluation set, named RACE-Audio, to assess our models rigorously.",
+    "In the context of video- related tasks, the performance of Uni-MoE is gauged using benchmarks from ActivityNet-QA [66] and MSVD-QA [67], which are instrumental in assessing video comprehension and interaction capabilities.",
+    "For multi-choice formats such as MMBench, RACE, and the English Listening Test, we apply strict accuracy metrics to assess the correctness of chosen responses.",
+    "Additionally, for video-related benchmarks like Ac- tivityNet and MSVD-QA, we implement a comprehensive JOURNAL OF LATEX CLASS FILES, VOL.",
+    "The questions of A-OKVQA, OK-VQA, and VQAv2 are converted into speech by the Text-to-Speech technical.",
+    "MMBench-Audio (Input Type: Text-Speech-Image) and RACE-Audio are used for held-out testing of long speech understanding and reasoning, where “middle” and “high” refer to the Chinese English examinations designed for middle school and high school students. “EHSL” indicates our collected English High School Listening Test (Long Speech) in real world.",
+    "Single-Modality-Expert-Task5 on A-OKVQA, OK-VQA, VQAv2, and MMBench-Audio; 2) Uni- MoE achieves better performance on challenging long speech understanding and reasoning tasks compared to dense models, e.g., Uni-MoE significantly suppresses other model variants on English High School Listening Test; 3) When the instruction tuning data mixes long and short speech, the performance of Uni-MoE is more stable compared to single-expert model, e.g., Single-Modality- Expert-Task4 vs."
+   ]
+  }
+ },
+ {
+  "id": "2408.15881",
+  "title": "LLaVA-MoD: Making LLaVA Tiny via MoE Knowledge Distillation",
+  "mark": "keep",
+  "chars": 39594,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 1,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 8,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "H800"
+   ],
+   "BASE": [
+    "BLIP-2",
+    "LLAVA",
+    "LLaVA",
+    "LLaVA-1.5",
+    "LLaVA-NeXT",
+    "Mini-Gemini",
+    "MiniCPM-V",
+    "Qwen-VL"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "GQA",
+    "MMBench",
+    "MME",
+    "POPE",
+    "ScienceQA",
+    "TextVQA",
+    "VizWiz"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "For example, the largest version of LLaVA-NeXT employs Qwen-1.5-110B and trains with 128 H800 GPUs for 18 hours."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "Extensive experiments demonstrate that LLaVA-MoD surpasses existing works across various bench- marks while maintaining minimal activated parameters and low computational costs.",
+    "Remarkably, LLaVA-MoD-2B surpasses Qwen-VL-Chat-7B with an aver- age gain of 8.8%, using merely 0.3% of the training data and 23% trainable param- eters.",
+    "The results underscore LLaVA-MoD’s ability to effectively distill compre- hensive knowledge from its teacher model, paving the way for developing efficient MLLMs.",
+    "The code is available at https://github.com/shufangxun/ LLaVA-MoD.",
+    "For example, the largest version of LLaVA-NeXT employs Qwen-1.5-110B and trains with 128 H800 GPUs for 18 hours.",
+    "LLaVA-MoD achieves comparable perfor- mance with advanced MLLMs using significantly lower training costs while outperforming current small-scale MLLMs by a large margin. s-MLLM performance.",
+    "We present LLaVA-MoD1 to address the challenges through Mixture-of-Expert (MoE) and Knowledge Distillation.",
+    "LLaVA-MoD exhibits impressive performance across various multimodal benchmarks while main- taining minimal activated parameters and low computational resources."
+   ],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [
+    "Remarkably, LLaVA-MoD-2B surpasses Qwen-VL-Chat-7B with an aver- age gain of 8.8%, using merely 0.3% of the training data and 23% trainable param- eters.",
+    "Knowledge Distillation (KD) from large-scale MLLM (l-MLLM) offers a promising yet unexplored strategy for enhancing ∗Equal Contribution †Core Members ‡Corresponding Authors 1 arXiv:2408.15881v3 [cs.CV] 23 Oct 2024 Technical Report < 0.3% data usage < 23% trainable params < 0.25% data usage GPU Hours Diameter 69.2 68.9 64.4 87.2 59.9 69.2 (a) Comparison of training samples, parameters, and GPU hours (b) Comparison of performance various tasks Figure 1: Comparisons of training cost and performance.",
+    "As illustrated in Figure 1, LLaVA-MoD-2B exceeds Qwen-VL-Chat-7B by an average of 8.8% on these benchmarks, utilizing just 0.3% of the training data and 23% trainable parameters.",
+    "Furthermore, it matches the perfor- 1MoD denotes Mixture-of-Expert Knowledge Distillation for MLLMs 2 Technical Report mance of RLHF-based methods with 7B and 13B parameters on several hallucination benchmarks.",
+    "Specifically, l-MLLM is configured with 7B parameters, while s-MLLM is config- ured with 1.8B and 0.5B parameters.",
+    "2, The 2B-sized LLaVA-MoD requires only 5M samples and activates merely a subset of its total 2.2B parameters during training and inference.",
+    "Moreover, compared to the small-sized model MiniCPM-V with 2.8B trainable parameters, LLaVA-MoD also achieves superior performance with just 1.6% of the data samples and 2B parameters, underscoring its efficiency.",
+    "Notably, it outperforms Qwen-VL-Chat-7B by 8.8% with only 2 billion activation parameters, 0.3% training data, and 23% trainable parameters, highlighting its effective- ness in distilling knowledge and driving more efficient MLLM development."
+   ],
+   "BENCH": [
+    "LLM VisEnc GQA VisWiz SQAI VQAT MME MMB MMBCN AVG Qwen-1.5-7B CLIP-L 62.3 40.7 70.9 55.3 72.1 68.5 64.9 62.1 Qwen-2-7B CLIP-L 62.5 37.9 73.2 57.2 78.0 71.6 71.1 64.5 Training Datasets.",
+    "We conduct experiments on MME (Fu et al., 2023), MMB (Liu et al., 2023c), and MMBCN.",
+    "SQAI: ScienceQA test, VQAT: TextVQA val, MME: MME Benchmark, normalized to percentage, MMB: MMBench dev, MMBCN: MMBench-Chinese dev.",
+    "Specifically, for general VQA tasks, we use VizWiz (Gurari et al., 2018) and GQA (Hudson & Man- ning, 2019) to test general visual understanding and relational reasoning.",
+    "TextVQA (Singh et al., 2019) is employed for text-oriented VQA tasks, focusing on fine-grained visual recognition and understanding of text within images.",
+    "ScienceQA (Lu et al., 2022b) is utilized to measure scien- tific knowledge.",
+    "Moreover, we conduct experiments on several hallucination benchmarks such as POPE (Li et al., 2023c), Object HalBench (Yu et al., 2024a), MMHal-Bench (Sun et al., 2023).",
+    "Distillation GQA VizWiz SQAI VQAT MME MMB MMBCN AVG Mimic 59.3 40.0 68.4 58.7 68.4 65.1 61.5 60.2 Mimic+Preference 58.7 39.2 68.0 58.5 66.7 66.3 61.9 59.9 Table 5: The impact of preference distillation on the hallucination-oriented benchmarks."
+   ]
+  }
+ },
+ {
+  "id": "2409.07267",
+  "title": "MiniDrive: More Efficient Vision-Language Models with Multi-Level 2D Features as Text Tokens for Autonomous Driving",
+  "mark": "keep",
+  "chars": 34611,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 2,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 3,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 6,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 4,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [
+    "RTX 4090"
+   ],
+   "BASE": [
+    "BLIP-2",
+    "Llava",
+    "Qwen-VL"
+   ],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [
+    "It can be fully trained with multiple instances on a single RTX 4090 GPU with 24GB of memory.",
+    "The training cost of the model is reduced, and multiple MiniDrive models can be fully trained simultaneously on an RTX 4090 GPU with 24GB of memory. • MinDrive is attempting for the first time to utilize a large convolutional kernel architec- ture as the vision encoder backbone for au- tonomous driving vision-language models, en- abling more efficient and faster extraction of 2D features at different image levels."
+   ],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "It can be fully trained with multiple instances on a single RTX 4090 GPU with 24GB of memory.",
+    "The training cost of the model is reduced, and multiple MiniDrive models can be fully trained simultaneously on an RTX 4090 GPU with 24GB of memory. • MinDrive is attempting for the first time to utilize a large convolutional kernel architec- ture as the vision encoder backbone for au- tonomous driving vision-language models, en- abling more efficient and faster extraction of 2D features at different image levels.",
+    "Implementation details Each model is trained on a single RTX 4090 GPU."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "However, current research on multimodal large models in autonomous driving mainly fo- cuses on models with over a billion parameters, such as BLIP-2 (Li et al., 2023), LLaMA-7B (Tou- vron et al., 2023), GPT-3.5, and GPT-4 (Achiam et al., 2023), with the vision encoders relying on pre-trained models based on the Transformer ar- chitecture, like CLIP (Radford et al., 2021).",
+    "Llava (Liu et al., 2024b) freezes CLIP’s vi- sion encoder (ViT) and adds a linear projection layer between the vision encoder and LLMs, aim- ing to map visual output representations into textual space.",
+    "Similarly, BLIP-2 (Li et al., 2023) aligns visual and textual representations through a more complex Q-Former.",
+    "InstructBLIP (Panagopoulou et al., 2023) builds on BLIP-2 with instruction fine-tuning on public visual question-answering datasets.",
+    "Llava-1.5v (Liu et al., 2024a) achieves state-of-the-art performance in 11 bench- marks by using CLIP-ViT-L-336px with a multi- layer perceptron (MLP) projection layer and adding VQA data tailored for academic tasks with simple response formatting prompts, significantly improv- ing data efficiency.",
+    "To establish baselines, Li et al. (2023) fine- tuned BLIP-2 on this new dataset."
+   ],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [
+    "Compared to previous works, MiniDrive achieves state- of-the-art performance in terms of parameter size, floating point operations, and response ef- ficiency, with the smallest version containing only 83M parameters.",
+    "For instance, MiniDrive224 has only 83M parameters and a FLOP count of merely 5.9B, which is signifi- cantly lower than current visual-language models used in autonomous driving.",
+    "In Figure 1(c), MiniDrive outperforms open-source models with 7B parameters and above on the single-image evaluation system CODA-LM (Li et al., 2024), approaching the performance of closed-source commercial models.",
+    "It is evident that despite MiniDrive having only 83M parameters, it demon- strates superior performance, outperforming open- source models and approaching the performance of closed-source models."
+   ],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2412.10302",
+  "title": "DeepSeek-VL2: Mixture-of-Experts Vision-Language Models for Advanced Multimodal Understanding",
+  "mark": "keep",
+  "chars": 53606,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 1,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 1,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 4,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 1,
+   "BENCH": 4
+  },
+  "sets": {
+   "HW": [
+    "NVIDIA A100"
+   ],
+   "BASE": [
+    "InternVL2",
+    "LLaVA",
+    "MiniCPM-V",
+    "Qwen2-VL",
+    "llava"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "AI2D",
+    "ChartQA",
+    "DocVQA",
+    "MMBench",
+    "MME",
+    "MMMU",
+    "MathVista",
+    "OCRBench",
+    "RealWorldQA",
+    "RefCOCO",
+    "RefCOCOg",
+    "TextVQA"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [
+    "Notably, our 3B, 16B and 27B models can be deployed on a single GPU with 10 GB, 40GB and 80GB memory respectively."
+   ],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "The training of DeepSeek-VL2 was completed in 7/10/14 days using a cluster of 16/33/42 nodes, with each node equipped with 8 NVIDIA A100 GPUs."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "0 2 4 6 8 10 Activated Parameters (Billions) 48 54 60 66 72 Average Performance DeepSeek-VL2-Tiny DeepSeek-VL2-Small DeepSeek-VL2 InternVL2-1B InternVL2-2B InternVL2-4B InternVL2-8B Qwen2-VL-2B Qwen2-VL-7B Phi-3.5-Vision DeepSeek-VL2 Family InternVL2 Family Qwen2-VL Family Figure 1 | Average performance vs. activated parameters among different open-source models.",
+    "The overall structure is a llava-style architecture, which includes a vision encoder, a VL adaptor, and a MoE-based LLM.",
+    "Building upon the decoder-only LLaVA- style [54] architecture of its predecessor, DeepSeek-VL2 introduces two major advancements: a dynamic tiling strategy and a DeepSeekMOE [20, 86] language model featuring Multi-head Latent Attention [53].",
+    "On the grounding benchmarks, we compare DeepSeek-VL2 with Groudning DINO [56], UNINEXT [52], ONE-PEACE [87], mPLUG-2 [97], Florence-2 [96], InternVL2 [16], Shikra [11], TextHawk2 [103], Ferret-v2 [108], MM1.5 [107] and Qwen2 [88]."
+   ],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [
+    "Conclusion In this technical report, we introduce DeepSeek-VL2, an enhanced version of MoE-based Vision- Language Models, available in scales of 3B, 16B, and 27B parameters in total, with corresponding activated parameters of 1.0B, 2.8B, and 4.5B."
+   ],
+   "BENCH": [
+    "We average the accuracy of MMBench v1.1, MMStar, MMMU (Val), MathVista (TestMini), AI2D (Test), and OCRBench.",
+    "The scores of OCRBench are divided by 10 to scale them to [0, 100]. ∗: Core contributors. †: Project lead. ‡: Corresponding author. arXiv:2412.10302v1 [cs.CV] 13 Dec 2024 Contents 1 Introduction 3 2 Model Architecture 4 3 Data Construction 6 3.1 Vision-Language Alignment Data . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
+    "Multimodal Performance Benchmarks We perform a holistic evaluation of DeepSeek-VL2 across a collection of com- monly used benchmarks, including DocVQA [66], ChartQA [65], InfoVQA 2 [67], TextVQA [77], RealWorldQA [95], OCRBench [57], AI2D [34], MMMU [105], MMStar [13], MathVista [60], MME [26], MMBench, MMBench-V1.1 [58] and MMT-Bench [100].",
+    "To evaluate the grounding capability of our models, we test DeepSeek-VL2 on the RefCOCO, RefCOCO+ and RefCOCOg benchmarks [33, 64]."
+   ]
+  }
+ },
+ {
+  "id": "2502.13145",
+  "title": "Multimodal Mamba: Decoder-only Multimodal State Space Model via Quadratic to Linear Distillation",
+  "mark": "keep",
+  "chars": 41787,
+  "counts": {
+   "SPEED": 6,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 1,
+   "TOK": 0,
+   "HW": 4,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 2,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "NVIDIA 4090",
+    "NVIDIA A800",
+    "NVIDIA RTX 4090"
+   ],
+   "BASE": [
+    "InternVL",
+    "LLaVA",
+    "Qwen-VL"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "GQA",
+    "MMBench",
+    "MME",
+    "MMMU",
+    "POPE",
+    "ScienceQA",
+    "TextVQA"
+   ]
+  },
+  "evidence": {
+   "SPEED": [
+    "At 103K tokens, mmMamba-linear demonstrates 20.6× speedup compared to HoVLE and saves 75.8% GPU memory, while mmMamba-hybrid achieves 13.5× speedup and saves 60.2% GPU memory.",
+    "At 103K tokens, mmMamba-linear demonstrates 20.6× speedup and 75.8% GPU memory reduction compared to HoVLE, while mmMamba-hybrid achieves 13.5× speedup and 60.2% memory sav- ings.",
+    "Notably, at the context length of 103K tokens, mmMamba-linear demonstrates 20.6× speedup compared to HoVLE and saves 75.8% GPU mem- ory, while mmMamba-hybrid achieves 13.5× speedup and saves 60.2% GPU memory.",
+    "Thanks to the fixed hidden state rooted in linear-complexity modeling, mmMamba-linear/hybrid achieve nearly 4× faster inference speed than all the Transformer-based VLMs. mmMamba-linear/hybrid also outperforms the linear complexity encoder-based VLMs (Cobra-3.5B and VisualRWKV-3B) by a large margin (about 30 tokens/s and 3× faster, respectively) due to the simple decoder-only ar- chitecture.",
+    "Specifically, at the 103K token length, mmMamba-linear demonstrates 20.6× speedup compared to HoVLE and saves 75.8% GPU mem- ory, while mmMamba-hybrid achieves 13.5× speedup and saves 60.2% GPU memory.",
+    "At 103K tokens, mmMamba-linear achieves up to 20.6× speedup and 75.8% memory reduction compared to Transformer-based teacher HoVLE, while mmMamba- hybrid achieves 13.5× speedup and saves 60.2% GPU mem- ory."
+   ],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [
+    "Thanks to the fixed hidden state rooted in linear-complexity modeling, mmMamba-linear/hybrid achieve nearly 4× faster inference speed than all the Transformer-based VLMs. mmMamba-linear/hybrid also outperforms the linear complexity encoder-based VLMs (Cobra-3.5B and VisualRWKV-3B) by a large margin (about 30 tokens/s and 3× faster, respectively) due to the simple decoder-only ar- chitecture."
+   ],
+   "TOK": [],
+   "HW": [
+    "All models are trained using 8 NVIDIA A800 80GB GPUs with BF16 precision and DeepSpeed ZeRO- 2 (Rajbhandari et al., 2020; Rasley et al., 2020).",
+    "The benchmark recipe directly follows Cobra, and we report the results on the same single NVIDIA RTX 4090 GPU.",
+    "All the evaluations are conducted on the same single NVIDIA RTX 4090 GPU.",
+    "To showcase the efficiency of the proposed mmMamba in this application, we compare our model with Transformer-based HoVLE in the same single NVIDIA RTX 4090 GPU."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "Notable examples such as LLaVA (Liu et al., 2024a), BLIP (Li et al., 2022), Qwen-VL (Bai et al., 2023b), InternVL (Chen et al., 2024b), and Monkey (Li et al., 2024b) have demonstrated remarkable success in enhancing LLMs’ visual compre- hension capabilities through the integration of pre-trained vision encoders and specialized connectors that bridge the modality gap between vision and language.",
+    "VL-Mamba (Qiao et al., 2024) follows the recipe of LLaVA by incorporating a Vision Selective Scan con- nector with the pre-trained Mamba LLM."
+   ],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": [
+    "The general VLM benchmarks include: MME (Yin et al., 2023), which evaluates visual perception and reasoning through true/false questions; MMBench (Liu et al., 2024b), which as- sesses model robustness through multiple-choice questions; POPE (Li et al., 2023b), which evaluates object hallucina- tion; SEED (Li et al., 2023a), which gauges open-world multi-modal understanding; MMMU (Yue et al., 2024), 6 Multimodal Mamba: Decoder-only Multimodal State Space Model via Quadratic to Linear Distillation Method Recipe Complexity # P. # T.P.",
+    "The visual question answering bench- marks comprise: TextVQA (Singh et al., 2019), which eval- uates optical character recognition (OCR) capabilities and text-based reasoning; ScienceQA (Lu et al., 2022), which tests scientific image comprehension; and GQA (Hudson & Manning, 2019), which assesses real-world visual reasoning and compositional question answering.",
+    "For the specific score in the comparison, we report the MME- perception score as the MME score, MMB score is calcu- lated on the MMBench-EN split, and the POPE score is calculated by averaging across its three categories.",
+    "SEED, MM-Vet, ScienceQA), while matching the performance on the left 3 benchmarks with 2× fewer parameters.",
+    "Init Strategy MME POPE TextVQA SQA-I from scratch 1214.0 83.1 40.0 67.4 inherit W Q,K,V 1222.6 84.0 41.9 73.3 inherit W Q,K,V + mimic 1303.5 85.2 47.7 79.2 Table 4: Ablation for parameter initialization.",
+    "Attention Layers MME POPE TextVQA SQA-I 0 1303.5 85.2 47.7 79.2 1 1304.3 85.5 48.0 79.3 2 1318.4 86.3 48.4 79.9 4 1329.1 86.8 51.5 82.8 8 1371.1 86.7 55.1 86.9 32 1433.5 87.6 66.0 94.8 Table 5: Ablation for the number of interleaved at- tention layers. “0” denotes mmMamba-pure, “8” de- notes mmMamba-hybrid, “32” denotes the full Transformer model HoVLE.",
+    "By 8 Multimodal Mamba: Decoder-only Multimodal State Space Model via Quadratic to Linear Distillation Hybrid strategy MME POPE TextVQA SQA-I Tail-stacked 1305.5 85.9 53.7 79.4 Head-stacked 1329.4 85.9 55.0 80.8 Tail-interleaved 1308.3 86.1 55.0 86.5 Head-interleaved 1371.1 86.7 55.1 86.9 Table 6: Ablation for hybrid strategy. progressively adding the designed distillation stages, the model’s performance is increasingly improved.",
+    "When com- paring ID-7 and ID-8, we can see that the proposed extra parameter distillation stage-1 decouples the optimization and eases the training, leading to a better alignment, with consistent improvements across all metrics (48 in MME, 1.7 in POPE, 6.6 in TextVQA, 7.1 in ScienceQA)."
+   ]
+  }
+ },
+ {
+  "id": "2504.07491",
+  "title": "Kimi-VL Technical Report",
+  "mark": "keep",
+  "chars": 92189,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 1,
+   "HW": 1,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 1,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "ascending a "
+   ],
+   "BASE": [
+    "Gemma3",
+    "LLaVA-OneVision",
+    "Qwen2.5-VL"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "AI2D",
+    "EgoSchema",
+    "LongVideoBench",
+    "MLVU",
+    "MMBench",
+    "MME",
+    "MMMU",
+    "MathVista",
+    "OCRBench",
+    "RealWorldQA",
+    "Video-MME"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [
+    "For data composition, we filter and upsample the ratio of long data to 25% in each sub-stage, while using the remaining 75% tokens to replay shorter data in its previous stage; our exploration confirms that this composition allows the model to effectively learn long-context understanding while maintaining short-context ability."
+   ],
+   "HW": [
+    "The theme of preparation and the awe-inspiring nature of the landscape are prominently featured, setting the stage for what is to come. (00:01:39 - 00:02:03) The scene opens with a group of climbers ascending a steep, snow-covered mountain, their movements slow and deliberate as they navigate the treacherous terrain (00:01:40- 00:01:46)."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "In comparative evaluations, it effectively competes with cutting-edge efficient VLMs such as GPT-4o- mini, Qwen2.5-VL-7B, and Gemma-3-12B-IT, while surpassing GPT-4o in several key domains.",
+    "Gemma-3 series, Qwen2.5-VL series) and long-thinking VLMs (QVQ-72B/Max-Preview), on MathVision benchmark.",
+    "Qwen2.5-VL (Bai et al.",
+    "MoonViT: A Native-resolution Vision Encoder We design MoonViT, the vision encoder of Kimi-VL, to natively process images at their varying resolutions, eliminating the need for complex sub-image splitting and splicing operations, as employed in LLaVA-OneVision (B.",
+    "Although having a more parameter-efficient architecture (2.8B+0.4B activated parameters) compared to larger models such as GPT-4o, Llama-3.2-11B-Inst. and Gemma3-12B-IT, Kimi-VL demonstrates competitive or superior performance in several key areas.",
+    "Our model employs a Mixture-of-Experts (MoE) architecture similar to DeepSeek-VL2, but outperforms it on most benchmarks with significantly fewer parameters (activated: 2.8B vs 4.5B; total: 16B vs 28B); it also outperforms Qwen2.5-VL-7B (actually 8.3B) on 19 out of 24 benchmarks, though the latter *GPT-4o and GPT-4o-mini results use Omniparser without UIA, according to Bonatti et al.",
+    "10 KIMI-VL TECHNICAL REPORT Benchmark (Metric) GPT-4o GPT- Qwen2.5- Llama3.2- Gemma3- DeepSeek- Kimi-VL- 4o-mini VL-7B 11B-Inst.",
+    "On video college-level problems, it significantly outperforms Qwen2.5-VL-7B and DeepSeek-VL2, only behind >10B Gemma-3-12B-IT, demonstrating reasonable university-level understanding capabilities compared to larger models."
+   ],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [
+    "arXiv:2504.07491v3 [cs.CV] 23 Jun 2025 KIMI-VL TECHNICAL REPORT Kimi Team ABSTRACT We present Kimi-VL, an efficient open-source Mixture-of-Experts (MoE) vision-language model (VLM) that offers advanced multimodal reasoning, long-context understanding, and strong agent capabilities—all while activating only 2.8B parameters in its language decoder (Kimi-VL-A3B)."
+   ],
+   "BENCH": [
+    "With a 128K extended context window, Kimi-VL can process diverse long inputs, achieving impressive scores of 64.5 on LongVideoBench and 35.1 on MMLongBench-Doc.",
+    "Developed through long chain-of-thought (CoT) supervised fine-tuning (SFT) and reinforcement learn- ing (RL), the latest model exhibits strong long-horizon reasoning capabilities (64.0 on MMMU, 46.3 on MMMU-Pro, 56.9 on MathVision, 80.1 on MathVista, 65.2 on VideoMMMU) while obtaining ro- bust general abilities (84.4 on MMBench, 83.2 on V* and 52.8 on ScreenSpot-Pro).",
+    "1) Kimi-VL is smart: it has comparable text ability against efficient pure-text LLMs; without long thinking, Kimi-VL is already competitive in multimodal reasoning and multi-turn agent benchmarks, e.g., MMMU, MathVista, OSWorld.",
+    "Despite its small scale, Kimi-VL-Thinking offers compelling performance on hard reasoning benchmarks (e.g., MMMU, MathVision, MathVista), outperforming many state-of-the-art VLMs with even larger sizes.",
+    "On MMMU validation set, it achieves a score of 57.0%, which outperforms DeepSeek-VL2 (51.1%) and is comparable to Qwen2.5- VL-7B (58.6%) and even Gemma-3-12B-IT (59.6%), despite having significantly fewer activated parameters.",
+    "On MMBench-EN-v1.1, it achieves 83.1% accuracy, outperforming all efficient VLMs in comparison, and performing on par with GPT-4o.",
+    "For AI2D, our model achieves 84.9% and surpasses all compared models including GPT-4o (84.6%).",
+    "For RealWorldQA, it achieves 68.1%, outperforming Gemma3-12B (59.1%) and approaching Qwen2.5-VL-7B (68.5%)."
+   ]
+  }
+ },
+ {
+  "id": "2505.21594",
+  "title": "Fast and Cost-effective Speculative Edge-Cloud Decoding with Early Exits",
+  "mark": "keep",
+  "chars": 36622,
+  "counts": {
+   "SPEED": 6,
+   "FLOP": 1,
+   "LAT": 3,
+   "MEM": 7,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 8,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 1,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 1,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [
+    "A100",
+    "CPU",
+    "Jetson",
+    "Jetson Nano",
+    "Jetson Nano is ideal ",
+    "Jetson Orin",
+    "Jetson Orin board ",
+    "Jetson RTX Drafting ",
+    "Jetson RTX Jetson RTX",
+    "Jetson RTX MT",
+    "Jetson has a high c ",
+    "NVIDIA A100",
+    "NVIDIA Jetson Nano",
+    "NVIDIA Jetson Nano ",
+    "NVIDIA Jetson Orin",
+    "NVIDIA Jetson Orin board",
+    "RTX 2080"
+   ],
+   "BASE": [
+    "Qwen2-VL"
+   ],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [
+    "Using an NVIDIA Jetson Nano (client) and an A100 GPU (server) with Vicuna-68M (draft) and Llama2-7B (target) models, our method achieves up to a 35% reduction in latency compared to cloud-based autoregressive decoding, with an additional 11% improvement from preemptive drafting.",
+    "With Vicuna- 68M as the draft model and Llama2-7B as the target model, we show an average 35% latency reduction from autoregressive to vanilla edge cloud speculative decoding and a further speedup of 11% with our fast decoding method. • We demonstrate our approach on a real-world robotics platform (Unitree Go2 equipped with an NVIDIA Jetson Orin), highlighting the applicability of our method for enabling edge-cloud collabo- rative inference in embodied intelligence applications.",
+    "AR →SD: On average, using RTX, vanilla SD achieves a 1.2x and 1.94x speedup over autoregressive decoding with the Vicuna-68M/Vicuna-7B and Vicuna-68M/Llama2-7B models, respectively.",
+    "Jetson, being slower at drafting coupled with higher communication cost, reduces the speedup relative to autoregressive decoding, making it slower for Vicuna-68M/Vicuna-7B and Vicuna-160M/Vicuna-13B models, though it achieves a 1.34x speedup with Vicuna-68M/Llama2-7B.",
+    "In contrast, for Vicuna-68M/Llama2-7B, a lower c combined with a higher τ yields a 1.35x speedup.",
+    "Metric Value Drafting Latency (γTp, γ = 4) 288ms Verification Latency (Tq) 620ms Latency Ratio (c = Tp/Tq) 0.11 Communication Latency (Tc) 120ms Max GPU Memory 12.4G Num EE Threads 6 (a) System and latency metrics Metric Value Avg Tokens (τ) (↑) 2.92 Cache Miss Rate (↓) 55.63 Avg EE (↓) 8 Speedup AR →SD (↑) 0.90x Speedup SD →FSD (↑) 1.34x (b) FSD speedup and performance metrics the visual observations and language commands to generate mid-level navigation actions (e.g., move forward small/medium/large), following the approach of Cheng et al. (2024)."
+   ],
+   "FLOP": [
+    "With a performance of up to 472 GFLOPs, the Jetson Nano is ideal for edge applications."
+   ],
+   "LAT": [
+    "Method Latency Cloud AR 2Tc + nTq Edge-Cloud SD n τ (2Tc + γTp + Tq) Edge-Cloud FSD n τ (2Tc + rγTp + (1 −r)Tr + Tq) Latency Calculation: Table 3 summarizes the notations used in our analysis.",
+    "Metric Vicuna-68m/Vicuna-7B Vicuna-160m/Vicuna-13B Vicuna-68m/Llama2-7B Jetson RTX Jetson RTX Jetson RTX Drafting Latency (γTp, γ = 4) 334ms 102ms 1596ms 555ms 301ms 99ms Verification Latency (Tq) 497ms 442ms 616ms 618ms 522ms 467ms Latency Ratio (c = Tp/Tq) 0.17 0.06 0.65 0.22 0.14 0.05 Communication Latency (Tc) 95ms 42ms 91ms 46ms 96ms 47ms Max GPU memory 1.7G 3.2G 3.5G 8.9G 1.7G 3.2G Num EE Threads 15 30 7 15 15 30 4.2 Speedup Results Evaluation Metrics: Our fast decoding method with early exit is exact, with outputs identical to standard speculative decoding, ensuring no loss in accuracy.",
+    "Metric Value Drafting Latency (γTp, γ = 4) 288ms Verification Latency (Tq) 620ms Latency Ratio (c = Tp/Tq) 0.11 Communication Latency (Tc) 120ms Max GPU Memory 12.4G Num EE Threads 6 (a) System and latency metrics Metric Value Avg Tokens (τ) (↑) 2.92 Cache Miss Rate (↓) 55.63 Avg EE (↓) 8 Speedup AR →SD (↑) 0.90x Speedup SD →FSD (↑) 1.34x (b) FSD speedup and performance metrics the visual observations and language commands to generate mid-level navigation actions (e.g., move forward small/medium/large), following the approach of Cheng et al. (2024)."
+   ],
+   "MEM": [
+    "For instance, the Unitree Go2 is powered by a Jetson Orin board with 16GB of unified memory, which is insufficient to run models over 10B parameters that require over 40GB of memory.",
+    "For language generation models, we train early exit adapters on the publicly available ShareGPT conversation dataset (hf:RyokoAI/ShareGPT52K) using a single NVIDIA A100 GPU with 80GB of VRAM.",
+    "Server Side Hardware: We utilize a high performance computing cluster node equipped with a single A100 GPU with 80GB VRAM, 16 CPU cores, and 8GB of CPU memory per core as our server.",
+    "Cluster Node with RTX 2080 Ti: This setup features a single RTX 2080 Ti GPU with 12GB VRAM, an 8-core CPU, and 4GB of RAM per core, providing a more powerful alternative for our experiments.",
+    "On the RTX-equipped node, the system handles up to 30 threads for the Vicuna-68M model, but GPU VRAM (12 GB) limits the Vicuna-160M model to 15 threads before encountering an out-of-memory (OOM) error.",
+    "The maximum number of threads is capped at 15 for the Vicuna-68M model, while the 4 GB memory limit allows only 7 threads for the Vicuna-160M model.",
+    "This platform features an onboard NVIDIA Jetson Orin board, which includes an 8-core ARM Cortex-A78AE v8.2 64-bit CPU and 16GB of 128-bit LPDDR5 unified memory, offering up to 157 TOPS of compute."
+   ],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "Using an NVIDIA Jetson Nano (client) and an A100 GPU (server) with Vicuna-68M (draft) and Llama2-7B (target) models, our method achieves up to a 35% reduction in latency compared to cloud-based autoregressive decoding, with an additional 11% improvement from preemptive drafting.",
+    "For instance, the Unitree Go2 is powered by a Jetson Orin board with 16GB of unified memory, which is insufficient to run models over 10B parameters that require over 40GB of memory.",
+    "With Vicuna- 68M as the draft model and Llama2-7B as the target model, we show an average 35% latency reduction from autoregressive to vanilla edge cloud speculative decoding and a further speedup of 11% with our fast decoding method. • We demonstrate our approach on a real-world robotics platform (Unitree Go2 equipped with an NVIDIA Jetson Orin), highlighting the applicability of our method for enabling edge-cloud collabo- rative inference in embodied intelligence applications.",
+    "For language generation models, we train early exit adapters on the publicly available ShareGPT conversation dataset (hf:RyokoAI/ShareGPT52K) using a single NVIDIA A100 GPU with 80GB of VRAM.",
+    "Note that the context length was reduced during training to ensure compatibility with the memory limitations of a single A100 GPU.",
+    "Server Side Hardware: We utilize a high performance computing cluster node equipped with a single A100 GPU with 80GB VRAM, 16 CPU cores, and 8GB of CPU memory per core as our server.",
+    "NVIDIA Jetson Nano: A compact AI development board tailored for edge computing.",
+    "It includes a quad-core ARM Cortex-A57 CPU, a 128-core Maxwell GPU, and 4GB of LPDDR4 RAM shared between the CPU and GPU."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "Model # Exits # Params % Params Context GPU Hours lmsys/Vicuna-7B-v1.3 Zheng et al. (2023) 31 101M 1.48 1600 117 lmsys/Vicuna-13B-v1.3 Zheng et al. (2023) 39 158M 1.20 800 122 meta-llama/Llama-2-7B-hf Touvron et al. (2023) 31 101M 1.48 1600 119 Qwen/Qwen2-VL-7B-Instruct Wang et al. (2024) 27 88M 1.02 1600 136 Table 3: Notations used in our analysis."
+   ],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [
+    "For instance, the Unitree Go2 is powered by a Jetson Orin board with 16GB of unified memory, which is insufficient to run models over 10B parameters that require over 40GB of memory."
+   ],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2509.18154",
+  "title": "MiniCPM-V 4.5: Cooking Efficient MLLMs via Architecture, Data, and Training Recipe",
+  "mark": "star",
+  "chars": 43716,
+  "counts": {
+   "SPEED": 1,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 1,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 2,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 2,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "A100"
+   ],
+   "BASE": [
+    "InternVL3",
+    "LLaVA",
+    "MiniCPM-V",
+    "Qwen2.5-VL"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "AI2D",
+    "ChartQA",
+    "DocVQA",
+    "LongVideoBench",
+    "MLVU",
+    "MMBench",
+    "MME",
+    "MMMU",
+    "MathVista",
+    "OCRBench",
+    "RealWorldQA",
+    "TextVQA",
+    "Video-MME",
+    "VideoMME"
+   ]
+  },
+  "evidence": {
+   "SPEED": [
+    "This module can encode a 6-second, 2-fps, 448×448 resolution video into only 128 visual tokens, achieving a 12×-24× reduction in to- ken cost compared to representative MLLMs [7, 9], enabling efficient high frame rate and long video understanding, and unified encoding for images as well. (2) Unified Learning Paradigm for Document Knowledge and OCR."
+   ],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [
+    "For example, on the widely adopted VideoMME benchmark, MiniCPM-V 4.5 achieves state-of-the-art per- formance among models under 30B size, using just 46.7% GPU memory cost and 8.7% inference time of Qwen2.5-VL 7B."
+   ],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "With only 8B parameters, it surpasses widely 10 Model Size Avg Score ↑ Time ↓ GLM-4.1V-9B-thinking 10.3B 76.6 17.5h MiMo-VL-7B-RL 8.3B 76.4 11.0h MiniCPM-V 4.5 8.7B 77.0 7.5h (a) OpenCompass results of thinking models Model Size Score ↑ Time ↓ Mem ↓ Qwen2.5-VL-7B 8.3B 71.6 3.00h 60G GLM-4.1V-9B-thinking 10.3B 73.6 2.63h 32G MiniCPM-V 4.5 8.7B 73.5 0.26h 28G (b) Video-MME results Table 2: Inference efficiency on 8 A100 GPUs.",
+    "3.3 Inference Efficiency We evaluated the inference efficiency of MiniCPM-V 4.5 in a standard configuration of 8 A100 GPUs on both image understanding and video understanding tasks."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "To address the challenges, we present MiniCPM-V 4.5, an 8B parameter model designed for high efficiency and strong performance.",
+    "Compre- hensive experimental results in OpenCompass evaluation show that MiniCPM-V 4.5 surpasses widely used proprietary models such as GPT-4o-latest, and signifi- cantly larger open-source models such as Qwen2.5-VL 72B.",
+    "For example, on the widely adopted VideoMME benchmark, MiniCPM-V 4.5 achieves state-of-the-art per- formance among models under 30B size, using just 46.7% GPU memory cost and 8.7% inference time of Qwen2.5-VL 7B.",
+    "For ex- ample, processing a 6-second, 2-fps video at a resolution of just 448×448 requires 1,536 tokens for Qwen2.5-VL [7], and 3,072 tokens for InternVL3 [9].",
+    "To address the challenges, MiniCPM-V 4.5 introduces three key improvements in model architec- ture, data strategy, and training method: (1) Unified 3D-Resampler for Compact Image and Video Encoding.",
+    "Previous MiniCPM-V series models [6] exhibit high compression rates (e.g., 4× com- pared with most MLLMs) for high-resolution images via 2D-Resamplers [5, 13].",
+    "Comprehensive experimental results in OpenCompass evaluation show that MiniCPM-V 4.5 out- performs widely used proprietary models such as GPT-4o-latest [4], and significantly larger open- source models such as Qwen2.5-VL 72B [7].",
+    "For example, powered by the efficient unified 3D-Resampler, MiniCPM-V 4.5 achieves equivalent performance on VideoMME [14] using only 9.9% of the inference time of prior state-of-the-art MLLMs [1]."
+   ],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [
+    "To address the challenges, we present MiniCPM-V 4.5, an 8B parameter model designed for high efficiency and strong performance.",
+    "With only 8B parameters, it surpasses widely 10 Model Size Avg Score ↑ Time ↓ GLM-4.1V-9B-thinking 10.3B 76.6 17.5h MiMo-VL-7B-RL 8.3B 76.4 11.0h MiniCPM-V 4.5 8.7B 77.0 7.5h (a) OpenCompass results of thinking models Model Size Score ↑ Time ↓ Mem ↓ Qwen2.5-VL-7B 8.3B 71.6 3.00h 60G GLM-4.1V-9B-thinking 10.3B 73.6 2.63h 32G MiniCPM-V 4.5 8.7B 73.5 0.26h 28G (b) Video-MME results Table 2: Inference efficiency on 8 A100 GPUs."
+   ],
+   "BENCH": [
+    "For example, on the widely adopted VideoMME benchmark, MiniCPM-V 4.5 achieves state-of-the-art per- formance among models under 30B size, using just 46.7% GPU memory cost and 8.7% inference time of Qwen2.5-VL 7B.",
+    "For example, powered by the efficient unified 3D-Resampler, MiniCPM-V 4.5 achieves equivalent performance on VideoMME [14] using only 9.9% of the inference time of prior state-of-the-art MLLMs [1].",
+    "Our evaluation encompasses several key areas of multimodal capabilities: STEM includes mathematics and science-oriented benchmarks such as MMMU [47], Math- Vista [48], AI2D [49], MathVerse [50], LogicVista [51], and EMMA [52], designed to evaluate logical reasoning, mathematical problem-solving, and scientific understanding capabilities.",
+    "Document, OCR & Chart covers OCR-related tasks through OCRBench [53], ChartQA [54], TextVQA [55], DocVQA [56], and OmniDocBench [57], testing ability to extract, interpret, and reason about textual information in various visual contexts, including documents and charts.",
+    "Multi-Image & Real-World & Instruction Following includes Mantis [61], MMT-Bench [62], RealWorldQA [63], and MM-IFEval [64], assessing performance on complex scenarios involving multiple images, real-world understanding, and instruction following.",
+    "Video Understanding encompasses Video-MME [65], LVBench [66], MLVU [67], LongVideoBench [68], MotionBench [69], and FavorBench [70], evaluating temporal reason- ing and dynamic visual comprehension across various video tasks.",
+    "Within the OpenCompass average, we use the long reasoning mode for 5 benchmarks, including MMStar, MMVet, HallusionBench, MathVista, and MMMU.",
+    "With only 8B parameters, it surpasses widely 10 Model Size Avg Score ↑ Time ↓ GLM-4.1V-9B-thinking 10.3B 76.6 17.5h MiMo-VL-7B-RL 8.3B 76.4 11.0h MiniCPM-V 4.5 8.7B 77.0 7.5h (a) OpenCompass results of thinking models Model Size Score ↑ Time ↓ Mem ↓ Qwen2.5-VL-7B 8.3B 71.6 3.00h 60G GLM-4.1V-9B-thinking 10.3B 73.6 2.63h 32G MiniCPM-V 4.5 8.7B 73.5 0.26h 28G (b) Video-MME results Table 2: Inference efficiency on 8 A100 GPUs."
+   ]
+  }
+ },
+ {
+  "id": "2510.01795",
+  "title": "Nav-EE: Navigation-Guided Early Exiting for Efficient Vision-Language Models in Autonomous Driving",
+  "mark": "keep",
+  "chars": 34266,
+  "counts": {
+   "SPEED": 1,
+   "FLOP": 0,
+   "LAT": 7,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 1,
+   "ACC": 1,
+   "FREE": 2,
+   "BASE": 8,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [
+    "RTX 3090"
+   ],
+   "BASE": [
+    "LLAVA",
+    "LLaVA"
+   ],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [
+    "These findings demonstrate that Nav-EE can be effectively deployed in real-vehicle settings, offering significant effi- ciency gains (up to nearly 50% reduction in latency) without compromising task performance."
+   ],
+   "FLOP": [],
+   "LAT": [
+    "Real-vehicle integration with Autoware Universe further demonstrates reduced inference latency (600 ms to 300 ms), supporting faster decision-making in complex scenarios.",
+    "For example, DS-Tiny improves from 71.29% to 95.80% accuracy while reducing latency from 0.098s to 0.084s.",
+    "Similarly, DS-Small increases ac- curacy from 52.01% to 77.55% with latency reduced from 0.248s to 0.186s.",
+    "The largest improvement is observed with LLaVA-7B, which rises from 52.10% to 76.93% accuracy while cutting inference latency from 0.030s to 0.025s.",
+    "For the decision- critical traffic-light recognition task, Nav-EE improves ac- curacy from 52.10% to 76.93% while reducing latency from 0.030s to 0.025s.",
+    "Specif- ically, for person detection, Nav-EE reduces the inference time from 0.609s (32 layers) to 0.361s by exiting at layer 18.",
+    "For traffic-light recognition, latency decreases from 0.611s to 0.486s with an exit at layer 25, and for vehicle recognition, Nav-EE exits as early as layer 14, cutting latency from 0.608s to 0.295s."
+   ],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "The vehicle is equipped with six high-resolution cameras and GPU computing units onboard (RTX 3090), allowing direct deployment of VLM- based perception."
+   ],
+   "ACC": [
+    "For example, pedestrian recognition improves slightly from 66.93% to 67.11%, while traffic-light accuracy decreases from 52.10% to 37.68%."
+   ],
+   "FREE": [
+    "Closest to our setting, retrieval-augmented early- exiting (RAEE) shows that instance-wise priors can guide exit-layer selection without re-training the backbone [16].",
+    "Offline Profiling: Aggressive Statistical Layer Selection To enable reliable early-exit without retraining, we adopt an offline profiling strategy based on large-scale training data."
+   ],
+   "BASE": [
+    "Large-scale models like DeepSeek-VL2 [5] and LLaVA [6] further illustrate the strong multimodal reasoning capabilities of modern VLMs.",
+    "By monitoring HD-map ROS 2 topics to trigger task switches, arXiv:2510.01795v2 [cs.RO] 10 Oct 2025 Prompt：Identify the object category from: pedestrian, rider, car, animal, facility, obstruction, misc LLaVA -7B Fig.",
+    "Layer-wise predictions of LLaVA-7B on CODA object recognition, showing early stabilization at the correct label (‘car’).",
+    "Foundation models such as DeepSeek-VL2 [5] and LLaVA [6] further highlight the potential of large-scale multimodal reasoning in this domain.",
+    "FOR DENSE MODELS (LLAVA-7B), THE ACTIVATED PARAMETERS EQUAL THE FULL MODEL SIZE.",
+    "Dataset Tasks DeepSeek-VL2-Tiny (MoE) DeepSeek-VL2-Small (MoE) LLaVA-7B (Dense) Full Layers 12 (1.0B) 27 (2.8B) 32 (7.0B) CODA Pedestrian 10 (0.90B) 24 (2.53B) 18 (4.07B) Cyclist 10 (0.90B) 25 (2.62B) 18 (4.07B) Vehicle 10 (0.90B) 20 (2.18B) 14 (3.24B) Animal 10 (0.90B) 21 (2.27B) 14 (3.24B) WAYMO Person 10 (0.90B) 25 (2.62B) 17 (3.86B) Vehicle 9 (0.85B) 20 (2.18B) 14 (3.24B) BOSCH Traffic-light 11 (0.95B) 22 (2.36B) 25 (5.54B) CODA is particularly valuable for testing the robustness of VLMs under safety-critical conditions and highlights their advantages in recognizing uncommon objects.",
+    "LLaVA-v1.6-Vicuna-7B [6] is a large-scale VLM with stronger reasoning ability, serving as a testbed for evaluating the scalability of early-exit strate- gies on high-capacity models.",
+    "We observe that common perception tasks such as vehicle recognition converge at much earlier layers (e.g., 9/12 in Tiny, 14/32 in LLaVA-7B), while more difficult categories like pedestrians and cyclists in CODA require deeper infer- ence."
+   ],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2601.13020",
+  "title": "PASs-MoE: Mitigating Misaligned Co-drift among Router and Experts via Pathway Activation Subspaces for Continual Learning",
+  "mark": "keep",
+  "chars": 36624,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 0,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 3,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [],
+   "BASE": [
+    "LLaVA"
+   ],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "Baselines We compare against representative continual learning methods for MLLMs, including LwF (Li and Hoiem, 2017b), EWC (Aich, 2021), L2P (Wang et al., 2022), O-LoRA (Wang et al., 2023), and HiDe-LLaVA (Guo et al., 2025a), and also include MoE-LoRA variants (MoELoRA and DDAS).",
+    "Implementation Details We adopt LLaVA-v1.5- 7B (Liu et al., 2024) as the base model and use CLIP-L/14-336 (Radford et al., 2021) to extract visual and textual features.",
+    "Following LLaVA’s LoRA protocol, we add LoRA to all language- model linear layers with rank r=128."
+   ],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2602.24059",
+  "title": "Quant Experts: Token-aware Adaptive Error Reconstruction with Mixture of Experts for Large Vision-Language Models Quantization",
+  "mark": "keep",
+  "chars": 36058,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 1,
+   "ACC": 2,
+   "FREE": 1,
+   "BASE": 5,
+   "CMP": 0,
+   "BIT": 8,
+   "PARAM": 1,
+   "BENCH": 7
+  },
+  "sets": {
+   "HW": [
+    "A800",
+    "RTX 4090"
+   ],
+   "BASE": [
+    "InternVL2"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "AI2D",
+    "ChartQA",
+    "DocVQA",
+    "MMMU",
+    "OCRBench",
+    "ScienceQA",
+    "TextVQA",
+    "VizWiz"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "Smaller models are evaluated on 4× RTX 4090 24G GPUs, and the 72B model is on 4× A800 80G GPUs."
+   ],
+   "ACC": [
+    "It employs a fixed shared expert to compensate global quantization er- rors while dynamically selecting routed experts to correct token-dependent local errors. • Extensive experiments across various quantization set- tings and multimodal benchmarks demonstrate that QE effectively mitigates low-bit performance degradation, achieving up to a 5.09% accuracy improvement under the challenging W4A6 quantization for the 72B model.",
+    "At W4A8, the performance gap to full precision narrows to within 2%, demonstrating strong robustness."
+   ],
+   "FREE": [
+    "Among existing approaches, Post-Training Quantization (PTQ) is widely adopted for its efficiency and compatibility without retraining the full model."
+   ],
+   "BASE": [
+    "We conduct comprehensive PTQ experiments on several representative open-source VLMs, covering the Qwen2VL [43] series (2B, 7B, 72B) and the InternVL2 [8] series (2B, 8B).",
+    "We report results on Qwen2VL-2B and InternVL2-8B in Tab.",
+    "In the challeng- ing W4A6 setting, it improves Qwen2VL-2B accuracy by 4.01% over MBQ, with only a 4.23% drop from full pre- cision, and gains 3.13% on InternVL2-2B.",
+    "Additional results on Qwen2VL-7B and InternVL2-2B (Supplementary Tab.",
+    "Main results on the model of InternVL2-8B."
+   ],
+   "CMP": [],
+   "BIT": [
+    "It employs a fixed shared expert to compensate global quantization er- rors while dynamically selecting routed experts to correct token-dependent local errors. • Extensive experiments across various quantization set- tings and multimodal benchmarks demonstrate that QE effectively mitigates low-bit performance degradation, achieving up to a 5.09% accuracy improvement under the challenging W4A6 quantization for the 72B model.",
+    "For weight-activation quantization, QE is evaluated under W4A6 and W4A8 settings against round-to-nearest (RTN), channel-scaling SmoothQuant (SQ) [44], modality-balanced MBQ [23], and low-rank reconstruction LQER [48].",
+    "For weight- only quantization, we adopt AWQ [24] as the channel- scaling baseline under the W3A16 configuration, apply- ing group-wise asymmetric quantization with 128 group size.",
+    "In the challeng- ing W4A6 setting, it improves Qwen2VL-2B accuracy by 4.01% over MBQ, with only a 4.23% drop from full pre- cision, and gains 3.13% on InternVL2-2B.",
+    "At W4A8, the performance gap to full precision narrows to within 2%, demonstrating strong robustness.",
+    "On the larger Qwen2VL- 72B, QE achieves a remarkable average accuracy improve- ment of 5.09% under the W4A6 quantization setting, nearly matching full-precision performance.",
+    "Setting Method MMMU OCRBench ScienceQA TextVQA VizWiz FP16 - 61.44 78.70 91.22 82.26 76.27 W4A6 RTN 51.33 59.10 85.52 72.12 64.29 SQ 53.33 61.20 86.96 74.42 63.45 LQER 52.33 59.60 86.71 73.84 66.64 MBQ 52.67 69.70 86.32 76.08 67.99 QE 58.11 76.60 90.33 79.27 73.91 W4A8 RTN 57.11 66.50 90.08 75.96 71.14 SQ 56.44 65.10 90.03 76.37 66.70 LQER 57.44 70.60 91.32 78.15 74.28 MBQ 58.33 73.90 89.24 79.19 72.24 QE 58.89 78.30 91.47 81.47 75.83 Table 3.",
+    "5 presents the ablation results of the proposed refinement for routed experts under the Setting Component MMMU (↑) ScienceQA (↑) FP16 - 39.89 76.95 W4A6 routed experts (REs) 34.56 68.72 shared expert (SE) 35.22 69.61 SE + random routing 35.89 70.00 SE + random clustering 35.33 69.71 QE (SE+REs) 36.89 70.85 W4A8 routed experts (REs) 36.00 71.94 shared expert (SE) 36.78 73.13 SE + random routing 37.89 73.67 SE + random clustering 37.22 73.82 QE (SE+REs) 38.00 74.37 Table 4."
+   ],
+   "PARAM": [
+    "Extensive experiments demonstrate that QE consis- tently enhances task accuracy across various quantization settings and model scales, ranging from 2B to 70B param- eters, while maintaining performance comparable to full- precision models."
+   ],
+   "BENCH": [
+    "Text recognition and understanding are tested on OCRBench [25] and TextVQA [38]; document and infographic comprehension on DocVQA [32] and In- foVQA [33]; chart reasoning on ChartQA [31]; and general visual perception on VizWiz-VQA [14].",
+    "ScienceQA [29] and MMMU [46] evaluate scientific and general reasoning, while MMStar [6] and MuirBench [42] assess overall multi- modal and multi-image understanding.",
+    "AI2D [18] measures diagram comprehension, ensuring coverage across all major aspects of multimodal reasoning.",
+    "Setting Method MMMU OCRBench ScienceQA TextVQA VizWiz FP16 - 61.44 78.70 91.22 82.26 76.27 W4A6 RTN 51.33 59.10 85.52 72.12 64.29 SQ 53.33 61.20 86.96 74.42 63.45 LQER 52.33 59.60 86.71 73.84 66.64 MBQ 52.67 69.70 86.32 76.08 67.99 QE 58.11 76.60 90.33 79.27 73.91 W4A8 RTN 57.11 66.50 90.08 75.96 71.14 SQ 56.44 65.10 90.03 76.37 66.70 LQER 57.44 70.60 91.32 78.15 74.28 MBQ 58.33 73.90 89.24 79.19 72.24 QE 58.89 78.30 91.47 81.47 75.83 Table 3.",
+    "5 presents the ablation results of the proposed refinement for routed experts under the Setting Component MMMU (↑) ScienceQA (↑) FP16 - 39.89 76.95 W4A6 routed experts (REs) 34.56 68.72 shared expert (SE) 35.22 69.61 SE + random routing 35.89 70.00 SE + random clustering 35.33 69.71 QE (SE+REs) 36.89 70.85 W4A8 routed experts (REs) 36.00 71.94 shared expert (SE) 36.78 73.13 SE + random routing 37.89 73.67 SE + random clustering 37.22 73.82 QE (SE+REs) 38.00 74.37 Table 4.",
+    "MMMU OCRBench ScienceQA TextVQA VizWiz 2B ✗ 33.78 68.20 71.84 73.18 59.62 ✓ 36.89 69.60 70.85 73.30 60.58 7B ✗ 45.44 73.00 79.87 71.63 64.18 ✓ 44.00 74.60 80.61 77.58 65.11 Table 5.",
+    "Nr OCRBench TextVQA VizWiz Avg. (↑) 2 68.40 73.14 59.70 67.08 4 68.50 73.13 60.41 67.35 8 69.60 73.30 60.58 67.83 16 69.90 73.52 60.75 68.06 Table 6."
+   ]
+  }
+ },
+ {
+  "id": "2603.20492",
+  "title": "AE-LLM: Adaptive Efficiency Optimization for Large Language Models",
+  "mark": "keep",
+  "chars": 35613,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 2,
+   "ACC": 3,
+   "FREE": 0,
+   "BASE": 4,
+   "CMP": 0,
+   "BIT": 6,
+   "PARAM": 2,
+   "BENCH": 7
+  },
+  "sets": {
+   "HW": [
+    "A100",
+    "RTX 4090"
+   ],
+   "BASE": [
+    "InternVL",
+    "LLaVA-1.5"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "GQA",
+    "TextVQA",
+    "VQAv2"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "Evaluation is conducted on Consumer-Grade (RTX 4090), Data Center (A100-80GB), and High-Performance (8×H200) platforms.",
+    "Hardware-Dependent Patterns: On memory-constrained hardware (RTX 4090), int4 quanti- zation is almost universally selected, combined with MQA attention for minimal memory footprint."
+   ],
+   "ACC": [
+    "Ex- tensive experiments across 15 models (0.5B-70B parameters) and 10 diverse tasks demonstrate that AE-LLM achieves an average of 2.8× improvement in efficiency metrics while maintaining competitive accuracy (within 1.2% of baseline), compared to static efficiency configurations.",
+    "We conduct extensive experiments across 15 models (0.5B-70B parameters) and 10 diverse tasks, demonstrating that AE-LLM achieves significant efficiency im- provements (average 2.8× across multiple metrics) while maintaining competitive accuracy (within 1.2% of baseline).",
+    "On average, AE-LLM configurations achieve accuracy within 1.2% of the default configuration, with some configurations even improving accuracy (e.g., +0.3% on MMLU for LLaMA-2-70B through optimal MoE configuration)."
+   ],
+   "FREE": [],
+   "BASE": [
+    "Model Method Accuracy Lat. (ms) Mem. (GB) En. (J) VQAv2 Benchmark LLaVA-1.5-7B Default 78.5 85.2 18.5 1.25 EfficientLLM Rec.",
+    "77.8 68.5 14.2 0.95 AdaptiveEfficientLLM 78.2 52.8 10.8 0.72 InternVL-Chat Default 81.2 92.5 22.5 1.42 EfficientLLM Rec.",
+    "80.5 75.8 17.5 1.15 AdaptiveEfficientLLM 80.8 58.2 12.8 0.85 COCO Caption Benchmark LLaVA-1.5-7B Default 128.5 125.8 18.5 1.85 EfficientLLM Rec.",
+    "126.8 98.5 14.2 1.38 AdaptiveEfficientLLM 127.5 75.2 10.8 1.02 TextVQA Benchmark LLaVA-1.5-7B Default 58.5 75.8 18.5 1.12 EfficientLLM Rec."
+   ],
+   "CMP": [],
+   "BIT": [
+    "Stage Category Sample Options / Parameters Architecture (Carch) Attention Type {MHA, MQA, GQA, MLA} MoE Config {Dense, Sparse-MoE (2/4/8 experts), Top-1/Top-2 rout- ing} Fine-Tuning (Cft) Method {Full, LoRA, QLoRA, DoRA, RSLoRA} Rank & Alpha Rank r ∈{8, 16, 32, 64, 128}, Alpha α ∈{r, 2r, 4r} Inference (Cinf) Quantization {FP16, FP8, INT8, INT4} via {GPTQ, AWQ, SmoothQuant} KV Cache {Full, MQA-style, GQA-style} 3.3 Efficient Search Algorithm To efficiently navigate the large configuration space, we propose a two-phase search algo- rithm combining predictive models with constraint-aware pruning.",
+    "Hardware-Dependent Patterns: On memory-constrained hardware (RTX 4090), int4 quanti- zation is almost universally selected, combined with MQA attention for minimal memory footprint.",
+    "Quantization: Int4 quantization achieves the largest efficiency gains (up to 4×) but also shows higher variance in accuracy degradation.",
+    "11 23 24 25 26 27 28 LoRA Rank 40 50 60 70 80 Accuracy (%) Small (1B) Medium (7B) Large (70B) FP16 INT8 INT4 INT2 Precision (bits) 20 30 40 50 60 70 Accuracy (%) MMLU GSM8K HumanEval 0 5 10 15 20 25 30 Number of Experts 35 40 45 50 55 60 65 70 Accuracy (%) / Latency (ms) Accuracy Latency Memory 2 1 20 21 22 23 Alpha / Rank Ratio 66 67 68 69 70 Accuracy (%) Optimal LoRA RSLoRA 20 30 40 50 60 Memory (GB) Figure 4: Sensitivity of performance metrics to key hyperparameters.",
+    "Quantization Bits: Accuracy degrades gracefully from FP16 to INT8, with a steeper drop from INT8 to INT4.",
+    "However, the degradation is not uniform: some models (Mistral-7B) maintain accuracy better than others (LLaMA-2-7B) under INT4 quantization."
+   ],
+   "PARAM": [
+    "Ex- tensive experiments across 15 models (0.5B-70B parameters) and 10 diverse tasks demonstrate that AE-LLM achieves an average of 2.8× improvement in efficiency metrics while maintaining competitive accuracy (within 1.2% of baseline), compared to static efficiency configurations.",
+    "We conduct extensive experiments across 15 models (0.5B-70B parameters) and 10 diverse tasks, demonstrating that AE-LLM achieves significant efficiency im- provements (average 2.8× across multiple metrics) while maintaining competitive accuracy (within 1.2% of baseline)."
+   ],
+   "BENCH": [
+    "Multi-Query Attention (MQA) (Shazeer, 2019), Grouped-Query Attention (GQA) (Ainslie et al., 2023), and Multi- head Latent Attention (MLA) (DeepSeek-AI, 2024) all aim to optimize memory and perfor- mance.",
+    "Stage Category Sample Options / Parameters Architecture (Carch) Attention Type {MHA, MQA, GQA, MLA} MoE Config {Dense, Sparse-MoE (2/4/8 experts), Top-1/Top-2 rout- ing} Fine-Tuning (Cft) Method {Full, LoRA, QLoRA, DoRA, RSLoRA} Rank & Alpha Rank r ∈{8, 16, 32, 64, 128}, Alpha α ∈{r, 2r, 4r} Inference (Cinf) Quantization {FP16, FP8, INT8, INT4} via {GPTQ, AWQ, SmoothQuant} KV Cache {Full, MQA-style, GQA-style} 3.3 Efficient Search Algorithm To efficiently navigate the large configuration space, we propose a two-phase search algo- rithm combining predictive models with constraint-aware pruning.",
+    "We report accuracy (VQA score for VQAv2, CIDEr for COCO Caption, accuracy for TextVQA) and efficiency metrics.",
+    "Model Method Accuracy Lat. (ms) Mem. (GB) En. (J) VQAv2 Benchmark LLaVA-1.5-7B Default 78.5 85.2 18.5 1.25 EfficientLLM Rec.",
+    "126.8 98.5 14.2 1.38 AdaptiveEfficientLLM 127.5 75.2 10.8 1.02 TextVQA Benchmark LLaVA-1.5-7B Default 58.5 75.8 18.5 1.12 EfficientLLM Rec.",
+    "The optimal configurations for VLMs share similarities with those for LLMs (e.g., GQA attention, LoRA fine-tuning), but also exhibit modality-specific patterns (e.g., higher LoRA rank for vision modules).",
+    "Long-context tasks favor GQA with KV cache optimization for memory efficiency."
+   ]
+  }
+ },
+ {
+  "id": "2604.02710",
+  "title": "V2X-QA: A Comprehensive Reasoning Dataset and Benchmark for Multimodal Large Language Models in Autonomous Driving Across Ego, Infrastructure, and Cooperative Views",
+  "mark": "keep",
+  "chars": 91651,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 0,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 0,
+   "CMP": 0,
+   "BIT": 1,
+   "PARAM": 0,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [],
+   "BASE": [],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [],
+   "CMP": [],
+   "BIT": [
+    "The implementation uses 4-bit NF4 quantization with bfloat16 computation and FlashAttention-2 for efficient training and inference."
+   ],
+   "PARAM": [],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2608.17402",
+  "title": "MoE-ViE: Mixture of Experts Vision Encoder for Efficient Image and Video Understanding",
+  "mark": "keep",
+  "chars": 57578,
+  "counts": {
+   "SPEED": 2,
+   "FLOP": 1,
+   "LAT": 1,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 5,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 0,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 6
+  },
+  "sets": {
+   "HW": [
+    "CPU",
+    "H100"
+   ],
+   "BASE": [
+    "InternVL"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "AI2D",
+    "ChartQA",
+    "DocVQA",
+    "EgoSchema",
+    "MVBench",
+    "TextVQA",
+    "VideoMME"
+   ]
+  },
+  "evidence": {
+   "SPEED": [
+    "Our largest encoder achieves results comparable to the SOTA dense encoder PEcoreG, which is 1.7× larger. – Our MoE kernel provides > 2.5× speedup in inference latency.",
+    "As shown in Table 7, the MoE kernel provides > 2.5× speedup across different batch sizes compared to the vanilla implementation."
+   ],
+   "FLOP": [
+    "109 1010 1011 1012 1013 GFLOPs 100 ImageNet 1K Error ViT-B/32 dense ViT-B/16 dense ViT-L/14 dense ViT-B/32 MoE ViT-B/16 MoE ViT-L/14 MoE Fig."
+   ],
+   "LAT": [
+    "Activated Parameters Total Parameters Latency (ms) Model bsz =16 32 64 128 SigLIP2-g-opt/16 [75] 1.1B 1.1B 76.39 141.78 275.94 549.62 PEcoreG/14 [5] 1.9B 1.9B 101.21 188.76 366.23 708.62 MoE-ViE-H/14 (Vanilla Implementation) 1.1B 3.5B 318.76 448.93 740.84 1306.81 MoE-ViE-H/14 (Optimized Kernel) 1.1B 3.5B 82.59 145.82 276.87 544.96 12 B."
+   ],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "Optimized Kernel While MoE is theoretically compute-efficient, naive im- plementations (e.g., sequentially looping over experts in PyTorch) often under- utilize GPUs, mainly due to three factors: (1) fragmenting compute into many small general matrix multiply (GEMM) operations reduces arithmetic inten- sity; (2) dynamic routing introduces CPU–GPU synchronization to determine per-expert workloads, creating idle hardware “bubbles”; (3) larger intermediate tensors amplify HBM traffic, making memory bandwidth the latency bottleneck.",
+    "To realize MoE’s theoretical efficiency in practice, we implement a specialized Triton [74] kernel with two key optimizations: First, Grouped GEMM aggregates all expert matrix multiplications (MatMuls) into a single, unified GPU task, en- abling parallel processing across experts and eliminating repeated CPU–GPU handshakes.",
+    "The resulting CPU- GPU synchronization and kernel-launch overhead can dominate latency when each expert processes only a small number of tokens.",
+    "A jagged layout handles variable per-expert token counts without padding, and GPU-side Sort/CumSum replaces per-expert Where queries, removing the loop and CPU-GPU synchronization so the forward pass completes in only two kernel launches.",
+    "All of our benchmarking results on latency are conducted on a single H100 GPU."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": [
+    "Images AI2D [39] TextVQA [67] ChartQA [51] DocVQA [53] Info.",
+    "Video VideoMME [27] MVBench [44] EgoSchema [50] Avg.",
+    "Images AI2D [39] TextVQA [67] ChartQA [51] DocVQA [53] Info.",
+    "Video VideoMME [27] MVBench [44] EgoSchema [50] Avg.",
+    "Images AI2D [39] TextVQA [67] ChartQA [51] DocVQA [53] Info.",
+    "Video VideoMME [27] MVBench [44] EgoSchema [50] Avg."
+   ]
+  }
+ }
+]

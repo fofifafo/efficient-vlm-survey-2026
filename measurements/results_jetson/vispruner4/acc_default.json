@@ -1,0 +1,14 @@
+{
+ "method": "vispruner4",
+ "setting": "default",
+ "n": 500,
+ "gqa500_acc": 0.55,
+ "meta": {
+  "name": "VisPruner",
+  "setting": "default",
+  "visual_token_num": 128,
+  "important_ratio": 0.5,
+  "quant": "nf4-4bit (bnb)"
+ },
+ "max_new_tokens": 16
+}

@@ -1,0 +1,649 @@
+[
+ {
+  "id": "2401.02797",
+  "title": "PeFoMed: Parameter Efficient Fine-tuning of Multimodal Large Language Models for Medical Imaging",
+  "mark": "keep",
+  "chars": 45559,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 1,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 1,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 7,
+   "CMP": 0,
+   "BIT": 1,
+   "PARAM": 1,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [
+    "A40"
+   ],
+   "BASE": [
+    "LLaVA"
+   ],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [
+    "4.2 Implementation Details All experiments were carried out using Python 3.9 on 4 NVIDIA Tesla A40 GPUs, each with 48GB of GPU memory."
+   ],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "4.2 Implementation Details All experiments were carried out using Python 3.9 on 4 NVIDIA Tesla A40 GPUs, each with 48GB of GPU memory."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "This type of models, namely Multimodal Large Lan- guage Models (MLLMs) have been actively studied and the early attempts, such as Med-Flamingo [19] and LLaVA-Med [10] have shown the performance on various medical multimodal tasks.",
+    "Similarly, LLaVA-Med [10] fine-tuned the projec- tion layer and the entire LM on the GPT-4 generated instruction- tuning and downstream biomedical datasets.",
+    "LLaVA-Med [10] represents the first effort to adapt multimodal instruction tuning for the biomedical domain, implementing end-to-end training to develop biomedical multi- modal dialogue assistants, thereby achieving promising outcomes in medical image-text dialogue.",
+    "LLaVA-Med [10] employed token-based recall for open-ended questions, while exact-match accuracy for closed-ended ones.",
+    "For open-ended questions, our MLLM-based model achieved 62.6%, compared to non-LLM dedicated visual language models, such as M3AE (67.2%) [4] and MUMC (71.5%) [34] In com- parison, the early attempt to use LLM as answer decoders by the LLaVA-Med model series [10] achieved overall accuracy of 75.8%, specifically, 84.2% for closed-ended questions and 64.8% for open- ended questions.",
+    "It is important to note that LLaVA-Med measures accuracy for open-ended and closed-ended questions differently, i.e.",
+    "Besides, it is worth highlighting that with the adoption of parameter- efficient fine-tuning, our model featured notably fewer trainable parameters (56.63M) in comparison to LLaVA-Med (7B parameters), which made our method a significantly more efficient framework for fine-tuning MLLMs. b."
+   ],
+   "CMP": [],
+   "BIT": [
+    "Particularly in MRG tasks, where the generated content is rel- atively lengthy, using a binary rating may not be ideal."
+   ],
+   "PARAM": [
+    "Besides, it is worth highlighting that with the adoption of parameter- efficient fine-tuning, our model featured notably fewer trainable parameters (56.63M) in comparison to LLaVA-Med (7B parameters), which made our method a significantly more efficient framework for fine-tuning MLLMs. b."
+   ],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2402.09353",
+  "title": "DoRA: Weight-Decomposed Low-Rank Adaptation",
+  "mark": "star",
+  "chars": 45515,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 1,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 0,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 5,
+   "CMP": 0,
+   "BIT": 2,
+   "PARAM": 0,
+   "BENCH": 3
+  },
+  "sets": {
+   "HW": [],
+   "BASE": [
+    "LLaVA",
+    "LLaVA-1.5"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "GQA",
+    "MMBench",
+    "POPE",
+    "VQAv2"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [
+    "The results indicate that the modification leads to a training memory reduction of approximately 24.4% in fine-tuning LLaMA and 12.4% in VL-BART."
+   ],
+   "THR": [],
+   "TOK": [],
+   "HW": [],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "DoRA consistently outper- forms LoRA on fine-tuning LLaMA, LLaVA, and VL-BART on various downstream tasks, such as commonsense reasoning, visual instruc- tion tuning, and image/video-text understanding.",
+    "The experimental results show that DoRA consistently outper- forms LoRA without sacrificing inference efficiency, such as commonsense reasoning (+3.7/+1.0 on LLaMA-7B/13B, +2.9 on LLaMA2-7B, and +4.4 on LLaMA3-8B), visual in- struction tuning (+0.6 on LLaVA-7B), and image/video-text understanding (+0.9/+1.9 on VL-BART).",
+    "We compare DoRA with LoRA across multi-task image/video-text under- standing tasks using VL-BART and visual instruction tuning with LLaVA-1.5-7B.",
+    "Visual instruction tuning evaluation results for LLaVA- 1.5-7B on a wide range of seven vision-language tasks.",
+    "FT 100 66.5 LoRA 4.61 66.9 DoRA (Ours) 4.63 67.6 LLaVA-1.5-7B (Liu et al., 2023a) which is composed of a language model, Vicuna-1.5-7B (Peng et al., 2023), and a vision encoder, CLIP ViT-L/336px (Radford et al., 2021)."
+   ],
+   "CMP": [],
+   "BIT": [
+    "To further decrease the memory demands of finetuning, QLoRA (Dettmers et al., 2023) suggests quan- tizing the pretrained model to 4-bit and finetuning LoRA on top of the frozen low-bit backbone.",
+    "In addition to the fine-tuned models, they also reported results from zero-shot, few-shot, and FT with post-training quantization (PTQ), where the FT model is quantized to the BnB NF4 format after training."
+   ],
+   "PARAM": [],
+   "BENCH": [
+    "The multi-task evaluation results on VQA, GQA, NVLR2 and COCO Caption with the VL-BART backbone.",
+    "Method # Params (%) VQAv2 GQA NVLR2 COCO Cap Avg.",
+    "The fine-tuned models are then evaluated on seven vision- language benchmarks: VQAv2 (Goyal et al., 2017), GQA (Hudson & Manning, 2019), VisWiz (Gurari et al., 2018) SQA (Lu et al., 2022), VQAT (Singh et al., 2019), POPE (Li et al., 2023), and MMBench (Liu et al., 2023c)."
+   ]
+  }
+ },
+ {
+  "id": "2404.01959",
+  "title": "Bi-LORA: A Vision-Language Approach for Synthetic Image Detection",
+  "mark": "keep",
+  "chars": 62410,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 1,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 0,
+   "BIT": 8,
+   "PARAM": 0,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [
+    "CPU"
+   ],
+   "BASE": [
+    "BLIP2",
+    "Llava"
+   ],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "In our experiments, we leveraged the PyTorch deep learning framework on a Windows 11 Pro computer equipped with an NVIDIA RTX A4500 GPU with 16 GB and an Intel(R) i9-12950HX CPU."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "Prominent instances include CLIP [5], Flamingo [6], BLIP2 [7], Flava [8], Llava [9], SimVLM [10], Visual-BERT [11], InstructBLIP [12], and ViTGPT21.",
+    "Specifically, we label authentic images as ”true” and synthetic images as ”fake”, capitalizing on the text generation capabilities of VLMs (e.g., BLIP2) combined with low-rank adaptation (LORA) tuning strategy for memory effi- ciency and faster training.",
+    "Instead of binary classification, we emphasize the potential of using VLMs (e.g., BLIP2) to create informative captions indicating class membership.",
+    "Our approach reframes the binary classification task into an image captioning task, leveraging cutting-edge VLMs models (e.g., BLIP2).",
+    "LORA Tuning on Bi-LORA BLIP2 [7] is a method that improves vision-language align- ment using a querying transformer (Q-Former) as a bridge.",
+    "Figure 3 (right) provides a visual overview of fine-tuning the BLIP2 model using the LORA technique.",
+    "During fine-tuning, we keep the pretrained BLIP2 model weights (W) frozen and inject a pair of trainable rank decomposition matrices (A and B) into each self attention layer, enabling us to optimize and adapt these layers to our new detection task without incurring excessive computational overhead.",
+    "Specifically, the update of BLIP2 pre-trained weight matrix W is constrained by a low-rank decomposition W + ∆W = W + BA."
+   ],
+   "CMP": [],
+   "BIT": [
+    "The pivotal conceptual shift in our methodology revolves around reframing binary classification as an image captioning task, leveraging the distinctive capabilities of cutting-edge VLM, notably bootstrapping language image pre-training (BLIP)2.",
+    "To tackle this discrepancy, a seemingly direct approach is to train a binary classifier using CNNs or transformer-based models to distinguish diffusion-generated images from genuine ones.",
+    "To the best of our knowledge, this work pioneers the concept of treating binary classification as image captioning, harnessing cutting-edge VLMs.",
+    "Instead of binary classification, we emphasize the potential of using VLMs (e.g., BLIP2) to create informative captions indicating class membership.",
+    "Local features are extracted from these selected patches and integrated with the global representation using an attention-based module for final binary classification.",
+    "Our approach reframes the binary classification task into an image captioning task, leveraging cutting-edge VLMs models (e.g., BLIP2).",
+    "Synthetic Image Detection Synthetic image detection is generally a binary image classification task.",
+    "Instead of treating synthetic image detection as a traditional binary classification task, we will employ VLMs to generate descriptive captions for each im- age."
+   ],
+   "PARAM": [],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2404.04883",
+  "title": "Mixture of Low-rank Experts for Transferable AI-Generated Image Detection",
+  "mark": "keep",
+  "chars": 44995,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 0,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 0,
+   "CMP": 0,
+   "BIT": 2,
+   "PARAM": 1,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [],
+   "BASE": [],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [],
+   "CMP": [],
+   "BIT": [
+    "Using only binary cross-entropy loss Lbce can lead to severe load imbalance, where Wg collapses such that almost all the inputs are assigned to the same expert.",
+    "We also visualize the variation of binary cross-entropy loss during training for the variants (b), (d), and (e) in Figure 8 (Supplementary Ma- terial), which shows that integrating both shared and sepa- rate adapters contributes to the model converging towards a globally better optimum."
+   ],
+   "PARAM": [
+    "Besides, the training process is computa- tionally efficient and resource-friendly as only 0.08% of the parameters are optimized."
+   ],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2405.18541",
+  "title": "Low-Rank Few-Shot Adaptation of Vision-Language Models",
+  "mark": "keep",
+  "chars": 36317,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 1,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 0,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [
+    "A100"
+   ],
+   "BASE": [],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "Experiments were conducted on a single A100 80Gb with the original code pro- vided by the authors."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2406.11909",
+  "title": "Mixture-of-Subspaces in Low-Rank Adaptation",
+  "mark": "keep",
+  "chars": 31247,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 4,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 4,
+   "CMP": 0,
+   "BIT": 2,
+   "PARAM": 0,
+   "BENCH": 6
+  },
+  "sets": {
+   "HW": [
+    "A100",
+    "Nvidia A100"
+   ],
+   "BASE": [
+    "LLaVA",
+    "LLaVA-1.5"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "AI2D",
+    "GQA",
+    "MMBench",
+    "MME",
+    "MMbench",
+    "MathVista",
+    "POPE",
+    "TextVQA",
+    "VQAv2"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "Param denotes the number of trained parameters, Time for the training time on A100 GPU, and Mem for the GPU Memory usage. ∗denotes a larger rank in DoRA.",
+    "All the experiments are conducted using 1 Nvidia 80G A100 GPU.",
+    "It takes around 20 hours to fine-tune using 4 Nvidia A100 80G GPUs.",
+    "We train the model for 500 steps, which costs around 16 minutes using 1 80G A100 GPU."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "We perform experiments on various downstream tasks, including commonsense reasoning tasks fine- tuning LLaMA 3 (AI@Meta, 2024), visual instruc- tion tuning on LLaVA-1.5 (Liu et al., 2023a) series models, and subject-driven text-to-image genera- tion on Stable Diffusion XL (SDXL) model (Podell et al., 2023).",
+    "4.2 Visual Instruction Tuning To evaluate performance on multimodal tasks, we fine-tune the LLaVA-1.5 (Liu et al., 2023a) series models for visual instruction tuning, and then test the model for various visual QA benchmarks.",
+    "There are two stages in training LLaVA: 1) pre- train a two-layer MLP to project visual features to language space, and 2) optimize LLM and vi- sual encoder (optional) for visual instruction tun- ing.",
+    "3) mod- els and datasets: For visual-instruction tuning tasks, FLoRA fine-tunes LLaVA-1.5-7B (based on Vicuna-1.5-7B (Peng et al., 2023)) and evalu- ates on seven vision language benchmarks: VQAv2 (Goyal et al., 2019), GQA (Hudson and Manning, 2019), VisWiz (Gurari et al., 2018), SQA (Lu et al., 2022a), TextVQA (Singh et al., 2019), POPE (Li et al., 2023b), and MMBench (Liu et al., 2023b)."
+   ],
+   "CMP": [],
+   "BIT": [
+    "For InternLM2, we employ the 4-bit QLoRA on LoRA and MoSLoRA.",
+    "Moreover, MoSLoRA also outperforms LoRA when combined with the 4-bit QLoRA."
+   ],
+   "PARAM": [],
+   "BENCH": [
+    "MMBench SEED- AI2D SciQA Text Math MM- MME Avg.",
+    "After visual instruction tuning, we evaluate the trained model on 9 popular benchmarks, includ- ing MMBench EN/CN (Liu et al., 2023b), SEED Bench (Li et al., 2023a), AI2D (Kembhavi et al., 2016), SciQA (Lu et al., 2022b), TextVQA (Singh et al., 2019), MathVista testmini (Lu et al., 2023), MM-Vet (Yu et al., 2023), and MME (Fu et al., 2023).",
+    "Specifically, we scale the MME scores to 100 to calculate the average score.",
+    "More finegrained ability Moreover, we also vi- sualize the normalized scores on 6 ability dimen- sions in the MMbench EN/CN test set.",
+    "3) mod- els and datasets: For visual-instruction tuning tasks, FLoRA fine-tunes LLaVA-1.5-7B (based on Vicuna-1.5-7B (Peng et al., 2023)) and evalu- ates on seven vision language benchmarks: VQAv2 (Goyal et al., 2019), GQA (Hudson and Manning, 2019), VisWiz (Gurari et al., 2018), SQA (Lu et al., 2022a), TextVQA (Singh et al., 2019), POPE (Li et al., 2023b), and MMBench (Liu et al., 2023b).",
+    "Differently, We select LLaMA3 8B and InternLM2 as the language models and evaluate the fine-tuned models on MMBench EN/CN (Liu et al., 2023b), SEED Bench (Li et al., 2023a), AI2D (Kembhavi et al., 2016), SciQA (Lu et al., 2022b), TextVQA (Singh et al., 2019), MathVista testmini (Lu et al., 2023), MM-Vet (Yu et al., 2023), and MME (Fu et al., 2023)."
+   ]
+  }
+ },
+ {
+  "id": "2407.03056",
+  "title": "Improving Zero-shot Generalization of Learned Prompts via Unsupervised Knowledge Distillation",
+  "mark": "keep",
+  "chars": 40907,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 2,
+   "LAT": 0,
+   "MEM": 1,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 0,
+   "ACC": 0,
+   "FREE": 1,
+   "BASE": 0,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [],
+   "BASE": [],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [
+    "Lightweight CLIP models based on ResNet-50 and ViT-B/32 require about 18 and 14 GFLOPs for inference, respectively.",
+    "In contrast, more powerful models based on ViT-H/14 [10,18] require nearly 30× the computation at 381 GFLOPs [18] for inference."
+   ],
+   "LAT": [],
+   "MEM": [
+    "According to Ren et al. [46], CoOp requires nearly 15MB of VRAM per class, resulting in approximately 300GB of memory when Improving Learned Prompts via Unsupervised Knowledge Distillation 9 multiplied by 20K classes."
+   ],
+   "THR": [],
+   "TOK": [],
+   "HW": [],
+   "ACC": [],
+   "FREE": [
+    "For class agnostic settings we instead use the suffix +CA-KDPL to indicate that no training class names are used."
+   ],
+   "BASE": [],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2407.05342",
+  "title": "Mind the Interference: Retaining Pre-trained Knowledge in Parameter Efficient Continual Learning of Vision-Language Models",
+  "mark": "keep",
+  "chars": 41860,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 1,
+   "ACC": 0,
+   "FREE": 1,
+   "BASE": 0,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 1,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [
+    "NVIDIA 3090"
+   ],
+   "BASE": [],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "All experiments are conducted on one NVIDIA 3090 GPU."
+   ],
+   "ACC": [],
+   "FREE": [
+    "Its residual property facilitates knowledge acquisition and reduces noise, enhancing existing works plug-and-play."
+   ],
+   "BASE": [],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [
+    "Experiments show that DIKI surpasses the previous SOTA method with only 0.86% trainable parameters."
+   ],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2411.15232",
+  "title": "BiomedCoOp: Learning to Prompt for Biomedical Vision-Language Models",
+  "mark": "keep",
+  "chars": 36118,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 1,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 0,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [
+    "NVIDIA A100"
+   ],
+   "BASE": [],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "All experiments ran on a single NVIDIA A100 GPU (40GB RAM)."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2505.23271",
+  "title": "LADA: Scalable Label-Specific CLIP Adapter for Continual Learning",
+  "mark": "keep",
+  "chars": 39988,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 1,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 0,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [
+    "NVIDIA 4090"
+   ],
+   "BASE": [],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "All experiments of LADA are conducted on a single NVIDIA 4090 GPU."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2508.06202",
+  "title": "LoRA in LoRA: Towards Parameter-Efficient Architecture Expansion for Continual Visual Instruction Tuning",
+  "mark": "keep",
+  "chars": 32509,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 0,
+   "ACC": 0,
+   "FREE": 1,
+   "BASE": 5,
+   "CMP": 0,
+   "BIT": 1,
+   "PARAM": 0,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [],
+   "BASE": [
+    "LLaVA",
+    "Qwen2-VL"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "GQA",
+    "ScienceQA",
+    "TextVQA",
+    "VQAv2"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [],
+   "ACC": [],
+   "FREE": [
+    "However, real-world applications increasingly demand that MLLMs continually acquire new capabilities without retraining from scratch."
+   ],
+   "BASE": [
+    "CL-MoE Continual LLaVA (Cao et al.",
+    "Implementation Details We adopt the pre-trained first-stage LLaVA-v1.5-7B (Liu et al.",
+    "Methods AP ↑ MAP ↑ BWT ↑ MIF ↑ DirLoRA 67.55 74.14 0.00 93.81 SeqLoRA 45.41 53.39 -6.42 70.91 Eproj 58.87 61.21 -2.47 90.12 LiLoRA 64.63 68.30 -0.94 92.94 Table 5: The evaluation results (%) on Qwen2-VL-2B.",
+    "To validate the general- ization ability of our approach across various MLLMs, we further evaluate the performance of LiLoRA on Qwen2-VL- 2B (Wang et al.",
+    "As shown in Table 5, although Qwen2-VL exhibits a lower degree of forgetting compared to LLaVA, our method still achieves overall performance improvements over SeqLoRA and Eproj, approaching the performance of DirLoRA."
+   ],
+   "CMP": [],
+   "BIT": [
+    "MIF is defined as: MIFk = 1 k k X j=1 1 n n X i=1 Bj(oj i) ! , (11) where B() is a binary function that returns 1 if the model output oj i satisfies the instruction format of the j-th task, and 0 otherwise. n denotes the number of evaluation samples."
+   ],
+   "PARAM": [],
+   "BENCH": [
+    "Specifically, the benchmark consists of ScienceQA (Lu et al.",
+    "2022), TextVQA (Singh et al.",
+    "2009), GQA (Hudson and Manning 2019), and VQAv2 (Goyal et al.",
+    "After training on the last task, VQAv2, as shown in Table 1, LiLoRA consistently outperforms all baseline methods.",
+    "0 10 20 30 40 50 60 70 80 90 Layer Index 0.0 0.2 0.4 0.6 0.8 Fusion Values 0.51 (a) Fusion Coefficients Before Training 0 10 20 30 40 50 60 70 80 90 Layer Index 0.0 0.2 0.4 0.6 0.8 Fusion Values 0.48 (b) Fusion Coefficients After Training (Shared, Before) (Shared, After) Mean Figure 3: The vlaue of fusion coefficients before and after training on the ScienceQA dataset. (a) shows the initial dis- tribution of fusion values at each layer, while (b) presents the updated values after training. rank of the shared basis (r) and the task-specific matrices (˜r) influence the overall performance.",
+    "These results demon- strate the flexibility of LiLoRA in selecting rank configura- tions without significant performance degradation, making ScienceQA TextVQA Flickr30k ImageNet GQA VQAv2 30 40 50 60 70 80 90 Accuracy (a) Accuracy on ScienceQA Across Tasks TextVQA Flickr30k ImageNet GQA VQAv2 0 10 20 30 40 50 60 70 (b) Accuracy on TextVQA Across Tasks SeqLoRA DoRA Eproj SMoLoRA Ours Figure 4: Accuracy (%) variations curves of ScienceQA and TextVQA during CVIT across sequential tasks.",
+    "3 illustrates the distributions of fu- sion coefficients across different layers for the ScienceQA datasets, both before and after training.",
+    "To comprehensively evaluate LiLoRA’s performance during CVIT, we analyze the task ac- curacy trends by plotting the representative accuracy curves for two datasets: ScienceQA and TextVQA."
+   ]
+  }
+ }
+]

@@ -1,0 +1,76 @@
+{
+ "n": 500,
+ "ttft_ms_median": 492.3078545034514,
+ "ttft_ms_p90": 1112.0238380026422,
+ "total_ms_median": 551.9044460015721,
+ "peak_vram_gb": 13.979635238647461,
+ "energy_j_per_sample": 75.45745975164283,
+ "mean_power_w": 94.41056171126871,
+ "n_vis_tokens": 128.0,
+ "method": "cdpruner",
+ "setting": "default",
+ "meta": {
+  "name": "CDPruner",
+  "setting": "default",
+  "visual_token_num": 128
+ },
+ "gpu": "NVIDIA GeForce RTX 5080",
+ "torch": "2.11.0+cu128",
+ "runs": [
+  {
+   "run": 0,
+   "n": 495,
+   "ttft_ms_median": 494.74239599658176,
+   "ttft_ms_p90": 1081.951496998954,
+   "total_ms_median": 551.9044460015721,
+   "peak_vram_gb": 13.979635238647461,
+   "energy_j_per_sample": 75.90615340860813,
+   "mean_power_w": 93.85397912663285,
+   "n_vis_tokens": 128
+  },
+  {
+   "run": 1,
+   "n": 500,
+   "ttft_ms_median": 492.3078545034514,
+   "ttft_ms_p90": 1074.654752999777,
+   "total_ms_median": 551.8586670004879,
+   "peak_vram_gb": 13.979635238647461,
+   "energy_j_per_sample": 75.1046999758718,
+   "mean_power_w": 94.47298959460052,
+   "n_vis_tokens": 128.0
+  },
+  {
+   "run": 2,
+   "n": 500,
+   "ttft_ms_median": 481.0569459987164,
+   "ttft_ms_p90": 1112.0238380026422,
+   "total_ms_median": 536.0464639998099,
+   "peak_vram_gb": 13.979635238647461,
+   "energy_j_per_sample": 75.11955623530916,
+   "mean_power_w": 94.41056171126871,
+   "n_vis_tokens": 128.0
+  },
+  {
+   "run": 3,
+   "n": 500,
+   "ttft_ms_median": 485.08474900154397,
+   "ttft_ms_p90": 1123.487141005171,
+   "total_ms_median": 554.4853065002826,
+   "peak_vram_gb": 13.979635238647461,
+   "energy_j_per_sample": 75.45745975164283,
+   "mean_power_w": 94.46731066808235,
+   "n_vis_tokens": 128.0
+  },
+  {
+   "run": 4,
+   "n": 500,
+   "ttft_ms_median": 642.5778465018084,
+   "ttft_ms_p90": 1253.5720539963222,
+   "total_ms_median": 681.7157189980207,
+   "peak_vram_gb": 13.979635238647461,
+   "energy_j_per_sample": 78.24257243875108,
+   "mean_power_w": 93.81463037677953,
+   "n_vis_tokens": 128.0
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "n": 15,
+ "ttft_ms_median": 6380.716708001273,
+ "ttft_ms_p90": 6555.695840997942,
+ "total_ms_median": 6443.825532001938,
+ "peak_vram_gb": 17.576720714569092,
+ "energy_j_per_sample": 666.6082472075935,
+ "mean_power_w": 76.19569349771623,
+ "n_vis_tokens": 192,
+ "method": "sparsevlm",
+ "setting": "default",
+ "meta": {
+  "name": "SparseVLM",
+  "setting": "default",
+  "retain_tokens": 192,
+  "version": "1_0"
+ },
+ "gpu": "NVIDIA GeForce RTX 5080",
+ "torch": "2.11.0+cu128",
+ "runs": [
+  {
+   "run": 0,
+   "n": 15,
+   "ttft_ms_median": 6380.716708001273,
+   "ttft_ms_p90": 6555.695840997942,
+   "total_ms_median": 6443.825532001938,
+   "peak_vram_gb": 17.576720714569092,
+   "energy_j_per_sample": 666.6082472075935,
+   "mean_power_w": 76.19569349771623,
+   "n_vis_tokens": 192
+  }
+ ]
+}

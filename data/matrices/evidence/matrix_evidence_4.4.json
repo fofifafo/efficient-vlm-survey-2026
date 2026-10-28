@@ -1,0 +1,1950 @@
+[
+ {
+  "id": "2403.06764",
+  "title": "An Image is Worth 1/2 Tokens After Layer 2: Plug-and-Play Inference Acceleration for Large Vision-Language Models",
+  "mark": "keep",
+  "chars": 37037,
+  "counts": {
+   "SPEED": 1,
+   "FLOP": 4,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 3,
+   "HW": 1,
+   "ACC": 0,
+   "FREE": 4,
+   "BASE": 8,
+   "CMP": 8,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "A40"
+   ],
+   "BASE": [
+    "LLAVA",
+    "LLaVA",
+    "LLaVA-1.5",
+    "Qwen-VL",
+    "Video-LLaVA"
+   ],
+   "CMP": [
+    "FastV"
+   ],
+   "BENCH": [
+    "MME",
+    "MMMU",
+    "MSRVTT",
+    "MSVD",
+    "SeedBench"
+   ]
+  },
+  "evidence": {
+   "SPEED": [
+    "Our evaluations demonstrate FastV’s ability to dramatically reduce computational costs (e.g., a 45% reduction in FLOPs for LLaVA-1.5- 13B) without sacrificing performance in a wide range of image and video understanding tasks."
+   ],
+   "FLOP": [
+    "We can see that FastV can achieve 45% FLOPs reduction with nearly no performance loss for different models. †Corresponding author.",
+    "Transformer Block K Transformer Block K+1 FastV Re-rank & Filtering R% Image Tokens Transformer Block K+2 … 8s Text Tokens No FastV 100% FLOPs FastV(K=2, R=50%) 52% FLOPs FastV(K=2, R=75%) 33% FLOPs FastV(K=5, R=75%) 38% FLOPs The video is funny because the baby is trying to read a book while sitting on the bed, and he is pointing to different parts of the book.",
+    "0.0 0.25 0.5 0.75 1.0 R Values 0 5 10 15 20 25 30 K Values 0.0 0.2 0.4 0.6 0.8 FLOPs reduction ratio Figure 6: The heat map of theoretical FLOPs reduction ratio.",
+    "The results indicate that FastV (K=2, R=50%) could achieve about 45% FLOPs reduction for different LVLMs without sacrificing the performance."
+   ],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [
+    "For instance, LLAVA process 336x336 images into 576 tokens Liu et al. (2023b) and process images with a greater resolution of 672x672 into 2304 tokens Liu et al. (2024b).",
+    "Fuyu Bavishi et al. (2023), in a similar vein, translates pixel-level images of 1080x1080 into 1296 tokens.",
+    "Model Nocaps Flickr30k A-OKVQA MMMU LLaVA1.5-7B (Retrained) 100.3 70.2 78.5 34.5 (a) w/ Train with 50% image tokens 98.5 68.5 76.8 33.5 (b) w/ FastV (K=2, R=50%) 100.1 70 78.4 34.6 (c) w/ FastV (K=2, R=50%, Random) 99.5 68.3 78.2 34.2 (d) w/ FastV (system prompt) 89.2 64.3 69.2 33.8 (e) w/ FastV (prune first half system prompt) 17.5 27.8 Failed Failed (f) w/ FastV (instruction) 77.3 50.1 56.5 29.5 (g) w/ StreamingLLM Xiao et al. (2023) 13.2 21.4 Failed Failed on different LVLM benchmarks with competitive performance."
+   ],
+   "HW": [
+    "The latency experiments are conducted on single A40 GPU."
+   ],
+   "ACC": [],
+   "FREE": [
+    "FastV An Image is Worth 1/2 Tokens After Layer 2: Plug-and-PLay Acceleration for VLLM Inference Liang Chen1, Haozhe Zhao1, Tianyu Liu2†, Shuang Bai2, Junyang Lin2 Chang Zhou2, Baobao Chang1† 1National Key Laboratory for Multimedia Information Processing, Peking University 2Alibaba Group [email removed] Abstract In this study, we identify the inefficient attention phenomena in Large Vision-Language Models (LVLMs), notably within prominent models like LLaVA-1.5, QwenVL-Chat, and Video-LLaVA.",
+    "Propose FastV, a plug-and-play method to significantly reduce inference cost for LVLMs without sacrificing performance inspired by our observation.",
+    "FastV is plug-and-play to different token-based LVLMs for various vision language tasks without the need of training the model.",
+    "6 Conclusion In this paper, we propose FastV, a plug-and-play inference cost optimization method for Large Vision-Language Models."
+   ],
+   "BASE": [
+    "FastV An Image is Worth 1/2 Tokens After Layer 2: Plug-and-PLay Acceleration for VLLM Inference Liang Chen1, Haozhe Zhao1, Tianyu Liu2†, Shuang Bai2, Junyang Lin2 Chang Zhou2, Baobao Chang1† 1National Key Laboratory for Multimedia Information Processing, Peking University 2Alibaba Group [email removed] Abstract In this study, we identify the inefficient attention phenomena in Large Vision-Language Models (LVLMs), notably within prominent models like LLaVA-1.5, QwenVL-Chat, and Video-LLaVA.",
+    "Our evaluations demonstrate FastV’s ability to dramatically reduce computational costs (e.g., a 45% reduction in FLOPs for LLaVA-1.5- 13B) without sacrificing performance in a wide range of image and video understanding tasks.",
+    "Specifically, the image tokens receive strikingly lower attention scores compared to their textual counterparts within the token-based LVLMs like LLaVA.",
+    "In the image captioning tasks, we observed that within the deep layers (after layer 2) of renowned LVLMs such as LLaVA 1.5, image tokens garner an average attention score that amounts to only 0.21% of the score attributed to system prompts.",
+    "As a result, FastV achieves a great theoretical reduction in FLOPs while maintaining relatively high performance as shown in Figure 1’s experiment on LLaVA and Qwen-VL-Chat models.",
+    "Our latency test experiment on A-OKVQA showed that LLaVA-13B model with FastV could achieve a lower latency than LLaVA-7B model while maintaining superior performance.",
+    "For instance, LLAVA process 336x336 images into 576 tokens Liu et al. (2023b) and process images with a greater resolution of 672x672 into 2304 tokens Liu et al. (2024b).",
+    "Methods AI2Diagram ↑ SciQA-IMG ↑ SeedBench ↑ MMVet↑ MME ↑ LLaVA-1.5-13B 59.45 72.99 68.23 30.55 1827.75 + FastV (K=2,R=50%) 58.96 73.23 68.03 31.25 1849.68 InstructBLIP-Vicuna-13B 45.46 61.15 52.11 24.19 1143.5 + FastV (K=2,R=50%) 43.12 61.23 50.41 22.15 1129.8 + FastV (K=5,R=50%) 44.39 62.33 51.69 23.51 1140.5 Table 3: Fine-grained results on MME benchmark."
+   ],
+   "CMP": [
+    "FastV An Image is Worth 1/2 Tokens After Layer 2: Plug-and-PLay Acceleration for VLLM Inference Liang Chen1, Haozhe Zhao1, Tianyu Liu2†, Shuang Bai2, Junyang Lin2 Chang Zhou2, Baobao Chang1† 1National Key Laboratory for Multimedia Information Processing, Peking University 2Alibaba Group [email removed] Abstract In this study, we identify the inefficient attention phenomena in Large Vision-Language Models (LVLMs), notably within prominent models like LLaVA-1.5, QwenVL-Chat, and Video-LLaVA.",
+    "To this end, we introduce FastV, a versatile plug-and- play method designed to optimize computational efficiency by learning adaptive attention patterns in early layers and pruning visual tokens in sub- sequent ones.",
+    "Our evaluations demonstrate FastV’s ability to dramatically reduce computational costs (e.g., a 45% reduction in FLOPs for LLaVA-1.5- 13B) without sacrificing performance in a wide range of image and video understanding tasks.",
+    "The computational efficiency and performance trade- off of FastV are highly customizable and Pareto-efficient.",
+    "We believe FastV has practical value for the deployment of LVLMs in edge devices and commercial models.",
+    "Code is released at github.com/pkunlp- icler/FastV.",
+    "Figure 1: The Efficiency/Performance trade-off curve of FastV.",
+    "The x-axis stands for the theoretical FLOPs reduction ratio under different FastV configurations."
+   ],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": [
+    "The y-axis stands for performance under different settings, we report the average scores of {Nocaps (Cider), Flickr30k (Cider), A-OKVQA (Acc), MMMU (Acc)}.",
+    "3.2 Experiment Settings To explore how LVLMs process image tokens, we first randomly sample N image-text pairs D = {(d1, t1), ..., (dN, tN)} from a combination of vision langauge tasks including image caption (Flickr30K), embodied reasoning (PCA-Bench), visual question answering (A-OKVQA), multimodal understanding and reasoning (MMMU) and then prompt the LVLM to generate N responses ˆY = { ˆy1, ..., ˆyN}.",
+    "Methods AI2Diagram ↑ SciQA-IMG ↑ SeedBench ↑ MMVet↑ MME ↑ LLaVA-1.5-13B 59.45 72.99 68.23 30.55 1827.75 + FastV (K=2,R=50%) 58.96 73.23 68.03 31.25 1849.68 InstructBLIP-Vicuna-13B 45.46 61.15 52.11 24.19 1143.5 + FastV (K=2,R=50%) 43.12 61.23 50.41 22.15 1129.8 + FastV (K=5,R=50%) 44.39 62.33 51.69 23.51 1140.5 Table 3: Fine-grained results on MME benchmark.",
+    "Total LLaVA-1.5-13B 185.00 155.00 133.33 170.00 125.00 160.72 152.54 161.25 170.50 118.50 128.41 42.50 77.50 47.50 1827.75 + FastV (K=2,R=50%) 185.00 155.00 133.33 175.00 132.50 159.77 153.15 161.75 168.25 117.00 126.43 42.50 82.50 57.50 1849.68 5 Experiment 5.1 Evaluation Tasks We conduct a wide range of evaluation including image captioning, VQA, multimodal reasoning, video QA and fine-grained benchmarks like MME Fu et al. (2023) to examine the influence of FastV on the performance of LVLMs.",
+    "The performance on tasks under different FastV settings are shown in Table 1 (Nocaps, Flickr30k, A-OKVQA, MMMU) and Table 5 (PCA-Bench, OCR-VQA).",
+    "The results of FastV on different video question answering tasks in shown in table 6 (TGIF, MSVD, MSRVTT).",
+    "Fine-grained Benchmarks and More Models We conduct additional experiments with InstructBLIP and also with more fine-grained LVLM benchmarks such as SciQA-IMGLu et al. (2022), SeedBench Li et al. (2023a), MMVet Yu et al. (2023), and MME Fu et al. (2023), together with benchmarks requiring more visual processing such as AI2Diagram.",
+    "The results and fine-grained scores of MME are shown in Table 2 and Table 3."
+   ]
+  }
+ },
+ {
+  "id": "2403.18293",
+  "title": "Efficient Test-Time Adaptation of Vision-Language Models",
+  "mark": "keep",
+  "chars": 37743,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 2,
+   "ACC": 0,
+   "FREE": 8,
+   "BASE": 0,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [
+    "RTX 6000"
+   ],
+   "BASE": [],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "All the experiments are conducted using a single NVIDIA Quadro RTX 6000 GPU.",
+    "This evaluation is performed on the ImageNet validation dataset, which consists of 50,000 images, us- ing a single NVIDIA Quadro RTX 6000 GPU."
+   ],
+   "ACC": [],
+   "FREE": [
+    "We design TDA, a training-free dynamic adapter that enables effective and efficient test- time adaptation with vision-language models.",
+    "Backpropagation Learnable Prompt + Image Encoder Text Encoder Selection Augmented Test Images CLIP Predictions Prediction Cat Panda Dog Class Bird (a) Test-time Prompt Tuning [9, 35] + Image Encoder Text Encoder Test Image Adapted Prediction CLIP Prediction Values Dynamic Adapter Keys Update Cat Panda Dog Class Bird Hand-crafted Prompt (b) Training-free Dynamic Adapter (Ours) Figure 1.",
+    "Comparison of our proposed Training-free Dynamic Adapter (TDA) with Test-time Prompt Tuning TPT [35] and its enhancement DiffTPT [9]: both TPT and DiffTPT require signif- icant computational resources to optimize the learnable prompt via backpropagation; TDA is a dynamic cache that is training- free without any backpropagation, making it efficient for test-time adaptation in various real-world scenarios. with the CLIP training images.",
+    "We design a training-free dynamic adapter (TDA) that allows efficient and effective test-time adaptation of vision- language models without requiring any backpropagation in test time.",
+    "First, we design a training-free dynamic adapter (TDA) that can achieve test-time adaptation of vision-language models efficiently and effectively.",
+    "Tip-Adapter [48] provides a training-free solution that uses a key-value cache model and integrates knowledge from the pre-trained CLIP model with few-shot labeled samples.",
+    "Training-free Dynamic Adapter During testing, pre-trained vision-language models like CLIP may encounter distribution shifts that degrade the classification performance.",
+    "Inspired by the concept of Tip- Adapter, we propose a training-free dynamic adapter (TDA) to enable efficient and effective test-time adaptation with CLIP."
+   ],
+   "BASE": [],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2406.18139",
+  "title": "LOOK-M: Look-Once Optimization in KV Cache for Efficient Multimodal Long-Context Inference",
+  "mark": "keep",
+  "chars": 32032,
+  "counts": {
+   "SPEED": 1,
+   "FLOP": 0,
+   "LAT": 1,
+   "MEM": 5,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 2,
+   "ACC": 0,
+   "FREE": 1,
+   "BASE": 8,
+   "CMP": 8,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [
+    "NVIDIA A100",
+    "RTX 3090"
+   ],
+   "BASE": [
+    "InternVL",
+    "LLaVA"
+   ],
+   "CMP": [
+    "FastV",
+    "LLaVA-Prumerge",
+    "LOOK-M",
+    "Prumerge"
+   ],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [
+    "LOOK-M demonstrates that with a significant reduction in KV Cache memory usage, such as reducing it by 80% in some cases, it not only achieves up to 1.5x faster decoding but also maintains or even enhances performance across a variety of long context multimodal tasks."
+   ],
+   "FLOP": [],
+   "LAT": [
+    "Method Budge Decoding Latency GPU Memory Full Cache 100% 28.16 ms/token 1.52 GiB LOOK-M 20% 20.98 ms/token 0.32 GiB LOOK-M 5% 18.22 ms/token 0.13 GiB As we can observe from Table 4, the decoding latency of our compressed model is significantly lower than that of the model retaining the full cache, with the advantage becoming more pronounced in the generation of long texts."
+   ],
+   "MEM": [
+    "LOOK-M demonstrates that with a significant reduction in KV Cache memory usage, such as reducing it by 80% in some cases, it not only achieves up to 1.5x faster decoding but also maintains or even enhances performance across a variety of long context multimodal tasks.",
+    "Compared to baselines, LOOK-M achieves minimal performance drop with a fixed KV cache budget and improves the model inference decoding latency by 1.3x to 1.5x and re- duces KV Cache memory footprint by 80% to 95% while still maintaining performance on long con- text multimodal tasks, and even showing improved performance across various tasks.",
+    "As depicted in Figure 5, LOOK-M approaches Full Cache performance even with an extreme KV cache compression of 5%, especially using the text- prior pivotal merging strategy.",
+    "Method Budge Decoding Latency GPU Memory Full Cache 100% 28.16 ms/token 1.52 GiB LOOK-M 20% 20.98 ms/token 0.32 GiB LOOK-M 5% 18.22 ms/token 0.13 GiB As we can observe from Table 4, the decoding latency of our compressed model is significantly lower than that of the model retaining the full cache, with the advantage becoming more pronounced in the generation of long texts.",
+    "Additionally, we analyzed the speed and GPU memory usage of the KV Cache under two budget scenarios: 20% and 5%, based on the mean values from the inference process of 20 ran- domly sampled data points (as illustrated in Table 4, Our findings indicate that the average GPU mem- ory consumption is nearly proportional to the cache budget."
+   ],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "4.3 Implementation Details We conducted experiments on NVIDIA A100 (80GB) and RTX 3090 (24GB) GPUs, employing nine variants of our method to compress the KV Cache of LLaVA-v1.5-7B/13B on ten tasks from MileBench.",
+    "Additionally, the speed tests were performed using RTX 3090 × 1."
+   ],
+   "ACC": [],
+   "FREE": [
+    "FastV (Chen et al., 2024) introduces a versatile plug-and-play method that optimizes computational efficiency through adaptive atten- tion patterns in early layers and visual token prun- ing in later stages, achieving up to a 45% reduc- tion in computational costs while preserving perfor- mance."
+   ],
+   "BASE": [
+    "We evaluate our LOOK-M with several strategies over four recent MLLM backbones LLaVA-v1.5-7B/13B (Liu et al., 2023), MobileVLM-v2 (Chu et al., 2024a) and InternVL- v1.5 (Chen et al., 2023) across several multimodal long-context tasks from MileBench (Song et al., 2024): temporal multi-image tasks, semantic multi- image tasks, needle in a haystack task, and image retrieval tasks, respectively.",
+    "Classical works in this category, including MobileVLM (Chu et al., 2024b), LLaVA- Prumerge (Shang et al., 2024), MADTP (Cao et al., 2024), and FastV (Chen et al., 2024), focus on reducing the number of image tokens, which con- stitute the majority of total tokens.",
+    "LLaVA-Prumerge (Shang et al., 2024) and MADTP (Cao et al., 2024) introduce adaptive ap- proaches to visual token reduction, effectively de- creasing their count while maintaining model per- formance.",
+    "5 Table 1: Performance metrics of various KV Cache Strategy on LLaVA-v1.5-7B/13B on MileBench’s tasks with recent ratio α1 = 0.1 and important ratio α2 = 0.1.",
+    "4.3 Implementation Details We conducted experiments on NVIDIA A100 (80GB) and RTX 3090 (24GB) GPUs, employing nine variants of our method to compress the KV Cache of LLaVA-v1.5-7B/13B on ten tasks from MileBench.",
+    "5 Experiment Results In this section, we present experimental results demonstrating the effectiveness of our LOOK-M strategy for KV cache optimization on the LLaVA- v1.5-7B and 13B (Liu et al., 2023), InternVL- v1.5-7B (Chen et al., 2023), and MobileVLM_V2- 3B (Chu et al., 2024b) models.",
+    "5.1 Main Results on MileBench We evaluate the LOOK-M model on the LLaVA- v1.5 7B and 13B using MileBench, as shown in Table 1.",
+    "Table 2: Performance on InternVL-v1.5-7B."
+   ],
+   "CMP": [
+    "LOOK-M: Look-Once Optimization in KV Cache for Efficient Multimodal Long-Context Inference Zhongwei Wan1†*, Ziang Wu2†, Che Liu3, Jinfa Huang2, Zhihong Zhu2, Peng Jin2, Longyue Wang4‡, Li Yuan2‡ 1The Ohio State University 2Peking University 3Imperial College London 4Tencent AI Lab [email removed], [email removed], [email removed] {jinfahuang, jp21, zhihongzhu}@stu.pku.edu.cn, [email removed] [email removed] Code: https://github.com/SUSTechBruce/LOOK-M.",
+    "In this work, we introduce LOOK-M, a pioneering, fine-tuning-free approach that ef- ficiently reduces the multimodal KV cache size while maintaining performance comparable to a full cache.",
+    "LOOK-M demonstrates that with a significant reduction in KV Cache memory usage, such as reducing it by 80% in some cases, it not only achieves up to 1.5x faster decoding but also maintains or even enhances performance across a variety of long context multimodal tasks.",
+    "In this paper, we introduce LOOK-M, a pio- neering and efficient framework that marks the first effort to compress KV caches specifically for mul- timodal long-context scenarios.",
+    "LOOK-M utilizes a text-prior technique that prioritizes the retention of textual KV pairs dur- ing the prompt encoding phase, given the insight from Figure 2.",
+    "Remarkably, LOOK-M does not require any fine-tuning and can be applied in a plug-and- play manner with a look-once KV cache com- pression strategy.",
+    "We evaluate our LOOK-M with several strategies over four recent MLLM backbones LLaVA-v1.5-7B/13B (Liu et al., 2023), MobileVLM-v2 (Chu et al., 2024a) and InternVL- v1.5 (Chen et al., 2023) across several multimodal long-context tasks from MileBench (Song et al., 2024): temporal multi-image tasks, semantic multi- image tasks, needle in a haystack task, and image retrieval tasks, respectively.",
+    "Compared to baselines, LOOK-M achieves minimal performance drop with a fixed KV cache budget and improves the model inference decoding latency by 1.3x to 1.5x and re- duces KV Cache memory footprint by 80% to 95% while still maintaining performance on long con- text multimodal tasks, and even showing improved performance across various tasks."
+   ],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2409.10197",
+  "title": "Fit and Prune: Fast and Training-free Visual Token Pruning for Multi-modal Large Language Models",
+  "mark": "keep",
+  "chars": 34583,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 4,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 2,
+   "HW": 1,
+   "ACC": 2,
+   "FREE": 6,
+   "BASE": 8,
+   "CMP": 8,
+   "BIT": 7,
+   "PARAM": 0,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "A100"
+   ],
+   "BASE": [
+    "LLaVA",
+    "LLaVA-1.5",
+    "LLaVA-NEXT"
+   ],
+   "CMP": [
+    "FastV",
+    "FitPrune",
+    "ToMe"
+   ],
+   "BENCH": [
+    "GQA",
+    "MMBench",
+    "MME",
+    "POPE",
+    "ScienceQA",
+    "TextVQA",
+    "VQAv2",
+    "VizWiz",
+    "Vizwiz"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [
+    "The experi- mental results show that our FitPrune can not only reduce the computational complexity to a large extent, while retain- ing high performance, e.g., -54.9% FLOPs for LLaVA-NEXT with only 0.5% accuracy drop.",
+    "2023d) for diverse percep- tion and reasoning tasks, MMBenchCN for Chinese language 20 30 40 50 60 FLOPs Reduction (%) 75 77 79 Test Accuracy (%) baseline FitPrune FastV ToMe (a) VQAv2 20 30 40 50 60 FLOPs Reduction (%) 56 58 60 62 Test Accuracy (%) baseline FitPrune FastV ToMe (b) GQA 15 25 35 45 55 FLOPs Reduction (%) 54 56 58 Test Accuracy (%) baseline FitPrune FastV ToMe (c) TextVQA Figure 5: Performance comparison of FitPrune and other pruning methods on the LLaVA-1.5 7B w.r.t different pruning ratios.",
+    "For instance, when decreasing 40% FLOPs from visual tokens in statistic, FitPrune decreases computation overhead by 33.2% on average without dropping perfor- mance.",
+    "When defining a pruning ratio of 60% FLOPs, our FitPrune reduces the overall computation overhead of LLaVA-NEXT by 55%, with only 0.3% drop for VQAv2."
+   ],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [
+    "For in- stance, dropping about 75% tokens at the 28-th layer will not result in performance loss.",
+    "For in- stance, pruning 50% tokens after the 4-th layer results in a 3.2% performance drop."
+   ],
+   "HW": [
+    "Our experiments are conducted on a single A100 40G GPU."
+   ],
+   "ACC": [
+    "For example, with a 20% pruning ratio on the GQA dataset, ToMe experiences only a 0.2% performance drop, and FastV shows a 0.4% reduction, while FitPrune maintains its performance without any degradation.",
+    "For instance, when the pruning ratio is 80%, the average divergence of the self-attention and cross-attention distributions compared to the original distributions reaches approximately 27%, leading to a performance drop of 3.6%."
+   ],
+   "FREE": [
+    "Fit and Prune: Fast and Training-free Visual Token Pruning for Multi-modal Large Language Models Weihao Ye12, Qiong Wu12, Wenhao Lin12, Yiyi Zhou12* 1Key Laboratory of Multimedia Trusted Perception and Efficient Computing, Ministry of Education of China, Xiamen University, 361005, P.R.",
+    "In this paper, we propose a novel and training-free approach for the effective visual token prun- ing of MLLMs, termed FitPrune, which can quickly produce a complete pruning recipe for MLLMs according to a pre- defined budget.",
+    "To this end, we question that “Can we find a solution that can directly determine the optimal pruning recipe for MLLMs?” To approach this target, we propose an effective and training-free pruning method for MLLMs, termed Fit and Prune (FitPrune).",
+    "Some recent approaches explore training-free token pruning (Fayyaz et al.",
+    "In this paper, we focus on a training-free and cost-effective method to quickly determine the pruning recipe based on the predefined target.",
+    "Method In this paper, we propose a novel and training-free method towards fast and effective visual token pruning of multi- modal large language models (MLLMs), termed fit-and- prune (FitPrune)."
+   ],
+   "BASE": [
+    "To vali- date FitPrune, we apply it to a set of recent MLLMs, includ- ing LLaVA-1.5, LLaVA-HR and LLaVA-NEXT, and conduct extensive experiments on a set of benchmarks.",
+    "The experi- mental results show that our FitPrune can not only reduce the computational complexity to a large extent, while retain- ing high performance, e.g., -54.9% FLOPs for LLaVA-NEXT with only 0.5% accuracy drop.",
+    "Question: what is the ship’s serial number? cross attention map (Layer 12) self attention map (Layer 12) Question: Is there a dog in the image? cross attention map (Layer 11) self attention map (Layer 11) Figure 1: Visualization of the cross and self attention of im- age tokens of LLaVA-1.5 7B (Liu et al.",
+    "For instance, LLaVA (Liu et al.",
+    "1, the attention from image to text at the 12-th layer (32 in total) of LLaVA becomes very fo- cused, indicating that only a small number of visual tokens engage in multimodal reasoning.",
+    "To validate FitPrune, we apply it to a set of advanced MLLMs, including LLaVA-1.5 (Liu et al.",
+    "2023b), LLaVA- HR (Luo et al.",
+    "2024) and LLaVA-NEXT (Liu et al."
+   ],
+   "CMP": [
+    "In this paper, we propose a novel and training-free approach for the effective visual token prun- ing of MLLMs, termed FitPrune, which can quickly produce a complete pruning recipe for MLLMs according to a pre- defined budget.",
+    "Specifically, FitPrune considers token prun- ing as a statistical problem of MLLM and its objective is to find out an optimal pruning scheme that can minimize the di- vergence of the attention distributions before and after prun- ing.",
+    "In practice, FitPrune can be quickly accomplished based on the attention statistics from a small batch of inference data, avoiding the expensive trials of MLLMs.",
+    "To vali- date FitPrune, we apply it to a set of recent MLLMs, includ- ing LLaVA-1.5, LLaVA-HR and LLaVA-NEXT, and conduct extensive experiments on a set of benchmarks.",
+    "The experi- mental results show that our FitPrune can not only reduce the computational complexity to a large extent, while retain- ing high performance, e.g., -54.9% FLOPs for LLaVA-NEXT with only 0.5% accuracy drop.",
+    "Our code is available at https://github.com/ywh187/FitPrune.",
+    "In this paper, our FitPrune will consider the fitting of both cross- and self-attentions. formance.",
+    "To this end, we question that “Can we find a solution that can directly determine the optimal pruning recipe for MLLMs?” To approach this target, we propose an effective and training-free pruning method for MLLMs, termed Fit and Prune (FitPrune)."
+   ],
+   "BIT": [
+    "In this case, the final pruning strategy P can be denoted by P = [t∗ 1, t∗ 2, · · · , t∗ K]. (6) Lastly, the optimization of FitPrune in Eq.1 can be refor- mulated as arg min P [d(DS, D′ S) + d(DC, D′ C)] , s.t. Φ (G, P)) ≤δ. (7) To accomplish the objective of Eq.7, we adopt the princi- ple of binary search to obtain the optimal pruning recipe.",
+    "Then, we employ binary search to determine the smallest divergence upper bound α.",
+    "The binary search is initialized with αL = 0 as the left boundary (no divergence) and αR = 1 as the right bound- ary (maximum divergence).",
+    "In each iteration of the binary search, the midpoint α = (αL+αR)/2 is evaluated.",
+    "Then, the number of pruned tokens in i-th layer can be calculated by: t∗ i = |Ti|, where Ti = TS ∩TC. (11) This iterative process continues by checking whether Φ(G, P) meets the target computation budget δ after each iteration, and accordingly adjusting the binary search bound- aries αL and αR.",
+    "In our statistical process, the binary search tolerance parameter ϵ is set to 0.01.",
+    "5, we can observe that our FitPrune method has obvious advantages over these Num. of Sample Search Time Accuracy (%) 6.6K 199 min 61.6 2.0K 66 min 61.6 0.6K 19 min 61.5 65 2 min 61.6 10 0.5 min 61.2 Table 3: Ablation study on the scale of data for binary search of FitPrune for LLaVA-1.5 on GQA. methods."
+   ],
+   "PARAM": [],
+   "BENCH": [
+    "The GQA accuracy (Hudson and Manning 2019) is reported.",
+    "2024) have been devoted to increasing the image resolution for MLLMs, which exhibit obvious improvements in fine- grained VL tasks, such as TextVQA (Singh et al.",
+    "1 4 8 12 16 20 24 28 32 Layer Index 52 54 56 58 Test Accuracy Baseline 25% Pruned 50% Pruned 75% Pruned Figure 4: Performance of LLaVA-1.5 using different ratios of random pruning on TextVQA.",
+    "The datasets include the common vision-language benchmarks such as VQAv2 (Goyal et al.",
+    "2017) for visual question answering, GQA (Hudson and Manning 2019) for compositional reasoning, VizWiz (Gu- rari et al.",
+    "2018) for zero-shot generalization, ScienceQA- IMG (Lu et al.",
+    "2022) for scientific question answering, and TextVQA (Singh et al.",
+    "The multimodal benchmarks for MLLMs are also used, including POPE (Li et al."
+   ]
+  }
+ },
+ {
+  "id": "2410.04417",
+  "title": "SparseVLM: Visual Token Sparsification for Efficient Vision-Language Model Inference",
+  "mark": "keep",
+  "chars": 33700,
+  "counts": {
+   "SPEED": 1,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 1,
+   "THR": 0,
+   "TOK": 6,
+   "HW": 1,
+   "ACC": 5,
+   "FREE": 6,
+   "BASE": 8,
+   "CMP": 8,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "NVIDIA A100"
+   ],
+   "BASE": [
+    "LLaVA",
+    "LLaVA-1.5",
+    "Mini-Gemini",
+    "MiniGemini",
+    "Qwen2-VL",
+    "Video-LLaVA",
+    "mini-Gemini"
+   ],
+   "CMP": [
+    "FastV",
+    "SparseVLM",
+    "ToMe"
+   ],
+   "BENCH": [
+    "ActivityNet",
+    "GQA",
+    "MMBench",
+    "MME",
+    "MSRVTT",
+    "MSVD",
+    "POPE",
+    "SEED-Bench",
+    "TextVQA",
+    "Textvqa",
+    "VQAv2",
+    "Vizwiz"
+   ]
+  },
+  "evidence": {
+   "SPEED": [
+    "Experiments demonstrated that e.g. the LLaVA when equipped with Spar- seVLM achieved 37.0% reduction in latency with a compres- sion ratio of 77.8% while maintaining 97% of the original accuracy."
+   ],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [
+    "Additionally, SparseVLM saves 67% cache memory compared to vanilla LLaVA (where 302.4MB is reduced to 100.8MB), while keeping 99.1% accuracy."
+   ],
+   "THR": [],
+   "TOK": [
+    "For example, LLaVA typically encodes 336 × 336 images into 576 tokens (Liu et al., 2024b) with up to 672 × 672 max- imum resolution using 2880 token sequences (Liu et al., 2024a).",
+    "Similarly, mini-Gemini-HD (Li et al., 2024c) con- verts 1536 × 1536 high resolution and 672 × 672 low reso- lution images into 2880 visual tokens.",
+    "When pruning from 576 to 192 tokens, the SparseLLaVA only decreases the average accuracy by 0.9% without additional training and exceeds ToMe (Bolya et al., 2023) 10.2%.",
+    "In Table 2, when 54.5% of vision tokens are removed, Qwen2-VL maintains an accuracy of 98.0%.",
+    "The original number of video tokens is 2048, while our experiment collectively prunes it down to 194 tokens.",
+    "For instance, when pruning from 192 to 64 tokens, the pruned token recycling signifi- cantly boosts the accuracy from 1.5% to 17.7% on POPE."
+   ],
+   "HW": [
+    "As displayed in Table 1, we conduct an inference efficiency analysis on a single NVIDIA A100-80GB with identical lengths of text prompts and single-image inputs."
+   ],
+   "ACC": [
+    "For instance, LLaVA (Liu et al., 2024b) when armed with SparseVLM achieves a 4.5× compression rate while maintaining 97% of its original performance.",
+    "Furthermore, for every 100 tokens pruned, the accuracy only drops by approximately 0.8%.",
+    "Compared to the baseline model, SparseVLM achieves a significant reduction of 43.1% in CUDA time and 62.8% in FLOPs while keeping 96.7% accuracy.",
+    "Additionally, SparseVLM saves 67% cache memory compared to vanilla LLaVA (where 302.4MB is reduced to 100.8MB), while keeping 99.1% accuracy.",
+    "Experiments demonstrated that e.g. the LLaVA when equipped with Spar- seVLM achieved 37.0% reduction in latency with a compres- sion ratio of 77.8% while maintaining 97% of the original accuracy."
+   ],
+   "FREE": [
+    "Differently, we propose a text- guided training-free token optimization mecha- nism dubbed SparseVLM that eliminates the need of extra parameters or fine-tuning costs.",
+    "In this paper, we introduce a text-guided training-free frame- work dubbed SparseVLM for efficient vision language model inference.",
+    "It can act as a plug-and-play module to improve the efficiency of VLMs without additional fine-tuning.",
+    "To the best of our knowledge, it is the first training-free approach that explores text-aware guidance for efficient VLM inference. • Particularly, we propose a strategy to select relevant text tokens as raters of visual tokens, a method to assess the significance of visual tokens followed by pruning of redundant visual tokens with a recycling mechanism to minimize the loss of information. • When applied to a number of VLMs, SparseVLM con- sistently outperforms prior state-of-the-art methods in various image and video understanding benchmarks.",
+    "Furthermore, we also compare the recent method PDrop (Xing et al., 2025) training-free version, which has lower FLOPs computation.",
+    "Conclusion This paper introduced a text-aware training-free token opti- mization approach called SparseVLM which significantly decreased the test-time computations of various VLMs."
+   ],
+   "BASE": [
+    "For instance, a 672×672 image in LLaVA (Liu et al., 2024b) yields 2304 visual tokens that span over half of the context length.",
+    "For instance, LLaVA (Liu et al., 2024b) when armed with SparseVLM achieves a 4.5× compression rate while maintaining 97% of its original performance.",
+    "Our ap- proach consistently outperforms prior state-of-the-art FastV method (Chen et al., 2024a) by 11.2 −17.3% on LLaVA, 9.2 −20.4% on MiniGemini, and 14.7% on VideoLLaVA when both have similar latencies.",
+    "For example, LLaVA typically encodes 336 × 336 images into 576 tokens (Liu et al., 2024b) with up to 672 × 672 max- imum resolution using 2880 token sequences (Liu et al., 2024a).",
+    "Similarly, mini-Gemini-HD (Li et al., 2024c) con- verts 1536 × 1536 high resolution and 672 × 672 low reso- lution images into 2880 visual tokens.",
+    "We verify SparseVLM on three VLM frameworks: LLaVA (Liu et al., 2024b), Mini-Gemini (MGM) (Li et al., 2024c), and Qwen2-VL (Bai et al., 2023).",
+    "LLaVA-1.5 employs CLIP-pretrained ViT-L as the visual tower, MGM further introduces a LAION-pretrained ConvNeXt-L (Liu et al., 2022) for high-resolution refine- ment, while Qwen2-VL owns dynamic resolution encoder.",
+    "In Table 1, we present the performance of SparseLLaVA (LLaVA equipped with SparseVLM) on im- age understanding benchmarks."
+   ],
+   "CMP": [
+    "arXiv:2410.04417v4 [cs.CV] 3 Jun 2025 SparseVLM: Visual Token Sparsification for Efficient Vision-Language Model Inference Yuan Zhang * 1 Chun-Kai Fan * 1 Junpeng Ma * 2 Wenzhao Zheng 3 Tao Huang 4 Kuan Cheng 1 Denis Gudovskiy 5 Tomoyuki Okuno 5 Yohei Nakata 5 Kurt Keutzer 3 Shanghang Zhang 1 Abstract In vision-language models (VLMs), visual tokens usually bear a significant amount of computa- tional overhead despite sparsity of information in them when compared to text tokens.",
+    "Differently, we propose a text- guided training-free token optimization mecha- nism dubbed SparseVLM that eliminates the need of extra parameters or fine-tuning costs.",
+    "Experimental results show that SparseVLM increases the efficiency of various VLMs in a number of image and video under- standing tasks.",
+    "In this paper, we introduce a text-guided training-free frame- work dubbed SparseVLM for efficient vision language model inference.",
+    "We ascer- tain that not all prompt tokens should be considered as some could be less relevant, which leads to inaccurate cor- relation results and downgrades the performance of sparse 1 SparseVLM: Visual Token Sparsification for Efficient Vision-Language Model Inference (a) Input Image Q-1: What is written on this blue sign?",
+    "Unlike previous methods with text-agnostic visual sparsification (c) e.g., VocoLLaMA (Ye et al., 2025), our SparseVLM (b) is guided by question prompts to select relevant visual patches from the image (a). inference.",
+    "Specifically, our SparseVLM first identifies text tokens strongly correlated with visual signals via cross- attention.",
+    "Extensive experi- ments demonstrate that our SparseVLM effectively reduces computational overhead of various VLMs without sacrific- ing their performance in a wide range of image and video understanding tasks."
+   ],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": [
+    "Then, the tokens T ∈RNk×D in the kth group are reconstructed into a new compressed token Tk ∈R1×D via the element-wise sum operation as Tk = XNk i=1 T[i], k ∈{1, 2, . . . , C}, (10) 4 SparseVLM: Visual Token Sparsification for Efficient Vision-Language Model Inference Question Prompt (from MME) picture Landmarks Mateo .",
+    "Question Prompt (from VQAv2) same pattern?",
+    "Question Prompt (from Vizwiz) Tylenol Advil ibuprofen Question Prompt (from Textvqa) fridge 1 2 3 4 The level of text related to the image.",
+    "For image-based multimodal evaluation, we con- duct experiments on eight widely adopted benchmarks, including GQA (Hudson & Manning, 2019), MMBench (MMB) (Liu et al., 2024c), MME (Fu et al., 2023), POPE (Li et al., 2023b), SQA (Lu et al., 2022), SEED-Bench (SEED) (Li et al., 2024a), VQAText (TextVQA) (Singh et al., 2019), and MMVet (Yu et al., 2024).",
+    "Figure 4 visualizes the performance of SparseMGM on POPE, TextVQA, and GQA.",
+    "Tokens MMB POPE VQAText Avg.",
+    "We test on four common video question answer- ing benchmarks, TGIF-QA (Jang et al., 2017), MSVD-QA (Xu et al., 2017), MSRVTT-QA (Xu et al., 2017), and ActivityNet-QA (Yu et al., 2019).",
+    "Specifically, following FastV’s (Chen et al., 2024a) setup, we use the first 1000 samples per benchmark and score them using the Video- 6 SparseVLM: Visual Token Sparsification for Efficient Vision-Language Model Inference 100 200 400 500 300 20 40 60 80 Accuracy (%) Baseline POPE ToMe FastV Ours Baseline 100 200 400 500 40 50 60 Accuracy (%) Baseline TextVQA ToMe FastV Ours Baseline 100 200 400 500 45 50 55 60 Accuracy (%) Baseline GQA ToMe FastV Ours Baseline 300 300 Tokens Figure 4."
+   ]
+  }
+ },
+ {
+  "id": "2410.17434",
+  "title": "LongVU: Spatiotemporal Adaptive Compression for Long Video-Language Understanding",
+  "mark": "keep",
+  "chars": 34360,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 4,
+   "TOK": 6,
+   "HW": 1,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "NVIDIA H100"
+   ],
+   "BASE": [
+    "BLIP-2",
+    "InternVL2",
+    "LLaVA",
+    "LLaVA-NeXT",
+    "LLaVA-OneVision",
+    "Video-LLaVA"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "EgoSchema",
+    "MLVU",
+    "MVBench",
+    "VideoMME"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [
+    "As a result, our model is capable of processing 1fps sampled video input with high performance, which can adaptively reduce the number of tokens per frame to 2 on average to accommodate an hour-long video for MLLM within 8k context length.",
+    "Our work focuses on maximizing the preservation of frames in video content (1fps) within given context length by proposing spatiotemporal compression of video tokens.",
+    "Given a 1fps-sampled video with N frames, denoted as I = {I1, ..., IN}, we first use DINOv2 (Oquab et al., 2023) to extract features from each frame, leading to a set of DINO features {V 1 dino, . . . , V N dino}.",
+    "We sample the video at 1 FPS and control the frame length ranging from 200 to 3.6k frames."
+   ],
+   "TOK": [
+    "For instance, 576 ∼2,880 tokens per image are used in LLaVA-1.6 (Liu et al., 2024b) and 7,290 tokens are used in LLaVA-OneVision (Li et al., 2024a).",
+    "However, a commonly used and computationally manageable context length for multimodal training is 8k, which limits processing 125 frames (2-minutes video) even at 64 tokens per frame, while an hour-long video could require over 200k tokens.",
+    "When applying uniforming sampling, 144 tokens per frame shows better performance than 64 tokens in an 8k context length on VideoMME (Fu et al., 2024) and MLVU Zhou et al. (2024) while worse on EgoSchema Mangalam et al. (2024).",
+    "With 144 tokens per frame, it preserves more visual details, but restricts the total number of frames, i.e., less than 60 frames within 8k context length.",
+    "We apply text-guided frame selection after temporal reduction, where relevant frames are maintained at full token capacity (144 tokens), while others are reduced to 64 tokens.",
+    "We observe that ∼40.4% tokens are reduced on average."
+   ],
+   "HW": [
+    "Our model is trained on 64 NVIDIA H100 GPUs."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "For instance, 576 ∼2,880 tokens per image are used in LLaVA-1.6 (Liu et al., 2024b) and 7,290 tokens are used in LLaVA-OneVision (Li et al., 2024a).",
+    "Our LongVU significantly outperformes several recent open-source video LLM models, such as VideoChat2 (Li et al., 2024b), LongVA (Zhang et al., 2024a), and LLaVA-OneVision (Li et al., 2024a), by a large margin.",
+    "For example, our LongVU outperforms a strong open-source baseline, LLaVA-OneVision (Li et al., 2024a) by approximately ∼5% in average accuracy.",
+    "Flamingo (Alayrac et al., 2022) and BLIP-2 (Li et al., 2023a) merge visual and linguistic features through cross-attention and a Q-Former module, respectively.",
+    "MiniGPT-4 (Zhu et al., 2023) and LLaVA (Liu et al., 2024c) simplify the integration by projecting visual features directly into the LLM embedding space using a MLP.",
+    "Several works (Li et al., 2023c, 2024b; Cheng et al., 2024), use the Q-Former module from BLIP-2 to merge visual and text features, while others (Lin et al., 2023; Luo et al., 2023; Ataallah et al., 2024a) concatenate frame features directly.",
+    "SlowFast-LLaVA (Xu et al., 2024) uniformly samples 8 frames for high-resolution tokens, while performing spatial pooling to decrease 3 … User: What did this man put on the pizza? 𝑉! 𝑉\" 𝑉# 𝑉$ 𝑉%&\" 𝑉%&! 𝑉% … Temporal Reduction Text Query Large Language Model Spatial Token Compression Spatial Token Compression Text Query Spatiotemporal Adaptive Token Compression SigLIP + DINOv2 Temporal Reduction Figure 2 Architecture of LongVU.",
+    "For simplicity, we combine these two steps in one stage using Single-Image data from LLaVA-OneVision (Li et al., 2024a)."
+   ],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": [
+    "Our LongVU consistently surpass existing methods across a variety of video understanding benchmarks, especially on hour-long video understanding tasks such as VideoMME and MLVU.",
+    "To evaluate our method, we conduct extensive experiments across various video understanding benchmarks, including EgoSchema (Mangalam et al., 2024), MVBench (Li et al., 2024b), VideoMME (Fu et al., 2024), and MLVU (Zhou et al., 2024).",
+    "We also observed that our light-weight LongVU, basing Llama3.2-3B (Llama, 2024) as the language backbone, significantly improves over previous state-of-the-art small video-LLMs, e.g., Phi-3.5-vision-instruct-4B (Abdin et al., 2024), by 3.4% on VideoMME Long subset.",
+    "4.2 Benchmarks and metrics We evaluate our model on EgoSchema (Mangalam et al., 2024), MVBench (Li et al., 2024b), VideoMME (Fu et al., 2024) and MLVU (Zhou et al., 2024).",
+    "VideoMME (Fu et al., 2024) (1 min ∼1 hour) and MLVU (Zhou et al., 2024) (3 mins ∼2 hours) are long video benchmarks for assessing long video understanding ability.",
+    "For VideoMME (Fu et al., 2024), videos are officially split based on duration, which contains a subset of long videos ranging from 30 minutes to 1 hour.",
+    "For example, on VideoMME (Fu et al., 2024), our LongVU outperforms VideoChat2 (Li et al., 2024b), LLaVA- OneVision (Li et al., 2024a) by 6.0% and 2.4% respectively.",
+    "Notably, on VideoMME Long subset (Fu et al., 2024), our model surpasses LLaVA-OneVision (Li et al., 2024a) by 12.8%."
+   ]
+  }
+ },
+ {
+  "id": "2412.01818",
+  "title": "Beyond Text-Visual Attention: Exploiting Visual Cues for Effective Token Pruning in VLMs",
+  "mark": "keep",
+  "chars": 41899,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 6,
+   "HW": 1,
+   "ACC": 4,
+   "FREE": 5,
+   "BASE": 8,
+   "CMP": 8,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "NVIDIA A100"
+   ],
+   "BASE": [
+    "InternVL",
+    "LLaVA",
+    "LLaVA-1.5",
+    "LLaVA-NeXT",
+    "Qwen-VL",
+    "Video-LLaVA"
+   ],
+   "CMP": [
+    "FastV",
+    "LLaVA-PruMerge",
+    "PruMerge",
+    "SparseVLM",
+    "ToMe",
+    "VisionZip"
+   ],
+   "BENCH": [
+    "ActivityNet",
+    "GQA",
+    "MMBench",
+    "MME",
+    "MSRVTT",
+    "MSVD",
+    "POPE",
+    "ScienceQA",
+    "TextVQA",
+    "VQAV2",
+    "VQAv2",
+    "VizWiz"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [
+    "For instance, LLaVA-1.5 [34] accepts 336 × 336 input images, which are converted into 576 visual tokens, while their textual coun- terparts have typically fewer than 100 tokens.",
+    "For example, VisPruner is capable of prun- ing 94.4% of visual tokens in LLaVA-1.5-7B, reducing in- ference FLOPs by more than 95%, and maintaining 91.5% of the original performance across 10 tasks without any ad- ditional training.",
+    "Following FastV [9], we prune 75% visual tokens after layer 2 of the language model based on text-visual attention and visualize the frequency with which visual tokens at var- ious positions are selected to be retained, as well as their average attention received across N samples.",
+    "It is observable that [CLS] attention is more con- centrated, with the top 20% visual tokens absorbing about 80% attention.",
+    "With only about 5% of the tokens retained, VisPruner is still able to maintain 91.5% of the performance, proving the effectiveness of its design that leverages both important tokens and diverse tokens as complements.",
+    "In this section, we ap- ply VisPruner to LLaVA-NeXT-7B, which can handle up to 2880 visual tokens."
+   ],
+   "HW": [
+    "All experiments are performed on a single NVIDIA A100- 80GB GPU, evaluated using the POPE benchmark."
+   ],
+   "ACC": [
+    "For example, VisPruner is capable of prun- ing 94.4% of visual tokens in LLaVA-1.5-7B, reducing in- ference FLOPs by more than 95%, and maintaining 91.5% of the original performance across 10 tasks without any ad- ditional training.",
+    "With only about 5% of the tokens retained, VisPruner is still able to maintain 91.5% of the performance, proving the effectiveness of its design that leverages both important tokens and diverse tokens as complements.",
+    "At a 94.4% reduction ratio, retaining only 160 visual tokens, VisPruner preserves 86.7% of the original perfor- mance, significantly outperforming FastV (74.7%), Sparse- VLM (74.5%) as well as VisionZip (82.3%), demonstrating the value of VisPruner for high-resolution visual inputs.",
+    "VisPruner maintains 95.1% of the original performance at a 88.9% reduction ratio (retain- ing 227 tokens) and 90.3% with only 114 tokens (94.4% reduction ratio), significantly outperforming FastV (86%)."
+   ],
+   "FREE": [
+    "Based on the analysis, We propose VisPruner, a plug-and-play method that utilizes visual cues for more effective token pruning in LVLMs.",
+    "Notably, without any training, VisPruner can reduce the FLOPs of LLaVA-1.5-7B by 91% and inference latency by 75%, while maintaining comparable performance.",
+    "Based on our observations, we propose VisPruner, a plug-and-play approach that exploits visual cues for more effective token pruning in VLMs.",
+    "We introduce VisPruner, a plug-and-play approach that exploits visual cues for more effective token prun- ing in VLMs based on our observations.",
+    "In this work, we mainly fo- cus on training-free VLM inference optimization, typically achieved by removing the less important tokens."
+   ],
+   "BASE": [
+    "Notably, without any training, VisPruner can reduce the FLOPs of LLaVA-1.5-7B by 91% and inference latency by 75%, while maintaining comparable performance.",
+    "User LLaVA FastV The unusual aspect of this image is that a person is standing on the back of a moving car.",
+    "For instance, LLaVA-1.5 [34] accepts 336 × 336 input images, which are converted into 576 visual tokens, while their textual coun- terparts have typically fewer than 100 tokens.",
+    "2880 for LLaVA-NeXT [35] and 2560 for Video-LLaVA [32]), further escalating computational load.",
+    "Benefiting from its simple design, we can easily ap- ply VisPruner to different VLMs, including the LLaVA se- ries [32, 34, 35] and other architectures like Qwen-VL [3].",
+    "For example, VisPruner is capable of prun- ing 94.4% of visual tokens in LLaVA-1.5-7B, reducing in- ference FLOPs by more than 95%, and maintaining 91.5% of the original performance across 10 tasks without any ad- ditional training.",
+    "In scenarios involving longer visual to- ken sequences, such as high-resolution images (LLaVA- NeXT) or video inputs (Video-LLaVA), VisPruner contin- ues to achieve superior performance with its simple design.",
+    "Text-visual attention shift To analyze text-visual attention in VLMs, we first randomly sample N image-text pairs from the LLaVA-mix665k data [34]."
+   ],
+   "CMP": [
+    "User LLaVA FastV The unusual aspect of this image is that a person is standing on the back of a moving car.",
+    "Text-visual attention methods like FastV often preserve the lower parts of input images, which can lead to the loss of crucial visual information during early pruning (e.g. the iron in the man’s hand).",
+    "To reduce the inference cost of VLMs, FastV [9] ini- tially attempts early pruning of visual tokens within the language model.",
+    "FastV [9] first identifies the redundancy and inefficiency of visual to- kens in VLMs and proposes a simple method to remove vi- sual tokens with low attention scores after the second layer of the language model.",
+    "SparseVLM [65] removes distrac- tions from text prompts and uses more accurate text atten- tion to progressively sparsify visual tokens.",
+    "Following FastV [9], we prune 75% visual tokens after layer 2 of the language model based on text-visual attention and visualize the frequency with which visual tokens at var- ious positions are selected to be retained, as well as their average attention received across N samples.",
+    "We choose ToMe [4], FastV [9], SparseVLM [65], LLaVA-PruMerge [45] and the latest Vi- sionZip [59] as comparison methods, covering a range of pruning approaches across different stages within VLMs.",
+    "When the number of retained tokens is further reduced to 64, about one-tenth of the full sequence length, VisPruner only decreases the original performance by 3.4%, outperforming the best text- visual attention-based method, SparseVLM, by as much as 10.2%."
+   ],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": [
+    "To answer this question, we separately preserve visual tokens from each quartile position and evaluate the average performance on four benchmarks of GQA [22], TextVQA [46], POPE [30], and MME [15] at different layers, as shown in Fig.",
+    "However, it is worth noting that pruning based on last attention still lags behind random pruning on some benchmarks, especially the hallucination benchmark POPE.",
+    "These two parts complement each other, ensuring that the model maintains comparable performance even after a significant reduction of visual tokens, without relying on any additional training. question answering tasks such as VQAv2 [16], GQA [22], VizWiz [17], ScienceQA-IMG [38], and TextVQA [46], as well as other multi-modal benchmarks such as POPE [30], MME [15], MMBench [37], MMBench-CN [37] and MM- Vet [61].",
+    "Additionally, we also experiment on 4 widely used video question answering benchmarks, including TGIF-QA [23], MSVD-QA [56], MSRVTT-QA [56], and ActivityNet-QA [62].",
+    "6 Method VQAV2 GQA VizWiz SQAIMG VQAText POPE MME MMB MMBCN MMVet Acc.",
+    "Method VQAV2 GQA VQAText POPE MME Acc.",
+    "Method TGIF-QA MSVD-QA MSRVTT-QA Average Acc.",
+    "InternVL and CogVLM both use MLPs as projec- 7 Method VQAV2 GQA VizWiz SQAIMG VQAText Acc."
+   ]
+  }
+ },
+ {
+  "id": "2412.13303",
+  "title": "FastVLM: Efficient Vision Encoding for Vision Language Models",
+  "mark": "star",
+  "chars": 44644,
+  "counts": {
+   "SPEED": 8,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 1,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 8,
+   "BIT": 0,
+   "PARAM": 2,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "NVIDIA H100"
+   ],
+   "BASE": [
+    "InternVL",
+    "LLaVA",
+    "LLaVA-1.5",
+    "LLaVA-NeXT",
+    "LLaVA-OneVision",
+    "LLaVa-OneVision",
+    "MiniGemini",
+    "Qwen-VL",
+    "mPLUG-Owl"
+   ],
+   "CMP": [
+    "FastV",
+    "FastVLM",
+    "LLaVA-PruMerge",
+    "PruMerge",
+    "SparseVLM",
+    "VisionZip",
+    "fastvlm"
+   ],
+   "BENCH": [
+    "AI2D",
+    "ChartQA",
+    "DocVQA",
+    "GQA",
+    "MMMU",
+    "OCRBench",
+    "POPE",
+    "ScienceQA",
+    "SeedBench",
+    "TextVQA",
+    "VQAv2"
+   ]
+  },
+  "evidence": {
+   "SPEED": [
+    "Compared to LLaVa-OneVision at the highest resolution (1152×1152), FastVLM achieves better performance on key benchmarks like SeedBench, MMMU and DocVQA, using the same 0.5B LLM, but with 85× faster TTFT and a vision encoder that is 3.4× smaller.",
+    "FastVLM is more than 3× faster than prior work.",
+    "We demonstrate the potential of this hy- brid backbone, which generates visual tokens over 4× faster than a ViT model while achieving higher overall VLM ac- curacy with multi-scale features (Section 3.1.1).",
+    "Com- pared to LLaVA-OneVision [45] operating at the highest possible resolution (1152×1152), FastVLM obtains compa- rable performance with the same 0.5B LLM, but with 85× faster TTFT and a 3.4× smaller vision encoder.",
+    "In a controlled experimental setup, where only the vision backbone is changed, we show that FastViTHD outperforms its ViT- based and convolution-based counterparts when used in VLMs: achieving 3.2× faster TTFT and 3.6× smaller size than SigLIP-SO400M [94], and 2.3× faster TTFT and 1.7× smaller size than ConvNeXT [28].",
+    "Note that the x-axis is in log scale. that FastViTHD, despite being 2.4× smaller and 6.9× faster than ViT-L/14, achieves comparable average performance across 38 multi-modal zero-shot tasks [27].",
+    "In compari- son to ViTamin [12], a hybrid transformer architecture built for VLMs, FastViTHD delivers superior average retrieval performance while being 2.7× smaller and 5.6× faster.",
+    "FastViTHD performs as well as ConvNeXT-XXL while being 6.8× smaller and 3.3× faster."
+   ],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "All FastVLM models reported in the paper are trained on a single node with 8× NVIDIA H100-80GB GPUs."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "In the LLaVA- 1.5 setup, FastVLM achieves 3.2× improvement in time-to- first-token (TTFT) while maintaining similar performance on VLM benchmarks compared to prior works.",
+    "Compared to LLaVa-OneVision at the highest resolution (1152×1152), FastVLM achieves better performance on key benchmarks like SeedBench, MMMU and DocVQA, using the same 0.5B LLM, but with 85× faster TTFT and a vision encoder that is 3.4× smaller.",
+    "For a fair comparison all models are trained using LLaVA-1.5 [53] setup with the vision encoders made trainable for resolution adaptation, see Sec.",
+    "Com- pared to LLaVA-OneVision [45] operating at the highest possible resolution (1152×1152), FastVLM obtains compa- rable performance with the same 0.5B LLM, but with 85× faster TTFT and a 3.4× smaller vision encoder.",
+    "Some promi- nent works that use this architecture are LLaVA [53–55], mPLUG-Owl [88–90], InstructBLIP [20], BLIP-3 [85], SPHINX [52], MiniGPT-4 [99], VILA [50], MM1 [66], Qwen-VL [4], InternVL [15, 16] and Cambrian-1 [78].",
+    "Since ViT-based architectures are a popular choice for VLMs, inefficiencies arise from the number of visual tokens outputted by the encoder, prompting methods like LLaVA-PruMerge [70] and Matryoshka-based token sampling [7, 32] to dynam- ically prune tokens.",
+    "The training setup for all results in this section follows the same configuration as LLaVA-1.5 [53] with Vicuna-7B [98] as the LLM decoder, unless mentioned otherwise.",
+    "FastViT as VLM Image Encoder VLMs such as LLaVA have three main components: an im- age encoder, a vision-language projector, and a large lan- guage model (LLM)."
+   ],
+   "CMP": [
+    "FastVLM: Efficient Vision Encoding for Vision Language Models Pavan Kumar Anasosalu Vasu⋆† Fartash Faghri⋆ Chun-Liang Li⋆ Cem Koc⋆ Nate True Albert Antony Gokul Santhanam James Gabriel Peter Grasch Oncel Tuzel⋆ Hadi Pouransari⋆† Apple {panasosaluvasu,fartash,chunliang li,cem koc,otuzel,mpouransari}@apple.com ⋆Core authors; †Project lead Abstract Scaling the input image resolution is essential for enhancing the performance of Vision Language Mod- els (VLMs), particularly in text-rich image understanding tasks.",
+    "Based on a comprehen- sive efficiency analysis of the interplay between image reso- lution, vision latency, token count, and LLM size, we intro- duce FastVLM—a model that achieves an optimized trade- off between resolution, latency, and accuracy.",
+    "FastVLM in- corporates FastViTHD, a novel hybrid vision encoder de- signed to output fewer tokens and significantly reduce en- coding time for high-resolution images.",
+    "Unlike previous methods, FastVLM achieves the optimal balance between visual token count and image resolution solely by scaling the input image, eliminating the need for additional token pruning and simplifying the model design.",
+    "In the LLaVA- 1.5 setup, FastVLM achieves 3.2× improvement in time-to- first-token (TTFT) while maintaining similar performance on VLM benchmarks compared to prior works.",
+    "Compared to LLaVa-OneVision at the highest resolution (1152×1152), FastVLM achieves better performance on key benchmarks like SeedBench, MMMU and DocVQA, using the same 0.5B LLM, but with 85× faster TTFT and a vision encoder that is 3.4× smaller.",
+    "Code and models are available at https: //github.com/apple/ml-fastvlm.",
+    "FastVLM is more than 3× faster than prior work."
+   ],
+   "BIT": [],
+   "PARAM": [
+    "We use a CLIP-pretrained hybrid vision encoder, specif- ically the MCi2 image encoder from MobileCLIP [83], which has 35.7M parameters and is based on the FastViT architecture.",
+    "The model has 125.1M parameters, which is 3.5× larger than the largest FastViT variant from MobileCLIP, but is still smaller than popular ViT alternatives."
+   ],
+   "BENCH": [
+    "Compared to LLaVa-OneVision at the highest resolution (1152×1152), FastVLM achieves better performance on key benchmarks like SeedBench, MMMU and DocVQA, using the same 0.5B LLM, but with 85× faster TTFT and a vision encoder that is 3.4× smaller.",
+    "Image Input #Visual Latency GQA TextVQA POPE DocVQA Seed Avg-5 Encoder Res.",
+    "Image Multi Pool GQA TextVQA POPE DocVQA Seed Avg-5 Encoder Scale Type BenchI FastViT - 62.7 62.3 86.5 34.4 67.1 62.6 FastViT ✓ AvgPool 63.0 62.2 86.2 35.1 66.9 62.7 FastViT ✓ DWConv 63.0 62.5 86.8 34.7 67.4 62.9 Table 2.",
+    "This performance gap is even more pronounced on text-rich benchmarks like TextVQA and DocVQA, despite both architectures produc- ing the same number of visual tokens.",
+    "Table 3 shows 4 Image Input Latency #Visual GQA TextVQA POPE DocVQA Seed Avg-5 Encoder Res.",
+    "At this stage, the input image resolution matches the back- bone pretraining resolution (e.g., 256 for FastViT and 224 Model Input #Visual GQA SQA Text- POPE VQA Seed Res.",
+    "TTFT GQA SQA Text POPE LLaVA MM- VQA Doc MMMU Seed Ann.",
+    "We evaluate the models on the main- stream benchmarks of GQA [34], ScienceQA [59], TextVQA [74], POPE [48], LLaVA-in-the-wild [54], VQAv2 [29], MMVet [91], MMMU [93], DocVQA [65] and SeedBench [42]."
+   ]
+  }
+ },
+ {
+  "id": "2501.00574",
+  "title": "VideoChat-Flash: Hierarchical Compression for Long-Context Video Modeling",
+  "mark": "keep",
+  "chars": 37606,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 1,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 3,
+   "HW": 2,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 2,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "A100",
+    "NVIDIA A100"
+   ],
+   "BASE": [
+    "InternVL2",
+    "InternVL2.5",
+    "LLaVA",
+    "LLaVA-OneVision",
+    "LLaVA-Video",
+    "Qwen2-VL",
+    "Qwen2.5-VL"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "LongVideoBench",
+    "MLVU",
+    "MVBench",
+    "VideoMME"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [
+    "1,184,250.0 TFLOPs)."
+   ],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [
+    "Each clip is compressed into 64 tokens, meaning that, on average, each frame is represented by 16 tokens.",
+    "The baseline employs SigLiP-so400M [65] as the vision encoder and Spatial donwsampling (196 tokens per frame) as the connector.",
+    "It adopts a two-stage training strateay with image and short video following LLaVA [33]. terms of the model, it can be observed that HiCo significantly reduces the computational load (from 196 to 16 tokens per frame) while barely compromising the performance."
+   ],
+   "HW": [
+    "The FLOPs and inference memory is estimated using one NVIDIA A100-80G GPU with one sample, and the training is estimated using 32 NVIDIA A100-80G GPUs with DeepSpeed ZeRO-3 [42].",
+    "10,000 frames on a single A100-80G."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "Remarkably, its performance even eclipses that of models with substan- tially larger scales, such as InternVL2-76B, as well as propri- etary models like GPT-4o and Gemini-1.5-Pro.",
+    "It adopts a two-stage training strateay with image and short video following LLaVA [33]. terms of the model, it can be observed that HiCo significantly reduces the computational load (from 196 to 16 tokens per frame) while barely compromising the performance."
+   ],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": [
+    "Meanwhile, the high redundancy in long video arXiv:2501.00574v4 [cs.CV] 13 Jul 2025 64.6 66.7 64.6 71.9 30.8 35.7 60.5 64 75 33.1 41.7 68.4 67.9 58.2 70.8 63.3 43.5 43.6 41.6 74.0 76.2 64.7 74.7 65.3 48.2 48.4 42.9 MVBench Perception Test LongVideoBench MLVU VideoMME LVBench Chardes-STA AuroraCap GPT4o Gemini1.5 Pro Previous SOTA (7B size) VideoChat-Flash (Ours) Short Video QA Long Video QA Temporal Grounding Video Caption Figure 2.",
+    "Model Size Avg tokens MVBench PerceptionTest LongVideoBench MLVU VideoMME (w/o & w sub.) LVBench Charades-STA AuroraCap per frame Avg Val Val M-Avg Overall Long Avg mIoU Avg Avg.",
+    "We evaluate our model on six general video understanding benchmarks in question-answering format, including two short video benchmarks: MVBench [29] and Perception Test [41], and three long video benchmarks: LongVideoBench [59], MLVU [73] and LVBench [53], and a comprehensive benchmark, VideoMME [16], covering videos ranging from minute-level to hour-level durations.",
+    "In Settings MVB MLVU VMME Charades Avg M-Avg Overall mIoU Baseline 60.2 63.7 52.8 + HiCo 61.1 60.6 53.2 - + short video pretraining 66.5 62.4 53.9 - + duration-based sampling 67.0 64.5 55.5 - + LongVid data 66.5 68.3 55.8 - + Joint short & long sft 73.2 74.5 64.0 48.4 + High-res post ft 74.0 74.7 65.3 48.0 - timestamp prompt 73.4 73.2 63.4 44.2 Table 2.",
+    "8 32 64 128 Tmin 55 57 59 61 63 65 67 69 71 73 Accuracy (%) 58.50 58.40 58.80 58.00 68.50 70.60 71.40 70.90 VideoMME MVBench (a) Effect of Tmin (Tmax=128) 64 128 256 512 Tmax 55 57 59 61 63 65 67 69 71 73 Accuracy (%) 58.30 59.30 60.30 61.60 71.00 71.70 72.50 72.00 VideoMME MVBench (b) Effect of Tmax (Tmin=64) Figure 7.",
+    "Ablation of Duration-based Sampling Visual Encoder FLOPs Latency MVBench MLVU VideoMME (G) (ms) Avg M-Avg Overall #tokens per frame=16, training data size=2M SigLIPSO400M@384 2679 79.7 60.2 62.0 53.5 UMT-L@224 596 11.8 61.1(+0.9) 60.0(-2.0) 53.2(-0.3) #tokens per frame=16, training data size=8M SigLIPSO400M@384 2679 79.7 71.2 70.8 62.4 UMT-L@224 596 11.8 73.5(+2.3) 73.7(+2.9) 62.7(+0.3) Table 3.",
+    "We found that even when the computational cost is significantly lower, UMT can still achieve better performance on the short video task MVBench.",
+    "Drop type/keep ratio Drop layer FLOPs Latency MLVU VideoMME (G) (s) M-Avg Overall - - 341.4 2.6 71.8 61.2 Uni./0.5 4 242.8 1.9 71.2 60.4 Attn./0.5 4 242.8 1.9 70.7 60.8 Uni./0.5 18 295.2 2.2 71.7 61.8 Attn./0.5 18 295.2 2.2 72.1(+0.3) 61.7(+0.5) Attn./0.75,Attn./0.25 4,18 245.8 1.9 71.4 60.9 Uni./0.75,Attn./0.25 4,18 245.8 1.9 72.0(+0.2) 61.1(-0.1) Table 5."
+   ]
+  }
+ },
+ {
+  "id": "2501.12386",
+  "title": "InternVideo2.5: Empowering Video MLLMs with Long and Rich Context Modeling",
+  "mark": "keep",
+  "chars": 44362,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 1,
+   "HW": 2,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 3,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "A100"
+   ],
+   "BASE": [
+    "InternVL2",
+    "InternVL2.5",
+    "LLaVA",
+    "LLaVA-1.5",
+    "LLaVA-NeXT",
+    "LLaVA-NexT",
+    "LLaVA-OneVision",
+    "LLaVA-Video",
+    "LLava",
+    "LLava-NeXT"
+   ],
+   "CMP": [
+    "ToMe"
+   ],
+   "BENCH": [
+    "ActivityNet",
+    "EgoSchema",
+    "LongVideoBench",
+    "MLVU",
+    "MVBench",
+    "RefCOCO",
+    "RefCOCOg",
+    "VideoMME"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [
+    "The system implements dynamic video sampling, processing 64- 512 frames, with each 8-frame clip compressed to 128 tokens, yielding approximately 16 tokens per frame representation."
+   ],
+   "HW": [
+    "500 1000 1500 2000 2500 3000 3500 4000 4500 5000 InternVL2.5 InternVL2.5-HiCo InternVideo2.5 #Frames N / A Figure 3: Single-hop Needle-in-a-haystack evaluation results using 5,000 frames using 16 A100 (80G) GPUs.",
+    "All models were evaluated on 16 A100 (80GB) GPUs."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "We utilize 3.5 million detailed image descriptions recaptioned with LLava-NeXT-34B [Zhang et al., 2024c] from COCO118K, BLIP558K, and CC3M datasets [Li et al., 2024a].",
+    "For instruction data, we use single- image instructions from LLava-NeXT [Zhang et al., 2024c], Allava [Chen et al., 2024a], and ShareGPT4O [Chen et al., 2024c, Wang et al., 2024f], along with multi-image instructions from LLaVA-Interleave [Li et al., 2024b].",
+    "For instruction fine-tuning, we use short video data from VideoChat2[Li et al., 2024c] and InternVideo2 [Wang et al., 2024f], complemented by GPT4o- annotated data from ShareGPT4o [Chen et al., 2024c, Wang et al., 2024f], VideoChatGPT-Plus [Maaz et al., 2024], LLaVA-Video-178K [Zhang et al., 2024d], and LLava-Hound [Zhang et al., 2024b]. • Text.",
+    "500 1000 1500 2000 2500 3000 3500 4000 4500 5000 InternVL2.5 InternVL2.5-HiCo InternVideo2.5 #Frames N / A Figure 3: Single-hop Needle-in-a-haystack evaluation results using 5,000 frames using 16 A100 (80G) GPUs.",
+    "Compared with the employed base MLLM InternVL2.5, InternVideo2.5 gives a overall increase no matter on short or long duration predictions.",
+    "The rises are notable when dealing with short videos, InternVideo2.5 increases more than 3 points on MVBench and Perception Test based on InternVL2.5.",
+    "With HiCo and long video learning corpus, InternVideo2.5 notably enhances InternVL2.5’s implicit memory (8B model).",
+    "As shown in Figure 3, InternVL2.5-8B struggles to recall target frames accurately even within 500 frames, falling short of the 95% accuracy threshold for memorization established in [Zhang et al., 2024a, Xue et al., 2024]."
+   ],
+   "CMP": [
+    "Connector vi ei ToMe TDrop Forward Temporal Head Mask Head Task Preference Model Figure 2: Framework of InternVideo2.5 with the long and rich context (LRC) modeling. implements a hierarchical token compression (HiCo) with two distinctive stages: 1) spatiotemporal-aware compression during the visual encoding, and 2) adaptive multimodal context consolidation during language model processing.",
+    "Prior empirical analysis [Li et al., 2024e] across various compression configurations (pooling, MLP, Q-Former, and more) reveal that exploiting semantic similarity-based token merging [Bolya et al., 2022] (ToMe) across spatiotemporal scales as C shows the superiority in visual compression while preserving essential details.",
+    "Such learning is independent of the pretraining or supervised finetuning (SFT) of vision or language models, while ToMe is plugable in training or testing without extra tuning just like pooling. • Multimodal Token Dropout."
+   ],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": [
+    "Left: open-source model (8B) performance on MVBench and VideoMME; right: an example of InternVideo2.5 about it monitors the target requested by users and analyzes it.",
+    "We use AS-V2 [Wang et al., 2024c], Visual Genome [Krishna et al., 2017], RefCOCO [Yu et al., 2016], RefCOCOg [Yu et al., 2016], RefCOCO+ [Yu et al., 2016] for one epoch with a total batch size of 128 to train region head and token. • Temporal Grounding.",
+    "We utilize DiDeMo [Hendricks et al., 2017], QuerYD [Oncescu et al., 2021], HiRest [Zala et al., 2023], ActivityNet [Caba Heilbron et al., 2015], TACoS [Regneri et al., 2013], NLQ [Grauman et al., 2022].",
+    "The rises are notable when dealing with short videos, InternVideo2.5 increases more than 3 points on MVBench and Perception Test based on InternVL2.5.",
+    "The brought increases are clear on EgoSchema (test) (+12.4) [Mangalam et al., 2023], MLVU (+3.9) [Zhou et al., 2024], and LVBench (+8.0) [Wang et al., 2024b] while they are relatively marginal on LongVideoBench (+0.6) [Wu et al., 2024a] and VideoMME (wo sub) (+0.9) [Fu et al., 2024].",
+    "GPT4-o and Gemini-1.5-Pro, InternVideo2.5 shows superiority over short duration spatiotemporal understanding while gives inferior results on long videos (except on MLVU).",
+    "Compared with InternVL2.5-HiCo, InternVideo2.5 gets non-trivial increases by 1.7, 3.5, 1.0, 1.0, and 1.3 points on MVBench, Percpetion Test, EgoSchema, LongVideoBench, and MLVU, respectively.",
+    "The effectivenss on VideoMME is barely observed as the increase is only 0.2."
+   ]
+  }
+ },
+ {
+  "id": "2502.11494",
+  "title": "Stop Looking for Important Tokens in Multimodal Language Models: Duplication Matters More",
+  "mark": "keep",
+  "chars": 35330,
+  "counts": {
+   "SPEED": 2,
+   "FLOP": 0,
+   "LAT": 2,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 2,
+   "HW": 0,
+   "ACC": 3,
+   "FREE": 4,
+   "BASE": 8,
+   "CMP": 8,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [],
+   "BASE": [
+    "LLaVA",
+    "LLaVA-1.5",
+    "LLaVA-Next",
+    "Qwen2-VL",
+    "Video-LLaVA",
+    "mini-Gemini"
+   ],
+   "CMP": [
+    "FastV",
+    "FasterVLM",
+    "FitPrune",
+    "HiRED",
+    "LLaVA-PruMerge",
+    "MustDrop",
+    "SparseVLM",
+    "ToMe"
+   ],
+   "BENCH": [
+    "GQA",
+    "MMBench",
+    "MME",
+    "MSVD",
+    "OCRBench",
+    "POPE",
+    "TextVQA",
+    "VQAV2",
+    "VizWiz"
+   ]
+  },
+  "evidence": {
+   "SPEED": [
+    "Experiments demonstrate that DART can prune 88.9% vision tokens while maintaining comparable performance, leading to a 1.99× and 2.99× speed-up in total time and prefilling stage, respectively, with good compatibility to efficient attention operators 1.",
+    "5 Analysis and Discussion 5.1 Efficiency Analysis As shown in Table 2, we compare the total infer- ence time, prefill time, FLOPs, and KV cache mem- ory of multiple methods. (i) DART achieves a 2.99× speedup in prefill and 1.99× speedup in in- ference, while its performance on POPE degrades by less than 3% versus the vanilla model. (ii) Anal- ysis reveals although FLOPs reduction is similar across methods, their speeds vary significantly."
+   ],
+   "FLOP": [],
+   "LAT": [
+    "4 Latency: 2174s Latency: 551s Latency: 1258s Latency: 2364s (a) POPE (b) MME (c) MMBench (d) VizWiz Figure 4: Performance-Latency trade-off comparisons across different datasets on LLaVA-Next-7B.",
+    "Latency: 2174s (a) POPE Latency: 551s (b) MME Figure 6: Influence from the layer for token pruning."
+   ],
+   "MEM": [],
+   "THR": [],
+   "TOK": [
+    "Experiments demonstrate that DART can prune 88.9% vision tokens while maintaining comparable performance, leading to a 1.99× and 2.99× speed-up in total time and prefilling stage, respectively, with good compatibility to efficient attention operators 1.",
+    "7), achieving 93.9% with only 11.1% tokens, outper- forming all competitors significantly. (iv) Inspired by (Wen et al., 2025), we apply DART during train- ing."
+   ],
+   "HW": [],
+   "ACC": [
+    "We ob- serve that (i) with only 192 tokens, DART achieves an impressive 98.8% average performance, sub- stantially outperforming second-best MustDrop by 1.6%. (ii) This trend strengthens under aggressive reduction ratios, with DART leading by 2.2% us- ing just 64 tokens. (iii) Moreover, DART scales seamlessly to advanced and larger models like LLaVA-Next-7B and Qwen2-VL-72B (See Tab.",
+    "5 Analysis and Discussion 5.1 Efficiency Analysis As shown in Table 2, we compare the total infer- ence time, prefill time, FLOPs, and KV cache mem- ory of multiple methods. (i) DART achieves a 2.99× speedup in prefill and 1.99× speedup in in- ference, while its performance on POPE degrades by less than 3% versus the vanilla model. (ii) Anal- ysis reveals although FLOPs reduction is similar across methods, their speeds vary significantly.",
+    "1, suggesting that removing duplicate tokens may re- duce hallucinations in MLLMs on the POPE. (ii) At deeper layers (e.g., 15, 20), the latency-minimizing points correspond to pruning all vision tokens, yet performance drops only by 0.1%∼1.6%."
+   ],
+   "FREE": [
+    "In- stead, we propose DART (Duplication-Aware Reduction of Tokens), which prunes tokens based on its duplication with other tokens, lead- ing to significant and training-free accelera- tion.",
+    "To solve this problem, abundant recent meth- ods introduce token pruning to remove the vision tokens in a training-free manner, which usually first defines the importance score of each token, and then prunes the most unimportant tokens dur- ing the inference phrase (Chen et al., 2024; Zhang et al., 2024c; Liu et al., 2024e).",
+    "Building on token duplication, we introduce a training- free, plug-and-play token reduction method that seamlessly integrates with Flash Attention. • Superior Performance with Extreme Com- pression.",
+    "ToMe (Bolya et al., 2023) merges tokens without training but disrupts cross- modal interactions (Xing et al., 2024)."
+   ],
+   "BASE": [
+    "Red text indicates hallucination from vanilla LLaVA-1.5-7B, green text represents hallucination from DART, and blue text represents hallucination from FastV. et al., 2024d) and multi-frame video (Tang et al., 2023), leading to challenges in their applications.",
+    "Random Figure 2: Performance of FastV and SparseVLM compared with random token pruning on the LLaVA- 1.5-7B, with a 88.9% token reduction ratio. the importance of each token should be adjusted when other tokens are pruned or preserved.",
+    "91.5%) on LLaVA- 1.5-7B with an 88.9% reduction ratio.",
+    "For in- stance, models like LLaVA (Liu et al., 2023) and mini-Gemini-HD (Li et al., 2024d) encode high- resolution images into thousands of tokens, while video models like VideoLLaVA (Lin et al., 2023) and VideoPoet (Kondratyuk et al., 2023) handle even more tokens across frames.",
+    "4 Latency: 2174s Latency: 551s Latency: 1258s Latency: 2364s (a) POPE (b) MME (c) MMBench (d) VizWiz Figure 4: Performance-Latency trade-off comparisons across different datasets on LLaVA-Next-7B.",
+    "DART † indicates that DART is applied during the training stage of LLaVA-1.5-7B.",
+    "Methods Tokens ↓Total Time ↓Prefilling Time ↓FLOPs ↓KV Cache ↓ POPE ↑ Speedup ↑ (Min:Sec) (Min:Sec) (MB) (F1-Score) (Total) (Prefilling) Vanilla LLaVA-Next-7B 2880 36:16 22:51 100% 1512.1 86.5 1.00× 1.00× + FastV 320 18:17 7:41 12.8% 168.0 78.3 1.98× 2.97× + SparseVLM 320 23:11 - 15.6% 168.0 82.3 1.56× - + DART 320 18:13 7:38 12.8% 168.0 84.1 1.99× 2.99× Table 2: Inference costs of the number of tokens, Total-Time, Prefilling-Time, FLOPs, and KV Cache Memory.",
+    "We ob- serve that (i) with only 192 tokens, DART achieves an impressive 98.8% average performance, sub- stantially outperforming second-best MustDrop by 1.6%. (ii) This trend strengthens under aggressive reduction ratios, with DART leading by 2.2% us- ing just 64 tokens. (iii) Moreover, DART scales seamlessly to advanced and larger models like LLaVA-Next-7B and Qwen2-VL-72B (See Tab."
+   ],
+   "CMP": [
+    "Figure 1: Comparison between DART and FastV.",
+    "Red text indicates hallucination from vanilla LLaVA-1.5-7B, green text represents hallucination from DART, and blue text represents hallucination from FastV. et al., 2024d) and multi-frame video (Tang et al., 2023), leading to challenges in their applications.",
+    "However, this paper argues that these importance-based methods have several serious problems. (I) Ignoring interactions between tokens during pruning: Although the interaction between differ- ent tokens is considered in attention scores, how- ever, importance-based methods directly remove the most unimportant tokens, ignoring the truth that 1 -23 -18 -13 -8 -3 2 7 12 FastV SparseVLM -395 -295 -195 -95 5 105 205 GQA MMB SQA VQA-V2 VQA-Text VizWiz MMB-CN POPE MME 2/3 Results are Worse than Random 1/3 Results are Better than Random Performance vs.",
+    "Random Figure 2: Performance of FastV and SparseVLM compared with random token pruning on the LLaVA- 1.5-7B, with a 88.9% token reduction ratio. the importance of each token should be adjusted when other tokens are pruned or preserved.",
+    "ToMe (Bolya et al., 2023) merges tokens without training but disrupts cross- modal interactions (Xing et al., 2024).",
+    "FastV (Chen et al., 2024) selects via attention scores, while Spar- seVLM (Zhang et al., 2024c) uses text guidance.",
+    "Notably, FastV gen- erates more hallucinations than the vanilla model, while DART effectively reduces them.",
+    "Methods Tokens ↓Total Time ↓Prefilling Time ↓FLOPs ↓KV Cache ↓ POPE ↑ Speedup ↑ (Min:Sec) (Min:Sec) (MB) (F1-Score) (Total) (Prefilling) Vanilla LLaVA-Next-7B 2880 36:16 22:51 100% 1512.1 86.5 1.00× 1.00× + FastV 320 18:17 7:41 12.8% 168.0 78.3 1.98× 2.97× + SparseVLM 320 23:11 - 15.6% 168.0 82.3 1.56× - + DART 320 18:13 7:38 12.8% 168.0 84.1 1.99× 2.99× Table 2: Inference costs of the number of tokens, Total-Time, Prefilling-Time, FLOPs, and KV Cache Memory."
+   ],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": [
+    "However, this paper argues that these importance-based methods have several serious problems. (I) Ignoring interactions between tokens during pruning: Although the interaction between differ- ent tokens is considered in attention scores, how- ever, importance-based methods directly remove the most unimportant tokens, ignoring the truth that 1 -23 -18 -13 -8 -3 2 7 12 FastV SparseVLM -395 -295 -195 -95 5 105 205 GQA MMB SQA VQA-V2 VQA-Text VizWiz MMB-CN POPE MME 2/3 Results are Worse than Random 1/3 Results are Better than Random Performance vs.",
+    "4 Latency: 2174s Latency: 551s Latency: 1258s Latency: 2364s (a) POPE (b) MME (c) MMBench (d) VizWiz Figure 4: Performance-Latency trade-off comparisons across different datasets on LLaVA-Next-7B.",
+    "5 Method GQA MMB MMB-CN MME POPE SQA VQAV2 VQAText VizWiz OCRBench Avg.",
+    "Methods Tokens ↓Total Time ↓Prefilling Time ↓FLOPs ↓KV Cache ↓ POPE ↑ Speedup ↑ (Min:Sec) (Min:Sec) (MB) (F1-Score) (Total) (Prefilling) Vanilla LLaVA-Next-7B 2880 36:16 22:51 100% 1512.1 86.5 1.00× 1.00× + FastV 320 18:17 7:41 12.8% 168.0 78.3 1.98× 2.97× + SparseVLM 320 23:11 - 15.6% 168.0 82.3 1.56× - + DART 320 18:13 7:38 12.8% 168.0 84.1 1.99× 2.99× Table 2: Inference costs of the number of tokens, Total-Time, Prefilling-Time, FLOPs, and KV Cache Memory.",
+    "To assess DART’s capabilities in video understanding, we integrate it with Video-LLaVA (Lin et al., 2023) and bench- mark it against state-of-the-art methods, including 6 Method GQA MMB MMB-CN MME POPE SQA VQAV2 VQAText VizWiz OCRBench Avg.",
+    "As demonstrated in Table 6, DART surpasses FastV across all bench- marks, achieving a notable 4.0 score on MSVD, 46.3% accuracy on TGIF, and 56.7% accuracy on MSRVT.",
+    "5 Analysis and Discussion 5.1 Efficiency Analysis As shown in Table 2, we compare the total infer- ence time, prefill time, FLOPs, and KV cache mem- ory of multiple methods. (i) DART achieves a 2.99× speedup in prefill and 1.99× speedup in in- ference, while its performance on POPE degrades by less than 3% versus the vanilla model. (ii) Anal- ysis reveals although FLOPs reduction is similar across methods, their speeds vary significantly.",
+    "Furthermore, on the MME benchmark, we ana- lyze the visual tokens retained by selecting pivot tokens based on K-norm♠and K-norm♡."
+   ]
+  }
+ },
+ {
+  "id": "2503.10501",
+  "title": "TokenCarve: Information-Preserving Visual Token Compression in Multimodal Large Language Models",
+  "mark": "keep",
+  "chars": 36503,
+  "counts": {
+   "SPEED": 2,
+   "FLOP": 0,
+   "LAT": 1,
+   "MEM": 7,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 2,
+   "ACC": 2,
+   "FREE": 8,
+   "BASE": 8,
+   "CMP": 8,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "V100"
+   ],
+   "BASE": [
+    "LLaVA",
+    "LLaVA-1.5"
+   ],
+   "CMP": [
+    "FastV",
+    "LLaVA-Mini",
+    "MustDrop",
+    "SparseVLM",
+    "ToMe",
+    "VisionZip",
+    "fastV"
+   ],
+   "BENCH": [
+    "MMBench",
+    "MME",
+    "POPE",
+    "TextVQA",
+    "VQAV2",
+    "VizWiz"
+   ]
+  },
+  "evidence": {
+   "SPEED": [
+    "It can even reduce the number of visual tokens to 22.2% of the original count, achieving a 1.23× speedup in inference, a 64% reduction in KV cache storage, and only a 1.54% drop in accuracy.",
+    "Specifically, decreasing the visual token count from 576 to 128 reduces inference latency from 1.124 s to 0.911 s, achieving a 1.23× speedup, while KV cache usage drops from 100% to 36%."
+   ],
+   "FLOP": [],
+   "LAT": [
+    "Specifically, decreasing the visual token count from 576 to 128 reduces inference latency from 1.124 s to 0.911 s, achieving a 1.23× speedup, while KV cache usage drops from 100% to 36%."
+   ],
+   "MEM": [
+    "It can even reduce the number of visual tokens to 22.2% of the original count, achieving a 1.23× speedup in inference, a 64% reduction in KV cache storage, and only a 1.54% drop in accuracy.",
+    "Concurrently, the inference speed is en- hanced by a factor of 1.23, and the KV cache storage is re- duced by 64%, leading to significant reductions in latency and improved storage efficiency.",
+    "Specifically, TokenCarve effectively reduces the visual token count to 22.2% of the original, achieving a 1.23× improvement in inference speed, a 64% reduction in KV cache storage, and only a 1.54% drop in accuracy.",
+    "Specifically, decreasing the visual token count from 576 to 128 reduces inference latency from 1.124 s to 0.911 s, achieving a 1.23× speedup, while KV cache usage drops from 100% to 36%.",
+    "Further compressing the visual token count to 64 results in a performance drop of 1.2, while KV cache us- age is reduced to 26.9%, achieving an even greater acceler- ation of 1.33×.",
+    "Visual token 576 192 128 64 Performance 58.2 58.4 58.1 57.0 KV Cache (%) 100% 45.1% 36% 26.9% Latency (s) 1.124 (1.00×) 0.974 (1.15×) 0.911 (1.23×) 0.845 (1.33×) Table 4.",
+    "By employing an Information-Preservation-Guided Selection (IPGS) strategy to prune and merge tokens, TokenCarve re- duces the visual token count to 22.2% of the original while achieving a 1.23× inference speedup, a 64% reduction in KV cache storage, and only a 1.54% drop in accuracy."
+   ],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "All experiments are done on a single NVIDIA Tesla V100 with 32GB.",
+    "4, we assess the practical acceleration of To- kenCarve on a single NVIDIA Tesla V100 (32GB) us- ing torch.profiler, evaluating 100 sampled instances from the TextVQA dataset with execution times averaged across samples."
+   ],
+   "ACC": [
+    "The results indicate that TokenCarve remains robust across differ- ent values of ρ, with performance variations staying within 1.5%. using LLaVA-1.5-7B as the base model and MME as the dataset.",
+    "As the merge proportion increases, model performance remains within a 1.5% variation across all three visual token count configura- tions."
+   ],
+   "FREE": [
+    "Existing training- based token compression methods improve inference ef- ficiency but require costly retraining, while training-free methods struggle to maintain performance when aggres- sively reducing token counts.",
+    "Based on this finding, we propose TokenCarve, a training-free, plug- and-play, two-stage token compression framework.",
+    "Existing compression approaches for MLLMs can be broadly categorized into two types: training-based methods [15, 17, 42], which rely on end-to-end learned compressors (e.g., query modules or Gumbel-softmax pre- dictors) and thus require costly retraining and model- specific adaptation; and training-free methods, which in- clude token compression applied to the visual encoder be- fore feeding into the LLM [27, 34] as well as token com- pression within the internal layers of the LLM [37, 43].",
+    "While these training-free methods can effectively compress tokens, their performance generally becomes difficult to maintain when the token count is significantly reduced.",
+    "In this study, we adopt a novel information-preservation perspective to investigate and design a training-free ap- proach that sustains strong performance even under sub- stantial token compression.",
+    "Building on this insight, we introduce TokenCarve, an information-preserving, training-free, and plug-and-play visual token compression method.",
+    "TokenCarve is training-free and plug-and-play, maintaining strong performance even when significantly reducing token count.",
+    "Existing token compression methods for MLLMs can be broadly catego- rized into training-based methods [8, 15, 17, 24, 30, 41, 42] and training-free methods [9, 16, 21, 27, 33, 34, 37, 38, 43]."
+   ],
+   "BASE": [
+    "Dynamic- LLaVA [15] reveals that for visual reasoning tasks, optimal inference performance is achieved by using the largest LLM that fits within the computational budget while minimizing the number of visual tokens.",
+    "LLaVA-Mini [42] introduces the modality prefusion, which integrates visual information into text tokens beforehand, enabling extreme compression where only a single visual token is fed into the LLM back- bone.",
+    "A typical architec- ture, exemplified by LLaVA [20] and QwenVL [35], com- prises a visual encoder, a projection module, and an LLM.",
+    "Key Insight: Correlation Between MLLM Per- formance and the Information Quantity of the Attention Output Matrix Taking LLaVA-7B as an example, during the prefilling stage the model employs 576 visual tokens out of a total of approximately 700 tokens, so that visual tokens consti- tute over 80% of the input.",
+    "TokenCarve is integrated between the second and third layers of the LLaVA-1.5 model as a plug-and-play module, effectuating visual token compression during the prefilling stage.",
+    "The upper panel illustrates TokenCarve’s integration with LLaVA-1.5, which conventionally comprises 36 system tokens, 576 visual tokens, and a variable number of prompt tokens.",
+    "Evaluation of TokenCarve on the LLaVA-1.5-7B model across eight datasets under three visual token compression levels (192, 128, and 64).",
+    "We conduct experiments mainly on LLaVA-1.5-7B frameworks."
+   ],
+   "CMP": [
+    "LLaVA-Mini [42] introduces the modality prefusion, which integrates visual information into text tokens beforehand, enabling extreme compression where only a single visual token is fed into the LLM back- bone.",
+    "FastV [9] identifies the phenomenon of ineffi- cient attention in MLLMs and proposes that an image is worth 1/2 tokens after layer 2 of MLLMs.",
+    "SparseVLM [43] proposes a text-guided and training-free visual token op- timization method that evaluates the importance of visual tokens by selecting text tokens that are the most relevant to visual content.",
+    "MustDrop [21] designs dedicated visual token compression modules in the visual encoding, pre- filling, and decoding stages of MLLMs.",
+    "VisionZip [38] in- troduces a text-independent approach that significantly re- duces the number of visual tokens by selecting dominant visual tokens and employing a similarity-based token merg- ing strategy.",
+    "Using this, the contribution of the x-th token to the rank of Z2 visual (i.e., its impact on the overall information quantity) can be computed as: C2(x) = r X i=1 |uxi σi| . (5) For computing the Attention Score of visual tokens, we follow the approach in FastV, using the Attention Matrix from the second LLM layer, denoted as A2 ∈RH×Lv×Lv, where H is the number of attention heads.",
+    "We compare TokenCarve against both published methods (e.g., FastV [9], VisionZip [38]) and preprints (e.g., MustDrop [21], SparseVLM [43]).",
+    "Finally, the top Lvc × ρ tokens in SetB—those exhibit- ing the highest similarity scores with tokens in SetA—are merged into SetA using an average weighting scheme (as employed by ToMe [5]), while all remaining tokens remain intact."
+   ],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": [
+    "Notably, it performs especially well on OCR-heavy tasks such as VQAText and VQAV2.",
+    "Evaluation Tasks To assess the effectiveness of our method on image understanding tasks, we conduct experiments on eight widely used benchmarks including MME [12], MMBench (MMB) [22], POPE [18], SQAIMG [23], VizWiz [4], VQAText [28], VQAV2 [13] and MMVet [40].",
+    "The visual q&a task datasets (such as VQAText and VQAV2) contain a large number of OCR tasks that are sensitive to the loss of informativeness due to token compression.",
+    "About results across more visual token count settings and additional datasets, Method MME POPE VQAText MMVet LLaVA-1.5-13B Upper Bound, 576 Tokens (100%) Vanilla 1531/296 86.4 61.2 36.1 Retain 192 Tokens (↓66.7%) FastV 1493/296 83.3 60.5 35 TokenCarve (Ours) 1535/311 86.8 60.8 34.4 Retain 128 Tokens (↓77.8%) FastV 1484/306 78 59.7 34 TokenCarve (Ours) 1507/315 85.8 60.6 35.6 Retain 64 Tokens (↓88.9%) FastV 1373/284 69.2 56.1 31.2 TokenCarve (Ours) 1483/285 83.7 59.3 33.9 Table 2.",
+    "In MME dataset, TokenCarve scored significantly higher than fastV on both Perception / Cognition parts.",
+    "In POPE dataset, when 64 visual tokens are retained, FastV’s performance drops by 17.2, yet TokenCarve drops by only 2.7.",
+    "MME, POPE and TextVQA) in Tab.",
+    "The performance of ICS on the POPE dataset is extremely bright and even achieves better results compared to the joint approach, reflecting our significance of minimizing infor- mation loss."
+   ]
+  }
+ },
+ {
+  "id": "2503.18278",
+  "title": "TopV: Compatible Token Pruning with Inference Time Optimization for Fast and Low-Memory Multimodal Vision Language Model",
+  "mark": "keep",
+  "chars": 39776,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 2,
+   "LAT": 2,
+   "MEM": 5,
+   "THR": 0,
+   "TOK": 3,
+   "HW": 1,
+   "ACC": 1,
+   "FREE": 1,
+   "BASE": 8,
+   "CMP": 8,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "A100",
+    "A6000"
+   ],
+   "BASE": [
+    "BLIP-2",
+    "InternVL",
+    "InternVL2",
+    "LLaVA",
+    "LLaVa",
+    "Video-LLaVA"
+   ],
+   "CMP": [
+    "FastV",
+    "LLaVA-PruMerge",
+    "LLaVa-PruMerge",
+    "TopV",
+    "VTW"
+   ],
+   "BENCH": [
+    "AI2D",
+    "MMBench",
+    "MMMU",
+    "OCRBench",
+    "POPE",
+    "VideoMME"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [
+    "We set the pruning ratio as 50% and the sampling interval to 4 for token recovering, achieving a 35% FLOPs reduction in overall vision tokens for LLaVA models.",
+    "For InternVL2 models, we set the pruning ratio as 70%, and the sampling interval to 3, resulting in reducing round 47% FLOPs ratio for the visual tokens."
+   ],
+   "LAT": [
+    "Notably, our optimization process requires only 2 ms, comprising less than 1% of total inference time. those with minimal influence.",
+    "Notably, our optimization pro- cess takes only 2 ms, accounting for less than 1% of total inference time in most cases."
+   ],
+   "MEM": [
+    "Specifically, on InternVL2 models, it improves accuracy by 1.2%, reduces visual FLOPs by 47%, low- ers dynamic memory usage by 61%, and achieves 2.1× inference efficiency.",
+    "For LLaVA models, it improves per- formance by 0.39%, reduces visual FLOPs by 50%, low- ers dynamic memory usage by 49%, and achieves 1.68× inference efficiency compared to previous methods.",
+    "For the InternVL2 models, when reducing FLOPs by round 47% for the vision tokens, the model showed almost no loss of accuracy compared to the baseline, while dy- namic memory usage is reduced by 23.8% and inference efficiency improved to 1.23 × on average and improved to 1.31 × for some recognition tasks.",
+    "When compared to FastV, which reduces FLOPs by 47%, InternVL2 models shows a 1.2 higher score on average, with dynamic memory usage decreasing by 61% and inference efficiency improv- ing by 2.1×.",
+    "Ad- ditionally, dynamic memory usage is reduced by 49%, and inference efficiency improves by 1.68×."
+   ],
+   "THR": [],
+   "TOK": [
+    "For example, in the OCR task, LLaVA-v1.5 [28] translates an image into 576 visual tokens, constituting up to 87% of the total in- put sequences.",
+    "For the LLaVA models, reducing FLOPs by 35% of the vision tokens results in negligible accuracy loss compared to the baseline, with inference efficiency improving to 1.08 × on average and improving to 1.12 × for some recogni- tion tasks.",
+    "When reducing FLOPs round 50% of the vision tokens, the model outperforms the FastV, which reduces FLOPs by 47%, by an average of 0.39% in accuracy."
+   ],
+   "HW": [
+    "The experiments are conducted on A6000 GPU for LLaVA-v1.5-7B and InternVL2-2B model, A100 GPU for LLaVA-v1.5-13B and InternVL2- 26B model."
+   ],
+   "ACC": [
+    "When compared to FastV, which reduces FLOPs by 47%, InternVL2 models shows a 1.2 higher score on average, with dynamic memory usage decreasing by 61% and inference efficiency improv- ing by 2.1×."
+   ],
+   "FREE": [
+    "Our contri- butions are summarized as follows: • We propose a training-free token reduction method for VLMs that optimizes pruning during the inference prefill- ing stage, reducing computation while maintaining com- patibility with FlashAttention and KV cache."
+   ],
+   "BASE": [
+    "For example, in the OCR task, LLaVA-v1.5 [28] translates an image into 576 visual tokens, constituting up to 87% of the total in- put sequences.",
+    "Similarly, InternVL [6, 7, 14], depending on image resolution, produces between 256 and 1792 visual to- kens, accounting for up to 95% of the total tokens.",
+    "LLaVA-PruMerge [42] retains the most critical visual tokens and then merges less important tokens into them.",
+    "Pre- vious works such as FastV [5], and LLaVa-PruMerge [42] primarily rely on attention scores to measure the impor- tance, assuming higher scores indicate greater relevance.",
+    "However, pre- vious works FastV [5] and LLaVa-PruMerge [42] uti- lize the attention scores for token importance, requiring explicit computation and negating FlashAttention’s effi- ciency benefits. • Incompatiblity with KV Cache.",
+    "Token impor- tance is then computed using the Sinkhorn algorithm, fol- lowed by a token recovery strategy after pruning. • We conduct extensive experiments on LLaVA and In- ternVL2 models across multiple tasks, demonstrating that our method surpasses state-of-the-art token pruning ap- proaches.",
+    "Specifically, on InternVL2 models, it improves accuracy by 1.2%, reduces visual FLOPs by 47%, low- ers dynamic memory usage by 61%, and achieves 2.1× inference efficiency.",
+    "For LLaVA models, it improves per- formance by 0.39%, reduces visual FLOPs by 50%, low- ers dynamic memory usage by 49%, and achieves 1.68× inference efficiency compared to previous methods."
+   ],
+   "CMP": [
+    "To address these issues, we introduce TopV, a com- patible TOken Pruning with inference Time Optimization for fast and low-memory VLM, achieving efficient pruning without additional training or fine-tuning.",
+    "FastV [5] dynamically prunes unimportant visual tokens based on their received atten- tion score.",
+    "LLaVA-PruMerge [42] retains the most critical visual tokens and then merges less important tokens into them.",
+    "VTW [25] prunes all vision tokens from certain lay- ers.",
+    "Pre- vious works such as FastV [5], and LLaVa-PruMerge [42] primarily rely on attention scores to measure the impor- tance, assuming higher scores indicate greater relevance.",
+    "In Contrast, VTW [25] prunes all visual tokens after cer- tain layers without considering importance metrics.",
+    "However, pre- vious works FastV [5] and LLaVa-PruMerge [42] uti- lize the attention scores for token importance, requiring explicit computation and negating FlashAttention’s effi- ciency benefits. • Incompatiblity with KV Cache.",
+    "Previous works such as FastV [5] dynamically prune tokens at each decoding step, requiring variable KV cache sizes."
+   ],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": [
+    "To evaluate the performance in a task-agnostic setting with zero-shot, we conduct the exper- iments on a variety of VLM tasks, such as recognition and reasoning tasks with AI2D [17], SQA image [32], MMMU [57], MMBench [30], POPE [21]; image captioning tasks with Npcaps [1] dataset; visual question answering tasks with OK-VQA [34]; and OCR tasks with OCRBench [29].",
+    "Performance comparisons in AI2D, SQA IMG, MMMU, MMBench tasks.",
+    "For MMBench, both CN and EN metrics are considered.",
+    "Performance comparisons in POPE, Nocaps, OCRBench, OK-VQA tasks.",
+    "To further investigate the impact on mem- ory usage resulting from compatibility with the KV cache, we conduct detailed profiling of memory usage on AI2D and OCRBench during the inference process.we select a few random samples for each task after GPU warmup (Fig.",
+    "Performance comparison with VTW in AI2D, SQA IMG, MMMU, MMBench, POPE, Nocaps, OCRBench, OK-VQA tasks.",
+    "Memory Usage of TopV (a, d), Baseline (b, e), and FastV (c, f) on AI2D and OCRBench tasks for InternVL2-2B.",
+    "Subfigures (a), (b), and (c) represent the memory usage of TopV, baseline, and FastV on the AI2D task, respectively, and (d), (e), (f) show the memory usage of these methods on the OCRBench task."
+   ]
+  }
+ },
+ {
+  "id": "2506.10967",
+  "title": "Beyond Attention or Similarity: Maximizing Conditional Diversity for Token Pruning in MLLMs",
+  "mark": "keep",
+  "chars": 37403,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 1,
+   "MEM": 1,
+   "THR": 0,
+   "TOK": 6,
+   "HW": 1,
+   "ACC": 8,
+   "FREE": 7,
+   "BASE": 8,
+   "CMP": 8,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "NVIDIA A100"
+   ],
+   "BASE": [
+    "LLaVA",
+    "LLaVA-1.5",
+    "LLaVA-NeXT",
+    "LLaVA-Video",
+    "Qwen2.5-VL"
+   ],
+   "CMP": [
+    "CDPruner",
+    "DivPrune",
+    "FastV",
+    "LLaVA-Prumerge",
+    "PruMerge",
+    "PyramidDrop",
+    "SparseVLM",
+    "TRIM",
+    "VisionZip"
+   ],
+   "BENCH": [
+    "AI2D",
+    "ChartQA",
+    "GQA",
+    "LongVideoBench",
+    "MLVU",
+    "MMBench",
+    "MME",
+    "MVBench",
+    "OCRBench",
+    "POPE",
+    "ScienceQA",
+    "TextVQA",
+    "VQAV2",
+    "VQAv2",
+    "Video-MME",
+    "VizWiz"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [
+    "The additional latency is negligible when m ≪n, with less than 10ms per sample."
+   ],
+   "MEM": [
+    "When applied to LLaVA-NeXT-7B, it reduces FLOPs by 95%, CUDA latency by 78%, and GPU memory by 17%, while maintaining 94% of the original performance in a training-free manner."
+   ],
+   "THR": [],
+   "TOK": [
+    "For example, LLaVA-1.5 [Liu et al., 2024a] converts a 336×336 image into 576 tokens, while its high-resolution variant, LLaVA-NeXT [Liu et al., 2024b], generates 2,880 tokens from an image with twice the resolution.",
+    "With 77.8% of tokens pruned, CDPruner remarkably maintains nearly all the original performance, surpassing VisionZip by 1.4%.",
+    "With only 5.6% of visual tokens retained, attention and similarity-based methods also encounter noticeable performance degradation because, despite selecting relatively important tokens, they include excessive redundancy and duplication.",
+    "As shown in Table 2, with 77.8% of tokens pruned, CDPruner maintains performance comparable to, or slightly better than, the original LLaVA- NeXT, demonstrating the higher visual redundancy in high-resolution scenarios.",
+    "As demonstrated in Table 3, with 62.1% of visual tokens pruned, CDPruner maintains 98.6% of the original performance, outperforming PDrop by 1.5%.",
+    "With 60.5% and 80.2% of tokens pruned, CDPruner retains 97.5% and 92.8% of the original performance, surpassing the second-best FastV by 0.5% and 2.0%, respectively."
+   ],
+   "HW": [
+    "All experiments are performed on a single NVIDIA A100-80GB GPU."
+   ],
+   "ACC": [
+    "When applied to LLaVA, CDPruner reduces FLOPs by 95% and CUDA latency by 78%, while maintaining 94% of the original accuracy.",
+    "When applied to LLaVA-NeXT-7B, it reduces FLOPs by 95%, CUDA latency by 78%, and GPU memory by 17%, while maintaining 94% of the original performance in a training-free manner.",
+    "When the number of visual tokens further decreases to 64, roughly one-tenth of the original token length, attention-based pruning methods exhibit significant performance degradation of over 25%, indicating that internal 6 Table 2: Performance comparison of different pruning methods on LLaVA-NeXT-7B.",
+    "In this scenario, CDPruner still maintains 94.3% of the original performance, significantly outperforming the best similarity-based method, DivPrune, by 3%, which fully demonstrates its effectiveness.",
+    "As the reduction ratio further increases to 88.9% and 94.4%, CDPruner still retains up to 98% and 96% of the original performance, outperforming the second-best DivPruner by 2% and 3.1%, respectively.",
+    "As demonstrated in Table 3, with 62.1% of visual tokens pruned, CDPruner maintains 98.6% of the original performance, outperforming PDrop by 1.5%.",
+    "As the reduction ratio increases to 81.1%, CDPruner still preserves 95% performance, significantly exceeding DivPrune’s 93%.",
+    "Furthermore, when only 16 visual tokens are retained per frame, text-based methods exhibit substantial performance degradation, while CDPruner is able to maintain 89.7% performance, showing a substantial 10% improvement over SparseVLM."
+   ],
+   "FREE": [
+    "The proposed CDPruner is training-free and model-agnostic, allowing easy application to various MLLMs.",
+    "To address these issues, we propose CDPruner, a plug-and-play method for MLLM inference ac- celeration by maximizing the conditional diversity of the selected subset.",
+    "When applied to LLaVA-NeXT-7B, it reduces FLOPs by 95%, CUDA latency by 78%, and GPU memory by 17%, while maintaining 94% of the original performance in a training-free manner.",
+    "We introduce CDPruner, a plug-and-play and model-agnostic solution for visual token pruning that maximizes conditional diversity.",
+    "Other works adopt a training-free approach by removing redundant visual tokens during inference, known as token pruning.",
+    "As a training-free and model-agnostic method, it ensures both the diversity and quality of the selected token subset, significantly reducing computational cost while maintaining considerable performance.",
+    "5 Conclusion In this paper, we introduce a novel training-free visual token pruning method CDPruner, for MLLM inference acceleration."
+   ],
+   "BASE": [
+    "When applied to LLaVA, CDPruner reduces FLOPs by 95% and CUDA latency by 78%, while maintaining 94% of the original accuracy.",
+    "When applied to LLaVA-NeXT-7B, it reduces FLOPs by 95%, CUDA latency by 78%, and GPU memory by 17%, while maintaining 94% of the original performance in a training-free manner.",
+    "For example, LLaVA-1.5 [Liu et al., 2024a] converts a 336×336 image into 576 tokens, while its high-resolution variant, LLaVA-NeXT [Liu et al., 2024b], generates 2,880 tokens from an image with twice the resolution.",
+    "We compute the relevance scores for several samples from the POPE benchmark using LLaVA-1.5-7B, with the instruction following the template: “Is there a {object} in the image?” Red indicates high relevance, while blue indicates low relevance.",
+    "Figure 3 shows the relevance scores derived through the LLaVA-1.5-7B [Liu et al., 2024a] model for several samples from the POPE benchmark [Li et al., 2023].",
+    "5 Table 1: Performance comparison of different pruning methods on LLaVA-1.5-7B.",
+    "We apply CDPruner to various MLLM architectures, including the LLaVA series such as LLaVA-1.5 [Liu et al., 2024a] for image understanding, LLaVA-NeXT [Liu et al., 2024b] for high-resolution inputs, and LLaVA-Video [Zhang et al., 2024d] for video understanding, as well as the current state-of-the-art open-source model Qwen2.5-VL [Bai et al., 2025].",
+    "We choose several recent works of different types as comparsion methods, in- cluding attention-based methods like FastV [Chen et al., 2024a], PyramidDrop [Xing et al., 2024] and SparseVLM [Zhang et al., 2024c], attention&similarity-based methods like LLaVA-Prumerge [Shang et al., 2024], TRIM [Song et al., 2024] and VisionZip [Yang et al., 2024b], as well as similarity-based methods like DART [Wen et al., 2025b] and DivPrune [Alvar et al., 2025]."
+   ],
+   "CMP": [
+    "In this paper, we go beyond attention or similarity by proposing a novel visual token pruning method named CDPruner, which maximizes the conditional diversity of retained tokens.",
+    "The proposed CDPruner is training-free and model-agnostic, allowing easy application to various MLLMs.",
+    "Extensive experiments across diverse MLLMs show that CDPruner establishes new state-of-the-art on various vision- language benchmarks.",
+    "When applied to LLaVA, CDPruner reduces FLOPs by 95% and CUDA latency by 78%, while maintaining 94% of the original accuracy.",
+    "Our code is available at https://github.com/Theia-4869/CDPruner.",
+    "Input Image Attention-based Pruning Similarity-based Pruning CDPruner (Ours) Description Q: Is the ramen spicy?",
+    "Our CDPruner considers the conditional diversity of the selected subset, dynamically adjusting pruning according to the user instructions and retaining maximal visual information.",
+    "In this example, CDPruner successfully preserves tokens related to crucial details, such as the “ICHIRAN” logo on the bowl and chopsticks, the chili pepper on the ramen, and the anti-slip design on the spoon handle, while both alternative methods failed."
+   ],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": [
+    "We compute the relevance scores for several samples from the POPE benchmark using LLaVA-1.5-7B, with the instruction following the template: “Is there a {object} in the image?” Red indicates high relevance, while blue indicates low relevance.",
+    "Figure 3 shows the relevance scores derived through the LLaVA-1.5-7B [Liu et al., 2024a] model for several samples from the POPE benchmark [Li et al., 2023].",
+    "Method VQAV2 GQA VizWiz SQAIMG VQAText POPE MME MMBEN MMBCN MMVet Acc.",
+    "We evaluate our method on 14 image-based multimodal benchmarks, including 10 general VQA tasks such as VQAv2 [Goyal et al., 2017], GQA [Hudson and Manning, 2019], VizWiz [Gurari et al., 2018], ScienceQA-IMG [Lu et al., 2022], HallBench [Guan et al., 2024], POPE [Li et al., 2023], MME [Fu et al., 2024a], MMBench [Liu et al., 2025], MMBench-CN [Liu et al., 2025] and MM-Vet [Yu et al., 2023], and 4 text-oriented VQA tasks such as TextVQA [Singh et al., 2019], ChartQA [Masry et al., 2022], AI2D [Kembhavi et al., 2016] and OCRBench [Liu et al., 2024d].",
+    "We also conduct experiments on 4 widely-used video understanding benchmarks, including MLVU [Zhou et al., 2024], MVBench [Li et al., 2024b], LongVideoBench [Wu et al., 2024] and Video-MME [Fu et al., 2024b].",
+    "Method VQAV2 GQA VizWiz SQAIMG VQAText POPE MME MMBEN MMBCN MMVet Acc.",
+    "Among all 10 benchmarks, CDPruner achieves particularly strong performance on POPE [Li et al., 2023], even exceeding the unpruned original LLaVA-1.5 model.",
+    "Since POPE is specifically designed to evaluate visual hallucination, this result suggests that appropriate pruning may help mitigate hallucination in MLLMs, which we believe is a valuable direction for future research."
+   ]
+  }
+ },
+ {
+  "id": "2506.17218",
+  "title": "Machine Mental Imagery: Empower Multimodal Reasoning with Latent Visual Tokens",
+  "mark": "keep",
+  "chars": 38011,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 0,
+   "ACC": 1,
+   "FREE": 0,
+   "BASE": 6,
+   "CMP": 0,
+   "BIT": 1,
+   "PARAM": 0,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [],
+   "BASE": [
+    "Qwen2.5-VL"
+   ],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [],
+   "ACC": [
+    "However, increasing k to 8 results in a significant performance drop around 13%, likely due to error accumula- tion in longer latent sequences under autoregressive non-decoding generation."
+   ],
+   "FREE": [],
+   "BASE": [
+    "With the generated helper image, we then employ Qwen2.5-VL 32B [Bai et al., 2025] as the external reasoning model Mr to generate textual thoughts.",
+    "In this work, unless stated otherwise, all experiments use Qwen2.5-VL 7B as the base model.",
+    "Second, the synthesized thoughts are generated by Qwen2.5-VL-32B; although generally sound, they are not flawless, and any imperfections propagate into the base model.",
+    "Zero-Shot 0.63 0.58 0.50 0.63 0.57 0.49 Direct SFT 0.71 0.87 0.95 0.95 0.95 0.67 CoT SFT 0.75 0.83 0.97 0.90 0.94 0.66 GRPO - 0.85 0.85 0.80 0.83 0.71 SFT + GRPO - 0.86 0.93 0.85 0.89 0.65 Ours 0.77 0.88 0.98 0.98 0.98 0.72 Table 3: Experimental Results with Qwen2.5-VL 3B on COMT, Jigsaw, and SAT tasks.",
+    "8 Level 3 Level 4 Level 5 Level 6 Level 3 Level 4 Level 5 Level 6 Qwen2.5-VL-3B-Instruct Qwen2.5-VL-7B-Instruct 1.0 0.8 0.6 0.4 0.2 1.0 0.8 0.6 0.4 0.2 (a) VSP Spatial Reasoning Qwen2.5-VL-3B-Instruct Qwen2.5-VL-7B-Instruct 1.0 0.8 0.6 0.4 0.2 1.0 0.8 0.6 0.4 0.2 Level 3 Level 4 Level 5 Level 6 Level 3 Level 4 Level 5 Level 6 (b) VSP Spatial Planning Zero-shot results SFT results Results w/ helper images Results w/o helper images Figure 6: Performance with Helper Images as Input Priors.",
+    "To further investigate the impact of our latent design, we also evaluate performance using the Qwen2.5-VL 3B model."
+   ],
+   "CMP": [],
+   "BIT": [
+    "We extend the original binary choice to a three-way classification."
+   ],
+   "PARAM": [],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2509.22548",
+  "title": "JanusVLN: Decoupling Semantics and Spatiality with Dual Implicit Memory for Vision-Language Navigation",
+  "mark": "keep",
+  "chars": 36651,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 1,
+   "MEM": 1,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 0,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 5,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [],
+   "BASE": [
+    "Qwen2.5-VL"
+   ],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [
+    "Memory Size Inference Time NEÓ OSÒ SRÒ SPLÒ VGGT (8) 268 ms 5.99 56.2 50.2 45.0 VGGT (32) 1549 ms 5.66 56.8 51.2 47.6 Cached Memory (8) 82 ms 5.91 56.0 50.5 45.7 Cached Memory (32) 149 ms 5.52 57.1 51.7 48.3 Cached Memory (48) 195 ms 5.17 58.0 52.8 49.2 Cached Memory (64) 244 ms 5.27 57.5 52.3 49.4 Cached Memory[w/o initial’s KV] (48) 171 ms 5.66 56.8 51.0 47.5 Ablation on memory size."
+   ],
+   "MEM": [
+    "Furthermore, removing the semantic memory results in a 13.8% decrease in the SR, underscoring the necessity of the semantic memory."
+   ],
+   "THR": [],
+   "TOK": [],
+   "HW": [],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "For both the semantic encoder and the LLM, namely Qwen2.5-VL, we employ standard KV Cache during the inference stage for acceleration, retaining only the key-value pairs within the initial and 5 Published as a conference paper at ICLR 2026 sliding windows.",
+    "For 2D semantic encoder, we adopt the original vi- sual encoder from Qwen2.5-VL to interactively encode the input frame xt with the semantic memory into a semantic tokens: St “ Encodersempxtq, St P Rt H p uˆt W p uˆC. (3) Additionally, Qwen2.5-VL (Bai et al., 2025) groups spatially adjacent 2ˆ2 patches into a single image token to reduce computational cost, yielding S1 t P Rt H 2p uˆt W 2p uˆC.",
+    "Upon acquiring the semantic features S1 t and spatial geometric features Gt, we first employ the spatial merging strategy from Qwen2.5-VL (Bai et al., 2025).",
+    "We constructed JanusVLN based on Qwen2.5-VL 7B (Bai et al., 2025) and VGGT Wang et al. (2025a).",
+    "While this makes them proficient in capturing high-level semantics, this information is largely redundant with that from the original visual encoder of Qwen2.5-VL, and consequently, offers no significant improvement."
+   ],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2510.16598",
+  "title": "VisionSelector: End-to-End Learnable Visual Token Compression for Efficient Multimodal LLMs",
+  "mark": "keep",
+  "chars": 41960,
+  "counts": {
+   "SPEED": 1,
+   "FLOP": 0,
+   "LAT": 3,
+   "MEM": 2,
+   "THR": 0,
+   "TOK": 1,
+   "HW": 3,
+   "ACC": 3,
+   "FREE": 8,
+   "BASE": 8,
+   "CMP": 8,
+   "BIT": 3,
+   "PARAM": 3,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "A800",
+    "NVIDIA A800"
+   ],
+   "BASE": [
+    "LLaVA",
+    "LLaVA-1.5",
+    "LLaVA-OneVision",
+    "Qwen2.5-VL"
+   ],
+   "CMP": [
+    "DivPrune",
+    "Dynamic-LLaVA",
+    "FastV",
+    "PruMerge",
+    "VisionZip"
+   ],
+   "BENCH": [
+    "AI2D",
+    "ChartQA",
+    "DocVQA",
+    "MME",
+    "MMMU",
+    "MVBench",
+    "OCRBench",
+    "POPE",
+    "SEED-Bench",
+    "SEEDBench",
+    "ScienceQA",
+    "TextVQA",
+    "VideoMME"
+   ]
+  },
+  "evidence": {
+   "SPEED": [
+    "Vision- Selector’s prefill time is only 760.82 ms and its end-to-end latency is 924.57 ms, achieving 1.86× and 1.74× speedups over the baseline model, respectively."
+   ],
+   "FLOP": [],
+   "LAT": [
+    "Vision- Selector’s prefill time is only 760.82 ms and its end-to-end latency is 924.57 ms, achieving 1.86× and 1.74× speedups over the baseline model, respectively.",
+    "ViT Backbone + Merger 26.55 38.6% 26.42 55.4% LIS (Importance Scorer) — — 0.14 0.3% Token Selection (Top-𝐾) — — 0.09 0.2% LLM Prefill 42.18 61.4% 21.01 44.1% End-to-End Prefill 68.73 100% 47.65 100% Prefill Speedup 1.44× As shown in Table 4, the ViT backbone latency is nearly identical in both configurations (26.55 ms vs.",
+    "The primary speedup comes from the LLM decoder, whose prefill time drops from 42.18 ms to 21.01 ms (2.01×) due to the shortened prefix."
+   ],
+   "MEM": [
+    "At 20% retention, it accelerates the prefill phase by a factor of 1.73× while simultane- ously reducing memory consumption to 86.08%.",
+    "Our method matches DivPrune in memory efficiency by lowering peak memory usage to 17.57 GB, a 32.3% reduction from the baseline model."
+   ],
+   "THR": [],
+   "TOK": [
+    "VisionSelector is optimal across all ratios, achieving a 2× prefill speedup with only 5% tokens. (c) DocVQA with a 20% token budget: comparison of performance, GPU memory, and speedup."
+   ],
+   "HW": [
+    "All experiments are conducted on 8 NVIDIA A800 GPUs (80GB).",
+    "4.6 Latency Breakdown Analysis To examine whether the LIS overhead offsets the efficiency gains from token compression, we profile the prefill latency of Qwen2.5- VL-7B with and without VisionSelector (𝑏=20%) on a single A800 GPU using a single-image input.",
+    "Table 4: Prefill latency breakdown on Qwen2.5-VL-7B (single image, A800 GPU, 𝑏=20%)."
+   ],
+   "ACC": [
+    "This leads to superior performance across the evaluated compression budgets, evidenced by preserving 100% performance on MME with a 30% retention budget, outperforming representa- tive heuristic baselines by 12.14 percentage points at a 10% reten- tion budget, and doubling prefill speed.",
+    "At a 20% bud- get, VisionSelector retains 94.83% of the full model’s average perfor- mance, exceeding the next-best method by over 8 percentage points; at 10%, the margin remains 9.40 percentage points even when the learnable baseline Dynamic* is included.",
+    "Overall, VisionSelector retains 98.13% of the baseline performance on these video tasks."
+   ],
+   "FREE": [
+    "To address these limitations, we reformulate token compression as a lightweight plug-and-play framework and turn it into an end-to-end learnable decision process.",
+    "Our ap- proach, VisionSelector, addresses the limitations of prior methods by introducing a lightweight, plug-and-play framework that seam- lessly integrates with existing vision-language models and supports adaptive compression.",
+    "The contributions of this paper could be summarized as: • We propose VisionSelector, a novel framework that refor- mulates visual token compression from heuristic-based post- processing to an end-to-end learnable decision process, opti- mized directly by downstream losses. • We design a lightweight, plug-and-play, and training-efficient module (12.85M parameters) that seamlessly integrates with existing MLLMs.",
+    "2 Related Work Training-free Token Compression Methods.",
+    "3.1 Overall Framework Our method, VisionSelector, is designed as a plug-and-play solu- tion for seamless integration into advanced MLLMs.",
+    "To further exam- ine the plug-and-play generality of VisionSelector across differ- ent MLLM architectures, we integrate it into LLaVA-OneVision- 1.5-8B [4].",
+    "These results demonstrate that VisionSelec- tor generalizes effectively to another MLLM backbone and adapts to unseen compression budgets without retraining.",
+    "Results on Qwen2.5-VL and LLaVA-OneVision-1.5 further show that VisionSe- lector is plug-and-play and supports end-to-end training in MLLMs."
+   ],
+   "BASE": [
+    "Dynamic- LLaVA [21] learns an image predictor for binary keep-or-drop token decisions, while LightVLA [24] follows a Straight-Through Estima- tion (STE) [8] style pruning paradigm to optimize discrete token selection.",
+    "All experiments are based on the Qwen2.5-VL-7B [6], a powerful open-source MLLM that serves as a high-performance baseline for our study.",
+    "We additionally include a re-implementation of the image predictor from Dynamic-LLaVA [21] (denoted as Dynamic* in tables) as a learnable baseline.",
+    "Since the original Dynamic-LLaVA is developed for LLaVA-1.5 [32] and jointly sparsifies visual and language contexts, we adapt only its image predictor to Qwen2.5- VL-7B to match our visual token compression setting.",
+    "4.3 Image-Language Understanding Evaluation To evaluate VisionSelector, we compare a model trained with a 20% budget against multiple baselines across varying budgets, and the results in Table 1 validate the effectiveness of our method while Table 2: Comparison results on LLaVA-OneVision-1.5-8B.",
+    "Experiments on LLaVA-OneVision-1.5-8B.",
+    "To further exam- ine the plug-and-play generality of VisionSelector across differ- ent MLLM architectures, we integrate it into LLaVA-OneVision- 1.5-8B [4].",
+    "Method MVBench SEEDBench VideoMME NExT-QA Performance Max GPU Prefill Time (ms) E2E Latency Acc Acc Score WUPS (%) mem (GB) (ms) (ms) Qwen2.5-VL-7B 68.10 60.48 60.67 27.58 100% 25.97 1413.34 1605.31 FastV (ECCV2024) 65.75 OOM 59.15 27.00 97.31% 27.59 851.76 1021.83 DART (EMNLP2025) 65.80 61.00 57.74 26.84 97.49% 18.93 832.58 996.55 DivPrune (CVPR2025) 65.85 59.79 57.78 27.00 97.17% 17.55 1184.00 1345.24 VisionSelector 66.55 59.82 59.22 27.10 98.13% 17.57 760.82 924.57 selector for one epoch on approximately 101K samples from the OCRVQA and TextVQA subsets of Cambrian-737K."
+   ],
+   "CMP": [
+    "For example, FastV [12] selects visual tokens according to the attention they receive from text tokens, while PruMerge+ [47] identifies important tokens via attention sparsity and merges the remaining ones with K-Nearest Neighbors (KNN) clustering.",
+    "VisionZip [69] further combines attention-based domi- nant token selection with similarity-based contextual token merg- ing, and HoloV [80] improves robustness under high pruning ratios by preserving holistic visual context across spatial crops.",
+    "DART [62] retains one representative token from near-duplicate groups based on cosine similarity, whereas DivPrune [3] preserves tokens by maximizing the informational diversity of the retained subset.",
+    "FastV [12], PruMerge+ [47], VisionZip [69] and HoloV [80], as well as the similarity-based methods DART [62] and DivPrune [3] as our baselines.",
+    "We additionally include a re-implementation of the image predictor from Dynamic-LLaVA [21] (denoted as Dynamic* in tables) as a learnable baseline.",
+    "Since the original Dynamic-LLaVA is developed for LLaVA-1.5 [32] and jointly sparsifies visual and language contexts, we adapt only its image predictor to Qwen2.5- VL-7B to match our visual token compression setting.",
+    "When the budget tight- ens from 20% to 10%, attention-based baselines drop sharply (e.g., VisionZip by ∼14 points), whereas VisionSelector degrades more gracefully (by ∼6 points).",
+    "Method MVBench SEEDBench VideoMME NExT-QA Performance Max GPU Prefill Time (ms) E2E Latency Acc Acc Score WUPS (%) mem (GB) (ms) (ms) Qwen2.5-VL-7B 68.10 60.48 60.67 27.58 100% 25.97 1413.34 1605.31 FastV (ECCV2024) 65.75 OOM 59.15 27.00 97.31% 27.59 851.76 1021.83 DART (EMNLP2025) 65.80 61.00 57.74 26.84 97.49% 18.93 832.58 996.55 DivPrune (CVPR2025) 65.85 59.79 57.78 27.00 97.17% 17.55 1184.00 1345.24 VisionSelector 66.55 59.82 59.22 27.10 98.13% 17.57 760.82 924.57 selector for one epoch on approximately 101K samples from the OCRVQA and TextVQA subsets of Cambrian-737K."
+   ],
+   "BIT": [
+    "Dynamic- LLaVA [21] learns an image predictor for binary keep-or-drop token decisions, while LightVLA [24] follows a Straight-Through Estima- tion (STE) [8] style pruning paradigm to optimize discrete token selection.",
+    "At inference time, we apply the standard Top-K operator directly to the score vector to obtain a hard binary mask that selects the top 𝑘tokens.",
+    "We then penalize the discrepancy between Msoft and Mhard using a binary cross-entropy (BCE) loss: 𝐿constraint = BCE(Msoft, Mhard) . (11) VisionSelector: End-to-End Learnable Visual Token Compression for Efficient Multimodal LLMs MM ’26, November 10–14, 2026, Rio de Janeiro, Brazil."
+   ],
+   "PARAM": [
+    "Remarkably lightweight with only 12.85M trainable parameters, VisionSelector demonstrates generalization across various compression rates and adaptively identifies critical tokens.",
+    "The contributions of this paper could be summarized as: • We propose VisionSelector, a novel framework that refor- mulates visual token compression from heuristic-based post- processing to an end-to-end learnable decision process, opti- mized directly by downstream losses. • We design a lightweight, plug-and-play, and training-efficient module (12.85M parameters) that seamlessly integrates with existing MLLMs.",
+    "The selector is trained with a fixed 20% retention budget and contains 16.87M trainable parameters."
+   ],
+   "BENCH": [
+    "This leads to superior performance across the evaluated compression budgets, evidenced by preserving 100% performance on MME with a 30% retention budget, outperforming representa- tive heuristic baselines by 12.14 percentage points at a 10% reten- tion budget, and doubling prefill speed.",
+    "VisionSelector is optimal across all ratios, achieving a 2× prefill speedup with only 5% tokens. (c) DocVQA with a 20% token budget: comparison of performance, GPU memory, and speedup.",
+    "DocVQA ChartQA TextVQA OCRBench ScienceQA AI2D MMMU MME POPE Method ANLS Relaxed EM Score EM EM Acc Score F1 Avg Dynamic Resolution(MinPix=256×28×28,MaxPix=2048×28×28),Upper Bound (100%) Avg.",
+    "It primarily includes ChartQA [38], OCRVQA [41], and a 10% random sample of the COCO [31].",
+    "For datasets included in both the training mixture and the evaluation suite (e.g., ChartQA), we strictly use their official training splits for optimization and the held-out validation or test splits for evaluation, ensuring no sample-level overlap between training and evaluation.",
+    "We select a suite of OCR and text-centric VQA datasets, in- cluding TextVQA [50], DocVQA [39], OCRBench [34], and ChartQA [38], to test the model’s ability to recognize and comprehend em- bedded text.",
+    "To measure complex reasoning about object relation- ships, attributes, and spatial layouts, we employ AI2D [25] and ScienceQA [36].",
+    "Furthermore, we test cross-domain knowledge and expert-level reasoning using two challenging comprehensive benchmarks: MME [17] and MMMU [73]."
+   ]
+  }
+ },
+ {
+  "id": "2602.23699",
+  "title": "HiDrop: Hierarchical Vision Token Reduction in MLLMs via Late Injection, Concave Pyramid Pruning, and Early Exit",
+  "mark": "keep",
+  "chars": 41431,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 1,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 3,
+   "HW": 1,
+   "ACC": 5,
+   "FREE": 5,
+   "BASE": 8,
+   "CMP": 1,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 6
+  },
+  "sets": {
+   "HW": [
+    "NVIDIA A100"
+   ],
+   "BASE": [
+    "LLaVA",
+    "LLaVA-1.5"
+   ],
+   "CMP": [
+    "FastV",
+    "VoCo-LLaMA"
+   ],
+   "BENCH": [
+    "GQA",
+    "POPE",
+    "TextVQA",
+    "VQAv2",
+    "VizWiz"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [
+    "Moreover, HiDrop lowers the prefill latency from 63.6 ms to 32.6 ms, and can be further reduced to 31.8 ms and 28.8 ms through parallelly decoupled visual KV projection and fewer dropping stages."
+   ],
+   "MEM": [],
+   "THR": [],
+   "TOK": [
+    "Extensive experiments show that HiDrop compresses ∼90% visual tokens while matching the original performance and accelerating training by 1.72×.",
+    "Extensive experiments on LLaVA-1.5-7B show that HiDrop compresses ∼90% of visual tokens while matching the original performance, accelerating training by up to 1.72× and substantially improving inference throughput.",
+    "Notably, it retains 98.3% and 96.5% of the baseline performance while pruning 88.9% and 91.7% of vision tokens, respectively."
+   ],
+   "HW": [
+    "All experiments are conducted on 8 NVIDIA A100 40 GB GPUs."
+   ],
+   "ACC": [
+    "Under an extreme GED schedule that reduces visual tokens from 576 to just 1 across the middle layers, the model still retains 99.6% of its original GQA performance.",
+    "Notably, it retains 98.3% and 96.5% of the baseline performance while pruning 88.9% and 91.7% of vision tokens, respectively.",
+    "At even more aggressive compression, HiDrop still retains 96.5% of the baseline at 91.7% pruning, whereas PDrop cannot reach this pruning level under the same protocol.",
+    "Notably, compared to PDrop’s pruning ratio of 46.9%, HiDrop achieves a much higher pruning ratio of 89.0%, which is 4.8 times more aggressive, while the performance drop is only 1.6%, demonstrating HiDrop’s superior efficiency and minimal accuracy trade-off.",
+    "At the same time, the compressed model remains close to the base model, with av- erage performance drops of only 3.0% (665k) and 3.7% (1M) despite operating under a much more aggressive visual-token budget."
+   ],
+   "FREE": [
+    "Most modern MLLMs rely on a connector-based architecture (Liu et al., 2023a;b; 2024a; Bai et al., 2023; Wang et al., 2024), wherein a lightweight module projects visual features directly into the LLM’s embedding space, allowing a pre-trained text backbone to process multimodal inputs without retraining from scratch (Li et al., 2023a).",
+    "To scrutinize this belief, we perform a training-free layer-wise probe on LLaVA- v1.5-7B, feeding GQA image–question pairs through the network and recording hidden states at all layers.",
+    "We validate this with behavior on LLaVA-v1.5-7B with a training-free “early exit” experiment, where we discard all visual tokens at a specific layer and ob- serve the impact on performance.",
+    "Dashed lines separate training-free (above) and training-based (below) methods within each block.",
+    "The ∗denotes results reproduced using the official checkpoints; † denotes training-based methods evaluated under training- free settings; ‡ denotes training-free methods evaluated under training-based settings."
+   ],
+   "BASE": [
+    "Extensive experiments on LLaVA-1.5-7B show that HiDrop compresses ∼90% of visual tokens while matching the original performance, accelerating training by up to 1.72× and substantially improving inference throughput.",
+    "To scrutinize this belief, we perform a training-free layer-wise probe on LLaVA- v1.5-7B, feeding GQA image–question pairs through the network and recording hidden states at all layers.",
+    "On LLaVA-v1.5-7B, we applied an aggressive middle- layer schedules parameterized by ex- ponential decay (ED) and generalized exponential decay (GED).",
+    "We validate this with behavior on LLaVA-v1.5-7B with a training-free “early exit” experiment, where we discard all visual tokens at a specific layer and ob- serve the impact on performance.",
+    "9 11 13 15 17 19 Layer 0.2 0.3 0.4 0.5 Inter-Layer Attn Similarity LLaVA-v1.5-7B: n=4 LLaVA-v1.5-7B: n=8 Figure 6: ILVAS curves for different window sizes, extended results in Ap- pendix.",
+    "6 Published as a conference paper at ICLR 2026 4 EXPERIMENT 4.1 EXPERIMENTAL SETTINGS Models Within the LLaVA-1.5 architecture (Liu et al., 2023a), we verify the effectiveness of the proposed HiDrop with three different LLM backbones: MobileLLaMA-2.7B (Wu et al., 2024), Vicuna-7B-v1.5, and Vicuna-13B-v1.5 (Zheng et al., 2023).",
+    "For LLaVA-1.5-7B, we adopt late injection layer Linj = 9, early exit layer Lexit = 25, and filtering layers F = {10, 14, 16, 18}.",
+    "For LLaVA-1.5- MobileLLaMA-2.7B, we ues Linj = 15, Lexit = 28, and F = {16, 19, 22, 25}."
+   ],
+   "CMP": [
+    "Existing approaches often adopt fixed-ratio, pyramid- like schemes such as FastV (Chen et al., 2024b), TwigVLM (Shao et al., 2025), and PDrop (Xing et al., 2024)."
+   ],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": [
+    "To scrutinize this belief, we perform a training-free layer-wise probe on LLaVA- v1.5-7B, feeding GQA image–question pairs through the network and recording hidden states at all layers.",
+    "Under an extreme GED schedule that reduces visual tokens from 576 to just 1 across the middle layers, the model still retains 99.6% of its original GQA performance.",
+    "Benchmarks To thoroughly evaluate the HiDrop, we conduct experiments on 11 mainstream benchmarks, including MMEP (Fu et al., 2023), MMB, MMBCN (Liu et al., 2025), GQA (Hudson & Manning, 2019), VQAv2 (Goyal et al., 2017), SQAI (Lu et al., 2022), VizWiz (Gurari et al., 2018), TextVQA (Singh et al., 2019), POPE (Li et al., 2023b), SEEDI (Li et al., 2024a), and MMStar (Chen et al., 2024c).",
+    "Model Train Top-K MMEP MMB GQA VQAv2 VizWiz VQAT MMStar Avg(%) LLaVA-1.5-7B - - 1506.5 64.7 61.9 78.5 50.1 58.2 33.7 100.0 LLaVA-1.5-7B + Top-K PT+FT Hard 1436.9 64.2 59.7 76.4 50.1 55.7 33.9 97.7 Diff.",
+    "Model MMEP MMB GQA VQAv2 VizWiz VQAT MMStar Avg(%) LLaVA-1.5-7B 1506.5 64.7 61.9 78.5 50.1 58.2 33.7 100.0 Persistent PE 1414.4 63.7 61.3 76.6 52.1 55.6 32.0 97.6 Compacted PE 1452.3 64.6 61.1 76.8 48.9 55.1 30.3 96.4 Group PE 1442.2 63.9 60.4 76.2 51.2 55.5 31.1 97.0 Table 6: Effect of instruction fine-tuning data scale (HiDrop retains 48 visual tokens in average).",
+    "Model Data Scale MMEP MMB GQA VQAv2 VizWizval VQAT MMStar Avg(%) LLaVA-1.5-7B 665k 1506.5 64.7 61.9 78.5 54.4 58.2 33.7 100.0 HiDrop 1M 1446.4 63.7 59.8 75.6 56.3 54.4 32.7 97.0 LLaVA-1.5-7B 665k 1526.1 68.7 62.7 79.2 61.2 58.8 38.2 100.0 HiDrop 1M 1453.9 66.2 59.5 76.1 60.7 55.4 36.9 96.3 fill gaps; and (3) Group PE: allocate disjoint RoPE index ranges for instruction and vision tokens, with no in-place updates during injection, pruning, or exit."
+   ]
+  }
+ },
+ {
+  "id": "2603.07135",
+  "title": "The Model Knows Which Tokens Matter: Automatic Token Selection via Noise Gating",
+  "mark": "keep",
+  "chars": 40372,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 2,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 1,
+   "HW": 0,
+   "ACC": 3,
+   "FREE": 2,
+   "BASE": 8,
+   "CMP": 8,
+   "BIT": 3,
+   "PARAM": 1,
+   "BENCH": 6
+  },
+  "sets": {
+   "HW": [
+    "NVIDIA A6000"
+   ],
+   "BASE": [
+    "BLIP-2",
+    "LLaVA",
+    "LLaVA-1.5",
+    "LLaVA-NEXT",
+    "LLaVA-NeXT",
+    "LLaVA-OneVision",
+    "Mini-Gemini",
+    "Qwen2-VL",
+    "Qwen2.5-VL"
+   ],
+   "CMP": [
+    "DivPrune",
+    "FastV",
+    "FasterVLM",
+    "FitPrune",
+    "HiRED",
+    "PruMerge",
+    "PyramidDrop",
+    "SparseVLM",
+    "ToMe",
+    "VTW",
+    "VisionZip"
+   ],
+   "BENCH": [
+    "GQA",
+    "MMBench",
+    "MME",
+    "POPE",
+    "SEED-Bench",
+    "ScienceQA",
+    "TextVQA",
+    "VQAv2",
+    "VizWiz"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [
+    "PruneSID’s module requires 43.39 ms, over 60× slower than AutoSelect, pushing its prefill total to 115.84 ms, barely faster than using all tokens.",
+    "By contrast, AutoSelect completes token selection in 0.69 ms and achieves the lowest TTFT of 72.73 ms."
+   ],
+   "MEM": [],
+   "THR": [],
+   "TOK": [
+    "The margin is widest under heavy pruning: at K=6 (3% of tokens) AutoSelect leads HoloV by roughly 10 percentage points in Top-1, while FastV trails further behind."
+   ],
+   "HW": [],
+   "ACC": [
+    "On ten VLM benchmarks, AutoSelect retains 96.5% of full model accuracy while accelerating LLM prefill by 2.85× with only 0.69 ms overhead, and transfers to different VLM backbones without architecture-specific tuning.",
+    "3) AutoSelect retains 96.5% of full-model performance at 88.9% pruning on LLaVA-1.5-7B with only 0.69 ms pruning module overhead, and generalizes consistently to the higher-resolution LLaVA-NEXT and the architecturally distinct Qwen2.5-VL.",
+    "On LLaVA-1.5-7B, AutoSelect retains 96.5% of full-model accuracy at 88.9% token pruning with only 0.69 ms selection overhead, and generalizes without architecture-specific modification to LLaVA-NEXT and Qwen2.5-VL, consistently outperforming existing methods across all evaluated settings."
+   ],
+   "FREE": [
+    "A representative line of work performs plug-and-play, training-free token pruning right after the vision encoder.",
+    "Other training-free approaches emphasize representational coverage: DivPrune [45], DART [46], and Feather [47] select tokens to maximize diversity or to minimize duplication among the retained set, which can be more robust than pure importance ranking at high pruning ratios."
+   ],
+   "BASE": [
+    "In the standard pipeline, patch or grid features from the encoder are projected into the LLM’s embedding space and typically prepended as visual tokens for autoregressive decoding, as seen in representative models like BLIP-2, InstructBLIP, and LLaVA [1, 2, 3].",
+    "3) AutoSelect retains 96.5% of full-model performance at 88.9% pruning on LLaVA-1.5-7B with only 0.69 ms pruning module overhead, and generalizes consistently to the higher-resolution LLaVA-NEXT and the architecturally distinct Qwen2.5-VL.",
+    "This growth substantially amplifies quadratic attention complexity and KV-cache overhead in the LLM, as demonstrated by LLaVA-NeXT [17], LLaVA-OneVision [18], and Qwen2-VL [19].",
+    "To enhance fine-grained perception without prohibitive token costs, MRA [20] adopts multi-resolution pathways to selectively attend to fine-grained tokens, Mini-Gemini [21] employs a dual visual encoder where low- resolution tokens query high-resolution patches via patch-level information mining, and PuMer [22] progressively reduces visual and textual tokens through text-informed pruning and modality-aware merging.",
+    "Finally, [CLS]-based scoring methods such as PruMerge [43] and FasterVLM [44] implicitly assume the backbone provides such a token, which may not hold for modern architectures like Qwen2.5-VL [55], whose vision encoder lacks a [CLS] token.",
+    "ATP-LLaVA [10] incorporates adaptive modules between LLM layers to predict instance-wise retention ratios.",
+    "We evaluate on three architectures: LLaVA-v1.5-7B [3], LLaVA-NeXT-7B [61], and Qwen2.5-VL-7B [55].",
+    "4.2 Main Benchmark Results Across Models Results on LLaVA-1.5-7B."
+   ],
+   "CMP": [
+    "PruMerge [43] and FasterVLM [44] use vision-side statistics such as [CLS]-to-patch attention to score token saliency.",
+    "Other training-free approaches emphasize representational coverage: DivPrune [45], DART [46], and Feather [47] select tokens to maximize diversity or to minimize duplication among the retained set, which can be more robust than pure importance ranking at high pruning ratios.",
+    "Beyond one-shot pruning, FitPrune [48], VTW [49], and Balanced Token Pruning [50] introduce calibration-based or staged schedules to balance local feature preservation and downstream effects, typically using a small calibration set or lightweight statistics.",
+    "In contrast to post-encoder pruning, FastV [4] and SparseVLM [51] prune inside the LLM stack to exploit deeper semantic mixing, trading earlier compute for potentially better task retention.",
+    "Recent analyses by FasterVLM [44], DART [46], and [52] highlight that pruning signal and evaluation protocol are critical: cross-attention can be a noisy proxy for token importance, and naive baselines may be surprisingly competitive.",
+    "Finally, [CLS]-based scoring methods such as PruMerge [43] and FasterVLM [44] implicitly assume the backbone provides such a token, which may not hold for modern architectures like Qwen2.5-VL [55], whose vision encoder lacks a [CLS] token.",
+    "This set follows the evaluation protocol used by DivPrune [45], SparseVLM [51], and HoloV [71], allowing direct comparison; detailed benchmark descriptions are provided in the supplementary material.",
+    "Methods: ToMe [39], HiRED [72], DivPrune [45], VisionZip [5], HoloV [71], and PRUNESID [73]."
+   ],
+   "BIT": [
+    "2) We introduce a variance-preserving noise gate that replaces the binary keep-or-discard decision of conventional pruning with continuous per-token information capacity modulation.",
+    "We anneal τ from τstart to τend on a cosine schedule; at large τ the scores are diffuse, and as τ →0 they collapse to the binary mask used at inference.",
+    "Each method first scores all N=576 tokens on the 24×24 grid produced by CLIP ViT-L/14 and generates a binary selection mask for budget K."
+   ],
+   "PARAM": [
+    "5 A PREPRINT - MARCH 10, 2026 4 Experiments 4.1 Experimental Setup The Scorer and Denoiser are jointly trained on ImageNet-1K [59] captioning data from ImageNet-1K-VL-Enriched [60], adding ∼84M trainable parameters while all base VLM weights remain frozen."
+   ],
+   "BENCH": [
+    "We evaluate on ten standard VLM benchmarks: GQA [62], MMBench [63], MMBench-CN [63], MME [64], POPE [65], ScienceQA-IMG [66], VQAv2 [67], TextVQA [68], SEED-Bench [69], and VizWiz [70].",
+    "GQA MMB MMBCN MME POPE SQA VQAv2 VQAText SEED VizWiz Avg.",
+    "GQA MMB MMBCN MME POPE SQA VQAv2 VQAText Avg.",
+    "Method MMB MME POPE SQA VQAText Avg.",
+    "For each configuration, we report the average performance retention over four benchmarks (GQA, MMB, POPE, MME) as summarized in Table 5.",
+    "Each row reports the average performance retention (%) over GQA, MMB, POPE, and MME across three token budgets. “Base” denotes the full AutoSelect configuration (VP noise + diagonal attention)."
+   ]
+  }
+ }
+]

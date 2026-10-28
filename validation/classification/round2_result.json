@@ -1,0 +1,63 @@
+{
+ "unfilled": [],
+ "4.3.2024": {
+  "strict_n": 9,
+  "strict_yes": 3,
+  "strict_prec": 33.3,
+  "strict_ci": [
+   12.1,
+   64.6
+  ],
+  "loose_prec": 64.1,
+  "loose_n": 18
+ },
+ "4.3.2026": {
+  "strict_n": 13,
+  "strict_yes": 7,
+  "strict_prec": 53.8,
+  "strict_ci": [
+   29.1,
+   76.8
+  ],
+  "loose_prec": 55.1,
+  "loose_n": 25
+ },
+ "4.3.all": {
+  "strict_n": 22,
+  "strict_yes": 10,
+  "strict_prec": 45.5,
+  "strict_ci": [
+   26.9,
+   65.3
+  ],
+  "loose_prec": 56.6,
+  "loose_n": 43
+ },
+ "4.5.2024": {
+  "strict_n": 2,
+  "strict_yes": 1,
+  "strict_prec": 50.0,
+  "strict_ci": [
+   9.5,
+   90.5
+  ]
+ },
+ "4.5.2026": {
+  "strict_n": 10,
+  "strict_yes": 8,
+  "strict_prec": 80.0,
+  "strict_ci": [
+   49.0,
+   94.3
+  ]
+ },
+ "4.5.all": {
+  "strict_n": 12,
+  "strict_yes": 9,
+  "strict_prec": 75.0,
+  "strict_ci": [
+   46.8,
+   91.1
+  ]
+ }
+}

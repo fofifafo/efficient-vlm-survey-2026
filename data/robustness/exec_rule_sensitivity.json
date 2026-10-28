@@ -1,0 +1,202 @@
+{
+ "rules": {
+  "base": "(?:visual|vision|image|video) tokens? (?:prun|reduc|compress|merg|select)|token (?:pruning|reduction|compression|merging|selection)|KV[- ]cache|key[- ]value cache|prefill|speculative decoding|flash[- ]?attention|\\bvLLM\\b|paged attention|prefix cach|continuous batching",
+  "broad": "(?:visual|vision|image|video) tokens? (?:prun|reduc|compress|merg|select)|token (?:pruning|reduction|compression|merging|selection)|KV[- ]cache|key[- ]value cache|prefill|speculative decoding|flash[- ]?attention|\\bvLLM\\b|paged attention|prefix cach|continuous batching|(?:prun|reduc|compress|merg|drop|discard|remov|withdr[ae]w|condens|sparsif|select|evict)\\w*\\s+(?:\\w+\\s+){0,4}?(?:visual|vision|image|video|patch)\\s+tokens?|(?:visual|vision|image|video|patch)\\s+tokens?\\s+(?:\\w+\\s+){0,3}?(?:prun|reduc|compress|merg|drop|discard|remov|withdr[ae]w|condens|sparsif|select|evict)\\w*|fewer\\s+(?:visual|vision|image|video|patch)\\s+tokens?|(?:visual|vision|image)\\s+token\\s+budget|token\\s+(?:dropping|drop|eviction|sparsification|condensation)"
+ },
+ "trend": [
+  {
+   "corpus": "pool",
+   "rule": "base",
+   "kind": "loose",
+   "n24": 52,
+   "n25": 177,
+   "n26": 250,
+   "s24": 19.4,
+   "s26": 26.57,
+   "rel_growth": 1.37,
+   "p_fisher": 0.0165,
+   "sig_bonf": false
+  },
+  {
+   "corpus": "pool",
+   "rule": "base",
+   "kind": "strict",
+   "n24": 30,
+   "n25": 119,
+   "n26": 165,
+   "s24": 11.19,
+   "s26": 17.53,
+   "rel_growth": 1.57,
+   "p_fisher": 0.0141,
+   "sig_bonf": false
+  },
+  {
+   "corpus": "pool",
+   "rule": "broad",
+   "kind": "loose",
+   "n24": 60,
+   "n25": 184,
+   "n26": 257,
+   "s24": 22.39,
+   "s26": 27.31,
+   "rel_growth": 1.22,
+   "p_fisher": 0.116,
+   "sig_bonf": false
+  },
+  {
+   "corpus": "pool",
+   "rule": "broad",
+   "kind": "strict",
+   "n24": 40,
+   "n25": 121,
+   "n26": 172,
+   "s24": 14.93,
+   "s26": 18.28,
+   "rel_growth": 1.22,
+   "p_fisher": 0.236,
+   "sig_bonf": false
+  },
+  {
+   "corpus": "vlm",
+   "rule": "base",
+   "kind": "loose",
+   "n24": 61,
+   "n25": 210,
+   "n26": 284,
+   "s24": 2.2,
+   "s26": 4.57,
+   "rel_growth": 2.07,
+   "p_fisher": 2.48e-08,
+   "sig_bonf": true
+  },
+  {
+   "corpus": "vlm",
+   "rule": "base",
+   "kind": "strict",
+   "n24": 32,
+   "n25": 131,
+   "n26": 182,
+   "s24": 1.16,
+   "s26": 2.93,
+   "rel_growth": 2.53,
+   "p_fisher": 1.1e-07,
+   "sig_bonf": true
+  },
+  {
+   "corpus": "vlm",
+   "rule": "broad",
+   "kind": "loose",
+   "n24": 89,
+   "n25": 248,
+   "n26": 321,
+   "s24": 3.22,
+   "s26": 5.16,
+   "rel_growth": 1.6,
+   "p_fisher": 3.02e-05,
+   "sig_bonf": true
+  },
+  {
+   "corpus": "vlm",
+   "rule": "broad",
+   "kind": "strict",
+   "n24": 49,
+   "n25": 146,
+   "n26": 195,
+   "s24": 1.77,
+   "s26": 3.14,
+   "rel_growth": 1.77,
+   "p_fisher": 0.000182,
+   "sig_bonf": true
+  }
+ ],
+ "recall": {
+  "base.loose.2024": [
+   9,
+   12
+  ],
+  "base.loose.2026": [
+   12,
+   14
+  ],
+  "base.loose.all": [
+   21,
+   26
+  ],
+  "base.strict.2024": [
+   5,
+   10
+  ],
+  "base.strict.2026": [
+   8,
+   11
+  ],
+  "base.strict.all": [
+   13,
+   21
+  ],
+  "broad.loose.2024": [
+   11,
+   12
+  ],
+  "broad.loose.2026": [
+   12,
+   14
+  ],
+  "broad.loose.all": [
+   23,
+   26
+  ],
+  "broad.strict.2024": [
+   8,
+   10
+  ],
+  "broad.strict.2026": [
+   8,
+   11
+  ],
+  "broad.strict.all": [
+   16,
+   21
+  ]
+ },
+ "named": {
+  "PyramidDrop": {
+   "base": "loose=False strict=False",
+   "broad": "loose=True strict=False",
+   "in_pool": false
+  },
+  "VTW": {
+   "base": "loose=False strict=False",
+   "broad": "loose=True strict=True",
+   "in_pool": false
+  },
+  "VoCo-LLaMA": {
+   "base": "loose=False strict=False",
+   "broad": "loose=True strict=True",
+   "in_pool": true
+  },
+  "TokenPacker": {
+   "base": "loose=False strict=False",
+   "broad": "loose=True strict=True",
+   "in_pool": false
+  },
+  "FasterVLM/VisPruner": {
+   "base": "loose=True strict=True",
+   "broad": "loose=True strict=True",
+   "in_pool": true
+  },
+  "LLaVA-PruMerge": {
+   "base": "loose=True strict=True",
+   "broad": "loose=True strict=True",
+   "in_pool": false
+  }
+ },
+ "lmm_extra_papers": {
+  "n": 125,
+  "by_year": {
+   "2026": 30,
+   "2025": 54,
+   "2024": 41
+  }
+ }
+}

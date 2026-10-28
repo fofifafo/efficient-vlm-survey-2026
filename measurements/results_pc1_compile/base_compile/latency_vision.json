@@ -1,0 +1,80 @@
+{
+ "n": 500,
+ "ttft_ms_median": 113.61977399997158,
+ "ttft_ms_p90": 130.82740599998033,
+ "total_ms_median": 149.31264049999982,
+ "peak_vram_gb": 13.953584671020508,
+ "energy_j_per_sample": 43.96012434050941,
+ "mean_power_w": 254.31404391692408,
+ "n_vis_tokens": 576.0,
+ "method": "base_compile",
+ "setting": "vision",
+ "meta": {
+  "name": "LLaVA-1.5-7B + torch.compile",
+  "setting": "vision",
+  "compiled": "vision tower",
+  "mode": "default inductor",
+  "warmup_s": 12.9,
+  "attn": "sdpa(default)",
+  "prompt": "vicuna_v1"
+ },
+ "gpu": "NVIDIA GeForce RTX 5080",
+ "torch": "2.11.0+cu128",
+ "runs": [
+  {
+   "run": 0,
+   "n": 495,
+   "ttft_ms_median": 113.9559810000037,
+   "ttft_ms_p90": 144.68828700000813,
+   "total_ms_median": 151.50992000008046,
+   "peak_vram_gb": 13.953584671020508,
+   "energy_j_per_sample": 44.46633775056272,
+   "mean_power_w": 247.38889246791115,
+   "n_vis_tokens": 576
+  },
+  {
+   "run": 1,
+   "n": 500,
+   "ttft_ms_median": 113.61977399997158,
+   "ttft_ms_p90": 130.82740599998033,
+   "total_ms_median": 149.31264049999982,
+   "peak_vram_gb": 13.953584671020508,
+   "energy_j_per_sample": 43.96012434050941,
+   "mean_power_w": 254.31404391692408,
+   "n_vis_tokens": 576.0
+  },
+  {
+   "run": 2,
+   "n": 500,
+   "ttft_ms_median": 121.84427649998497,
+   "ttft_ms_p90": 240.58938899997884,
+   "total_ms_median": 166.244509500018,
+   "peak_vram_gb": 13.953584671020508,
+   "energy_j_per_sample": 47.09152939488409,
+   "mean_power_w": 219.19291710801218,
+   "n_vis_tokens": 576.0
+  },
+  {
+   "run": 3,
+   "n": 500,
+   "ttft_ms_median": 108.22827949999692,
+   "ttft_ms_p90": 118.25231599993913,
+   "total_ms_median": 141.5381699999898,
+   "peak_vram_gb": 13.953584671020508,
+   "energy_j_per_sample": 42.9487832430329,
+   "mean_power_w": 266.6894278814807,
+   "n_vis_tokens": 576.0
+  },
+  {
+   "run": 4,
+   "n": 500,
+   "ttft_ms_median": 107.40219000001616,
+   "ttft_ms_p90": 117.75593899994874,
+   "total_ms_median": 142.37013399997522,
+   "peak_vram_gb": 13.953584671020508,
+   "energy_j_per_sample": 43.122828050532775,
+   "mean_power_w": 265.78542407046547,
+   "n_vis_tokens": 576.0
+  }
+ ]
+}

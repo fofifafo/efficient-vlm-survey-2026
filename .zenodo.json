@@ -1,0 +1,28 @@
+{
+  "title": "Efficient Vision-Language Models: A Quantitative Survey of 1,947 arXiv Papers with Evidence Grading and Consumer-GPU Measurement — data and code",
+  "upload_type": "dataset",
+  "description": "Corpus labels, screening verdicts, comparison matrices with supporting sentences, validation labels of both raters, measurement scripts and raw measurements for the survey submitted to Image and Vision Computing.",
+  "creators": [
+    {
+      "name": "Jee, Youchan",
+      "affiliation": "Department of Metaverse & Game and G-LAMP, Soonchunhyang University"
+    },
+    {
+      "name": "Kim, Woojae",
+      "affiliation": "Institute for Molecular Metabolism Innovation, Soonchunhyang University"
+    },
+    {
+      "name": "Ahn, Hoyeon",
+      "affiliation": "Department of Metaverse & Game and G-LAMP, Soonchunhyang University"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "keywords": [
+    "vision-language model",
+    "efficient inference",
+    "visual token compression",
+    "survey",
+    "bibliometric analysis",
+    "reproducibility"
+  ]
+}

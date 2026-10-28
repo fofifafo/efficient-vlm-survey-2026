@@ -1,0 +1,18 @@
+MEM {"tag": "before_load", "alloc_gb": 0.0, "reserved_gb": 0.0, "reserved_peak_gb": 0.0, "free_gb": 14.6, "total_gb": 15.92, "alloc_retries": 0, "device_allocs": 0, "smi_used_gb": 0.86, "smi_total_gb": 15.92}
+You are using a model of type llava to instantiate a model of type llava_llama. This is not supported for all configurations of models and can yield errors.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.95s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.38s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.46s/it]
+MEM {"tag": "after_load", "alloc_gb": 13.45, "reserved_gb": 15.5, "reserved_peak_gb": 15.5, "free_gb": 0.0, "total_gb": 15.92, "alloc_retries": 0, "device_allocs": 415, "smi_used_gb": 15.58, "smi_total_gb": 15.92}
+MEM {"tag": "after_empty_cache", "alloc_gb": 13.45, "reserved_gb": 13.81, "reserved_peak_gb": 15.5, "free_gb": 0.25, "total_gb": 15.92, "alloc_retries": 0, "device_allocs": 415, "smi_used_gb": 13.89, "smi_total_gb": 15.92}
+MEM {"tag": "after_10_questions", "alloc_gb": 13.46, "reserved_gb": 13.81, "reserved_peak_gb": 15.5, "free_gb": 0.24, "total_gb": 15.92, "alloc_retries": 0, "device_allocs": 416, "smi_used_gb": 14.68, "smi_total_gb": 15.92}
+10/50 ttft median so far 74.1 ms
+MEM {"tag": "after_20_questions", "alloc_gb": 13.46, "reserved_gb": 13.81, "reserved_peak_gb": 15.5, "free_gb": 0.24, "total_gb": 15.92, "alloc_retries": 0, "device_allocs": 416, "smi_used_gb": 14.71, "smi_total_gb": 15.92}
+20/50 ttft median so far 77.4 ms
+MEM {"tag": "after_30_questions", "alloc_gb": 13.46, "reserved_gb": 13.81, "reserved_peak_gb": 15.5, "free_gb": 0.24, "total_gb": 15.92, "alloc_retries": 0, "device_allocs": 416, "smi_used_gb": 14.71, "smi_total_gb": 15.92}
+30/50 ttft median so far 77.4 ms
+MEM {"tag": "after_40_questions", "alloc_gb": 13.46, "reserved_gb": 13.81, "reserved_peak_gb": 15.5, "free_gb": 0.24, "total_gb": 15.92, "alloc_retries": 0, "device_allocs": 416, "smi_used_gb": 14.71, "smi_total_gb": 15.92}
+40/50 ttft median so far 78.0 ms
+MEM {"tag": "after_50_questions", "alloc_gb": 13.46, "reserved_gb": 13.81, "reserved_peak_gb": 15.5, "free_gb": 0.24, "total_gb": 15.92, "alloc_retries": 0, "device_allocs": 416, "smi_used_gb": 14.71, "smi_total_gb": 15.92}
+50/50 ttft median so far 77.9 ms
+MEM {"tag": "end", "alloc_gb": 13.46, "reserved_gb": 13.81, "reserved_peak_gb": 15.5, "free_gb": 0.24, "total_gb": 15.92, "alloc_retries": 0, "device_allocs": 416, "smi_used_gb": 14.71, "smi_total_gb": 15.92}
+SUMMARY {"method": "cdpruner_fix", "setting": "default", "gpu": "NVIDIA GeForce RTX 5080", "torch": "2.11.0+cu128", "ttft_ms_median": 77.8978419999703, "ttft_ms_p90": 125.4435169998942, "ttft_ms_max": 181.00216599998475, "n": 45, "clip_direct_default_stream": {"median_ms": 7.82, "max_ms": 9.2}, "tower_wrapper_with_text": {"median_ms": 11.54, "max_ms": 27.99}, "note": "reserved > total - (smi_used before load) means the allocator pools no longer fit beside other GPU users (display); alloc_retries > 0 means the caching allocator had to free and retry cudaMalloc"}
+MEM_PEAK {"reserved_gb": 15.5, "reserved_peak_gb": 15.5, "alloc_retries": 0, "smi_used_gb": 15.58}

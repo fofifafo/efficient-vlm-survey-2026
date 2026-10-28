@@ -1,0 +1,74 @@
+{
+ "4.1": {
+  "n": 10,
+  "q1_agree": 9,
+  "q2_agree": 9,
+  "strict_n": 5,
+  "strict_yes_r1": 4,
+  "strict_yes_r2": 3,
+  "strata": {
+   "strict": 5,
+   "loose_only": 5
+  }
+ },
+ "4.2": {
+  "n": 10,
+  "q1_agree": 7,
+  "q2_agree": 7,
+  "strict_n": 6,
+  "strict_yes_r1": 4,
+  "strict_yes_r2": 4,
+  "strata": {
+   "strict": 6,
+   "loose_only": 4
+  }
+ },
+ "4.3": {
+  "n": 10,
+  "q1_agree": 10,
+  "q2_agree": 8,
+  "strict_n": 4,
+  "strict_yes_r1": 3,
+  "strict_yes_r2": 3,
+  "strata": {
+   "strict": 4,
+   "loose_only": 6
+  }
+ },
+ "4.4": {
+  "n": 10,
+  "q1_agree": 10,
+  "q2_agree": 10,
+  "strict_n": 6,
+  "strict_yes_r1": 6,
+  "strict_yes_r2": 6,
+  "strata": {
+   "strict": 6,
+   "loose_only": 4
+  }
+ },
+ "4.5": {
+  "n": 10,
+  "q1_agree": 8,
+  "q2_agree": 9,
+  "strict_n": 5,
+  "strict_yes_r1": 2,
+  "strict_yes_r2": 2,
+  "strata": {
+   "loose_only": 5,
+   "strict": 5
+  }
+ },
+ "4.6": {
+  "n": 10,
+  "q1_agree": 10,
+  "q2_agree": 10,
+  "strict_n": 6,
+  "strict_yes_r1": 6,
+  "strict_yes_r2": 6,
+  "strata": {
+   "loose_only": 4,
+   "strict": 6
+  }
+ }
+}

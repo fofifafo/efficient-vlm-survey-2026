@@ -1,0 +1,37 @@
+== base default 01:42
+pope {'acc': 0.8698, 'f1': 0.8587, 'yes_ratio': 0.4216, 'n': 9000}
+mme {'perception_total': 1528.1, 'cognition_total': 309.6}
+saved /home/yc2008/vlmbench/results_acc16/base/acc_default/accuracy.json
+== vispruner default 02:48
+pope {'acc': 0.8552, 'f1': 0.8423, 'yes_ratio': 0.4179, 'n': 9000}
+mme {'perception_total': 1463.3, 'cognition_total': 341.8}
+saved /home/yc2008/vlmbench/results_acc16/vispruner/acc_default/accuracy.json
+== vispruner r889 03:28
+pope {'acc': 0.8277, 'f1': 0.8038, 'yes_ratio': 0.3783, 'n': 9000}
+mme {'perception_total': 1372.6, 'cognition_total': 330.7}
+saved /home/yc2008/vlmbench/results_acc16/vispruner/acc_r889/accuracy.json
+== cdpruner_fix default 04:04
+pope {'acc': 0.8796, 'f1': 0.8751, 'yes_ratio': 0.4647, 'n': 9000}
+mme {'perception_total': 1465.5, 'cognition_total': 350.0}
+saved /home/yc2008/vlmbench/results_acc16/cdpruner_fix/acc_default/accuracy.json
+== cdpruner_fix r889 04:47
+pope {'acc': 0.8796, 'f1': 0.8754, 'yes_ratio': 0.4664, 'n': 9000}
+mme {'perception_total': 1414.7, 'cognition_total': 332.1}
+saved /home/yc2008/vlmbench/results_acc16/cdpruner_fix/acc_r889/accuracy.json
+== sparsevlm default 05:24
+pope {'acc': 0.8659, 'f1': 0.8535, 'yes_ratio': 0.4157, 'n': 9000}
+mme {'perception_total': 1459.8, 'cognition_total': 336.1}
+saved /home/yc2008/vlmbench/results_acc16/sparsevlm/acc_default/accuracy.json
+== sparsevlm r889 06:15
+pope {'acc': 0.8113, 'f1': 0.7763, 'yes_ratio': 0.3436, 'n': 9000}
+mme {'perception_total': 1296.3, 'cognition_total': 314.3}
+saved /home/yc2008/vlmbench/results_acc16/sparsevlm/acc_r889/accuracy.json
+== dart default 06:59
+pope {'acc': 0.8307, 'f1': 0.8036, 'yes_ratio': 0.362, 'n': 9000}
+mme {'perception_total': 1482.5, 'cognition_total': 341.8}
+saved /home/yc2008/vlmbench/results_acc16/dart/acc_default/accuracy.json
+== dart r889 07:45
+pope {'acc': 0.7908, 'f1': 0.7421, 'yes_ratio': 0.3112, 'n': 9000}
+mme {'perception_total': 1420.4, 'cognition_total': 354.3}
+saved /home/yc2008/vlmbench/results_acc16/dart/acc_r889/accuracy.json
+== acc16 done 08:28

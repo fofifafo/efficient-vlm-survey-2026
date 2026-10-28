@@ -1,0 +1,13 @@
+{
+ "metric_terms": {
+  "latency": "latency|inference time|inference speed|wall[- ]clock|response time|time[- ]to[- ]first[- ]token|\\bTTFT\\b",
+  "device": "\\b(?:Jetson|Raspberry Pi|Snapdragon|Dimensity|Orin|iPhone|Pixel \\d|Galaxy|A100|H100|H800|A800|V100|A6000|RTX ?\\d{4}|NPU|FPGA|smartphone|mobile phone)\\b",
+  "params": "\\d+(?:\\.\\d+)?\\s?(?:[BM]|billion|million)\\s+(?:trainable\\s+)?(?:parameters|params)|(?:number of|fewer|reduc\\w*|trainable) parameters",
+  "flops": "\\b(?:[GTM]?FLOPs?|MACs)\\b|floating[- ]point operations",
+  "throughput": "throughput|tokens? per second|tokens?/s\\b|\\bTPS\\b|frames per second|\\bFPS\\b",
+  "memory": "memory (?:footprint|usage|consumption|cost|overhead|requirement|saving|reduction)|\\bVRAM\\b|GPU memory|peak memory|KV[- ]cache (?:size|memory|footprint)",
+  "energy": "energy (?:consumption|efficien|cost)|power consumption|\\bwatts?\\b|\\bjoules?\\b|battery"
+ },
+ "broader_quantity_rule": "\\d+(?:\\.\\d+)?\\s?(?:×|x|times)\\s*(?:faster|speed|acceleration|higher throughput|fewer|smaller|less|reduction|compression|lower)|(?:speed-?ups?|acceleration|faster)\\s+(?:of|by|up to)?\\s*(?:up to\\s*)?\\d+(?:\\.\\d+)?\\s?(?:×|x|%|times)|\\d+(?:\\.\\d+)?\\s?(?:×|x)\\s+(?:speed-?up|inference)|\\d+(?:\\.\\d+)?\\s?%\\s+(?:fewer|less|lower|reduction|of the (?:visual |vision |image )?tokens|tokens|FLOPs|memory|latency|parameters|computation|compute|faster|speed)|(?:reduc\\w+|cut\\w*|sav\\w+|prun\\w+|compress\\w*|remov\\w+|decreas\\w+|lower\\w*)\\b[^.]{0,60}?\\bby\\s+(?:up to\\s+|over\\s+|about\\s+|nearly\\s+)?\\d+(?:\\.\\d+)?\\s?(?:%|×|x)|\\d+(?:\\.\\d+)?\\s?(?:ms|milliseconds?|seconds?|GB|GiB|MB|tokens?/s|FPS|fps|W|J|mJ)\\b|\\b\\d+(?:\\.\\d+)?-?bit\\b|\\d+(?:\\.\\d+)?\\s?(?:[BM]|billion|million)\\s+(?:trainable\\s+)?(?:parameters|params)|\\d+(?:\\.\\d+)?\\s?(?:G|T|M)?FLOPs|only\\s+\\d+(?:\\.\\d+)?\\s?%\\s+of",
+ "scope": "abstracts of the 1,947-paper efficiency pool"
+}

@@ -1,0 +1,1970 @@
+[
+ {
+  "id": "2403.02781",
+  "title": "PromptKD: Unsupervised Prompt Distillation for Vision-Language Models",
+  "mark": "keep",
+  "chars": 37842,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 1,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 0,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [
+    "A100"
+   ],
+   "BASE": [],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "The inference cost for all methods is calculated on a sin- gle A100 GPU on the SUN397 dataset."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2407.19409",
+  "title": "LLAVADI: What Matters For Multimodal Large Language Models Distillation",
+  "mark": "keep",
+  "chars": 35576,
+  "counts": {
+   "SPEED": 1,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 0,
+   "ACC": 1,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 1,
+   "BIT": 0,
+   "PARAM": 4,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [],
+   "BASE": [
+    "BLIP-2",
+    "IDEFICS",
+    "LLAVA",
+    "LLaVA",
+    "LLaVA-1.5",
+    "LLava",
+    "Qwen-VL"
+   ],
+   "CMP": [
+    "FastV",
+    "VTW"
+   ],
+   "BENCH": [
+    "GQA",
+    "MMBench",
+    "MME",
+    "POPE",
+    "ScienceQA",
+    "TextVQA"
+   ]
+  },
+  "evidence": {
+   "SPEED": [
+    "4.5 Compared with other distillation strategy DistilBERT [54] proposes an effective and efficient distillation that reduces the size of a BERT model by 40% while retaining 97% of its language understanding capabilities and being 60% faster."
+   ],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [],
+   "ACC": [
+    "4.5 Compared with other distillation strategy DistilBERT [54] proposes an effective and efficient distillation that reduces the size of a BERT model by 40% while retaining 97% of its language understanding capabilities and being 60% faster."
+   ],
+   "FREE": [],
+   "BASE": [
+    "The state-of-the-art LLaVA [41] model designs a data engine to unify numer- ous vision-language tasks, including visual question answering, conversation, complex reasoning, and captions.",
+    "Many methods have been developed to enhance various aspects of LLaVA, including improving the alignment between visual and textual representations, optimizing the projection layer efficiency, and tackling challenges in integrating multimodal data.",
+    "Some approaches have also expanded LLaVA into video domains or added grounding and segmentation capabilities, enabling a broader range of applications for multimodal tasks.",
+    "Combining these studies, we term our framework LLAVA DIstillation (LLAVADI), a simple yet efficient distillation framework for MLLM distillation, by joint distilling features and logits, which are refined by teacher-generated data and instruction tuning data.",
+    "LLaVA [41] is a seminal work that directly feeds visual tokens into LLMs, allowing them to grasp nuanced image information and perform intricate image-based reasoning.",
+    "After LLaVA, lots of works [11, 78, 6, 17, 8] apply visual instruction tuning under various applications.",
+    "LLaVA-Phi [84] achieves stronger results in visual reasoning tasks via Phi–2.7B models.",
+    "3 Method 3.1 LLAVADI Framework Overview of LLaVA."
+   ],
+   "CMP": [
+    "FastV [12] and VTW [37] suggest reducing or eliminating visual tokens to decrease computational complexity."
+   ],
+   "BIT": [],
+   "PARAM": [
+    "By evaluating different benchmarks and proper strategy, even a 2.7B small-scale model can perform on par with larger models with 7B or 13B parameters.",
+    "Our choice for the teacher model is LLaVA-v1.5-13B [41], while the student model employs MobileLLaMA [15] as its LLM, which only contains 2.7B parameters.",
+    "The teacher model LLava-V1.5-13B [41] uses the pre-trained CLIP [52] ViT-L/14 with only 0.3B parameters as its visual encoder.",
+    "The teacher model utilizes the large language model Vicuna-13B-v1.5 [14], while our student model employs the MobileLLaMA [15] with 2.7B parameters as our large language model."
+   ],
+   "BENCH": [
+    "Following LLaVA [41], we mainly use six datasets for comparison, including GQA [27]; SQAI(ScienceQA-IMG [45]), VQAT(TextVQA [57]), POPE [33], MMEP(MME Perception [22]), and MMBdev(MMBench-dev [43]).",
+    "We mainly use VQAT, SQA, MMEP, and POPE for empirical studies and report final results on all benchmarks.",
+    "Method VQAT SQAI POPE MMEP Baseline 47.5 59.7 85.2 1307.7 Last layer 48.3 58.6 86.0 1268.7 Last layer + All tokens 48.2 59.3 86.4 1286.4 Last two layers 36.2 47.7 82.5 1015.8 Table 1: Feature level distillation.",
+    "The results indicate that the MSE loss performs significantly worse than the baseline across all evaluation benchmarks, suggesting its 6 Method VQAT SQAI POPE MMEP Baseline 47.5 59.7 85.2 1307.7 MSE 35.9 51.8 83.3 1159.8 Forward KL 48.2 57.2 86.0 1313.3 Reverse KL [23] 48.6 56.1 85.7 1252.1 JSD [72] 48.7 59.3 85.9 1301.2 Forward KL + Logit stand. [59] 48.6 58.4 86.1 1254.4 Forward KL + All tokens 45.9 56.2 85.4 1294.1 Table 2: Knowledge distillation for aligning logits using various methods.",
+    "Method VQAT SQAI POPE MMEP Baseline 47.5 59.7 85.2 1307.7 Attention Score 46.2 58.1 82.3 1279.8 Similarity [76] 44.7 52.0 82.4 1120.3 Table 3: Affinity aware distillation. unsuitability for logit alignment.",
+    "7 Method VQAT SQAI POPE MMEP Data from teacher 49.2 60.7 85.4 1296.5 Data from student 49.8 57.9 85.9 1276.3 Baseline+2M 57.4 66.9 85.5 1386.8 Distillation + 2M 58.2 68.4 86.0 1365.9 Table 4: Data-driven knowledge distillation.",
+    "The results show that data corrected by the teacher model has performed well in VQAT, SQAI, and POPE, but has slightly declined in MMEP.",
+    "8 Method VQAT SQAI POPE MMEP DistilBERT [54] 46.5 55.3 85.4 1296.0 LLAVADI 50.7 64.1 86.7 1376.1 Table 5: Compared with distillation strategy from DistilBERT."
+   ]
+  }
+ },
+ {
+  "id": "2408.03735",
+  "title": "Advancing Multimodal Large Language Models with Quantization-Aware Scale Learning for Efficient Adaptation",
+  "mark": "keep",
+  "chars": 46864,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 4,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 0,
+   "BIT": 8,
+   "PARAM": 0,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "A100",
+    "A800"
+   ],
+   "BASE": [
+    "BLIP2",
+    "LLaVA"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "ScienceQA"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "Although recent efforts have introduced more efficient adapters and the freezing of LLMs to reduce training over- heads [15, 32], VL tuning within current MLLM frameworks still demands substantial memory usage and computational resources, necessitating at least 8 NVIDIA Tesla A100 GPUs [32].",
+    "Results are evaluated using 4 A800 GPUs.",
+    "LaVIN [32], which utilizes an adapter to achieve parameter-efficient VL instruction tuning, still necessitates at least eight NVIDIA Tesla A100 GPUs.",
+    "Although recent advancements [12, 23, 32, 47] have shown the potential of freezing the LLM backbone to eliminate partial backward costs of the LLM backbone, exist- ing VL tuning frameworks still require a minimum of 8 NVIDIA Tesla A100 GPUs."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "One notable example of this technique is LLaVA [24], which employs a linear projection layer to bridge the gap between the visual encoder and the LLM.",
+    "By doing so, LLaVA fully harnesses the power of pre-trained LLMs, thereby significantly enhancing its visual comprehension capabilities.",
+    "For instance, LLaVA-13B fully fine-tunes the entire LLM during VL instruction tuning, often requiring hundreds of GPU hours [28].",
+    "Methods #T-Params Memory (GB) Time (hours) Average (%) LLaVA [28] 13B OOM N/A N/A LLaVA† [28] 13B 71.54 8.75 90.92 QLoRA 500.70M 66.92 6.12 86.96 QSLAW 84.25M 66.52 5.76 91.04 in QLoRA [12], which quantizes each linear layer’s weights into a 4-bit NormalFormat (NF) datatype and uses the low-rank adapter (LoRA) [20] for fine-tuning.",
+    "Additionally, scale learning exhibits significantly higher Figure 1: Absolute magnitude of the input activation in one LLaVA-13B block.",
+    "For instance, QSLAW achieves 91.04% accuracy on ScienceQA with LLaVA-13B, representing a 4.08% gain compared to the 86.96% achieved by QLoRA, which even outperforms the full-precision fine-tuned LLaVA- 13B (91.04 for QSLAW v.s.",
+    "Recent advances in this area include Flamingo [2], which introduces the Perceiver Resampler as the modular structure, and BLIP2 [24], which proposes a lightweight Q-Former to align different modalities.",
+    "LLaVA [28] employs a simple MLP as a modular structure and introduces VL instruction tuning, enabling LLMs to execute multimodal tasks in an autoregressive manner."
+   ],
+   "CMP": [],
+   "BIT": [
+    "Methods #T-Params Memory (GB) Time (hours) Average (%) LLaVA [28] 13B OOM N/A N/A LLaVA† [28] 13B 71.54 8.75 90.92 QLoRA 500.70M 66.92 6.12 86.96 QSLAW 84.25M 66.52 5.76 91.04 in QLoRA [12], which quantizes each linear layer’s weights into a 4-bit NormalFormat (NF) datatype and uses the low-rank adapter (LoRA) [20] for fine-tuning.",
+    "As can be seen, utilizing QLoRA to quantize LLM weights to 4-bit can signif- icantly reduce both GPU memory consumption and time overhead.",
+    "This observation elucidates the performance deterioration of QLoRA in VL instruction tuning for MLLMs, as its adopted NF4 datatype only pursues equating the quantity of values across all quantization bins from the weight tensor and causes severe information loss, making it hard for LoRA to accommodate activation outliers.",
+    "Furthermore, we adopt uniform quantization instead of forcing an equal number of weights in each quantiza- tion bin like NF4 and initialize the quantized weights with Omni- Quant [37], an LLM uniform quantization method that employs weight clipping to mitigate the quantization difficulty occurring in language tasks, rather than relying solely on the probability den- sity of the weights as in NF4.",
+    "LLM.int8() [11] highlights significant errors in quantization caused by activation outliers within LLMs, leading to the proposal of a mixed-precision quantization approach.",
+    "Specifically, QLoRA compresses the normalized weight ˆW into quantized weight W with 4-bit NormalFloat (NF) format 𝑞𝑖as: MM ’24, October 28-November 1, 2024, Melbourne, VIC, Australia Jingjing Xie, Yuxin Zhang, Mingbao Lin, Liujuan Cao, and Rongrong Ji W = arg min 𝑞𝑖 | ˆW −𝑞𝑖|, (5) where ˆW = W 𝑚𝑎𝑥(𝑎𝑏𝑠(W)) and 𝑞𝑖in 4-bit NF format is: 𝑞𝑖= 1 2 ( 𝑄( 𝑖 17) + 𝑄(𝑖+ 1 17 ) ), (6) where 𝑄(·) is the quantile function of the standard Gaussian distri- bution N (0, 1).",
+    "After the NF4 initialization, the quantized LLM is frozen, and the low-rank adapter (LoRA) [20] is then utilized for transfer learning on downstream tasks.",
+    "It has been widely demon- strated in the literature [6, 18, 45, 46] that QLoRA can maintain the performance of LLMs on downstream language tasks with 4-bit quantization, significantly reducing the training burden and mem- ory costs."
+   ],
+   "PARAM": [],
+   "BENCH": [
+    "It has been adopted for parameter-efficient fine-tuning (PEFT) of LLMs [12, 17, 43], notably arXiv:2408.03735v1 [cs.CV] 7 Aug 2024 MM ’24, October 28-November 1, 2024, Melbourne, VIC, Australia Jingjing Xie, Yuxin Zhang, Mingbao Lin, Liujuan Cao, and Rongrong Ji Table 1: Cost and accuracy over various VL instruction tuning paradigms on ScienceQA.",
+    "For instance, QSLAW achieves 91.04% accuracy on ScienceQA with LLaVA-13B, representing a 4.08% gain compared to the 86.96% achieved by QLoRA, which even outperforms the full-precision fine-tuned LLaVA- 13B (91.04 for QSLAW v.s.",
+    "Regrettably, when we employ QLoRA to enhance the efficiency of MLLM training, a nearly 4% decrease in accuracy is observed on ScienceQA, as illustrated in Table 1.",
+    "0 2 4 6 8 10 12 14 16 18 20 Epoch 0.00 0.25 0.50 Loss full-precision multimodal data hybrid data multimodal warmup 0 2 4 6 8 10 12 14 16 18 20 Epoch 50 60 70 80 90 100 Accuracy 15 20 89.41 Figure 2: Loss and accuracy curves of training scaling with dif- ferent strategies on ScienceQA.",
+    "While effective mitigation of overfitting is Advancing Multimodal Large Language Models with Quantization-Aware Scale Learning for Efficient Adaptation MM ’24, October 28-November 1, 2024, Melbourne, VIC, Australia Table 2: Quantitative accuracy on ScienceQA test dataset.",
+    "For a straightforward comparison, we follow the precedent set by LLaVA and LaVIN to choose the ScienceQA dataset [31] for visual reasoning.",
+    "4.2 Main Results 4.2.1 ScienceQA.",
+    "Quantita- tive results on ScienceQA are presented in Table 2."
+   ]
+  }
+ },
+ {
+  "id": "2408.05517",
+  "title": "SWIFT:A Scalable lightWeight Infrastructure for Fine-Tuning",
+  "mark": "star",
+  "chars": 43765,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 2,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 2,
+   "CMP": 0,
+   "BIT": 3,
+   "PARAM": 0,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [
+    "A100",
+    "CPU"
+   ],
+   "BASE": [
+    "InternVL3",
+    "LLaVA",
+    "PaliGemma",
+    "Qwen-VL",
+    "Qwen2.5-VL"
+   ],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "These tuners can be used in combination, similar to the MixedPeftModel capability of PEFT, and support offloading of deactivated tuners to CPU or meta SWIFT:A Scalable lightWeight Infrastructure for Fine-Tuning devices.",
+    "Using qwen-7b-chat as the base model, we conducted training on a single A100-80G GPU, comparing memory usage and loss, among other metrics."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "The release of Qwen2.5-VL [2], GLM4-V [19], InternVL3 [65], and DiT models [45] , can all satisfy to this trend.",
+    "It also facilitates the training of some of them multi-modal models such as LLaVA, PaliGemma, and Qwen-VL."
+   ],
+   "CMP": [],
+   "BIT": [
+    "By reducing the tensor types to 8-bit or 4-bit, the same model can be loaded with less memory.",
+    "It is even possible to run the model with 1-bit or 1.5- bit precision; this approach is collectively known as quantization.",
+    "The main idea is to convert the low-precision floating-point values of the model into 8-bit or lower fixed-point values."
+   ],
+   "PARAM": [],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2408.15881",
+  "title": "LLaVA-MoD: Making LLaVA Tiny via MoE Knowledge Distillation",
+  "mark": "keep",
+  "chars": 39594,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 1,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 8,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "H800"
+   ],
+   "BASE": [
+    "BLIP-2",
+    "LLAVA",
+    "LLaVA",
+    "LLaVA-1.5",
+    "LLaVA-NeXT",
+    "Mini-Gemini",
+    "MiniCPM-V",
+    "Qwen-VL"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "GQA",
+    "MMBench",
+    "MME",
+    "POPE",
+    "ScienceQA",
+    "TextVQA",
+    "VizWiz"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "For example, the largest version of LLaVA-NeXT employs Qwen-1.5-110B and trains with 128 H800 GPUs for 18 hours."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "Extensive experiments demonstrate that LLaVA-MoD surpasses existing works across various bench- marks while maintaining minimal activated parameters and low computational costs.",
+    "Remarkably, LLaVA-MoD-2B surpasses Qwen-VL-Chat-7B with an aver- age gain of 8.8%, using merely 0.3% of the training data and 23% trainable param- eters.",
+    "The results underscore LLaVA-MoD’s ability to effectively distill compre- hensive knowledge from its teacher model, paving the way for developing efficient MLLMs.",
+    "The code is available at https://github.com/shufangxun/ LLaVA-MoD.",
+    "For example, the largest version of LLaVA-NeXT employs Qwen-1.5-110B and trains with 128 H800 GPUs for 18 hours.",
+    "LLaVA-MoD achieves comparable perfor- mance with advanced MLLMs using significantly lower training costs while outperforming current small-scale MLLMs by a large margin. s-MLLM performance.",
+    "We present LLaVA-MoD1 to address the challenges through Mixture-of-Expert (MoE) and Knowledge Distillation.",
+    "LLaVA-MoD exhibits impressive performance across various multimodal benchmarks while main- taining minimal activated parameters and low computational resources."
+   ],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [
+    "Remarkably, LLaVA-MoD-2B surpasses Qwen-VL-Chat-7B with an aver- age gain of 8.8%, using merely 0.3% of the training data and 23% trainable param- eters.",
+    "Knowledge Distillation (KD) from large-scale MLLM (l-MLLM) offers a promising yet unexplored strategy for enhancing ∗Equal Contribution †Core Members ‡Corresponding Authors 1 arXiv:2408.15881v3 [cs.CV] 23 Oct 2024 Technical Report < 0.3% data usage < 23% trainable params < 0.25% data usage GPU Hours Diameter 69.2 68.9 64.4 87.2 59.9 69.2 (a) Comparison of training samples, parameters, and GPU hours (b) Comparison of performance various tasks Figure 1: Comparisons of training cost and performance.",
+    "As illustrated in Figure 1, LLaVA-MoD-2B exceeds Qwen-VL-Chat-7B by an average of 8.8% on these benchmarks, utilizing just 0.3% of the training data and 23% trainable parameters.",
+    "Furthermore, it matches the perfor- 1MoD denotes Mixture-of-Expert Knowledge Distillation for MLLMs 2 Technical Report mance of RLHF-based methods with 7B and 13B parameters on several hallucination benchmarks.",
+    "Specifically, l-MLLM is configured with 7B parameters, while s-MLLM is config- ured with 1.8B and 0.5B parameters.",
+    "2, The 2B-sized LLaVA-MoD requires only 5M samples and activates merely a subset of its total 2.2B parameters during training and inference.",
+    "Moreover, compared to the small-sized model MiniCPM-V with 2.8B trainable parameters, LLaVA-MoD also achieves superior performance with just 1.6% of the data samples and 2B parameters, underscoring its efficiency.",
+    "Notably, it outperforms Qwen-VL-Chat-7B by 8.8% with only 2 billion activation parameters, 0.3% training data, and 23% trainable parameters, highlighting its effective- ness in distilling knowledge and driving more efficient MLLM development."
+   ],
+   "BENCH": [
+    "LLM VisEnc GQA VisWiz SQAI VQAT MME MMB MMBCN AVG Qwen-1.5-7B CLIP-L 62.3 40.7 70.9 55.3 72.1 68.5 64.9 62.1 Qwen-2-7B CLIP-L 62.5 37.9 73.2 57.2 78.0 71.6 71.1 64.5 Training Datasets.",
+    "We conduct experiments on MME (Fu et al., 2023), MMB (Liu et al., 2023c), and MMBCN.",
+    "SQAI: ScienceQA test, VQAT: TextVQA val, MME: MME Benchmark, normalized to percentage, MMB: MMBench dev, MMBCN: MMBench-Chinese dev.",
+    "Specifically, for general VQA tasks, we use VizWiz (Gurari et al., 2018) and GQA (Hudson & Man- ning, 2019) to test general visual understanding and relational reasoning.",
+    "TextVQA (Singh et al., 2019) is employed for text-oriented VQA tasks, focusing on fine-grained visual recognition and understanding of text within images.",
+    "ScienceQA (Lu et al., 2022b) is utilized to measure scien- tific knowledge.",
+    "Moreover, we conduct experiments on several hallucination benchmarks such as POPE (Li et al., 2023c), Object HalBench (Yu et al., 2024a), MMHal-Bench (Sun et al., 2023).",
+    "Distillation GQA VizWiz SQAI VQAT MME MMB MMBCN AVG Mimic 59.3 40.0 68.4 58.7 68.4 65.1 61.5 60.2 Mimic+Preference 58.7 39.2 68.0 58.5 66.7 66.3 61.9 59.9 Table 5: The impact of preference distillation on the hallucination-oriented benchmarks."
+   ]
+  }
+ },
+ {
+  "id": "2410.08119",
+  "title": "Q-VLM: Post-training Quantization for Large Vision-Language Models",
+  "mark": "keep",
+  "chars": 37491,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 0,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 0,
+   "BIT": 8,
+   "PARAM": 0,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [],
+   "BASE": [
+    "LLaVA"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "ScienceQA",
+    "VizWiz"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "Experimental results demonstrate that our method compresses the memory by 2.78x and increase generate speed by 1.44x about 13B LLaVA model without performance degradation on diverse multi-modal reasoning tasks.2 1 Introduction Large vision-language models (LVLMs) [31, 53] have achieved outstanding performance in a large number of multi-modal reasoning tasks such as visual question answering [45, 28], embodied instruction following [1] and robot navigation [2, 16], which are benefited from numerous network parameters and vast training data.",
+    "Our Q-VLM can still generate plausible response in multi-modal reasoning with 4-bit quantization because of the precise rounding functions, and compresses the memory by 2.78x and increase the generate speed by 1.44x about 13B LLaVA model.",
+    "We evaluate our method with the LLaVA and the MoE-LLaVA models in different bitwidth settings, and the results in various visual question answering datasets demonstrate that our Q-VLM outperforms the state-of-the-art post-training methods significantly with negligible search overhead.",
+    "Recent studies including LLaVA [31] and InstructBLIP [30] aim to enhance LVLMs’ zero-shot capabilities by aligning them more closely with human preferences.",
+    "MoE-LLaVA [28] constructs a spare MoE-based model, which identifies a sparse pathway by simultaneously handling image and text features to achieve comparable performance with fewer activated parameters.",
+    "Figure 2 is produced with the activations in the 15th layer of the LLaVA architectures on SQA dataset.",
+    "4 Experiments In this section, we conduct extensive experiments for LLaVA and MoE-LLaVA benchmarks on ScienceQA multi-modal question answering dataset to evaluate the effectiveness of our methods.",
+    "4.1 Implementation Details We utilize the large vision-language frameworks for post-training quantization including LLaVA [31] and MoE-LLaVA [28] with their pre-trained weights for multi-modal question answering tasks."
+   ],
+   "CMP": [],
+   "BIT": [
+    "Our Q-VLM can still generate plausible response in multi-modal reasoning with 4-bit quantization because of the precise rounding functions, and compresses the memory by 2.78x and increase the generate speed by 1.44x about 13B LLaVA model.",
+    "LLM.int8() [8], SmoothQuant [46] and ZeroQuant [48] handled activation outliers to achieve accurate quantization function learning by eliminating the extreme values with equivalent transformation, yet encountered challenges in effectively scaling to extremely large models due to the unbearable computational costs.",
+    "The quantization function parameters were updated for 10 6 Method W6A6 W4A4 Memory Search cost Accuracy Memory Search cost Accuracy QLoRA 9.7G 23.7 88.43 6.6G 23.5 77.53 +CDM 26.9 88.95 25.9 78.66 +VEO 24.1 88.72 23.7 78.35 Q-VLM 25.1 89.34 24.6 79.79 Table 1: Effect of different LVLM quantization method we proposed. \"CDM\" means cross-layer dependency mining and \"VEO\" stands for visual encoder optimization.",
+    "INT4 Q-VLM Oceans are huge bodies of salt water.",
+    "INT4 AWQ The Southern Ocean reaches from the shores of Antarctica to South latitude.",
+    "Options: (A) yes (B) no INT4 Q-VLM Today, many scientists classify organisms into six broad kingdoms.",
+    "INT4 AWQ Animals get their food by digesting other organisms.",
+    "Q-VLM improves over the AWQ baseline for W4A4 quantization, reducing quantization errors and providing more reasonable answers."
+   ],
+   "PARAM": [],
+   "BENCH": [
+    "4 Experiments In this section, we conduct extensive experiments for LLaVA and MoE-LLaVA benchmarks on ScienceQA multi-modal question answering dataset to evaluate the effectiveness of our methods.",
+    "We report the result of LLaVA-7B model on ScienceQA dataset. (a) (b) (c) Figure 3: (a)The answering accuracy and searching cost w.r.t. different maximum layer depth within a block. (b) The answering accuracy and searching cost w.r.t. different hyperparameters across various vision-language models. (c) Quantization errors w.r.t. different maximum layer depth across various layers. epochs in searching process, and the acquired discretization function was directly employed for multi-modal question answering.",
+    "The multi-modal answer reasoning dataset is ScienceQA [35], which contains 21k vision-language multiple choice questions.",
+    "We also contain VizWiz [15] and VQA-v2 [14] datasets.",
+    "Finally, we randomly select 64 vision-language pairs from ScienceQA dataset to finetune quantized models and demonstrate the effectiveness of the proposed cross-layer dependency mining and visual encoder optimizing method.",
+    "All experiments in the ablation study were conducted with ScienceQA dataset and the LLaVA-v1.3-7B framework.",
+    "Performance w.r.t. different method we proposed in question answering process: To verify the effectiveness of different method we proposed in LVLM quantization, we conduct the ablation study on ScienceQA dataset under different bitwidth.",
+    "Visualization reasoning examples: We further provide qualitative visual reasoning example of the LLaVA-v1.3-13B model in Figure 4 from ScienceQA dataset."
+   ]
+  }
+ },
+ {
+  "id": "2412.19509",
+  "title": "MBQ: Modality-Balanced Quantization for Large Vision-Language Models",
+  "mark": "keep",
+  "chars": 34805,
+  "counts": {
+   "SPEED": 4,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 1,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 7,
+   "ACC": 2,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 0,
+   "BIT": 8,
+   "PARAM": 3,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "A100",
+    "RTX 4090",
+    "RTX4090"
+   ],
+   "BASE": [
+    "InternVL",
+    "InternVL2",
+    "LLaVA",
+    "LLaVA-onevision",
+    "Qwen-VL",
+    "Qwen2-VL"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "MMMU",
+    "OCRBench",
+    "SEED-Bench",
+    "ScienceQA",
+    "TextVQA",
+    "VizWiz"
+   ]
+  },
+  "evidence": {
+   "SPEED": [
+    "Additionally, we im- plement a W3A16 GPU kernel that fuses the dequantization and GEMV operators, achieving a 1.4× speedup on LLaVA- onevision-7B on the RTX 4090.",
+    "The evaluation results show that the fused W3A16 GEMV kernel achieves a speedup of 1.2× to 5.0× across 4 different shapes, compared to the FP16 GEMV baseline.",
+    "In this case, we apply the W4A8 kernel to the ViT encoder and achieve 1.15× speedup.",
+    "However, the W3A16-quantized VLM is 1.23× faster than the W4A8 model."
+   ],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [
+    "For example, the largest LLaVA-onevision VLM, with 72B parameters, requires 144GB of memory, which exceeds the 80GB memory capacity of the A100 GPU."
+   ],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "Additionally, we im- plement a W3A16 GPU kernel that fuses the dequantization and GEMV operators, achieving a 1.4× speedup on LLaVA- onevision-7B on the RTX 4090.",
+    "For example, the largest LLaVA-onevision VLM, with 72B parameters, requires 144GB of memory, which exceeds the 80GB memory capacity of the A100 GPU.",
+    "Experiments on differ- ent workloads show that we can achieve up to 1.4× end-to- end speedup on LLaVA-onevision-7B on RTX 4090.",
+    "Single Kernel Performance We evaluate the speed of the proposed fused W3A16 GEMV kernel on the RTX 4090 GPU, testing linear layers Shape (IC × OC) FP16 (ms) W3A16 (ms) Speedup 3584 × 3584 3.0 2.6 1.2× 3584 × 10752 8.3 2.7 3.1× 3584 × 18944 14.4 2.9 5.0× 18944 × 3584 14.6 3.1 4.7× Table 8.",
+    "The speed up of the fused W3A16 General Matrix-Vector Multiplication (GEMV) kernel on RTX 4090 GPU. “IC” and “OC” are short of “Input Channel” and “Output Channel”. with different weight matrix shapes in LLaVA-onevision- 7B.",
+    "End-to-End Performance With the help of the proposed W3A16 GPU kernel and the W4A8 GPU kernel from Qserve [29], we evaluate the la- tency of both the ViT encoder and the VLM in LLaVA- onevision-7B on RTX 4090.",
+    "The end-to-end speed up of LLaVA-onevision-7B on RTX4090 with fused GPU kernels. quantization to the VLM."
+   ],
+   "ACC": [
+    "The average accuracy loss for RTN-quantized 7B and 8B VLMs is 9.6%, significantly higher than the 1.5% loss seen in VLMs over 26B.",
+    "5, across three different large VLMs, the proposed MBQ (Rot) under W4A8 quantization exhibits an accuracy loss of less than 1.1% compared to the original FP16 VLMs."
+   ],
+   "FREE": [],
+   "BASE": [
+    "Additionally, we im- plement a W3A16 GPU kernel that fuses the dequantization and GEMV operators, achieving a 1.4× speedup on LLaVA- onevision-7B on the RTX 4090.",
+    "However, due to the large mem- ory and computation overhead, existing large VLMs, such as LLaVA [31], InternVL [11], and QwenVL [4], are hard *Equal contribution. †Corresponding to: [email removed], ji- [email removed], [email removed] 0 200 400 600 800 1000 Token Index Channel Index 896 1792 2688 3584 1e-6 1e-6 1.0 0.5 0.0 -0.5 -1.0 Avg Abs Grad of Vision: 1.7e-8 Avg Abs Grad of Language: 2.1e-7 1.0 0.5 0.0 -0.5 -1.0 Figure 1.",
+    "The gradients of loss function w.r.t. the token features of the 13th transformer block in the LLaVA-onevision-7B VLM on COCO caption dataset [8, 10].",
+    "For example, the largest LLaVA-onevision VLM, with 72B parameters, requires 144GB of memory, which exceeds the 80GB memory capacity of the A100 GPU.",
+    "1, using an image- caption pair from the COCO dataset as the input [10], we vi- sualize the loss gradient w.r.t. the output feature of the 13th layer in LLaVA-onevision-7B.",
+    "Experiments on differ- ent workloads show that we can achieve up to 1.4× end-to- end speedup on LLaVA-onevision-7B on RTX 4090.",
+    "1, with a heuristic selected modality-balancing factor, the bal- anced CWE easily surpasses the performance of CWE by Model FP16 W3 RTN CWE Balanced CWE LLaVA-ov-7B 46.00 34.67 36.56 40.22 InternVL2-8B 48.00 43.67 44.78 46.33 Table 1.",
+    "The LLaVA-ov-7B is short for LLaVA- onevision-7B."
+   ],
+   "CMP": [],
+   "BIT": [
+    "Extensive experiments show that MBQ can significantly improve task accuracy by up to 4.4% and 11.6% under W3A16 and W4A8 quantization for 7B to 70B VLMs, compared to SOTA baselines.",
+    "Additionally, we im- plement a W3A16 GPU kernel that fuses the dequantization and GEMV operators, achieving a 1.4× speedup on LLaVA- onevision-7B on the RTX 4090.",
+    "These sensitivity indicators are then incorporated into the reconstruction loss as the objec- tive for searching optimal channel-wise equalization fac- tors [27, 43] in both weight-only (W3A16 and W4A16) and weight-activation quantization (W4A8 and W8A8).",
+    "The results show MBQ significantly improves the task accuracy by up to 4% and 11% under W3A16 and W4A8 quantization com- pared with other SOTA methods.",
+    "For W3A16 quantization, we design a GPU kernel that fuses 3-bit dequantization with general matrix-vector multi- plication (GEMV).",
+    "For W4A16, W4A8, and W8A8 quanti- zation, we adopt existing open-source GPU kernels [27, 29] to accelerate the inference process.",
+    "For example, W4A8 denotes quan- tizing weights to 4-bit and activations to 8-bit.",
+    "Specifi- cally, we pack eight 3-bit weights into three bytes, and the fused W3 kernel first loads the W3 weights instead of FP16 weights to reduce memory access overhead."
+   ],
+   "PARAM": [
+    "For example, the largest LLaVA-onevision VLM, with 72B parameters, requires 144GB of memory, which exceeds the 80GB memory capacity of the A100 GPU.",
+    "For LLaVA-onevision, we select models with 7B and 72B parameters, which uti- lize Qwen2-7B/-72B for the VLM and SigLIP-400M [48] for the ViT encoder.",
+    "For Qwen2-VL, we use models with 7B and 72B parameters in our evaluation, which use Qwen2-7B/-72B for the VLM component and a 675M ViT encoder."
+   ],
+   "BENCH": [
+    "The accuracy results (%) on MMMU benchmark after W3 quantization.",
+    "Specifically, we use OCRBench [32] and TextVQA [40] for text recognition and comprehension, VizWiz [18] and SEED-Bench [19] to test visual perception, and ScienceQA [34] and MMMU [47] to evaluate visual reasoning.",
+    "3, the results of RTN quantization indicate that smaller VLMs are more sensitive to weight-only quan- BitWidth Method Components MMMU (↑) SEED (↑) Channel-wise Equalization COCO Calib.",
+    "4, when we use the COCO caption dataset as the calibration dataset, the perfor- mance of AWQ W3A16 can significantly increase by 2.1% and 10.3% on MMMU and SEED datasets, respectively.",
+    "However, the performance of SmoothQuant W4A8 with the COCO caption calibration dataset significantly decreases by 1.7% and 31.4% on MMMU and SEED datasets.",
+    "4, with the help of Modality-Balancing (MAE), the SmoothQuant with COCO calibration can significantly improve 13.4% and 54.2% on MMMU and SEED, re- spectively.",
+    "For the weight-only quantization, Modality- Balancing (MAE) can increase the accuracy by 3.3% and 4.6% on MMMU and SEED, respectively.",
+    "For both W3A16 and W4A8, Modality-Balancing with MAE recon- struction loss can achieve over 1% accuracy improvement on both MMMU and SEED datasets."
+   ]
+  }
+ },
+ {
+  "id": "2501.01709",
+  "title": "MoVE-KD: Knowledge Distillation for VLMs with Mixture of Visual Encoders",
+  "mark": "keep",
+  "chars": 33723,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 1,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "A800"
+   ],
+   "BASE": [
+    "LLaVA",
+    "LLaVA-1.5",
+    "LLaVA-NeXT",
+    "Mini-Gemini",
+    "Qwen-VL"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "GQA",
+    "MMBench",
+    "MME",
+    "POPE",
+    "TextVQA",
+    "VQAV2",
+    "VizWiz"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "The framework involves training on 16×A800 GPUs for standard machine configurations."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "Compre- hensive experiments on popular VLMs, such as LLaVA and LLaVA-NeXT, validate the effectiveness of our method.",
+    "Comparison of LLaVA-1.5-7B [27] and RADIO [36] on a wide range of benchmarks, and MoVE-KD surpasses them. gration of visual encoders a key area of research.",
+    "Additionally, we incorporate Mixture-of-LoRA-Experts (MoLE) to pre- vent knowledge confusion. • Our framework has been applied to LLaVA and LLaVA- NeXT, achieving state-of-the-art performance across multiple benchmarks.",
+    "LLaVA [27] di- rectly connects the vision encoder and LLM with MLPs, showing proficiency in multi-modal dialogues.",
+    "For example, Mini-Gemini [24] employs an additional vi- sion encoder for high-resolution refinement, and S2 [37] introduces multiple visual branches by scaling up the im- age scale.",
+    "Mean- while, the commonly-used linear interpolation in KD meth- ods is challenging to bridge the distinct tokens from differ- ent encoders to a unified and student-friendly token space, as discussed by LLaVA-1.5 [27].",
+    "We verify the proposed MoVE-KD on two popu- lar VLM frameworks: LLaVA [27] and LLaVA-NeXT [28].",
+    "LLaVA-1.5 employs CLIP-pretrained [35] ViT-L as the vi- sual tower."
+   ],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": [
+    "To validate the effectiveness of our method, we conduct comprehensive experiments on eight widely adopted benchmarks including VQAV2 (VQA V2) [13], GQA [18], VQAText (TextVQA) [40], VizWiz [14], POPE [22], SQA [32], MME [11], MMBench (MMB) [30].",
+    "More Method VQAV2 GQA VQAText VizWiz POPE SQA MME MMB Avg LLaVA-1.5 7b 78.5 62.0 58.2 50.0 85.9 66.8 1510.7 64.3 66.5 ↑KD (interpolation) 79.0 62.4 56.7 50.9 84.7 67.6 1507.6 62.9 66.3 ↑Encoder adapter 79.3 62.4 57.0 51.2 85.2 68.3 1517.8 63.8 66.7 ↑MoLE 79.1 62.8 57.3 51.9 86.4 68.7 1521.3 65.4 67.4 ↑Token weight 79.3 63.1 57.7 52.5 86.7 68.9 1524.1 66.0 67.7 ↑Teacher weight 79.5 63.2 58.3 52.3 86.9 69.3 1524.5 66.3 68.0 Table 2.",
+    "The RADIO [36] ex- hibits obvious knowledge forgetting issues on VQAV2 and VQAText, while our approach overcomes this problem and achieves comprehensive improvements on Viunca-7b [53].",
+    "Besides, the LLaVA-1.5 equipped with our method even surpasses LLaVA-NeXT on some tasks, like MME and MMB, and it validates the effectiveness of MoVE-KD.",
+    "MoLE VQAV2 GQA VQAText VizWiz POPE SQA MMB Avg w/o 76.7 60.0 54.8 51.9 81.5 64.1 62.1 64.4 w/ 77.4 60.3 55.6 51.3 82.1 63.7 61.5 64.5 Table 3.",
+    "This has led to significant performance improve- ments across various benchmarks, particularly in POPE and MMB.",
+    "This situation typically requires setting an additional learn- CLIP weight VQAV2 GQA VQAText VizWiz POPE SQA MME MMB Avg 0.6 78.8 62.6 57.3 51.7 86.6 68.2 1518.4 64.5 67.1 0.7 79.1 62.5 57.9 52.1 86.3 69.5 1521.7 65.2 67.5 0.8 79.5 63.2 58.3 52.3 86.9 69.3 1524.5 66.3 68.0 0.9 80.1 62.9 57.8 51.9 86.6 69.4 1519.5 65.8 67.8 Table 4.",
+    "Encoder VQAV2 GQA VQAText VizWiz POPE SQA Unfreeze 76.7 60.0 54.8 51.9 81.5 64.1 Freeze 78.5 62.0 58.2 50.0 85.9 66.8 Table 5."
+   ]
+  }
+ },
+ {
+  "id": "2502.00425",
+  "title": "MQuant: Unleashing the Inference Potential of Multimodal Large Language Models via Full Static Quantization",
+  "mark": "keep",
+  "chars": 47728,
+  "counts": {
+   "SPEED": 1,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 1,
+   "THR": 0,
+   "TOK": 1,
+   "HW": 2,
+   "ACC": 1,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 0,
+   "BIT": 8,
+   "PARAM": 0,
+   "BENCH": 5
+  },
+  "sets": {
+   "HW": [
+    "NVIDIA RTX 6000",
+    "RTX 6000"
+   ],
+   "BASE": [
+    "InternVL",
+    "InternVL2",
+    "Internvl2",
+    "Mini-Gemini",
+    "MiniCPM-V",
+    "Qwen-VL",
+    "Qwen2-VL"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "DocVQA",
+    "MME",
+    "OCRBench",
+    "ScienceQA",
+    "TextVQA"
+   ]
+  },
+  "evidence": {
+   "SPEED": [
+    "AIFS maintains full multi-batch compatibility with- out overhead, enabling consistent 20% faster inference versus FP baselines across batch sizes 1-4 (Table 13). ❷For multi-turn dia- logue, under identical resolution and input format (50 text tokens per turn + 512 decoded tokens), MQuant achieves 38.7% faster end-to- end inference than BF16 for 1-3 turns (Table 14) through optimized key-value caches and position IDs across turns."
+   ],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [
+    "This re- moves the need to recalculate scales per token, cutting runtime overhead and boosting throughput. ❸Enhanced Memory Efficiency: Sequential processing of visual (via 𝑠𝑣) and textual (𝑠𝑡) tokens with dedicated scale factors minimizes memory fragmentation, yielding up to 24.7% speedups and 152.9% memory efficiency gains (Ta- ble 17) through eliminated padding/slicing operations."
+   ],
+   "THR": [],
+   "TOK": [
+    "Table 9: Latency combining AIFS with FlashAttention from 100 to 8100 tokens (𝑄/𝐾/𝑉shape is (1, 28, num-tokens, 128)) Tokens Number 100 900 2500 4900 8100 FlashAttn (ms) 27.3 33.6 35.5 165.9 271.6 AIFS+FlashAttn (ms) 27.3 34.1 36.4 167.5 272.1 Integrate AIFS with Flash Attention."
+   ],
+   "HW": [
+    "As evidenced in Table 9, we integrated the causal attention mechanism of AIFS into FlashAt- tention and tested it on an RTX 6000, observing that its speed is nearly identical to that of standard causal attention.",
+    "Latency were tested on an NVIDIA RTX 6000 Ada Generation."
+   ],
+   "ACC": [
+    "The extensive results on diverse multimodal reasoning tasks demonstrate that MQuant achieves less than 1% accuracy loss on all MLLMs with 23% and 100% speedup in prefill and decode stage under the W4A8 setting, highlighting its superior performance and wide practical value."
+   ],
+   "FREE": [],
+   "BASE": [
+    "On five mainstream MLLMs (including Qwen- VL, MiniCPM-V, CogVLM2), MQuant under W4A8 achieves near- floating-point accuracy (<1% degradation) while reducing inference latency by up to 30%, significantly outperforming existing PTQ baselines.",
+    "As shown in Fig 1(a), in models such as Qwen2-VL [53], the number of prefill visual tokens grows as image resolution increases (detailed figure in Appendix A.6).",
+    "We evaluate MQuant on five mainstream MLLMs, including InternVL [14], Qwen-VL [8], MiniCPM-V [60], CogVLM2 [24] and Qwen2-VL [53].",
+    "Subsequent efforts, including Qwen-VL [8], InternVL [15], and CogVLMV2 [24], have enhanced MLLMs by improving high- resolution inputs and scaling training data.",
+    "Besides, smaller MLLMs like Mini-Gemini [35], MobileVLM [16], and MiniCPM-V [60] have emerged.",
+    "9 Ratio Number Number Internvl2-8B Visual 24 24 100% LLM 32 4 12.5% Qwenvl-9.6B Visual 48 48 100% LLM 32 13 40.6% MiniCPM-V-2.6-8B Visual 27 27 100% LLM 28 3 10.7% GLM-4V-9B Visual 63 63 100% LLM 40 6 15.0% Qwen2vl-7B Visual 32 32 100% LLM 28 1 3.5% Prevalence of Eq.",
+    "We conduct systematic block- level verification across five state-of-the-art MLLMs (InternVL2-8B, QwenVL-9.6B, MiniCPM-V-2.6-8B, GLM-4V-9B, and Qwen2VL- 7B) to quantify the occurrence of Fast Hadamard Transform (FHT)- induced weight outliers.",
+    "We evaluate our MQUANT on five MLLMs: InternVL2-8B [14], Qwen-VL-Chat-9.6B [8], MiniCPM-V 2.6-8B [60], Qwen2-VL-7B [53], and GLM-4V-9B [24]."
+   ],
+   "CMP": [],
+   "BIT": [
+    "On five mainstream MLLMs (including Qwen- VL, MiniCPM-V, CogVLM2), MQuant under W4A8 achieves near- floating-point accuracy (<1% degradation) while reducing inference latency by up to 30%, significantly outperforming existing PTQ baselines.",
+    "Quantization has proven an effective strategy for reducing memory usage and inference costs in LLMs [43, 62, 70], by converting high-precision parameters (e.g., FP32) into lower-bit representations (e.g., INT8).",
+    "The extensive results on diverse multimodal reasoning tasks demonstrate that MQuant achieves less than 1% accuracy loss on all MLLMs with 23% and 100% speedup in prefill and decode stage under the W4A8 setting, highlighting its superior performance and wide practical value.",
+    "Generally, when we quantize the network’s weight with 4-bit and activations with 8-bit, called it as W4A8.",
+    "In Quarot, FHT is crucial for low-bit quantization (e.g., 4-bit) as shown in Appendix A.9.",
+    "X × M din HWl2 dout din X1 × W2 X × W1 OutFP16 W4A8 GEMM (1) Compute scale 𝑠𝑥and 𝑠𝑤1 (2) Quantize: FP16 𝐶𝑙𝑎𝑚𝑝Rou𝑛𝑑 Τ 𝑋𝑠𝑥 = 𝑋𝐼8 (3) W4A8 Matmul: 𝑋𝐼8 @ 𝑊1𝐼4 = 𝑂𝑢𝑡1𝐼32 (4) Dequantize:𝑂𝑢𝑡1𝐼32 ∗𝑠𝑥∗s𝑤1 = 𝑂𝑢𝑡1𝐹16 W4A8 GEMV (1) Compute scale 𝑠𝑥1 and 𝑠𝑤2 (2) Quantize: (3) W4A8 Matmul: 𝑋1𝐼8 @ 𝑊2𝐼4 = 𝑂𝑢𝑡2𝐼32 (4) Dequantize: 𝑂𝑢𝑡2𝐼32 ∗𝑠𝑥1 ∗s𝑤2 = 𝑂𝑢𝑡2𝐹16 FP16 𝐶𝑙𝑎𝑚𝑝Rou𝑛𝑑 ൗ 𝑊1 𝑠𝑤1 = 𝑊1𝐼4 𝐶𝑙𝑎𝑚𝑝𝑅𝑜𝑢𝑛𝑑 Τ 𝑋1 𝑠𝑥1 = 𝑋1𝐼8 𝐶𝑙𝑎𝑚𝑝𝑅𝑜𝑢𝑛𝑑 ൗ 𝑊2 𝑠𝑤2 = 𝑊2𝐼4 Figure 5: An overview of our proposed RMS.",
+    "We test W8A8 and W4A8 quantization settings for both visual encoders and LLMs, comparing RTN, SmoothQuant [56], and Quarot [5].",
+    "In W8A8 setting, MQuant achieves near-lossless performance to the FP models across diverse datasets and different model scales (7-72B)."
+   ],
+   "PARAM": [],
+   "BENCH": [
+    "Evaluations are con- ducted on four benchmarks covering OCR and general question answering: TextVQA [44], DocVQA [40], OCRBench [38], and MME [22], which assesses perception and cognition across 14 tasks.",
+    "Bits Method T.VQA↑ D.VQA↑ OCRB.↑ MME↑ BF16 - 85.48 95.95 883 2479 W4A8 MBQ [34] 83.41 92.30 854 2402 W4A8 MQuant (ours) 85.03 95.49 868 2471 4.2 Comparison with other MLLMs Quantization Methods To rigorously evaluate MQuant, we compare it against recent state- of-the-art (SOTA) quantization methods [34, 52, 57] specifically designed for MLLMs.",
+    "On the ScienceQA bench- mark [39] (Table 5) in LLaVA1.5-13B [37], our W4A4 MQuant surpasses Q-VLM by a significant margin of 6.4% in average ac- curacy.",
+    "Methods T.VQA↑D.VQA↑OCRB.↑MME↑Lat (ms) ↓ Static AIFS + MSQ RMS BF16 84.43 93.87 842 2319 6523 ✓ ✗ ✗ 71.44 83.96 670 1911 5479 ✓ ✓ ✗ 78.95 87.55 721 2095 5484 ✓ ✓ ✓ 84.32 93.58 824 2255 5471 Ablation Study of Proposed Quantization Designs.",
+    "Calib size T.VQA↑ D.VQA↑ OCRB.↑ MME↑ BF16 84.43 93.87 842 2319 128 84.28 93.50 820 2243 256 84.32 93.58 824 2255 512 84.32 93.57 823 2254 MM ’25, October 27–31, 2025, Dublin, Ireland JiangYong Yu & Sifan Zhou et al."
+   ]
+  }
+ },
+ {
+  "id": "2502.14786",
+  "title": "SigLIP 2: Multilingual Vision-Language Encoders with Improved Semantic Understanding, Localization, and Dense Features",
+  "mark": "keep",
+  "chars": 41947,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 0,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 1,
+   "CMP": 0,
+   "BIT": 1,
+   "PARAM": 0,
+   "BENCH": 3
+  },
+  "sets": {
+   "HW": [],
+   "BASE": [
+    "PaliGemma"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "AI2D",
+    "DocVQA",
+    "GQA",
+    "RefCOCO",
+    "RefCOCOg",
+    "ScienceQA",
+    "TextVQA",
+    "VQAv2"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "To evaluate the performance of SigLIP 2 in this application, we develop a recipe similar to that of PaliGemma 2 [56]."
+   ],
+   "CMP": [],
+   "BIT": [
+    "Unlike CLIP [50], which relies on a contrastive loss, SigLIP creates binary classification problems by combining every image embedding with every text embedding in the mini-batch and trains the embeddings to classify matching and non- matching pairs via logistic regression (sigmoid loss)."
+   ],
+   "PARAM": [],
+   "BENCH": [
+    "Referring expression comprehension To probe the referring expression comprehension capabilities of SigLIP 2 on different RefCOCO vari- ants [29, 68] we apply the evaluation protocol from [62].",
+    "We attach a 6-layer transformer de- coder to the un-pooled, frozen vision encoder representation via cross-attention and train it from scratch on a mix of all RefCOCO variants (see [62] for details).",
+    "10 SigLIP 2: Multilingual Vision-Language Encoders with Improved Semantic Understanding, Localization, and Dense Features RefCOCO RefCOCO+ RefCOCOg ViT Seq."
+   ]
+  }
+ },
+ {
+  "id": "2502.20321",
+  "title": "UniTok: A Unified Tokenizer for Visual Generation and Understanding",
+  "mark": "keep",
+  "chars": 36276,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 0,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 3,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 7
+  },
+  "sets": {
+   "HW": [],
+   "BASE": [
+    "LLaVA",
+    "Mini-Gemini"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "GQA",
+    "MME",
+    "POPE",
+    "TextVQA",
+    "VQAv2"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "Subsequently, we finetune the model on 1.5M text-to-image data and 1.5M multimodal instruction tuning data introduced in Mini-Gemini [23].",
+    "Specifically, we adopt the classic LLaVA framework for evaluation, 9 replacing the original CLIP tokenizer with UniTok while keeping all other the training settings unchanged.",
+    "Table 9: Comparison of different initialization methods under the LLaVA framework. † indicates the model uses CLIP weights for initialization."
+   ],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": [
+    "It outperforms the Liquid [59] baseline with a VQGAN tokenizer by 5.5% on VQAv2 [13], 9.2% on TextVQA [42], and 339 points on MME [64]; In addition, we demonstrate that semantic supervision leads to improved latent space structure for autoregressive generation, i.e., for class-conditional image generation on ImageNet 256×256, UniTok significantly reduces generation FID without classifier-free guidance from 14.6 to 2.5 under the LlamaGen [43] framework, which aligns with recent findings in diffusion modeling [19, 4, 63].",
+    "The VQA score is measured using the average score across the VQAv2, GQA, TextVQA, and POPE benchmarks.",
+    "For visual understanding evaluation, we report results on standard VQA benchmarks including VQAv2 [13], GQA [14], TextVQA [42], POPE [24], MME [64], and MM-Vet [70].",
+    "Specifically, UniTok significantly outperforms the Chameleon model, which relies on a traditional VQVAE tokenizer, by 7.2% higher accuracy on VQAv2.",
+    "Additionally, it surpasses VILA-U, another model with a unified tokenizer, by 3.3% in accuracy on the TextVQA benchmark and by a notable margin of 112 points on the MME-Perception scores.",
+    "Supervision Generation Understanding rFID ↓ gFID ↓ VQAv2 GQA SciQA TextVQA POPE MME Contrastive – – 68.95 56.89 65.64 49.89 82.34 1373 Reconstruction 0.82 3.59 56.33 47.53 63.26 43.65 77.09 902 Recon. + Contra.",
+    "Tokenizer VQAv2 GQA TextVQA POPE MME UniTok† 69.9 56.2 49.3 81.2 1331 UniTok 72.4 58.2 51.6 82.4 1392 5 Limitations and Conclusion This paper studies unified visual tokenization for generation and understanding, which serves as the cornerstone of unified multimodal large language models."
+   ]
+  }
+ },
+ {
+  "id": "2503.12067",
+  "title": "A Comprehensive Survey on Knowledge Distillation",
+  "mark": "keep",
+  "chars": 194465,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 0,
+   "ACC": 0,
+   "FREE": 1,
+   "BASE": 1,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [],
+   "BASE": [
+    "Gemma3"
+   ],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [],
+   "ACC": [],
+   "FREE": [
+    "Sun et al. (2024a) suggests logit standardization by setting the temperature as the weighted standard deviation of the logit and performing a plug-and-play Z-score pre-process."
+   ],
+   "BASE": [
+    "Gemma3 (Team et al., 2025) and Qwen3 (Yang et al., 2025) employ logit sampling and weak-to-strong distillation, respectively."
+   ],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2504.07934",
+  "title": "SoTA with Less: MCTS-Guided Sample Selection for Data-Efficient Visual Reasoning Self-Improvement",
+  "mark": "keep",
+  "chars": 39462,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 1,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "A100"
+   ],
+   "BASE": [
+    "InternVL2.5",
+    "LLaVA",
+    "LLaVA-Onevision",
+    "Qwen2-VL",
+    "Qwen2.5-VL"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "AI2D",
+    "MMBench",
+    "MMMU",
+    "MathVista",
+    "ScienceQA"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "For all models, we use 8×80G A100 GPUs for model training and evaluation."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "Using this approach, we select just 11k challenging samples for RFT on Qwen2.5-VL-7B-Instruct and 7.5k samples for Qwen2.5-VL-72B-Instruct.",
+    "In particular, ThinkLite-VL-7B improves the average performance of Qwen2.5-VL-7B-Instruct by 7% and surpasses all existing 7B-level models, as well as much larger models such as GPT-4o, O1 and Qwen2.5-VL-72B, achieving a new SoTA score of 75.1 on MathVista.",
+    "Our model ThinkLite-VL-7B achieves the state-of- the-art (SoTA) accuracy of 75.1, surpassing Qwen2.5-VL-72B-Instruct, GPT-4o, O1, and other 7B-level reasoning VLMs.",
+    "Our model significantly out- performs Qwen2.5-VL-7B and other reasoning models.",
+    "From this pool, we extract two difficulty-filtered subsets: 11k samples for Qwen2.5-VL-7B- Instruct and 7.5k samples for Qwen2.5-VL-72B-Instruct.",
+    "After RFT, ThinkLite-VL-7B improves the average performance of Qwen2.5-VL-7B-Instruct from 59.69% to 64.18%, and outperforms a comparable baseline trained on randomly selected 11k samples (60.89%).",
+    "Similarly, ThinkLite-VL-72B raises the average accuracy of Qwen2.5-VL-72B-Instruct from 68.25% to 72.67%, exceeding the baseline trained on randomly selected 7.5k samples 69.91%.",
+    "ThinkLite-VL-7B also outperforms much larger models—including GPT-4o, Qwen2.5-VL-72B, and o1—on the MathVista benchmark, achieving a new SoTA score of 75.1% (Figure 1)."
+   ],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": [
+    "In particular, ThinkLite-VL-7B improves the average performance of Qwen2.5-VL-7B-Instruct by 7% and surpasses all existing 7B-level models, as well as much larger models such as GPT-4o, O1 and Qwen2.5-VL-72B, achieving a new SoTA score of 75.1 on MathVista.",
+    "ThinkLite-VL-72B further advances the SoTA frontier, achieving an accuracy of 79.7 on MathVista and an average benchmark improvement of 4.42 over the open-source SOTA.",
+    "This paper presents a data-efficient self-improving method for better training reasoning VLMs. (Left) Comparison of VLMs with different parameter sizes on MathVista.",
+    "ThinkLite-VL-7B also outperforms much larger models—including GPT-4o, Qwen2.5-VL-72B, and o1—on the MathVista benchmark, achieving a new SoTA score of 75.1% (Figure 1).",
+    "ThinkLite-VL-72B further advances the frontier, attaining a SoTA accuracy of 79.7% on MathVista.",
+    "Notably, ThinkLite-VL-7B improves the average performance of its base model by 7%, and achieves a new SoTA score of 75.1 on MathVista— surpassing larger models such as GPT-4o, O1 and Qwen2.5-VL-72B.",
+    "ThinkLite-VL-72B further advances this with a MathVista score of 79.7. (5) Open-source release.",
+    "Data Collection We collect a total of 70k datas from widely used open-source training datasets as our initial training set, covering three category: multimodel mathematical reasoning (Geometry3K (Lu et al., 2021), GeoQA (Chen et al., 2022), Geos (Seo et al., 2015)), natural image understanding (FigureQA (Kahou et al., 2018), ScienceQA (Lu et al., 2022a), OK-VQA (Marino et al., 2019)), and chart understanding (IconQA (Lu et al., 2022b), TabMWP (Lu et al., 2023))."
+   ]
+  }
+ },
+ {
+  "id": "2506.07530",
+  "title": "BitVLA: 1-bit Vision-Language-Action Models for Robotics Manipulation",
+  "mark": "keep",
+  "chars": 37883,
+  "counts": {
+   "SPEED": 2,
+   "FLOP": 0,
+   "LAT": 2,
+   "MEM": 5,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 6,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 4,
+   "CMP": 0,
+   "BIT": 8,
+   "PARAM": 0,
+   "BENCH": 1
+  },
+  "sets": {
+   "HW": [
+    "NVIDIA A100",
+    "NVIDIA A800",
+    "NVIDIA H800",
+    "RTX 3050"
+   ],
+   "BASE": [
+    "LLaVA",
+    "LLaVA-1.5"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "AI2D",
+    "MMMU",
+    "SeedBench"
+   ]
+  },
+  "evidence": {
+   "SPEED": [
+    "Latency 0 200 400 OpenVLA-OFT+ Pi-0 BitVLA 4.4 x Real World 0 20 40 60 80 OpenVLA-OFT Pi-0 BitVLA OOD SFT Memory Usage 0 5 10 15 20 OpenVLA-OFT Pi-0 BitVLA 11 x Reduction Only 1.4G -1 0 +1 Simulation 50 70 90 OpenVLA-OFT Pi-0 BitVLA 0 100 200 300 400 OpenVLA-OFT+ Pi-0 BitVLA Throughput 4.4 x BitVLA Fig.",
+    "Meanwhile, BitVLA requires only 1.4 GB memory and delivers a 4.4× speedup over OpenVLA-OFT."
+   ],
+   "FLOP": [],
+   "LAT": [
+    "BitVLA achieves 73 ms latency and 341.1 Hz throughput, outperforming OpenVLA- OFT+ by 4.4× lower latency and 4.4× higher throughput, and also exceeding π0 in both metrics. only the limited fine-tuning data.",
+    "BitVLA achieves 73 ms latency and 341.1 Hz throughput, substantially outperforming OpenVLA-OFT+ (321 ms, 77.9 Hz) and RDT-1B (297 ms, 84.1 Hz), corresponding to about 4.4× lower latency than OpenVLA-OFT+."
+   ],
+   "MEM": [
+    "Meanwhile, BitVLA requires only 1.4 GB memory and delivers a 4.4× speedup over OpenVLA-OFT.",
+    "BitVLA achieves competitive performance with a 1.4 GB memory footprint.",
+    "In practice, BitVLA requires only 1.4 GB of memory, enabling deployment on consumer-grade GPUs, such as the NVIDIA GeForce RTX 3050 Ti Laptop GPU (4 GB).",
+    "As shown in Table III, across the five benchmarks, the 1.58-bit encoder incurs only a 1.5% absolute drop in aver- age accuracy, while reducing the vision encoder’s memory footprint from 0.8 GB to 0.1 GB.",
+    "The Quantize-then-distill stage preserves the multimodal ability while reducing the memory footprint from 0.8GB to 0.1GB."
+   ],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "This three-stage VLM training takes 7 days on 8 NVIDIA H800 GPUs (80GB each).",
+    "The full pre-training takes 14 days on 16 NVIDIA H800 GPUs (80GB each).",
+    "In practice, BitVLA requires only 1.4 GB of memory, enabling deployment on consumer-grade GPUs, such as the NVIDIA GeForce RTX 3050 Ti Laptop GPU (4 GB).",
+    "The training procedure was conducted on an NVIDIA H800 GPU, utilizing a batch size of 64 and action chunk size of 10.",
+    "The VLAs are hosted on a remote server equipped with an NVIDIA A800 GPU, while the robot control loop communicates with the server over the network to retrieve real-time action outputs.",
+    "Following OpenVLA-OFT [18], we report throughput and latency on an NVIDIA A100 GPU averaged over 100 queries."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "Specifically, we first train a vision-language model by pairing the 1-bit LLM with a full-precision vision encoder following the LLaVA training paradigm [25].",
+    "Throughout the pipeline, we explicitly control which modules are trainable at each stage to stabilize optimization under aggressive quantization. a) Multimodal Training: Following LLaVA [25], we first construct a vision-language model by pairing the 1-bit LLM backbone with a full-precision vision encoder and a lightweight connector.",
+    "Following LLaVA [25], we train BitVLA with a three-stage VLM curriculum that progressively.",
+    "In visual alignment, we train only the connector on LLaVA-1.5-558k [26] to align the SigLIP-L features with the 1-bit LLM embedding space, using a peak learning rate of 1 × 10−3 and a batch size of 256."
+   ],
+   "CMP": [],
+   "BIT": [
+    "BitVLA: 1-bit Vision-Language-Action Models for Robotics Manipulation Hongyu Wang Chuyan Xiong Ruiping Wang∗Xilin Chen Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences University of Chinese Academy of Sciences.",
+    "1: We introduce BitVLA, the first fully native 1-bit vision-language-action (VLA) model for robotic manipulation, in which every parameter is ternary, i.e., {−1, 0, 1}.",
+    "With the proposed Quantize-then-Distill stage, we compress the full-precision vision encoder to 1.58-bit weights with INT8 activations after multimodal training.",
+    "Thus, we propose BitVLA, a fully native 1-bit VLA model for robotic manipulation, where every parameters is ternary, i.e., {−1, 0, 1}.",
+    "BitVLA is built on the publicly available 1-bit LLM BitNet b1.58 2B4T, and is trained as a vision-language-action policy that inherits the compactness of 1-bit pretraining while retaining strong task performance.",
+    "In particular, 1-bit LLMs [38, 28, 29], whose parameters are restricted to ternary values (i.e., {−1, 0, 1}), demonstrate that aggressive quantization can significantly reduce inference cost and improve hardware efficiency while preserving competitive performance.",
+    "In this work, we present BitVLA, to the best of our knowledge, the first fully native 1-bit Vision-Language-Action model for robotic manipulation, where all model parameters are ternary, i.e., {−1, 0, 1}.",
+    "BitVLA is built upon the publicly available 1-bit LLM BitNet b1.58 2B4T [29], and adopts a deployment-oriented training pipeline that couples low-bit modeling with multimodal learning."
+   ],
+   "PARAM": [],
+   "BENCH": [
+    "WBits ABits ViT Memory Usage (GB) Training Tokens (Stage III) Laux MMMU (val) SeedBench (image) SeedBench2+ (test) MMStar (test) AI2D (test) Average BF16 BF16 0.8GB (8.00×) - - 37.4 70.6 45.0 43.6 68.6 53.0 1.58-bit INT8 0.1GB (1.00×) 10B ✓ 35.4 69.3 43.7 41.5 67.6 51.5 1.58-bit INT8 0.1GB (1.00×) 5B ✓ 33.3 69.1 43.3 41.4 66.4 50.8 1.58-bit INT8 0.1GB (1.00×) 5B ✗ 32.4 52.9 38.8 30.7 57.5 42.4 BF16 SigLIP 1.58-bit SigLIP bicycle bird book bottle bus car cat chair dining table dog laptop motorcycle person tv Layer 0 Layer 12 Layer 26 Fig."
+   ]
+  }
+ },
+ {
+  "id": "2509.23729",
+  "title": "LUQ: Layerwise Ultra-Low Bit Quantization for Multimodal Large Language Models",
+  "mark": "keep",
+  "chars": 44001,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 4,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 3,
+   "ACC": 2,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 0,
+   "BIT": 8,
+   "PARAM": 1,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "NVIDIA RTX 5000",
+    "ascending "
+   ],
+   "BASE": [
+    "LLaVA",
+    "LLaVA-1.5",
+    "Qwen-VL"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "ChartQA",
+    "DocVQA",
+    "GQA",
+    "MMBench",
+    "MME",
+    "MathVista",
+    "POPE",
+    "TextVQA",
+    "VQAv2"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [
+    "Evaluated on LLaVA-1.5 and Qwen- 2.5-VL across 9 VQA benchmarks, LUQ models use 40% and 31% less memory than their 4-bit counterparts while exhibiting less than 10% degradation on MME.",
+    "For LLaVA-1.5 7B, LUQ achieves comparable VQA accuracy to 4-bit GPTQ/AWQ while reducing memory requirements by 40%.",
+    "All experiments are conducted on a single NVIDIA RTX 5000 GPU with 32GB of VRAM.",
+    "For Qwen 2.5 VL, we create a memory-constrained model with a hardware motivated budget of 2.5 GB, a hypothetical limit for edge devices (having 4 GB RAM), leading to the quantization of the 12 lowest-entropy layers (2.75 avg. bits per parameter)."
+   ],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "Let π : {1, ..., L} →{1, ..., L} be a permutation that sorts layers by their entropy in ascending order: Hπ(1) ≤Hπ(2) ≤... ≤Hπ(L) (6) For a given ultra-low bit PTQ method Qlow and a 4-bit PTQ method Qhigh we progressively quantize layers following this ordering.",
+    "All experiments are conducted on a single NVIDIA RTX 5000 GPU with 32GB of VRAM.",
+    "Highest vs Lowest Entropy: We evaluate the impact of activation entropy-based layer selection by comparing: (1) standard LUQ, which quantizes layers in ascending order of entropy (Low Entropy First), and (2) an inverted strategy that prioritizes layers with highest entropy (High Entropy First) on LLaVA-1.5."
+   ],
+   "ACC": [
+    "This helps LUQ achieve a better compression-performance trade-off. • We demonstrate the role of calibration data composition in ultra-low bit quantization, showing that multimodal calibration improves performance over text-only calibration in the ultra-low bit regime. • We benchmark LUQ on 9 standard VQA benchmarks, showing that LUQ reduces the model size of LLaVA-1.5 and Qwen-2.5 VL by 40% and 31% respectively, compared to their 4-bit counterparts, while incurring a performance degradation of less than 10% on the challenging MME benchmark.",
+    "Specifically, the accuracy drop on TextVQA, VQAv2, and GQA is a modest 3.4%, 1.7%, and 3.2%, respectively, compared to 4-bit GPTQ."
+   ],
+   "FREE": [],
+   "BASE": [
+    "Evaluated on LLaVA-1.5 and Qwen- 2.5-VL across 9 VQA benchmarks, LUQ models use 40% and 31% less memory than their 4-bit counterparts while exhibiting less than 10% degradation on MME.",
+    "This is visualized in Figure 1, which shows that for the Qwen-VL model on the MME bench- mark, LUQ consistently establishes a better performance-to-memory frontier than its uniformly quantized counterparts.",
+    "To comprehensively validate the effectiveness of our method, we apply LUQ to two widely-used MLLMs: LLaVA-1.5 7B and Qwen-2.5 VL 7B.",
+    "We conduct evaluations across nine standard Visual Question Answering (VQA) benchmarks, where our experiments show that LUQ achieves a substantial reduction in model size, lowering the average parameter bit-width by 40% for LLaVA-1.5 and 31.5% for Qwen 2.5-VL compared to the 4-bit baseline, while only suffering a small degradation in accuracy.",
+    "This helps LUQ achieve a better compression-performance trade-off. • We demonstrate the role of calibration data composition in ultra-low bit quantization, showing that multimodal calibration improves performance over text-only calibration in the ultra-low bit regime. • We benchmark LUQ on 9 standard VQA benchmarks, showing that LUQ reduces the model size of LLaVA-1.5 and Qwen-2.5 VL by 40% and 31% respectively, compared to their 4-bit counterparts, while incurring a performance degradation of less than 10% on the challenging MME benchmark.",
+    "In Section 4.2, we present our main results, comparing LUQ quantized LLaVA 1.5 7B (Liu et al., 2024a) and Qwen 2.5 VL 7B (Bai et al., 2025) against state-of-the-art quantization methods across 9 VQA benchmarks and demonstrating its superior performance-memory trade- off for a given threshold.",
+    "For LLaVA-1.5 7B, LUQ achieves comparable VQA accuracy to 4-bit GPTQ/AWQ while reducing memory requirements by 40%.",
+    "Results for LLaVA-1.5 7B on ChartQA and DocQA are excluded as the FP16 baseline performance was too low to enable a meaningful analysis of quantization effects."
+   ],
+   "CMP": [],
+   "BIT": [
+    "Post-training quantization (PTQ) has successfully compressed language models to as low as 1-bit precision, its effectiveness for multimodal LLMs (MLLMs) remains unex- plored.",
+    "In this paper, we present the first method for ultra-low-bit (<4-bit) quantization of MLLMs.",
+    "Evaluated on LLaVA-1.5 and Qwen- 2.5-VL across 9 VQA benchmarks, LUQ models use 40% and 31% less memory than their 4-bit counterparts while exhibiting less than 10% degradation on MME.",
+    "Recent advances (Malinovskii et al., 2024; Huang et al., 2024a) have pushed the boundaries further, achieving compression to even 1-2 bit-widths.",
+    "To address this gap, we conduct an in-depth study of ultra-low bit (< 4-bit) PTQ for Multimodal LLMs.",
+    "LUQ selectively quantizes a subset of network layers to ultra-low bit widths while maintaining 4-bit precision elsewhere.",
+    "We conduct evaluations across nine standard Visual Question Answering (VQA) benchmarks, where our experiments show that LUQ achieves a substantial reduction in model size, lowering the average parameter bit-width by 40% for LLaVA-1.5 and 31.5% for Qwen 2.5-VL compared to the 4-bit baseline, while only suffering a small degradation in accuracy.",
+    "To summarize our contributions, • We present the first method for ultra-low bit (<4-bit) quantization of Multimodal LLMs."
+   ],
+   "PARAM": [
+    "We note that our work targets weight compression of the LLM backbone, which constitutes >95% of param- eters in typical MLLMs."
+   ],
+   "BENCH": [
+    "Evaluated on LLaVA-1.5 and Qwen- 2.5-VL across 9 VQA benchmarks, LUQ models use 40% and 31% less memory than their 4-bit counterparts while exhibiting less than 10% degradation on MME.",
+    "0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 Average bit-width (bits) 0 500 1000 1500 2000 MME score MME vs Average Bit-Width of Qwen 2.5 VL-7B AWQ GPTQ LUQ FP16 Figure 1: Performance vs.",
+    "Our method, Layerwise Ultra- Low Bit Quantization (LUQ), achieves a better trade- off on the MME benchmark compared to AWQ and GPTQ baselines when used to quantize the multi- modal LLM in the ultra-low bit regime.",
+    "This is visualized in Figure 1, which shows that for the Qwen-VL model on the MME bench- mark, LUQ consistently establishes a better performance-to-memory frontier than its uniformly quantized counterparts.",
+    "This helps LUQ achieve a better compression-performance trade-off. • We demonstrate the role of calibration data composition in ultra-low bit quantization, showing that multimodal calibration improves performance over text-only calibration in the ultra-low bit regime. • We benchmark LUQ on 9 standard VQA benchmarks, showing that LUQ reduces the model size of LLaVA-1.5 and Qwen-2.5 VL by 40% and 31% respectively, compared to their 4-bit counterparts, while incurring a performance degradation of less than 10% on the challenging MME benchmark.",
+    "Bit width MME Per.",
+    "MME Cog.",
+    "Results for LLaVA-1.5 7B on ChartQA and DocQA are excluded as the FP16 baseline performance was too low to enable a meaningful analysis of quantization effects."
+   ]
+  }
+ },
+ {
+  "id": "2510.16292",
+  "title": "QSVD: Efficient Low-rank Approximation for Unified Query-Key-Value Weight Compression in Low-Precision Vision-Language Models",
+  "mark": "keep",
+  "chars": 42733,
+  "counts": {
+   "SPEED": 2,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 1,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 3,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 0,
+   "BIT": 7,
+   "PARAM": 1,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "A6000",
+    "CPU",
+    "NVIDIA RTX 4070"
+   ],
+   "BASE": [
+    "LLaVA",
+    "LLaVA-1.5",
+    "LLaVA-Next"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "SEED-Bench",
+    "SEEDBench",
+    "ScienceQA",
+    "VizWiz"
+   ]
+  },
+  "evidence": {
+   "SPEED": [
+    "4.4 Latency Evaluation on VLM 0 5 10 15 FP16 noQ-40% noQ-30% 70% 50% INT8 12.7× 13.1× 9.7× 1× 1.7× 2.1× Speedup Figure 4: Normalized speedup of QSVD-noQ and QSVD W8A8 on low-end GPU.",
+    "However, QSVD-noQ with 40% and 30% (denoted as noQ-40% and noQ-30%) rank retention benefits from reduced data movement enabled by effective SVD compression, achieving up to a 2.1× speedup over the baseline."
+   ],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [
+    "We evaluate inference latency of the layer-wise LLaVA-v1.5 7B on an NVIDIA RTX 4070 GPU with 12GB memory."
+   ],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "We evaluate all performance results on NVIDIA RTX A6000 GPUs using VLMEvalKit [10], and we report results under three weight-activation quantization configurations: W8A8 (8-bit weights and 8-bit activations), W8A4, and W4A4.",
+    "We evaluate inference latency of the layer-wise LLaVA-v1.5 7B on an NVIDIA RTX 4070 GPU with 12GB memory.",
+    "As shown in Figure 4 , under FP16 precision, due to limited GPU memory, both the FP16 baseline and QSVD-noQ require partial offloading to CPU memory."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "This concatenation-based design is adopted by widely used models including the LLaVA series [33], SmolVLM [39], PaLI-Gemma [4], and Qwen- VL [48].",
+    "To analyze the outlier distribution in the VLM, we profile the input activation distribution of LLaVA- v1.5 13B [33].",
+    "4 Evaluation Results We evaluate QSVD on five VLMs: LLaVA-v1.5 7B [33], LLaVA-v1.5 13B, LLaVA-Next 7B, LLaVA- Next 13B, and SmolVLM-Instruct [39].",
+    "For evaluation, we adopt three widely used benchmark datasets, ScienceQA [36], VizWiz [15], and SEED-Bench-IMG [21], in line with prior work such as LLaVA.",
+    "On LLaVA-v1.5 13B, QSVD-noQ results in less than a 1% drop in ScienceQA-IMG accuracy compared to the original FP16 baseline, and notably even surpasses the FP16 performance on VizWiz.",
+    "On large-scale models like LLaVA-1.5 13B, it reaches accuracy comparable to the FP16 baseline while reducing QKV weights and compute by 50%, and cutting intermediate data size to just 18.75%.",
+    "Method ScienceQA-IMG ↑ LLaVA-v1.5-13B FP16 71.78% R1 R2 60.0% 22.5% 53.3% 20.0% 46.7% 17.5% 40.0% 15.0% UR 71.84% 70.40% 70.40% 67.72% FIB 70.60% 70.60% 70.15% 69.96% QSVD-noQ 71.79% 71.74% 71.74% 70.80% Effectiveness of Cross-layer Rank Allocation Scheme To evaluate the effectiveness of our cross-layer rank al- location strategy (Section 3.2), we compare it with two baseline methods.",
+    "Table 4 presents the impact of the learnable β on VLM accuracy under W4A4 setting over LLaVA 7Bs on Science QA."
+   ],
+   "CMP": [],
+   "BIT": [
+    "We evaluate all performance results on NVIDIA RTX A6000 GPUs using VLMEvalKit [10], and we report results under three weight-activation quantization configurations: W8A8 (8-bit weights and 8-bit activations), W8A4, and W4A4.",
+    "As shown in Table 2, under the W8A8 setting, QSVD consistently outperforms other baselines in most scenarios.",
+    "Under the more aggressive W8A4 setting, QSVD surpasses all baselines and approaches FP16-level performance using as little as 9.38% of the original KV cache.",
+    "Finally, Table 2 shows the quantization results under the W4A4 setting.",
+    "Table 4 presents the impact of the learnable β on VLM accuracy under W4A4 setting over LLaVA 7Bs on Science QA.",
+    "4.4 Latency Evaluation on VLM 0 5 10 15 FP16 noQ-40% noQ-30% 70% 50% INT8 12.7× 13.1× 9.7× 1× 1.7× 2.1× Speedup Figure 4: Normalized speedup of QSVD-noQ and QSVD W8A8 on low-end GPU.",
+    "Furthermore, QSVD with W8A8 quantization, under 70% and 50% rank retention, completely avoids offloading and achieves a significant speedup of up to 13.1×."
+   ],
+   "PARAM": [
+    "TinyGPT-V [59] and TinyLLaVA [62] explore efficient designs at smaller scales, while SmolVLM [39] introduces a family of compact models (500M and 2B parameters) that maintain strong performance with much reduced hardware cost."
+   ],
+   "BENCH": [
+    "Method ScienceQA-IMG ↑ VizWiz ↑ Acc.",
+    "To determine the optimal rank allocation and β parameters, we use 256 samples from the ScienceQA training dataset [36], following the procedures outlined in Section 3.2 and Section 3.3.",
+    "For evaluation, we adopt three widely used benchmark datasets, ScienceQA [36], VizWiz [15], and SEED-Bench-IMG [21], in line with prior work such as LLaVA.",
+    "On LLaVA-v1.5 13B, QSVD-noQ results in less than a 1% drop in ScienceQA-IMG accuracy compared to the original FP16 baseline, and notably even surpasses the FP16 performance on VizWiz.",
+    "For instance, in the SmolVLM setting, our method attains over 70% accuracy on ScienceQA-IMG, while both ASVD and SVD-LLM fail to operate effectively.",
+    "Evaluations are conducted on three benchmark datasets: ScienceQA, VizWiz, and SEEDBench.",
+    "Method ScienceQA-IMG ↑ LLaVA-v1.5-13B FP16 71.78% R1 R2 60.0% 22.5% 53.3% 20.0% 46.7% 17.5% 40.0% 15.0% UR 71.84% 70.40% 70.40% 67.72% FIB 70.60% 70.60% 70.15% 69.96% QSVD-noQ 71.79% 71.74% 71.74% 70.80% Effectiveness of Cross-layer Rank Allocation Scheme To evaluate the effectiveness of our cross-layer rank al- location strategy (Section 3.2), we compare it with two baseline methods.",
+    "Moreover, the relative performance trends on HRBench-4K closely mirror those observed on ScienceQA-IMG and VizWiz, indicating that our rank allocation strategy generalizes effectively to long sequence scenarios resulting from high-resolution visual inputs."
+   ]
+  }
+ },
+ {
+  "id": "2511.08914",
+  "title": "SPEED-Q: Staged Processing with Enhanced Distillation towards Efficient Low-bit On-device VLM Quantization",
+  "mark": "keep",
+  "chars": 33469,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 3,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 0,
+   "ACC": 2,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 8,
+   "BIT": 8,
+   "PARAM": 4,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [],
+   "BASE": [
+    "InternVL2.5",
+    "InternVL3",
+    "LLaVA",
+    "Qwen2-VL"
+   ],
+   "CMP": [
+    "FastVLM"
+   ],
+   "BENCH": [
+    "AI2D",
+    "DocVQA",
+    "MMBench",
+    "MMMU",
+    "OCRBench",
+    "RealWorldQA",
+    "SEED-Bench",
+    "ScienceQA"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [
+    "For example, InternVL3-2B consumes over 4 GB of memory, pushing memory usage close to system lim- its and causing application instability.",
+    "For example, 2-bit quan- tized InternVL3-1B consumes less than 400 MB of run- ning memory while achieving accuracy comparable to the best 0.6B model of FastVLM that requires almost 1.5GB of memory.",
+    "SPEED-Q successfully limits qcom_8elite 1789.5 485.0 315.0 1304.5 MB 170.0 MB Model File Size (MB) FP16 4-bit 2-bit qcom_8elite 1855.0 527.0 388.0 1328.0 MB 139.0 MB Memory Footprint (MB) FP16 4-bit 2-bit Figure 5: On-device efficiency evaluation of FP16 and low- bit InternVL2.5-1B on Samsung Galaxy S25 Ultra. the performance drop to 4.78% and 15.06% under 4-bit and 2-bit quantization respectively."
+   ],
+   "THR": [],
+   "TOK": [],
+   "HW": [],
+   "ACC": [
+    "Specifically, by utilizing the proposed SPEED-Q, the quantized 4-bit model exhibits a marginal performance decrease of 3% compared to their original BF16 counterpart.",
+    "SPEED-Q successfully limits qcom_8elite 1789.5 485.0 315.0 1304.5 MB 170.0 MB Model File Size (MB) FP16 4-bit 2-bit qcom_8elite 1855.0 527.0 388.0 1328.0 MB 139.0 MB Memory Footprint (MB) FP16 4-bit 2-bit Figure 5: On-device efficiency evaluation of FP16 and low- bit InternVL2.5-1B on Samsung Galaxy S25 Ultra. the performance drop to 4.78% and 15.06% under 4-bit and 2-bit quantization respectively."
+   ],
+   "FREE": [],
+   "BASE": [
+    "0 1000 2000 3000 4000 Model File Size (MB) 40 50 60 70 Average score of 8 benchmarks 0.25B 0.5B 0.6B 1.5B 0.8B 2B 1B 2B Low-bit quantization 2B(4-bit) 2B(2-bit) 1B(4-bit) 1B(2-bit) BF16 SmolVLM FastVLM H2OVL InternVL3 InternVL3 SPEED-Q (Ours) Figure 1: Comparison with SOTA on-device VLMs.",
+    "The proposed quantized version of InternVL3 outperforms the existing on-device VLMs with a smaller model file size. (Galib et al.",
+    "Recently, several advanced large model series have re- leased relatively small variants ranging from 1B to 2B pa- rameters, such as InternVL3-2B (Chen et al.",
+    "2024f) and Qwen2-VL-2B (Wang et al.",
+    "For example, InternVL3-2B consumes over 4 GB of memory, pushing memory usage close to system lim- its and causing application instability.",
+    "2024) focus on 8/4-bit quantization and have restricted quantization to lan- guage modules, leaving the problem of unified quantiza- arXiv:2511.08914v1 [cs.CV] 12 Nov 2025 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 Layer Index 0.00 0.05 0.10 0.15 0.20 0.25 0.30 0.35 Average Absolute Gradient Vision module Language module Figure 2: The average absolute gradients of vision (ViT) and language (LLM) module in the InternVL2.5-1B quantization-aware training process. tion for both vision and language components largely un- explored.",
+    "Tak- ing InternVL3-1B as an example, the ViT encoder contains 304M out of its 938M total parameters.",
+    "For example, 2-bit quan- tized InternVL3-1B consumes less than 400 MB of run- ning memory while achieving accuracy comparable to the best 0.6B model of FastVLM that requires almost 1.5GB of memory."
+   ],
+   "CMP": [
+    "2025), FastVLM (Vasu et al.",
+    "0 1000 2000 3000 4000 Model File Size (MB) 40 50 60 70 Average score of 8 benchmarks 0.25B 0.5B 0.6B 1.5B 0.8B 2B 1B 2B Low-bit quantization 2B(4-bit) 2B(2-bit) 1B(4-bit) 1B(2-bit) BF16 SmolVLM FastVLM H2OVL InternVL3 InternVL3 SPEED-Q (Ours) Figure 1: Comparison with SOTA on-device VLMs.",
+    "For example, 2-bit quan- tized InternVL3-1B consumes less than 400 MB of run- ning memory while achieving accuracy comparable to the best 0.6B model of FastVLM that requires almost 1.5GB of memory.",
+    "2025) BF16 41.06 38.33 31.44 29.43 59.52 61.0 62.03 76.73 49.94 FastVLM-600M (Vasu et al.",
+    "2024) BF16 48.14 38.93 30.78 28.60 53.47 75.0 60.18 66.48 50.20 Quantized: InternVL2.5-1B SPEED-Q 4-bit 66.41 50.27 36.89 41.41 68.36 75.8 71.47 89.08 62.46 InternVL2.5-1B SPEED-Q 2-bit 53.68 43.6 33.33 37.04 59.42 61.2 66.78 61.18 52.03 FastVLM-600M SPEED-Q 4-bit 51.70 42.4 32.22 31.71 64.70 53.4 61.43 77.68 51.91 FastVLM-600M SPEED-Q 2-bit 41.99 39.53 29.56 31.93 54.86 50.2 60.72 61.66 46.31 Table 4: Main results on on-device VLMs.",
+    "4-bit InternVL2.5-1B (485 MB, model file size) outperforms BF16 FastVLM (1517 MB) by +7.94 points, while the 2-bit InternVL2.5-1B (315 MB) matches its performance at 1/5 size.",
+    "5.3 Comparison with Lightweight VLMs As shown in Table 4, we first compare the quantized models with the existing VLMs designed for edge deployment, such as SmolVLM, FastVLM, and H2OVL, which typically have fewer than 1B parameters.",
+    "Furthermore, the 2-bit quantized InternVL2.5-1B ex- hibits comparable accuracy to FastVLM, which exhibits a favorable trade-off between model size and performance."
+   ],
+   "BIT": [
+    "Exten- sive experiments across multiple benchmarks demonstrate that SPEED-Q achieves up to 6× higher accuracy than existing quantization methods under 2-bit settings and con- sistently outperforms prior on-device VLMs under both 2- bit and 4-bit settings.",
+    "0 1000 2000 3000 4000 Model File Size (MB) 40 50 60 70 Average score of 8 benchmarks 0.25B 0.5B 0.6B 1.5B 0.8B 2B 1B 2B Low-bit quantization 2B(4-bit) 2B(2-bit) 1B(4-bit) 1B(2-bit) BF16 SmolVLM FastVLM H2OVL InternVL3 InternVL3 SPEED-Q (Ours) Figure 1: Comparison with SOTA on-device VLMs.",
+    "2024) focus on 8/4-bit quantization and have restricted quantization to lan- guage modules, leaving the problem of unified quantiza- arXiv:2511.08914v1 [cs.CV] 12 Nov 2025 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 Layer Index 0.00 0.05 0.10 0.15 0.20 0.25 0.30 0.35 Average Absolute Gradient Vision module Language module Figure 2: The average absolute gradients of vision (ViT) and language (LLM) module in the InternVL2.5-1B quantization-aware training process. tion for both vision and language components largely un- explored.",
+    "To the best of our knowledge, SPEED-Q is the first quantiza- tion framework to enable 2/4-bit weight-only quantization of both vision and language modules in small-scale billion- parameter VLMs, achieving superior accuracy–efficiency trade-offs.",
+    "For example, 2-bit quan- tized InternVL3-1B consumes less than 400 MB of run- ning memory while achieving accuracy comparable to the best 0.6B model of FastVLM that requires almost 1.5GB of memory.",
+    "2024), em- ploys group-wise scaling and multimodal warm-up, but only quantizes the language component to 4-bit and leaves the vi- sion module at its original precision (i.e., FP16).",
+    "For 4-bit quantization, the first-level group size is 32 and the second-level group size is 128.",
+    "For 2-bit quantization, both levels use a group size of 16."
+   ],
+   "PARAM": [
+    "However, existing research has rarely ex- plored aggressive quantization on VLMs, particularly for the models ranging from 1B to 2B parameters, which are more suitable for resource-constrained edge devices.",
+    "This limitation poses a significant challenge for deploying VLMs with 1–2B parameters, as the visual mod- ule accounts for a substantial portion of the parameters.",
+    "5.3 Comparison with Lightweight VLMs As shown in Table 4, we first compare the quantized models with the existing VLMs designed for edge deployment, such as SmolVLM, FastVLM, and H2OVL, which typically have fewer than 1B parameters.",
+    "6 Conclusion In order to further unleash the potential of VLMs deploy- ment on edge devices, we have presented SPEED-Q, a novel quantization framework for 1-2B parameter VLMs."
+   ],
+   "BENCH": [
+    "Specif- ically, we use MMBench (Liu et al.",
+    "2024c) for comprehensive multimodal eval- uation, ScienceQA (Lu et al.",
+    "2022) and MMMU (Yue et al.",
+    "2024) to evaluate visual reasoning, AI2D (Kembhavi et al.",
+    "2016) and OCRBench (Liu et al.",
+    "2024c) for text recognition and comprehension, SEED-Bench (Li et al.",
+    "Generally speaking, Model Bitwidth Method MMBench MMStar MMMU Hallusion.",
+    "Com- pared to other methods that only quantize the LLM mod- Model Bitwidth Method DocVQA RealWorldQA LLaVA-13B BF16 - 14.46 48.49 4-bit QSLAW 3.46 40.65 SPEED-Q‡ 13.54 55.16 Table 3: Comparison with QSLAW (Xie et al."
+   ]
+  }
+ },
+ {
+  "id": "2601.22709",
+  "title": "Gated Relational Alignment via Confidence-based Distillation for Efficient VLMs",
+  "mark": "star",
+  "chars": 43584,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 1,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 3,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 0,
+   "BIT": 8,
+   "PARAM": 0,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "L40",
+    "NVIDIA A100",
+    "NVIDIA H100"
+   ],
+   "BASE": [
+    "LLaVA",
+    "LLaVA-1.5",
+    "Qwen2-VL"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "GQA",
+    "MMBench",
+    "MME",
+    "POPE",
+    "SEED-Bench",
+    "ScienceQA",
+    "TextVQA",
+    "VQAv2",
+    "VizWiz"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [
+    "Accuracy Pareto Better Teacher (13B) Baseline (7B) AWQ QAT GRACE (Ours) Pareto Frontier Memory ~4 GB ~14 GB ~26 GB 13B Teacher (BF16) 7B Baseline (BF16) AWQ (4-bit) QAT (4-bit) GRACE (8-bit) GRACE (4-bit) ∼3.0× Throughput +1.3% Acc vs."
+   ],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "L4/32 (very early) L8/32 (early) L16/32 (middle) L24/32 (late) L32/32 (final) L5/40 (very early) L10/40 (early) L20/40 (middle) L30/40 (late) L40/40 (final) What object is being used as the telephone receiver?",
+    "The models are trained on 8 NVIDIA H100, with 12 hours of training for LLaVA-1.5 and 8 hours for Qwen2-VL.",
+    "All inference experiments are conducted on a single NVIDIA A100 GPU."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "Extensive evalu- ations of the LLaVA and Qwen benchmarks show that our INT4 models consistently outperform the BF16 baselines (e.g., LLaVA-1.5-7B: 70.1 vs.",
+    "66.8 on SQA; Qwen2-VL-2B: 76.9 vs.",
+    "20 40 60 80 100 120 Throughput (tokens/s) 65 66 67 68 69 70 71 72 Average Accuracy (%) 7B Baseline Level (BF16) LLaVA-1.5-7B: Throughput vs.",
+    "Throughput-accuracy Pareto analysis on LLaVA-1.5-7B.",
+    "Extensive experiments on LLaVA-1.5 and Qwen2-VL demonstrate the effectiveness of GRACE.",
+    "Our distilled LLaVA-1.5-7B achieves 69.0% average accuracy, improv- ing the 7B baseline by 3.8% and nearly matching the 13B teacher.",
+    "More importantly, as shown in Figure 1, our INT4 Qwen2-VL-2B not only recovers but surpasses the full- precision baseline across all benchmarks, such as 79.1 vs.",
+    "All authors are affiliated with academic institutions (ETH Zurich and University of Bologna) and declare no financial conflicts of interest; the models evaluated in this work (LLaVA-1.5 and Qwen2-VL) are publicly released open-source models."
+   ],
+   "CMP": [],
+   "BIT": [
+    "Extensive evalu- ations of the LLaVA and Qwen benchmarks show that our INT4 models consistently outperform the BF16 baselines (e.g., LLaVA-1.5-7B: 70.1 vs.",
+    "With real INT4 kernels, we achieve 3× throughput and 54% memory reduction.",
+    "Accuracy Pareto Better Teacher (13B) Baseline (7B) AWQ QAT GRACE (Ours) Pareto Frontier Memory ~4 GB ~14 GB ~26 GB 13B Teacher (BF16) 7B Baseline (BF16) AWQ (4-bit) QAT (4-bit) GRACE (8-bit) GRACE (4-bit) ∼3.0× Throughput +1.3% Acc vs.",
+    "Post-training quantization (PTQ) is at- tractive because it requires little or no retraining (Frantar et al., 2022; Shao et al., 2023; Lin et al., 2024), but aggres- sive INT4 quantization often causes severe degradation in VLMs due to heterogeneous multimodal distributions and cross-modal sensitivity (Wang et al., 2024a; Li et al., 2025).",
+    "More importantly, as shown in Figure 1, our INT4 Qwen2-VL-2B not only recovers but surpasses the full- precision baseline across all benchmarks, such as 79.1 vs.",
+    "GRACE also delivers significant infer- ence speedup and memory reduction when deployed with real INT4 kernels.",
+    "Our contributions are summarized as follows: • We formulate QAT-based VLM compression from an In- formation Bottleneck perspective, connecting low-bit quantization, capacity allocation, and teacher-guided knowledge preservation. • We propose GRACE, a unified framework that combines confidence-gated distillation, relational CKA, adaptive IB control, and group-wise learned step-size quantization for efficient VLM compression. • We show that GRACE enables INT4-quantized VLMs to surpass BF16 baselines while achieving substantial inference speedup and memory reduction.",
+    "This MSE-based initialization is particularly important for 4-bit QAT, where the quantiza- tion grid is coarse and max-based scales can leave large rounding or clipping errors."
+   ],
+   "PARAM": [],
+   "BENCH": [
+    "72.6 on MMBench), closely matching teacher perfor- mance.",
+    "73.7 on ScienceQA.",
+    "Correlation between teacher entropy and error rate on ScienceQA (LLaVA-1.5 13B).",
+    "To test this, we examine the relationship between teacher con- fidence and prediction accuracy in the ScienceQA data set using LLaVA-1.5 13B as the teacher.",
+    "Method VQAv2 GQA TextVQA VizWiz POPE SQA MME MMB Avg.",
+    "Bitwidth Method VQAv2 GQA TextVQA VizWiz POPE SQA MMB Avg.",
+    "GDKD RCKA Adaptive IB MMBench SEED-Bench ScienceQA Avg.",
+    "Precision KD Method MMBench SEED-Bench ScienceQA Avg."
+   ]
+  }
+ },
+ {
+  "id": "2602.03782",
+  "title": "QVLA: Not All Channels Are Equal in Vision-Language-Action Model's Quantization",
+  "mark": "keep",
+  "chars": 41588,
+  "counts": {
+   "SPEED": 2,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 5,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 4,
+   "ACC": 3,
+   "FREE": 0,
+   "BASE": 0,
+   "CMP": 0,
+   "BIT": 8,
+   "PARAM": 0,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [
+    "NVIDIA A100",
+    "NVIDIA Jetson AGX Orin can ",
+    "NVIDIA RTX 4090",
+    "ascending "
+   ],
+   "BASE": [],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [
+    "In the LIBERO, the quantization version of OpenVLA-OFT with our method requires only 29.2% of the original model’s VRAM while main- taining 98.9% of its original performance and achieving a 1.49× speedup.",
+    "In the LIBERO environ- ment, our method on the OpenVLA-OFT requires only 29.2% of the original model’s VRAM while maintaining 98.9% of its original performance and achieving a 1.49× speedup."
+   ],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [
+    "In the LIBERO, the quantization version of OpenVLA-OFT with our method requires only 29.2% of the original model’s VRAM while main- taining 98.9% of its original performance and achieving a 1.49× speedup.",
+    "However, their immense computational and memory demands, which often exceed 14 GB in standard half-precision for a 7B model, present a critical barrier to deployment.",
+    "In the LIBERO environ- ment, our method on the OpenVLA-OFT requires only 29.2% of the original model’s VRAM while maintaining 98.9% of its original performance and achieving a 1.49× speedup.",
+    "The row ④with “prune” and without “uniform-bit” indicates our proposed quantization method with the {0, 2, 4, 8, 16} as candidates during assigning bit to each channel. # Weight Type Quantization Method Spatial Object Goal Long Avg. ↑ Memory (GB) Prune Uniform Bit ① FP Model – – 84.7% 88.4% 79.2% 53.7% 76.5% 15.2 ② INT8 86.4% 88.0% 79.0% 53.4% 76.7% 7.5 ③ ✓ 83.6% 87.0% 77.4% 50.2% 74.6% 7.6 ④ ✓ 86.2% 88.4% 79.4% 53.1% 76.8% 7.0 ⑤ ✓ ✓ 84.0% 87.2% 77.0% 50.4% 74.7% 7.1 ority is even more pronounced at INT8 precision, where our method not only matches but surpasses the baseline at 76.8%.",
+    "When combined with pruning (from ②{2, 4, 8, 16} to ④{0, 2, 4, 8, 16}), this method fur- ther reduces memory to 7.0 GB while also slightly boosting the average success rate to 76.8%."
+   ],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "For instance, running such a model on a widely-used robotic platform like the NVIDIA Jetson AGX Orin can result in inference latencies of several hundred milliseconds per action, far too slow for the fluid, real-time control required in dynamic environments.",
+    "Specifically, in the 16 →8 stage, we sort all channels by their corresponding ρl,c in ascending order and sequentially demote them to 8-bit.",
+    "Our floating-point (FP) baseline employs models with weights in the BF16 format, and all experiments were conducted on NVIDIA RTX 4090 GPUs.",
+    "Our model is trained on NVIDIA A100 GPUs and deployed for inference on a single NVIDIA 4070 GPU."
+   ],
+   "ACC": [
+    "In the LIBERO environ- ment, our method on the OpenVLA-OFT requires only 29.2% of the original model’s VRAM while maintaining 98.9% of its original performance and achieving a 1.49× speedup.",
+    "For instance, under the W4A4 quantization setting for the OpenVLA model, QVLA retains 99.3% of the full-precision performance, incurring a minimal accuracy drop of only 0.5%.",
+    "Similarly, for the OpenVLA-OFT model, QVLA’s performance degradation was minimal at just 0.1% and 0.4%, markedly lower than the 2.0% and 4.5% losses observed with AWQ."
+   ],
+   "FREE": [],
+   "BASE": [],
+   "CMP": [],
+   "BIT": [
+    "This process yields a precise, per-channel importance metric that guides a global optimization, which elegantly unifies quantization and pruning (0-bit) into a single, cohesive framework.",
+    "Concur- rently, in industrial practice, module-level mixed precision has emerged as a compromise, such as quantizing vision encoders to 4-bit while preserving language backbones at 8-bit.",
+    "Moreover, our approach naturally unifies quantization and pruning (0-bit) into a single process, enabling fine- grained, per-channel bit allocation.",
+    "Our findings reveal why existing paradigms fail and establish that aligning quantization with the action space is a foundational principle for effective compression in embodied AI. ♠We propose QVLA, a novel channel-wise framework that uniquely uses action-space sensitiv- ity to guide bit allocation, cohesively unifying weight quantization and pruning (0-bit). ♠Through extensive evaluations on OpenVLA and OpenVLA-OFT baselines, we demonstrate that QVLA sig- nificantly outperforms methods adapted from LLMs and MLLMs.",
+    "To handle pernicious outliers in weights and activations, another research thrust em- ploys learned rotations or permutations to redistribute value distributions, exemplified by methods like QuaRot (Ashkboos et al., 2024) and SpinQuant (Liu et al., 2024c), enabling robust 4-bit quanti- zation.",
+    "This observation highlights the inherent limitations of uniform bit allocation schemes (whether global or per-layer) and strongly motivates a more nuanced, per-channel mixed-precision strategy, which could include pruning (i.e., 0-bit quantization) for the least sensitive channels to optimize the computational budget.",
+    "Each output channel can then be assigned a unique bit-width from {0, 2, 4, 8, 16}, a formulation that elegantly unifies quantization with structural pruning by treating a 0-bit assignment as a channel to be pruned.",
+    "W4A4/W8A8 refers to the quantization of weights (W) and activations (A) to 4 and 8 bits, respectively."
+   ],
+   "PARAM": [],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2603.04800",
+  "title": "MASQuant: Modality-Aware Smoothing Quantization for Multimodal Large Language Models",
+  "mark": "keep",
+  "chars": 30166,
+  "counts": {
+   "SPEED": 1,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 1,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 0,
+   "BIT": 8,
+   "PARAM": 0,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "RTX 4090"
+   ],
+   "BASE": [
+    "Qwen2.5-VL"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "MMMU",
+    "OCRBench",
+    "ScienceQA",
+    "TextVQA",
+    "Vizwiz"
+   ]
+  },
+  "evidence": {
+   "SPEED": [
+    "Table 7 shows that MASQuant achieves a 2.5x speedup over FP16 with marginal latency overhead (5– 10%) compared to MBQ, while maintaining identical de- coding latency."
+   ],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "End-to-end prefill-stage performance of Qwen2.5-VL-7B on Desktop RTX 4090 with fused GPU kernels (sequence length = 2048) under W4A4 setting."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "Experimental Setups We evaluate on Qwen2.5-VL [3] and Qwen2.5-Omni [39], multimodal LLMs supporting text, audio, and vision.",
+    "Vision-Language MLLMs Table 1 evaluates MASQuant on Qwen2.5-VL models.",
+    "We investigate modality domi- nance by applying SmoothQuant to Qwen2.5-VL and Qwen2.5-Omni.",
+    "We verify this on Qwen2.5-VL/Omni-3B using effective rank (lower is bet- ter).",
+    "Effective ranks of ∆W is reduced across layers after SVD-based Whitening b SQNR improves as the rank ratio in- creases on both Qwen2.5-VL-3B and Qwen2.5-Omni-3B.",
+    "Table 4 shows ablation results of λt and λv on Qwen2.5-VL-3B.",
+    "Qwen2.5-VL-3B λt λv PPL MMMU T-VQA.",
+    "Table 5 shows convergence on Qwen2.5-VL-3B."
+   ],
+   "CMP": [],
+   "BIT": [
+    "We use WxAy nota- tion for x-bit weights and y-bit activations, with two main types: weight-only quantization (e.g., W4A16) and weight- activation quantization (e.g., W8A8, W4A8).",
+    "What brand is in white letters with a red background? \"Answer the question using a single word.\" ×\" Text serves as the dominant modality Vision serves as the dominant modality Text Tokenizer Vision Encoder Audio Encoder !(#!$) $ MBR Loss # !('/#) Channel-wise Smoothing Modality Balance Reconstruction Fox ' SQNR = 5.31 PPL = 18.19 $ MBR Loss !('/#) Modality-aware Smoothing Modality Balance Reconstruction Coca-Cola SQNR = 8.25 PPL = 15.90 '\" '# '$ !(#\"$) (a) FP16 MLLM Inference (b) MBQ + SmoothQuant W4A8 (c) MASQuant W4A8 Coca-Cola RMS Norm q k v o RMS Norm MLP Over Smoothed !",
+    "0 10 20 30 Transformer Layer Index 0 5 10 15 20 SQNR (dB) Unified Smoothing (W4A8) Optimal Smoothing (W4A8) Unified Smoothing (W4A6) Optimal Smoothing (W4A6) Unified Smoothing (W4A4) Optimal Smoothing (W4A4) Figure 2.",
+    "MASQuant matches FP16 performance on both model sizes at W8A8, suggesting that MLLMs can be quantized to 8 bits without accuracy loss when modality-specific charac- teristics are properly handled.",
+    "RTN completely fails on W4A8, while SmoothQuant severely degrades.",
+    "At W4A8, SmoothQuant’s audio performance collapses catas- trophically on 3B: Librispeech WER jumps from 3.9 to 77.4, and Wenetspeech from 7.5 to 94.2.",
+    "Table 3 reveals the necessity of modality-aware smoothing in W4A8 quantization.",
+    "Effects of Modality-Aware Smoothing (W4A8)."
+   ],
+   "PARAM": [],
+   "BENCH": [
+    "OCR: OCRBench.",
+    "Viz: Vizwiz.",
+    "S-QA: ScienceQA.",
+    "T-VQA: TextVQA.",
+    "Visual Reasoning Tasks: Evaluated on OCRBench [20], TextVQA [30], Vizwiz [12], ScienceQA [23] and MMMU [42].Multimodal Reasoning Tasks: Evaluated on OmniBench [17], covering joint text- audio-visual reasoning.",
+    "Reducing vi- sion smoothing to λv=0.5 drops MMMU from 37.8 to 30.0 with minimal text benefit.",
+    "MMMU Uniform 77.4 27.3 51.3 25.6 MAS 3.8 36.7 54.7 28.9 Uniform ✓ 6.0 33.3 65.0 33.3 MAS ✓ 3.6 47.7 68.2 46.7 Table 4.",
+    "Qwen2.5-VL-3B λt λv PPL MMMU T-VQA."
+   ]
+  }
+ },
+ {
+  "id": "2603.17809",
+  "title": "Fine-Grained Post-Training Quantization for Large Vision Language Models with Quantization-Aware Integrated Gradients",
+  "mark": "keep",
+  "chars": 37362,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 2,
+   "ACC": 1,
+   "FREE": 2,
+   "BASE": 8,
+   "CMP": 0,
+   "BIT": 8,
+   "PARAM": 0,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "A800",
+    "NVIDIA A800"
+   ],
+   "BASE": [
+    "InternVL",
+    "InternVL2",
+    "LLaVA",
+    "LLaVA-onevision",
+    "Qwen2-VL"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "AI2D",
+    "ChartQA",
+    "MMMU",
+    "ScienceQA",
+    "VizWiz"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "All experiments are con- ducted on a single NVIDIA A800 GPU (80GB).",
+    "Quantization time (in GPU hours) of differnet models using a single A800 80GB GPU."
+   ],
+   "ACC": [
+    "Under the W4A8 configuration, our approach re- covers most of the FP16 accuracy, keeping the performance drop within 3% on all benchmarks."
+   ],
+   "FREE": [
+    "By applying weight-only or weight-activation quantization, it reduces memory usage and computation overload while minimiz- ing reconstruction error with a small calibration set, thereby maintaining task performance and achieving strong accu- racy–efficiency trade-offs in a training-free manner.",
+    "Notably, the modification requires no additional calibration data and incurs negligible computation overhead, making it a plug-and-play enhancement to standard GPTQ."
+   ],
+   "BASE": [
+    "For example, under 3-bit weight-only quantization, our method improves the average accuracy of LLaVA-onevision-7B by 1.60%, reducing the gap to its full- precision counterpart to only 1.33%.",
+    "For example, under 3-bit weight-only quantiza- tion, our method improves the average accuracy of LLaVA- onevision-7B by 1.60%, reducing the gap to its full- precision counterpart to only 1.33%.",
+    "Representative archi- tectures such as LLaVA [19], InternVL [8], and Qwen- VL [3] encode an image using a Vision Transformer [9] or CLIP encoder [29] into a sequence of visual patch to- kens.",
+    "Visualization of activation distributions in InternVL2-8B during calibration.",
+    "Comparison of modality-level and token-level sensitivity estimation strategies on VizWiz (W4A8, InternVL2-8B).",
+    "To examine whether fine-grained sensitivity modeling is necessary, we run controlled experiments on InternVL2- 8B (W4A8), keeping all quantization hyperparameters and calibration data fixed and varying only the sensitivity esti- mation strategy.",
+    "We conduct both W3A16 and W4A8 quanti- zation on numerous leading open-source LVLMs, includ- ing LLaVA-onevision-7B [19], Qwen2-VL-7B [36], and InternVL2-8B/26B [8].",
+    "For the LLaVA-onevision series, we select versions that adopt Qwen2 as the language model backbone and SigLIP-400M [47] as the vision encoder."
+   ],
+   "CMP": [],
+   "BIT": [
+    "Extensive experiments on multiple LVLMs under both W4A8 and W3A16 settings show that our method improves accu- racy across models and benchmarks with negligible la- tency overhead.",
+    "For example, under 3-bit weight-only quantization, our method improves the average accuracy of LLaVA-onevision-7B by 1.60%, reducing the gap to its full- precision counterpart to only 1.33%.",
+    "For example, under 3-bit weight-only quantiza- tion, our method improves the average accuracy of LLaVA- onevision-7B by 1.60%, reducing the gap to its full- precision counterpart to only 1.33%.",
+    "For example, W4A8 de- notes quantizing weights to 4 bits and activations to 8 bits.",
+    "Comparison of modality-level and token-level sensitivity estimation strategies on VizWiz (W4A8, InternVL2-8B).",
+    "To examine whether fine-grained sensitivity modeling is necessary, we run controlled experiments on InternVL2- 8B (W4A8), keeping all quantization hyperparameters and calibration data fixed and varying only the sensitivity esti- mation strategy.",
+    "Given that W8A8 quan- tization has been established as lossless in precision by SmoothQuant [38], our primary evaluation in this paper focuses on W4A8 and W3A16.",
+    "We conduct both W3A16 and W4A8 quanti- zation on numerous leading open-source LVLMs, includ- ing LLaVA-onevision-7B [19], Qwen2-VL-7B [36], and InternVL2-8B/26B [8]."
+   ],
+   "PARAM": [],
+   "BENCH": [
+    "Comparison of modality-level and token-level sensitivity estimation strategies on VizWiz (W4A8, InternVL2-8B).",
+    "For weight-only quantization, we compare our method with vanilla round-to-nearest (RTN), AWQ [23], Model Bitwidth Method VizWiz MMMU ChartQA AI2D ScienceQA Avg.",
+    "In particular, MMMU [41] and ScienceQA [27] are used to test visual reasoning, VizWiz [13] to examine real- world perception, and ChartQA [28] and AI2D [17] to eval- uate the understanding of structured visual information.",
+    "Under W3A16, GPTQ often lags behind RTN in terms of average accuracy (e.g., LLaVA- onevision-7B and InternVL2-8B), and under W4A8, SQ is Model Bitwidth Method ChartQA MMMU VizWiz FP16 - 86.44 52.78 65.65 W4A8 MBQ 84.44 49.78 63.51 InternVL2-26B Ours 85.24 50.22 63.91 W3A16 MBQ 84.48 51.67 63.33 Ours 85.12 50.89 64.14 Table 3.",
+    "On VizWiz and MMMU, our method sur- passes MBQ by around 1% on average, which suggests that token-level weighting better preserves sensitive visual and reasoning tokens.",
+    "To assess whether the baseline Attribution objective ChartQA VizWiz 0 f(x) 73.87 61.73 0 f(x) −f(0) 74.30 62.31 xq f(x) 74.12 61.52 xq f(x) −f(xq) 74.52 62.82 Table 4.",
+    "3, our method yields clear gains over MBQ on ChartQA and VizWiz for both bitwidth settings, while maintaining comparable performance on MMMU.",
+    "Even under the more aggressive W3A16 setting, our method still surpasses MBQ on ChartQA and VizWiz and remains within 2% of the FP16 model across all tasks, despite using 3-bit weights."
+   ]
+  }
+ },
+ {
+  "id": "2603.21010",
+  "title": "SkinCLIP-VL: Consistency-Aware Vision-Language Learning for Multimodal Skin Cancer Diagnosis",
+  "mark": "keep",
+  "chars": 24783,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 1,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 1,
+   "ACC": 2,
+   "FREE": 0,
+   "BASE": 7,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [
+    "NVIDIA A100"
+   ],
+   "BASE": [
+    "InternVL2.5",
+    "LLaVA",
+    "Qwen2.5-VL"
+   ],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [
+    "By freezing the 300M+ visual backbone and utilizing LoRA, we reduce training memory requirements by 43% compared to full fine- tuning."
+   ],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "Optimization uses AdamW (lr = 1e −4) for 20 epochs on a single NVIDIA A100 (80GB)."
+   ],
+   "ACC": [
+    "When training data is reduced to 12%, baselines utilizing full fine-tuning (SkinGPT-4) or trained from scratch (EfficientNet) suffer catastrophic performance drops (over 16%).",
+    "In con- trast, SkinCLIP-VL retains 97.6% of its original performance (dropping only 2.6%)."
+   ],
+   "FREE": [],
+   "BASE": [
+    "Adopting a frozen per- ception, adaptive reasoning paradigm, we integrate a frozen CLIP encoder with a lightweight, quantized Qwen2.5-VL via low-rank adaptation (LoRA).",
+    "Adopting a “frozen perception, adaptive reasoning” paradigm, we inte- grate a pre-trained CLIP visual encoder with a lightweight Qwen2.5-VL decoder [8] via parameter-efficient fine-tuning (PEFT) [9].",
+    "The architecture consists of three key stages: (1) Meta-Data Enhancement: We leverage GPT-4o to expand tabular meta-data into comprehensive clinical descriptions, providing semantic guidance for the visual branch. (2) Parameter-Efficient Encoding: Instead of full fine-tuning, we employ a frozen CLIP visual encoder and a LoRA-adapted Qwen2.5-VL generative decoder to extract and align visual and textual features. (3) Consistency-Aware Focal Alignment (CFA): To capture fine-grained correlations, the Focal Pooling Layer aggregates the N × M interaction map into compact focal vectors.",
+    "4) LoRA-Adapted Generative Decoder (Edec): We employ Qwen2.5-VL-7B [8] as the reasoning engine.",
+    "The decoder is initialized from Qwen2.5-VL-7B-Instruct.",
+    "1) Effective Foundation Model Adaptation: Direct ap- plication of general-purpose VLMs yields suboptimal results (Qwen2.5-VL: 72.8%, LLaVA-Med: 62.1%).",
+    "In contrast, SkinCLIP-VL achieves a +15.9% gain over Qwen2.5-VL, validating that our parameter-efficient adaptation strategy effectively bridges the domain gap between natural and medical imagery."
+   ],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2604.24380",
+  "title": "Structural Pruning of Large Vision Language Models: A Comprehensive Study on Pruning Dynamics, Recovery, and Data Efficiency",
+  "mark": "keep",
+  "chars": 60991,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 1,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 0,
+   "ACC": 5,
+   "FREE": 2,
+   "BASE": 8,
+   "CMP": 1,
+   "BIT": 4,
+   "PARAM": 2,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [],
+   "BASE": [
+    "InternVL",
+    "LLaVA"
+   ],
+   "CMP": [
+    "PruMerge"
+   ],
+   "BENCH": [
+    "AI2D",
+    "DocVQA",
+    "GQA",
+    "MME",
+    "MMMU",
+    "MathVista",
+    "POPE"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [
+    "For exam- ple, on LLaVA at 30% compression, layerwise pruning achieves a latency of 80.7 ms, compared to 84.4 ms for widthwise pruning."
+   ],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [],
+   "ACC": [
+    "Notably, effective recovery can be achieved using just 5% of the original data, while retaining over 95% of the original performance.",
+    "For example, at a 15% ratio, LLaVA retains 90.87% of its performance with widthwise prun- ing, compared to only 72.22% with layerwise pruning.",
+    "At a low compression ratio of 15%, multimodal performance drops sig- nificantly (9.13%) while text-only performance remains largely intact (1.07% degradation).",
+    "Even at a severe compression ratio of 60%, projector SFT recovers 60–80% of the original performance by re-aligning the visual features with the pruned language model.",
+    "At 45% compres- sion, the retained performance for LLaVA and InternVL drops to 83.99% and 86.22%, respec- tively, falling below the 90% fidelity threshold."
+   ],
+   "FREE": [
+    "This strategy allows customizable model sizing and performance tuning without retraining from scratch.",
+    "For instance, LLaVA- PruMerge [47] utilizes a dynamic approach of token pruning and merging for adaptive compres- sion, while CoViPAL [48] introduces a model- agnostic plug-and-play module for token pruning."
+   ],
+   "BASE": [
+    "For instance, models in the LLaVA [3] family typically range from 7 to 34 billion parame- ters, and even compact models like Bunny-v1.0 (3 billion parameters) [6] pose significant deployment challenges in resource-constrained environments.",
+    "First, we expand the empirical evaluation from two to three representative LVLM families by adding Mini-InternVL-Chat-4B [2], in addition to LLaVA-v1.5-7B [3] and Bunny-v1-3B [6], ensuring our findings generalize across different architec- tures.",
+    "For instance, LLaVA- PruMerge [47] utilizes a dynamic approach of token pruning and merging for adaptive compres- sion, while CoViPAL [48] introduces a model- agnostic plug-and-play module for token pruning.",
+    "Alternatively, researchers have developed lightweight LVLMs by integrating smaller lan- guage backbones, as seen in LLaVA-Phi [50], MobileVLM [1], and Bunny [6].",
+    "To ensure architectural diversity, we evaluate pruning and recovery methods on three LVLMs from distinct model families: LLaVA- v1.5-7B (LLaVA) [3], Mini-InternVL-Chat-4B (InternVL) [2], and Bunny-v1.0-3B (Bunny) [6].",
+    "We exclusively utilize each model’s original visual instruction tuning dataset for both pruning calibration and recovery training: LLaVA- v1.5-mix665k [3] for LLaVA, InternVL-Chat-V1- 2-SFT-Data [2] for InternVL, and Bunny-695K [6] for Bunny.",
+    "We present the number of parameters, along with the vision encoder, multimodal projector and the language decoder of the models included in our study Model Parameters Vision Encoder Multimodal Projector Language Decoder LLaVA-v1.5-7B 7.0B CLIP-ViT-L (0.3B) mlp2x-gelu (0.01B) Vicuna-v1.5 (6.7B) Mini-InternVL-Chat-4B-V1.5 4.1B InternViT-300M-448px L (0.3B) mlp2x-gelu (0.02B) Phi-3-mini-128k-instruct (3.8B) Bunny-v1.0-3B 3.2B SigLIP-SO (0.4B) mlp2x-gelu (0.02B) Phi-2 (2.8B) knowledge, we employ MMMU [61], SQA [62].",
+    "For example, at a 15% ratio, LLaVA retains 90.87% of its performance with widthwise prun- ing, compared to only 72.22% with layerwise pruning."
+   ],
+   "CMP": [
+    "For instance, LLaVA- PruMerge [47] utilizes a dynamic approach of token pruning and merging for adaptive compres- sion, while CoViPAL [48] introduces a model- agnostic plug-and-play module for token pruning."
+   ],
+   "BIT": [
+    "Crucially, these benchmarks span a wide range of prompt formats, requiring the mod- els to adapt to multiple-choice questions (e.g., MMMU, SQA, AI2D), binary Yes/No classifica- tion (e.g., POPE, MME), and open-ended free generation (e.g., MathVista, DocVQA, GQA).",
+    "Using LLM.int8() [71] as a representative method, Table 7 shows that applying quantization to our already-pruned models yields compound memory savings.",
+    "First, we focused exclusively on structured pruning for hardware universality; we did not investigate unstructured or semi-structured methods [8, 9], which rep- resent an orthogonal direction for compression Table 7 Memory usage and average performance of LLaVA-v1.5-7B when combining structural pruning (layerwise) and int8 quantization.",
+    "Model Memory Ratio Avg (GiB) LLaVA-7B 13.2 0% 53.7 LLaVA-7B.int8() 7.5 0% 52.5 LLaVA-6B 11.3 15% 52.68 LLaVA-6B.int8() 6.5 15% 51.9 LLaVA-5B 9.4 30% 51.75 LLaVA-5B.int8() 5.4 30% 50.8 requiring different hardware considerations."
+   ],
+   "PARAM": [
+    "Through empirical study on three represen- tative LVLM families ranging from 3B to 7B parameters, this study offers actionable insights for practitioners to compress LVLMs without extensive computation resources or sufficient data.",
+    "For LLaVA-v1.5- 7B models compressed by up to 45% (retain- ing approximately 3.8B parameters), the results 14 Table 6 Qualitative analysis of compressed LLaVA-v1.5-7B models following our established insights."
+   ],
+   "BENCH": [
+    "Second, we broaden the evaluation suite to include domain-specific and reasoning-intensive benchmarks such as AI2D [13], MathVista [14], and DocVQA [15], providing a more granular view of how compression affects complex reasoning ver- sus simple perception.",
+    "We present the number of parameters, along with the vision encoder, multimodal projector and the language decoder of the models included in our study Model Parameters Vision Encoder Multimodal Projector Language Decoder LLaVA-v1.5-7B 7.0B CLIP-ViT-L (0.3B) mlp2x-gelu (0.01B) Vicuna-v1.5 (6.7B) Mini-InternVL-Chat-4B-V1.5 4.1B InternViT-300M-448px L (0.3B) mlp2x-gelu (0.02B) Phi-3-mini-128k-instruct (3.8B) Bunny-v1.0-3B 3.2B SigLIP-SO (0.4B) mlp2x-gelu (0.02B) Phi-2 (2.8B) knowledge, we employ MMMU [61], SQA [62].",
+    "For advanced reasoning, we employ MathVista [14] and AI2D [13].",
+    "Complementing these are assess- ments of fine-grained perception and halluci- nation, including POPE [63] and the separate Cognition and Perception subsets of MME [64].",
+    "Finally, we evaluate general visual understand- ing and document understanding via GQA [56] and DocVQA [15].",
+    "Crucially, these benchmarks span a wide range of prompt formats, requiring the mod- els to adapt to multiple-choice questions (e.g., MMMU, SQA, AI2D), binary Yes/No classifica- tion (e.g., POPE, MME), and open-ended free generation (e.g., MathVista, DocVQA, GQA).",
+    "However, there is a limit: beyond a 45% ratio, both methods fail, and benchmark scores on SQA and DocVQA drop to near-zero.",
+    "First, on tasks that require free-form responses (GQA, DocVQA, and MathVista), the gap is substantially larger than the aggregate trend (Fig."
+   ]
+  }
+ },
+ {
+  "id": "2607.12787",
+  "title": "Do We Really Need Multimodal Emotion Language Models Larger Than 1B Parameters?",
+  "mark": "keep",
+  "chars": 42754,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 2,
+   "MEM": 3,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 0,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 0,
+   "CMP": 0,
+   "BIT": 1,
+   "PARAM": 8,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [],
+   "BASE": [
+    "Video-LLaVA",
+    "mPLUG-Owl"
+   ],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [
+    "In descriptive mode, M-GRPO refinement reduces the average out- put from 110.5 to 70.8 words and latency from 4.6 s to 3.1 s, a 32.8% reduction over the SWD-H-only student.",
+    "In direct mode, the M-GRPO student runs at 0.5 s per sample."
+   ],
+   "MEM": [
+    "Video Audio Text Large Parameter Model Current Approach Lightweight Model Deployable on edge devices SWD Hidden-State Distillation GRPO Description Refinement ~3GB VRAM ~4.3s/sample ~20GB VRAM ~9.1s/sample Figure 1: Large multimodal emotion models achieve strong performance but are difficult to deploy at the edge.",
+    "The sub-1B student achieves 11.0× compression in parameters and FLOPs, and 7.9× memory reduction from 20.04 GB to 2.54 GB.",
+    "For closed-set tasks where the label space is fixed, direct mode offers a viable low-latency alternative. (Answer to RQ5): The Light-MER student fits within 2.54 GB memory and processes samples in 0.5 s in direct mode or 3.1 s in descriptive mode, with 11× fewer parameters than the teacher."
+   ],
+   "THR": [],
+   "TOK": [],
+   "HW": [],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [],
+   "CMP": [],
+   "BIT": [
+    "Multi-class emotion recognition relies more on such enumeration than binary sentiment polarity, consistent with the observed accuracy shift."
+   ],
+   "PARAM": [
+    "Do We Really Need Multimodal Emotion Language Models Larger Than 1B Parameters?",
+    "This raises a fundamental question: do we really need the multimodal MER model larger than 1B parameters for high-quality MER?",
+    "Do We Really Need Multimodal Emotion Language Models Larger Than 1B Parameters?.",
+    "Our goal is to preserve most of the performance of an 8B teacher while moving the deployment model below 1B parameters. reliant on increasingly large model scales—typically requiring at least 7B parameters [5, 6]—to achieve strong recognition and gen- eration performance.",
+    "This naturally raises a key question: do we really need multimodal emotion language models larger than 1B parameters for high-quality MER?",
+    "Extensive experiments on nine benchmark datasets demonstrate that Light-MER not only significantly improves inference efficiency, but also achieves state-of-the-art performance, showing that high- quality generative MER does not necessarily require deployment models larger than 1B parameters.",
+    "Do We Really Need Multimodal Emotion Language Models Larger Than 1B Parameters?",
+    "However, existing systems typically require deployment models with at least 7B parameters [6, 34, 55, 68], resulting in substantial memory and latency costs."
+   ],
+   "BENCH": []
+  }
+ }
+]

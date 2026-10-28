@@ -1,0 +1,29 @@
+{
+ "sheets": [
+  "안내",
+  "기준",
+  "A",
+  "B",
+  "C"
+ ],
+ "A_Q1_kappa": 0.71,
+ "A_Q1_agree": 90.0,
+ "A_Q1_n": 60,
+ "A_Q2_kappa": 0.77,
+ "A_Q2_agree": 88.3,
+ "A_Q2_n": 60,
+ "C_Q1_kappa": 0.31,
+ "C_Q1_agree": 63.6,
+ "C_Q1_n": 11,
+ "C_Q2_kappa": 0.54,
+ "C_Q2_agree": 81.8,
+ "C_Q2_n": 11,
+ "B_loose_kappa": 0.76,
+ "B_loose_agree": 93.3,
+ "B_loose_n_papers": 20,
+ "B_strict_kappa": 0.71,
+ "B_strict_agree": 94.2,
+ "B_strict_n_papers": 20,
+ "G_skipped": "등급 시트 없음",
+ "n_disagreements": 19
+}

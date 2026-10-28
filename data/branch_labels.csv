@@ -1,0 +1,12 @@
+key,label_in_files,english,paper_section
+pool,효율 풀,efficiency-oriented subset (n = 1947),3.1
+pool,VLM 전체,all VLM-relevant papers (n = 15394),3.1
+branch,4.1 설계 시점 — 구조,Design-time efficiency (MoE; state-space backbones; connectors; early exit),4.1
+branch,4.2 학습 시점 — PEFT·데이터,Training-time efficiency (parameter-efficient fine-tuning; data efficiency),4.2
+branch,4.3 압축 시점 — 양자화·저랭크·증류,Compression (quantization; low-rank; distillation; pruning),4.3
+branch,4.4 실행 시점 — 토큰·캐시·디코딩,Execution-time efficiency (token compression; prefill; KV cache; decoding),4.4
+branch,4.5 배포 시점 — 온디바이스·하드웨어,Deployment (on-device and hardware),4.5
+branch,4.6 측정 — 효율 지표,Measurement (efficiency metrics and benchmarks),4.6
+mark,keep,read in full (kept),3.5
+mark,star,representative (kept),3.5
+mark,skip,not kept,3.5

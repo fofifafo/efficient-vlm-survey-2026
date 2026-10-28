@@ -1,0 +1,122 @@
+{
+ "4.3|2408.05517": {
+  "ko": {
+   "memory": "학습 메모리 LoRA 32.35 / Full 73.53 / LISA 31.11 GiB (Qwen-7B-chat, A100-80G; 표 4)",
+   "speed_latency": "학습 속도 LoRA 0.95 / Full 1.43 / LISA 2.66 samples/s (표 4)"
+  },
+  "en": {
+   "memory": "training memory LoRA 32.35, full 73.53, LISA 31.11 GiB (Qwen-7B-chat)",
+   "speed_latency": "training speed LoRA 0.95, full 1.43, LISA 2.66 samples/s"
+  },
+  "evidence": "4.1 Lightweight Tuning Benchmark: 'conducted training on a single A100-80G GPU, comparing memory usage and loss'; Table 4 (Memory (GiB), Speed (samples/s))"
+ },
+ "4.1|2409.07267": {
+  "ko": {
+   "memory": "GPU 메모리 1.03 GB (MiniDrive224; 표 2)"
+  },
+  "en": {
+   "memory": "GPU memory 1.03 GB (MiniDrive224)"
+  },
+  "evidence": "4.3 Computational Analysis / Table 2 'GPU memory usage': 'MiniDrive224 (ours) 83M 5.9B 1.03'"
+ },
+ "4.5|2501.04322": {
+  "ko": {
+   "speed_latency": "학습 15 GPU-days (표 5)"
+  },
+  "en": {
+   "speed_latency": "training 15 GPU-days"
+  },
+  "evidence": "Table 5 GPU-days column; 'offers significant advantages in training efficiency, requiring only 15 GPU-days'"
+ },
+ "4.4|2409.10197": {
+  "ko": {
+   "speed_latency": "프루닝 레시피 탐색 약 5분; 처리량 +22.2% (50% 프루닝, 부록 표 7 samples/s)"
+  },
+  "en": {
+   "speed_latency": "recipe search ≈5 min; throughput +22.2% at 50% pruning"
+  },
+  "evidence": "Abstract: 'the pruning recipe can be obtained in about 5 minutes'; appendix: 'at a 50% pruning ratio … throughput increasing by 22.2%'; Table 7 throughput in samples per second"
+ },
+ "4.2|2405.18541": {
+  "ko": {
+   "speed_latency": "학습 50분 vs CoOp 2시간 (16-shot ImageNet, A100 80GB; 표 1)"
+  },
+  "en": {
+   "speed_latency": "training 50 min vs 2 h for CoOp (16-shot ImageNet)"
+  },
+  "evidence": "Table 1: 'Training time on 16-shots ImageNet task. Experiments were conducted on a single A100 80Gb' — CoOp (16) 2h, CLIP-LoRA 50 min"
+ },
+ "4.1|2408.15881": {
+  "ko": {
+   "speed_latency": "모방 증류 960 vs 1536 GPU 시간(D2D+D2S vs D2S; 표 7), 16×A100",
+   "hardware": "A100"
+  },
+  "en": {
+   "speed_latency": "mimic distillation 960 vs 1,536 GPU hours (D2D+D2S vs D2S)",
+   "hardware": "A100"
+  },
+  "evidence": "'D2D+D2S is more computationally efficient, consuming only 62.5% of the GPU hours required by D2S' (Table 7: 1536 vs 960); appendix: 'train on 16 NVIDIA A100 GPUs … approximately 960 GPU hours'"
+ },
+ "4.3|2408.15881": {
+  "ko": {
+   "speed_latency": "모방 증류 960 vs 1536 GPU 시간(D2D+D2S vs D2S; 표 7), 16×A100",
+   "hardware": "A100"
+  },
+  "en": {
+   "speed_latency": "mimic distillation 960 vs 1,536 GPU hours (D2D+D2S vs D2S)",
+   "hardware": "A100"
+  },
+  "evidence": "same as 4.1 entry"
+ },
+ "4.1|2412.10302": {
+  "ko": {
+   "speed_latency": "학습 7/10/14일 (Tiny/Small/Base, 노드 16/33/42개 × A100 8장)"
+  },
+  "en": {
+   "speed_latency": "training 7/10/14 days on 16/33/42 nodes of 8 A100 GPUs"
+  },
+  "evidence": "'The training of DeepSeek-VL2 was completed in 7/10/14 days using a cluster of 16/33/42 nodes, with each node equipped with 8 NVIDIA A100 GPUs.'"
+ },
+ "4.2|2508.00230": {
+  "ko": {
+   "speed_latency": "1 epoch 학습 16.5분(ViT-B/32)·137.5분(ViT-L/14)·220.1분(ViT-H/14); LLaMA3-8B 247.6분 (부록 표 5)"
+  },
+  "en": {
+   "speed_latency": "training per epoch 16.5 min (ViT-B/32), 137.5 min (ViT-L/14), 220.1 min (ViT-H/14); 247.6 min (LLaMA3-8B)"
+  },
+  "evidence": "Appendix E 'Training times and VRAM usage', Table 5: KRAdapter 16.5 / 137.5 / 220.1 / 247.6 / 226.3 mins"
+ },
+ "4.2|2406.11909": {
+  "ko": {
+   "speed_latency": "학습 8.2 h (LLaMA-3 8B 상식추론, A100; 표 4)",
+   "memory": "GPU 메모리 31 GB (표 4)"
+  },
+  "en": {
+   "speed_latency": "training 8.2 h (LLaMA-3 8B, commonsense)",
+   "memory": "GPU memory 31 GB"
+  },
+  "evidence": "Table 4: 'Time for the training time on A100 GPU, and Mem for the GPU Memory usage' — MoSLoRA 28.4M 8.2h 31G"
+ },
+ "4.4|2506.17218": {
+  "ko": {
+   "speed_latency": "학습 1단계 약 3.5 h, 2단계 약 7.2 h (단일 H100; 텍스트 CoT SFT 5.5 h)",
+   "hardware": "H100"
+  },
+  "en": {
+   "speed_latency": "training ≈3.5 h (stage 1) and ≈7.2 h (stage 2) vs 5.5 h for text-only CoT SFT",
+   "hardware": "H100"
+  },
+  "evidence": "Appendix: 'Both training stages of Mirage are conducted on a single NVIDIA H100 GPU … Stage 1 completes in approximately 3.5 hours, while Stage 2 takes around 7.2 hours.'"
+ },
+ "4.2|2605.06175": {
+  "ko": {
+   "speed_latency": "action chunk 생성 지연(배치 1, 120회 평균; RTX 5080, 부록 D.4 그림 5 — 수치는 그림에만)",
+   "hardware": "A100, RTX 5080"
+  },
+  "en": {
+   "speed_latency": "action-chunk latency at batch 1, mean of 120 runs (values only in a figure of the paper)",
+   "hardware": "A100, RTX 5080"
+  },
+  "evidence": "Appendix D.4: 'measuring the wall-clock latency required to generate one action chunk … batch size 1 … NVIDIA RTX 5080 GPU … average latency over 120 runs' (Figure 5)"
+ }
+}

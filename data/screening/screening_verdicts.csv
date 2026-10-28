@@ -1,0 +1,619 @@
+﻿id,b,mark,tier,ts,rec,code,stars,v,c,sub,t
+2411.10640,4.5R2,skip,B,ft,True,False,,CVPR,27,4.5.1 모바일·NPU,BlueLM-V-3B: Algorithm and System Co-Design for Multimodal Large Language Models on Mobile Devices
+2512.02924,4.5R2,skip,C,abs,True,False,,,21,4.5.1 모바일·NPU,AutoNeural: Co-Designing Vision-Language Models for NPU Inference
+2503.06019,4.5R2,skip,C,abs,True,False,,ICCV,3,4.5.1 모바일·NPU,GenieBlue: Integrating both Linguistic and Multimodal Capabilities for Large Language Models on Mobile Devices
+2607.22708,4.5R2,skip,B,abs,True,False,,,1,4.5.1 모바일·NPU,StepX-Edge: An On-Device UI Vision-Language Model via Architecture-Training-Deployment Co-Design
+2607.08029,4.5R2,skip,C,abs,True,False,,ICML 2026,0,4.5.2 Jetson·임베디드·MCU,Rethinking Small VLM Quantization: From Component-Wise Analysis to Hardware-Aware Edge Deployment
+2603.00136,4.5R2,skip,B,abs,True,False,,,0,4.5.2 Jetson·임베디드·MCU,TinyVLM: Zero-Shot Object Detection on Microcontrollers via Vision-Language Distillation with Matryoshka Embeddings
+2604.27476,4.5R2,skip,C,abs,True,False,,,1,4.5.4 하드웨어 가속,EdgeFM: Efficient Edge Inference for Vision-Language Models
+2510.25122,4.5R2,keep,B,ft,True,False,,,14,4.5.5 VLA·로봇 온보드,NanoVLA: Routing Decoupled Vision-Language Understanding for Nano-sized Generalist Robotic Policies
+2607.09520,4.5R2,skip,C,abs,True,True,2,ACM MM 2026,0,4.5.6 에너지·비용 측정,"Seeing is Free, Speaking is Not: Uncovering the True Energy Bottleneck in Edge VLM Inference"
+2605.29299,4.5R2,skip,B,abs,False,False,,,0,4.5.1 모바일·NPU,Pocket-Dentist: On-Device Dental Image Understanding via Efficient Multimodal Large Language Models
+2412.11475,4.5R2,skip,A,abs,False,True,,,11,4.5.1 모바일·NPU,"OmniVLM: A Token-Compressed, Sub-Billion-Parameter Vision-Language Model for Efficient On-Device Inference"
+2604.27393,4.5R2,star,B,ft,False,True,26483,,34,4.5.1 모바일·NPU,MiniCPM-o 4.5: Towards Real-Time Full-Duplex Omni-Modal Interaction
+2508.01540,4.5R2,skip,B,abs,False,False,,,1,4.5.1 모바일·NPU,MagicVL-2B: Empowering Vision-Language Models on Mobile Devices with Lightweight Visual Encoders via Curriculum Learning
+2512.14052,4.5R2,skip,C,abs,False,False,,,2,4.5.2 Jetson·임베디드·MCU,HyperVL: An Efficient and Dynamic Multimodal Large Language Model for Edge Devices
+2508.11690,4.5R2,skip,C,abs,False,False,,2025 International Conference on Intelligent Systems: Theories and Applications ,3,4.5.2 Jetson·임베디드·MCU,Real Time Child Abduction And Detection System
+2510.10560,4.5R2,skip,C,abs,False,False,,Proceedings of the First BabyLM Workshop,1,4.5.2 Jetson·임베디드·MCU,BitMar: Low-Bit Multimodal Fusion with Episodic Memory for Edge Devices
+2602.07849,4.5R2,skip,C,abs,False,False,,,0,4.5.2 Jetson·임베디드·MCU,LQA: A Lightweight Quantized-Adaptive Framework for Vision-Language Models on the Edge
+2407.11771,4.5R2,skip,C,abs,False,True,4,Information Fusion,27,4.5.2 Jetson·임베디드·MCU,XEdgeAI: A Human-centered Industrial Inspection Framework with Data-centric Explainable Edge AI Approach
+2502.20572,4.5R2,skip,A,abs,False,True,,International Conference on Multimodal Interaction,2,4.5.2 Jetson·임베디드·MCU,HazardNet: A Small-Scale Vision Language Model for Real-Time Traffic Safety Detection at Edge Devices
+2505.18039,4.5R2,skip,C,abs,False,False,,CVPR 2025,2,4.5.2 Jetson·임베디드·MCU,Clip4Retrofit: Enabling Real-Time Image Labeling on Edge Devices via Cross-Architecture CLIP Distillation
+2510.27256,4.5R2,skip,C,abs,False,False,,,2,4.5.3 엣지-클라우드,ECVL-ROUTER: Scenario-Aware Routing for Vision-Language Models
+2508.01057,4.5R2,skip,C,abs,False,False,,,5,4.5.3 엣지-클라우드,Edge-Based Multimodal Sensor Data Fusion with Vision Language Models (VLMs) for Real-time Autonomous Vehicle Accident Avoidance
+2509.21259,4.5R2,keep,B,ft,False,False,,IEEE Transactions on Network Science and Engineering,11,4.5.3 엣지-클라우드,Semantic Edge-Cloud Communication for Real-Time Urban Traffic Surveillance with ViT and LLMs over Mobile Networks
+2604.26508,4.5R2,skip,C,abs,False,True,0,,0,4.5.3 엣지-클라우드,Progressive Semantic Communication for Efficient Edge-Cloud Vision-Language Models
+2601.19908,4.5R2,skip,B,abs,False,False,,"Design, Automation and Test in Europe",5,4.5.4 하드웨어 가속,CHIME: Chiplet-based Heterogeneous Near-Memory Acceleration for Edge Multimodal LLM Inference
+2606.27871,4.5R2,skip,B,abs,False,False,,,1,4.5.5 VLA·로봇 온보드,LocalNav: Distilling Frontier VLMs and Embodied RL for On-Device Object Goal Navigation
+2601.20262,4.5R2,skip,C,abs,False,False,,,6,4.5.5 VLA·로봇 온보드,Shallow-π: Knowledge Distillation for Flow-based VLAs
+2608.29208,4.5R2,skip,C,abs,False,False,,IROS 2026,0,4.5.5 VLA·로봇 온보드,AdaVLA: Adaptive Step Flow Matching for Training-free Acceleration of Vision-Language-Action Models
+2512.20276,4.5R2,skip,B,abs,False,False,,,5,4.5.5 VLA·로봇 온보드,ActionFlow: A Pipelined Action Acceleration for Vision Language Models on Edge
+2512.00903,4.5R2,skip,C,abs,False,False,,,22,4.5.5 VLA·로봇 온보드,SwiftVLA: Unlocking Spatiotemporal Dynamics for Lightweight VLA Models at Minimal Overhead
+2512.16531,4.5R2,skip,C,abs,False,False,,,3,4.5.6 에너지·비용 측정,Scaling Laws for Energy Efficiency of Local LLMs
+2608.07861,4.5R2,skip,C,abs,False,False,,,0,4.5.6 에너지·비용 측정,How Much Does It Cost to Answer My Question? Benchmarking Cloud VLM-based VQA Systems
+2607.23373,4.5R2,skip,C,abs,False,False,,ECCV 2026,0,4.5.1 모바일·NPU,UltraViT: Latency-Optimized On-device Vision Encoder for Large Vision-Language Models
+2604.04905,4.5R2,skip,C,abs,False,False,,,0,4.5.1 모바일·NPU,ClickAIXR: On-Device Multimodal Vision-Language Interaction with Real-World Objects in Extended Reality
+2605.26546,4.5R2,skip,C,abs,False,False,,,0,4.5.1 모바일·NPU,MobileExplorer: Accelerating On-Device Inference for Mobile GUI Agents via Online Exploration
+2505.01743,4.5R2,skip,C,abs,False,False,,,1,4.5.2 Jetson·임베디드·MCU,An LLM-Empowered Low-Resolution Vision System for On-Device Human Behavior Understanding
+2504.06298,4.5R2,skip,C,abs,False,False,,,1,4.5.2 Jetson·임베디드·MCU,Ternarization of Vision Language Models for use on edge devices
+2509.04162,4.5R2,skip,C,abs,False,False,,,2,4.5.4 하드웨어 가속,Real Time FPGA Based Transformers & VLMs for Vision Tasks: SOTA Designs and Optimizations
+2605.31460,4.5R2,skip,C,abs,False,False,,,0,4.5.5 VLA·로봇 온보드,On-Device Robotic Planning: Eliminating Inference Redundancy for Efficient Decision-Making
+2412.19509,4.3R,star,A,ft,True,True,96,CVPR,43,4.3.1 양자화,MBQ: Modality-Balanced Quantization for Large Vision-Language Models
+2502.00425,4.3R,star,A,ft,True,True,44,ACM MM,40,4.3.1 양자화,MQuant: Unleashing the Inference Potential of Multimodal Large Language Models via Full Static Quantization
+2410.08119,4.3R,keep,A,ft,True,True,103,NeurIPS,51,4.3.1 양자화,Q-VLM: Post-training Quantization for Large Vision-Language Models
+2408.03735,4.3R,keep,A,ft,False,True,14,ACM MM,24,4.3.1 양자화,Advancing Multimodal Large Language Models with Quantization-Aware Scale Learning for Efficient Adaptation
+2409.17634,4.3R,skip,C,abs,False,False,,,9,4.3.1 양자화,P4Q: Learning to Prompt for Quantization in Visual-language Models
+2509.18763,4.3R,skip,C,abs,True,False,,,4,4.3.1 양자화,Bi-VLM: Pushing Ultra-Low Precision Post-Training Quantization Boundaries in Vision-Language Models
+2509.23729,4.3R,keep,B,ft,True,False,,TMLR,5,4.3.1 양자화,LUQ: Layerwise Ultra-Low Bit Quantization for Multimodal Large Language Models
+2603.04800,4.3R,keep,A,ft,True,True,52,CVPR 2026,3,4.3.1 양자화,MASQuant: Modality-Aware Smoothing Quantization for Multimodal Large Language Models
+2602.07899,4.3R,skip,C,abs,False,False,,,1,4.3.1 양자화,Rethinking Practical and Efficient Quantization Calibration for Vision-Language Models
+2605.19929,4.3R,skip,C,abs,False,True,3,,1,4.3.1 양자화,Breaking Modality Heterogeneity in Low-Bit Quantization for Large Vision-Language Models
+2603.17809,4.3R,keep,A,ft,False,True,25,CVPR 2026,2,4.3.1 양자화,Fine-Grained Post-Training Quantization for Large Vision Language Models with Quantization-Aware Integrated Gradients
+2607.21076,4.3R,skip,C,abs,False,False,,,0,4.3.1 양자화,C-PTQ: Fisher-weighted Channel-wise Sensitivity for Post-training Quantization of MLLMs
+2602.01037,4.3R,skip,C,abs,False,True,8,,2,4.3.1 양자화,VEQ: Modality-Adaptive Quantization for MoE Vision-Language Models
+2606.17118,4.3R,skip,C,abs,False,False,,EMNLP 2026,0,4.3.1 양자화,MODE: Modality-Decomposed Expert-Level Mixed-Precision Quantization for MoE Multimodal LLMs
+2607.01876,4.3R,skip,C,abs,False,True,6,,1,4.3.1 양자화,SAB-LVLM: Significance-Aware Binarization for Large Vision-Language Models
+2601.15287,4.3R,skip,C,abs,True,True,9,,0,4.3.1 양자화,Towards Understanding Best Practices for Quantization of Vision-Language Models
+2607.08029,4.3R,skip,C,abs,True,False,,ICML 2026,0,4.3.1 양자화,Rethinking Small VLM Quantization: From Component-Wise Analysis to Hardware-Aware Edge Deployment
+2511.08914,4.3R,star,A,ft,False,True,30,,4,4.3.1 양자화,SPEED-Q: Staged Processing with Enhanced Distillation towards Efficient Low-bit On-device VLM Quantization
+2608.21134,4.3R,skip,B,abs,False,False,,,0,4.3.1 양자화,Llama-Mobile: Efficient 2.7-Bit Quantization of VLMs
+2601.22709,4.3R,star,A,ft,False,True,210,ICML 2026,5,4.3.1 양자화,Gated Relational Alignment via Confidence-based Distillation for Efficient VLMs
+2503.04982,4.3R,skip,C,abs,True,True,,NAACL,6,4.3.1 양자화,LVLM-Compress-Bench: Benchmarking the Broader Impact of Large Vision-Language Model Compression
+2410.20265,4.3R,skip,C,abs,False,False,,,3,4.3.1 양자화,You Never Know: Quantization Induces Inconsistent Biases in Vision-Language Foundation Models
+2602.13289,4.3R,skip,B,abs,False,False,,,0,4.3.1 양자화,Evaluating the Impact of Post-Training Quantization on Reliable VQA with Multimodal LLMs
+2509.21173,4.3R,skip,C,abs,False,False,,ICML 2026,2,4.3.1 양자화,Less Precise Can Be More Reliable: A Systematic Evaluation of Quantization's Impact on VLMs Beyond Accuracy
+2510.16292,4.3R,star,A,ft,True,True,29,NeurIPS,11,4.3.2 저랭크,QSVD: Efficient Low-rank Approximation for Unified Query-Key-Value Weight Compression in Low-Precision Vision-Language Models
+2604.02570,4.3R,skip,C,abs,False,True,4,,2,4.3.2 저랭크,WSVD: Weighted Low-Rank Approximation for Fast and Efficient Execution of Low-Precision Vision-Language Models
+2510.05544,4.3R,skip,C,abs,False,False,,,3,4.3.2 저랭크,Activation-Informed Pareto-Guided Low-Rank Compression for Efficient LLM/VLM
+2606.00573,4.3R,skip,C,abs,False,False,,,0,4.3.2 저랭크,LASER: Loss-Aware Singular-value Decomposition and Rank Allocation for Efficient Low-Precision Vision-Language Models
+2404.02424,4.3R,skip,C,abs,True,True,17,ACM SIGMETRICS Performance Evaluation Review,4,4.3.5 프루닝,Rethinking Pruning for Vision-Language Models: Strategies for Effective Sparsity and Performance Restoration
+2404.05621,4.3R,skip,C,abs,False,True,24,CVPR,14,4.3.5 프루닝,MULTIFLOW: Shifting Towards Task-Agnostic Vision-Language Pruning
+2507.20749,4.3R,skip,C,abs,True,False,,DAGM GCPR,2,4.3.5 프루닝,Investigating Structural Pruning and Recovery Techniques for Compressing Multimodal Large Language Models: An Empirical Study
+2604.24380,4.3R,keep,A,ft,True,True,,International Journal of Computer Vision,2,4.3.5 프루닝,"Structural Pruning of Large Vision Language Models: A Comprehensive Study on Pruning Dynamics, Recovery, and Data Efficiency"
+2507.23362,4.3R,skip,C,abs,True,True,7,ACM MM,8,4.3.5 프루닝,Short-LVLM: Compressing and Accelerating Large Vision-Language Models by Pruning Redundant Layers
+2604.16502,4.3R,skip,C,abs,False,True,,,1,4.3.5 프루닝,Topology-Aware Layer Pruning for Large Vision-Language Models
+2603.20275,4.3R,skip,C,abs,False,False,,,1,4.3.5 프루닝,Understanding Pruning Regimes in Vision-Language Models Through Domain-Aware Layer Selection
+2603.16001,4.3R,skip,C,abs,False,True,2,,0,4.3.5 프루닝,"Mostly Text, Smart Visuals: Asymmetric Text-Visual Pruning for Large Vision-Language Models"
+2603.06270,4.3R,skip,C,abs,False,False,,,0,4.3.5 프루닝,HiPP-Prune: Hierarchical Preference-Conditioned Structured Pruning for Vision-Language Models
+2505.16104,4.3R,skip,C,abs,False,False,,ACL,4,4.3.5 프루닝,Hierarchical Safety Realignment: Lightweight Restoration of Safety in Pruned Large Vision-Language Models
+2608.06901,4.3R,skip,C,abs,False,True,,ECCV 2026,0,4.3.5 프루닝,Prune Once: Retraining-Free Task-Agnostic Pruning for Vision-Language Models
+2604.02956,4.3R,skip,C,abs,False,True,,,1,4.3.5 프루닝,Collaborative Multi-Mode Pruning for Vision-Language Models
+2604.17320,4.3R,skip,C,abs,False,False,,,0,4.3.5 프루닝,Towards Joint Quantization and Token Pruning of Vision-Language Models
+2408.15881,4.3R,keep,C,ft,True,True,227,ICLR,54,4.3.3 증류,LLaVA-MoD: Making LLaVA Tiny via MoE Knowledge Distillation
+2407.19409,4.3R,keep,C,ft,True,False,,,24,4.3.3 증류,LLAVADI: What Matters For Multimodal Large Language Models Distillation
+2501.01709,4.3R,keep,C,ft,False,True,55,CVPR,38,4.3.3 증류,MoVE-KD: Knowledge Distillation for VLMs with Mixture of Visual Encoders
+2603.05421,4.3R,skip,B,abs,True,False,,,0,4.3.3 증류,DARK: Diagonal-Anchored Repulsive Knowledge Distillation for Vision-Language Models under Extreme Compression
+2605.10641,4.3R,skip,C,abs,False,False,,,0,4.3.3 증류,LLaVA-CKD: Bottom-Up Cascaded Knowledge Distillation for Vision-Language Models
+2511.17886,4.3R,skip,C,abs,False,False,,,0,4.3.3 증류,When Better Teachers Don't Make Better Students: Revisiting Knowledge Distillation for CLIP Models in VQA
+2604.14629,4.3R,skip,C,abs,False,False,,CVPR,1,4.3.3 증류,Switch-KD: Visual-Switch Knowledge Distillation for Vision-Language Models
+2605.21924,4.3R,skip,C,abs,False,False,,,10,4.3.3 증류,Visual-Advantage On-Policy Distillation for Vision-Language Models
+2601.20088,4.3R,skip,C,abs,False,False,,,18,4.3.3 증류,Quantization-Aware Distillation for NVFP4 Inference Accuracy Recovery
+2603.00136,4.3R,skip,B,abs,False,False,,,0,4.3.3 증류,TinyVLM: Zero-Shot Object Detection on Microcontrollers via Vision-Language Distillation with Matryoshka Embeddings
+2506.07530,4.3R,star,A,ft,True,True,167,,38,4.3.6 VLA 압축,BitVLA: 1-bit Vision-Language-Action Models for Robotics Manipulation
+2602.20309,4.3R,skip,C,abs,False,False,,,16,4.3.6 VLA 압축,QuantVLA: Scale-Calibrated Post-Training Quantization for Vision-Language-Action Models
+2602.03782,4.3R,keep,B,ft,False,False,,,13,4.3.6 VLA 압축,QVLA: Not All Channels Are Equal in Vision-Language-Action Model's Quantization
+2506.17639,4.3R,skip,C,abs,False,False,,RA-L,21,4.3.6 VLA 압축,RLRC: Reinforcement Learning-based Recovery for Compressed Vision-Language-Action Models
+2510.08464,4.3R,skip,C,abs,False,False,,,8,4.3.6 VLA 압축,Don't Run with Scissors: Pruning Breaks VLA Models but They Can Be Recovered
+2509.09090,4.3R,skip,C,abs,False,False,,,15,4.3.6 VLA 압축,SQAP-VLA: A Synergistic Quantization-Aware Pruning Framework for High-Performance Vision-Language-Action Models
+2507.21976,4.3R,skip,B,abs,False,False,,,2,4.3.x 응용,Compression Strategies for Efficient Multimodal LLMs in Medical Contexts
+2603.26770,4.3R,skip,C,abs,False,False,,,2,4.3.x 응용,Quantized Vision-Language Models for Damage Assessment: A Comparative Study of LLaVA-1.5-7B Quantization Levels
+2603.25035,4.3R,skip,C,abs,False,False,,,0,4.3.x 분석,Mechanistically Interpreting Compression in Vision-Language Models
+2603.26769,4.3R,skip,C,abs,False,False,,,0,4.3.x 분석,Edge Reliability Gap in Vision-Language Models: Quantifying Failure Modes of Compressed VLMs Under Visual Corruption
+2401.16160,4.1R,skip,C,abs,True,False,,,105,4.1.1 MoE,LLaVA-MoLE: Sparse Mixture of LoRA Experts for Mitigating Data Conflicts in Instruction Finetuning MLLMs
+2403.14520,4.1R,star,A,ft,True,True,294,AAAI,138,4.1.4 SSM·선형,Cobra: Extending Mamba to Multi-Modal Large Language Model for Efficient Inference
+2405.11273,4.1R,keep,C,ft,True,True,1116,TPAMI,174,4.1.1 MoE,Uni-MoE: Scaling Unified Multimodal LLMs with Mixture of Experts
+2407.19832,4.1R,skip,C,abs,False,False,,,17,4.1.4 SSM·선형,ML-Mamba: Efficient Multi-Modal Large Language Model Utilizing Mamba-2
+2408.15881,4.1R,keep,C,ft,False,True,227,ICLR,54,4.1.1 MoE,LLaVA-MoD: Making LLaVA Tiny via MoE Knowledge Distillation
+2409.07267,4.1R,skip,B,ft,False,False,,Chinese Conference on Pattern Recognition and Computer Vision,20,4.1.3 인코더 경량화·제거,MiniDrive: More Efficient Vision-Language Models with Multi-Level 2D Features as Text Tokens for Autonomous Driving
+2411.10669,4.1R,skip,C,abs,False,True,35,,1,4.1.1 MoE,Awaker2.5-VL: Stably Scaling MLLMs with Parameter-Efficient Mixture of Experts
+2412.10302,4.1R,keep,A,ft,True,True,5374,,695,4.1.1 MoE,DeepSeek-VL2: Mixture-of-Experts Vision-Language Models for Advanced Multimodal Understanding
+2412.13180,4.1R,skip,C,abs,False,False,,ICCV,43,4.1.x 타가지,Feather the Throttle: Revisiting Visual Token Pruning for Vision-Language Model Acceleration
+2502.13145,4.1R,star,A,ft,True,True,104,,12,4.1.4 SSM·선형,Multimodal Mamba: Decoder-only Multimodal State Space Model via Quadratic to Linear Distillation
+2503.12446,4.1R,skip,C,abs,True,False,,WACV,6,4.1.3 인코더 경량화·제거,BREEN: Bridge Data-Efficient Encoder-Free Multimodal Learning with Learnable Queries
+2504.07491,4.1R,keep,C,ft,True,True,1227,,331,4.1.1 MoE,Kimi-VL Technical Report
+2504.21831,4.1R,skip,C,abs,False,False,,,1,4.1.2 조기종료·층축소,Early Exit and Multi Stage Knowledge Distillation in VLMs for Video Summarization
+2505.21594,4.1R,keep,B,ft,False,False,,TMLR,17,4.1.x 비대상,Fast and Cost-effective Speculative Edge-Cloud Decoding with Early Exits
+2508.01540,4.1R,skip,B,abs,False,False,,,1,4.1.3 인코더 경량화·제거,MagicVL-2B: Empowering Vision-Language Models on Mobile Devices with Lightweight Visual Encoders via Curriculum Learning
+2508.07738,4.1R,skip,C,abs,False,False,,,1,4.1.x 비대상,Separation and Collaboration: Two-Level Routing Grouped Mixture-of-Experts for Multi-Domain Continual Learning
+2508.17467,4.1R,skip,C,abs,False,False,,SC25-W: Workshops of the International Conference for High Performance Computing,12,4.1.1 MoE,MoE-Inference-Bench: Performance Evaluation of Mixture of Expert Large Language and Vision Models
+2508.17205,4.1R,skip,C,abs,False,False,,Applied Computing and Intelligence,4,4.1.x 비대상,Multi-Agent Visual-Language Reasoning for Comprehensive Highway Scene Understanding
+2508.17595,4.1R,skip,B,abs,False,False,,ICCV Workshop 2025,1,4.1.3 인코더 경량화·제거,TinyGiantVLM: A Lightweight Vision-Language Architecture for Spatial Reasoning under Resource Constraints
+2509.11662,4.1R,skip,C,abs,False,False,,,2,4.1.x 타가지,MindVL: Towards Efficient and Effective Training of Multimodal Large Language Models on Ascend NPUs
+2509.18154,4.1R,star,A,ft,True,True,26432,,163,4.1.5 커넥터·리샘플러,"MiniCPM-V 4.5: Cooking Efficient MLLMs via Architecture, Data, and Training Recipe"
+2510.01795,4.1R,skip,B,ft,True,False,,IEEE International Conference on Embedded and Real-Time Computing Systems and Ap,0,4.1.2 조기종료·층축소,Nav-EE: Navigation-Guided Early Exiting for Efficient Vision-Language Models in Autonomous Driving
+2510.10962,4.1R,skip,C,abs,False,False,,TPAMI,1,4.1.1 MoE,MC#: Mixture Compressor for Mixture-of-Experts Large Models
+2511.01463,4.1R,skip,C,abs,False,False,,,4,4.1.x 비대상,HMVLM: Human Motion-Vision-Lanuage Model via MoE LoRA
+2511.17885,4.1R,skip,C,abs,False,False,,,1,4.1.1 MoE,FastMMoE: Accelerating Multimodal Large Language Models through Dynamic Expert Activation and Routing-Aware Token Pruning
+2512.14757,4.1R,skip,C,abs,False,False,,,6,4.1.x 비대상,SocialNav-MoE: A Mixture-of-Experts Vision Language Model for Socially Compliant Navigation with Reinforcement Fine-Tuning
+2601.13020,4.1R,skip,C,abs,False,True,0,ACL,4,4.1.x 비대상,PASs-MoE: Mitigating Misaligned Co-drift among Router and Experts via Pathway Activation Subspaces for Continual Learning
+2602.01037,4.1R,skip,C,abs,False,True,8,,2,4.1.x 타가지,VEQ: Modality-Adaptive Quantization for MoE Vision-Language Models
+2602.24059,4.1R,keep,C,ft,False,False,,CVPR 2026,2,4.1.x 타가지,Quant Experts: Token-aware Adaptive Error Reconstruction with Mixture of Experts for Large Vision-Language Models Quantization
+2603.04772,4.1R,skip,C,abs,False,False,,,4,4.1.x 비대상,TSEmbed: Unlocking Task Scaling in Universal Multimodal Embeddings
+2604.01310,4.1R,skip,C,abs,False,False,,,2,4.1.x 타가지,Sparse Spectral LoRA: Routed Experts for Medical VLMs
+2604.02710,4.1R,skip,C,abs,False,True,11,,5,4.1.x 비대상,"V2X-QA: A Comprehensive Reasoning Dataset and Benchmark for Multimodal Large Language Models in Autonomous Driving Across Ego, Infrastructure, and Cooperative Views"
+2605.05225,4.1R,skip,C,abs,False,False,,ACL,2,4.1.1 MoE,MACS: Modality-Aware Capacity Scaling for Efficient Multimodal MoE Inference
+2605.08560,4.1R,skip,C,abs,False,True,,,1,4.1.1 MoE,ZAYA1-VL-8B Technical Report
+2605.15300,4.1R,skip,A,abs,False,True,10,ICML 2026,0,4.1.5 커넥터·리샘플러,Deep Pre-Alignment for VLMs
+2605.20247,4.1R,skip,C,abs,False,False,,,3,4.1.x 비대상,CP-MoE: Consistency-Preserving Mixture-of-Experts for Continual Learning
+2605.23477,4.1R,skip,C,abs,False,False,,Robotics,1,4.1.x 비대상,Semantically Structured Mixture-of-Experts for Compositional Robotic Manipulation
+2605.26415,4.1R,skip,B,abs,False,False,,,0,4.1.2 조기종료·층축소,The Rescue Effect: Spatio-Semantic Early Exit Bypasses Quantization Collapse in CLIP
+2606.17118,4.1R,skip,C,abs,False,False,,EMNLP 2026,0,4.1.x 타가지,MODE: Modality-Decomposed Expert-Level Mixed-Precision Quantization for MoE Multimodal LLMs
+2606.31383,4.1R,skip,C,abs,True,False,,,0,4.1.5 커넥터·리샘플러,MS-Resampler: Multi-Scope Visual Resampling for Efficient Multimodal LLMs
+2607.02930,4.1R,skip,C,abs,False,True,6,,1,4.1.x 비대상,CL-Anomaly: Layer-Adaptive Mixture-of-Experts with Multimodal Large Language Model for Continual Learning in Anomaly Detection
+2607.16742,4.1R,skip,C,abs,False,False,,TCSVT,4,4.1.x 비대상,Multi-Dimensional Quality Assessment for AI-Generated Human-Centric Videos: Dataset and Model
+2608.17402,4.1R,star,A,ft,True,True,28,ECCV 2026,1,4.1.1 MoE,MoE-ViE: Mixture of Experts Vision Encoder for Efficient Image and Video Understanding
+2608.27867,4.1R,skip,C,abs,False,True,2,Findings of EMNLP 2026,0,4.1.x 타가지,CoRe-MoE: Compact Reusable MoE for Continual Multimodal Instruction Tuning
+2407.11771,4.5R,skip,C,abs,False,True,4,Information Fusion,27,4.5.2 Jetson·임베디드·MCU,XEdgeAI: A Human-centered Industrial Inspection Framework with Data-centric Explainable Edge AI Approach
+2408.01800,4.5R,star,A,ft,True,True,26478,,1276,4.5.1 모바일·NPU,MiniCPM-V: A GPT-4V Level MLLM on Your Phone
+2408.15518,4.5R,skip,A,abs,False,True,,,8,4.5.x 비대상,Squid: Long Context as a New Modality for Energy-Efficient On-Device Language Models
+2409.09086,4.5R,skip,B,abs,False,False,,,32,4.5.x 타가지,Inf-MLLM: Efficient Streaming Inference of Multimodal Large Language Models on a Single GPU
+2410.14803,4.5R,skip,B,abs,False,False,,ICLR,70,4.5.x 비대상,DistRL: An Asynchronous Distributed Reinforcement Learning Framework for On-Device Control Agents
+2411.10640,4.5R,keep,B,ft,True,False,,CVPR,27,4.5.1 모바일·NPU,BlueLM-V-3B: Algorithm and System Co-Design for Multimodal Large Language Models on Mobile Devices
+2412.11475,4.5R,skip,A,abs,False,True,,,11,4.5.1 모바일·NPU,"OmniVLM: A Token-Compressed, Sub-Billion-Parameter Vision-Language Model for Efficient On-Device Inference"
+2501.04322,4.5R,keep,C,ft,False,True,13,AAAI,18,4.5.2 Jetson·임베디드·MCU,Eve: Efficient Multimodal Vision Language Models with Elastic Visual Experts
+2502.10419,4.5R,skip,B,abs,False,False,,Computer Communications,18,4.5.x 비대상,A Hybrid Swarm Intelligence Approach for Optimizing Multimodal Large Language Models Deployment in Edge-Cloud-based Federated Learning Environments
+2502.06395,4.5R,skip,C,abs,False,False,,,17,4.5.x 비대상,AppVLM: A Lightweight Vision Language Model for Online App Control
+2502.11573,4.5R,skip,C,abs,False,False,,,2,4.5.x 비대상,InfiR : Crafting Effective Small Language Models and Multimodal Small Language Models in Reasoning
+2502.20572,4.5R,skip,A,abs,False,True,,International Conference on Multimodal Interaction,2,4.5.2 Jetson·임베디드·MCU,HazardNet: A Small-Scale Vision Language Model for Real-Time Traffic Safety Detection at Edge Devices
+2503.06019,4.5R,skip,C,abs,True,False,,ICCV,3,4.5.1 모바일·NPU,GenieBlue: Integrating both Linguistic and Multimodal Capabilities for Large Language Models on Mobile Devices
+2503.06029,4.5R,skip,C,abs,False,True,7,EMNLP,2,4.5.x 비대상,SmartBench: Is Your LLM Truly a Good Chinese Smartphone Assistant?
+2504.06298,4.5R,skip,C,abs,False,False,,,1,4.5.2 Jetson·임베디드·MCU,Ternarization of Vision Language Models for use on edge devices
+2505.01743,4.5R,skip,C,abs,False,False,,,1,4.5.2 Jetson·임베디드·MCU,An LLM-Empowered Low-Resolution Vision System for On-Device Human Behavior Understanding
+2505.18039,4.5R,skip,C,abs,False,False,,CVPR 2025,2,4.5.2 Jetson·임베디드·MCU,Clip4Retrofit: Enabling Real-Time Image Labeling on Edge Devices via Cross-Architecture CLIP Distillation
+2505.21594,4.5R,keep,B,ft,False,False,,TMLR,17,4.5.x 비대상,Fast and Cost-effective Speculative Edge-Cloud Decoding with Early Exits
+2505.21382,4.5R,skip,C,abs,False,False,,Neural Networks,2,4.5.x 비대상,DeCAF: Decentralized Consensus-And-Factorization for Low-Rank Adaptation of Foundation Models
+2505.24371,4.5R,skip,C,abs,False,False,,International Conference on Information Photonics,1,4.5.x 비대상,Grid-LOGAT: Grid Based Local and Global Area Transcription for Video Question Answering
+2507.14049,4.5R,keep,A,ft,False,True,109,IROS-MoMA3 Workshop 2024,21,4.5.5 VLA·로봇 온보드,EdgeVLA: Efficient Vision-Language-Action Models
+2507.15428,4.5R,skip,B,abs,False,False,,,5,4.5.x 타가지,EgoPrune: Efficient Token Pruning for Egomotion Video Reasoning in Embodied Agent
+2508.01057,4.5R,skip,C,abs,False,False,,,5,4.5.3 엣지-클라우드,Edge-Based Multimodal Sensor Data Fusion with Vision Language Models (VLMs) for Real-time Autonomous Vehicle Accident Avoidance
+2508.01540,4.5R,skip,B,abs,False,False,,,1,4.5.1 모바일·NPU,MagicVL-2B: Empowering Vision-Language Models on Mobile Devices with Lightweight Visual Encoders via Curriculum Learning
+2508.11690,4.5R,skip,C,abs,False,False,,2025 International Conference on Intelligent Systems: Theories and Applications ,3,4.5.2 Jetson·임베디드·MCU,Real Time Child Abduction And Detection System
+2509.04162,4.5R,skip,C,abs,False,False,,,2,4.5.4 하드웨어 가속,Real Time FPGA Based Transformers & VLMs for Vision Tasks: SOTA Designs and Optimizations
+2509.15076,4.5R,skip,C,abs,False,False,,ICCV Workshop 2025,2,4.5.x 비대상,Forecasting and Visualizing Air Quality from Sky Images with Vision-Language Models
+2509.21259,4.5R,skip,B,ft,False,False,,IEEE Transactions on Network Science and Engineering,11,4.5.3 엣지-클라우드,Semantic Edge-Cloud Communication for Real-Time Urban Traffic Surveillance with ViT and LLMs over Mobile Networks
+2510.10560,4.5R,skip,C,abs,False,False,,Proceedings of the First BabyLM Workshop,1,4.5.2 Jetson·임베디드·MCU,BitMar: Low-Bit Multimodal Fusion with Episodic Memory for Edge Devices
+2510.20333,4.5R,skip,C,abs,False,False,,,14,4.5.x 비대상,GhostEI-Bench: Do Mobile Agents Resilience to Environmental Injection in Dynamic On-Device Environments?
+2510.25122,4.5R,skip,B,ft,True,False,,,14,4.5.5 VLA·로봇 온보드,NanoVLA: Routing Decoupled Vision-Language Understanding for Nano-sized Generalist Robotic Policies
+2510.27256,4.5R,skip,C,abs,False,False,,,2,4.5.3 엣지-클라우드,ECVL-ROUTER: Scenario-Aware Routing for Vision-Language Models
+2511.08914,4.5R,star,A,ft,True,True,30,,4,4.5.1 모바일·NPU,SPEED-Q: Staged Processing with Enhanced Distillation towards Efficient Low-bit On-device VLM Quantization
+2511.10615,4.5R,skip,B,abs,False,False,,,3,4.5.x 비대상,Towards Blind and Low-Vision Accessibility of Lightweight VLMs and Custom LLM-Evals
+2512.00903,4.5R,skip,C,abs,False,False,,,22,4.5.5 VLA·로봇 온보드,SwiftVLA: Unlocking Spatiotemporal Dynamics for Lightweight VLA Models at Minimal Overhead
+2512.02924,4.5R,skip,C,abs,True,False,,,21,4.5.1 모바일·NPU,AutoNeural: Co-Designing Vision-Language Models for NPU Inference
+2512.04763,4.5R,skip,C,abs,False,False,,,6,4.5.x 비대상,MemLoRA: Distilling Expert Adapters for On-Device Memory Systems
+2601.19908,4.5R,skip,B,abs,False,False,,"Design, Automation and Test in Europe",5,4.5.4 하드웨어 가속,CHIME: Chiplet-based Heterogeneous Near-Memory Acceleration for Edge Multimodal LLM Inference
+2512.14052,4.5R,skip,C,abs,False,False,,,2,4.5.2 Jetson·임베디드·MCU,HyperVL: An Efficient and Dynamic Multimodal Large Language Model for Edge Devices
+2512.16531,4.5R,skip,C,abs,False,False,,,3,4.5.6 에너지·비용 측정,Scaling Laws for Energy Efficiency of Local LLMs
+2512.20276,4.5R,skip,B,abs,False,False,,,5,4.5.5 VLA·로봇 온보드,ActionFlow: A Pipelined Action Acceleration for Vision Language Models on Edge
+2601.20262,4.5R,skip,C,abs,False,False,,,6,4.5.5 VLA·로봇 온보드,Shallow-π: Knowledge Distillation for Flow-based VLAs
+2601.20323,4.5R,skip,C,abs,False,False,,ICASSP,4,4.5.x 비대상,ECG-Agent: On-Device Tool-Calling Agent for ECG Multi-Turn Dialogue
+2602.07849,4.5R,skip,C,abs,False,False,,,0,4.5.2 Jetson·임베디드·MCU,LQA: A Lightweight Quantized-Adaptive Framework for Vision-Language Models on the Edge
+2603.00136,4.5R,skip,B,abs,True,False,,,0,4.5.2 Jetson·임베디드·MCU,TinyVLM: Zero-Shot Object Detection on Microcontrollers via Vision-Language Distillation with Matryoshka Embeddings
+2603.05421,4.5R,skip,B,abs,False,False,,,0,4.5.x 타가지,DARK: Diagonal-Anchored Repulsive Knowledge Distillation for Vision-Language Models under Extreme Compression
+2604.04905,4.5R,skip,C,abs,False,False,,,0,4.5.1 모바일·NPU,ClickAIXR: On-Device Multimodal Vision-Language Interaction with Real-World Objects in Extended Reality
+2604.06832,4.5R,skip,C,abs,False,False,,,5,4.5.x 타가지,Fast-dVLM: Efficient Block-Diffusion VLM via Direct Conversion from Autoregressive VLM
+2604.18452,4.5R,skip,C,abs,False,False,,,0,4.5.x 비대상,ESsEN: Training Compact Discriminative Vision-Language Transformers in a Low-Resource Setting
+2604.19541,4.5R,skip,B,abs,False,False,,,1,4.5.x 비대상,FOCAL: Filtered On-device Continuous Activity Logging for Efficient Personal Desktop Summarization
+2604.26508,4.5R,skip,C,abs,False,True,0,,0,4.5.3 엣지-클라우드,Progressive Semantic Communication for Efficient Edge-Cloud Vision-Language Models
+2604.27393,4.5R,star,B,ft,False,True,26483,,34,4.5.1 모바일·NPU,MiniCPM-o 4.5: Towards Real-Time Full-Duplex Omni-Modal Interaction
+2604.27476,4.5R,skip,C,abs,True,False,,,1,4.5.4 하드웨어 가속,EdgeFM: Efficient Edge Inference for Vision-Language Models
+2605.13178,4.5R,skip,C,abs,False,True,18,ICML 2026,0,4.5.x 타가지,CLIP Tricks You: Training-free Token Pruning for Efficient Pixel Grounding in Large VIsion-Language Models
+2605.21421,4.5R,skip,B,abs,False,False,,,0,4.5.x 비대상,"AIGaitor: Privacy-preserving and cloud-free motion analysis for everyone, using edge computing"
+2605.24019,4.5R,skip,C,abs,False,False,,,0,4.5.x 타가지,MGVQ: Synergizing Multi-dimensional Sensitivity-Aware and Gradient-Hessian Fusion for Vector Quantization
+2605.26546,4.5R,skip,C,abs,False,False,,,0,4.5.1 모바일·NPU,MobileExplorer: Accelerating On-Device Inference for Mobile GUI Agents via Online Exploration
+2605.29299,4.5R,skip,B,abs,False,False,,,0,4.5.1 모바일·NPU,Pocket-Dentist: On-Device Dental Image Understanding via Efficient Multimodal Large Language Models
+2605.31460,4.5R,skip,C,abs,False,False,,,0,4.5.5 VLA·로봇 온보드,On-Device Robotic Planning: Eliminating Inference Redundancy for Efficient Decision-Making
+2606.15898,4.5R,skip,C,abs,False,False,,,1,4.5.x 비대상,VL2Spike: Spike-driven Distillation from VLMs for Low-Power Visual Perception in Embodied AI
+2606.27871,4.5R,skip,B,abs,False,False,,,1,4.5.5 VLA·로봇 온보드,LocalNav: Distilling Frontier VLMs and Embodied RL for On-Device Object Goal Navigation
+2607.08029,4.5R,skip,C,abs,True,False,,ICML 2026,0,4.5.2 Jetson·임베디드·MCU,Rethinking Small VLM Quantization: From Component-Wise Analysis to Hardware-Aware Edge Deployment
+2607.09520,4.5R,skip,C,abs,True,True,2,ACM MM 2026,0,4.5.6 에너지·비용 측정,"Seeing is Free, Speaking is Not: Uncovering the True Energy Bottleneck in Edge VLM Inference"
+2607.12659,4.5R,star,A,ft,False,True,37,,2,4.5.5 VLA·로봇 온보드,Jetson-PI: Towards Onboard Real-Time Robot Control via Foresight-Aligned Asynchronous Inference
+2607.22708,4.5R,skip,B,abs,True,False,,,1,4.5.1 모바일·NPU,StepX-Edge: An On-Device UI Vision-Language Model via Architecture-Training-Deployment Co-Design
+2607.23373,4.5R,skip,C,abs,False,False,,ECCV 2026,0,4.5.1 모바일·NPU,UltraViT: Latency-Optimized On-device Vision Encoder for Large Vision-Language Models
+2607.26042,4.5R,skip,C,abs,False,False,,,0,4.5.x 비대상,VetClaw: An Edge-Cloud Multimodal Agentic System for Veterinary Disease Screening
+2608.07861,4.5R,skip,C,abs,False,False,,,0,4.5.6 에너지·비용 측정,How Much Does It Cost to Answer My Question? Benchmarking Cloud VLM-based VQA Systems
+2608.09682,4.5R,skip,C,abs,False,False,,,1,4.5.x 비대상,"Thinking With Tools, Not With Pixels: Tool Calls as Text Scaffolds for Visual Reasoning"
+2608.29208,4.5R,skip,C,abs,False,False,,IROS 2026,0,4.5.5 VLA·로봇 온보드,AdaVLA: Adaptive Step Flow Matching for Training-free Acceleration of Vision-Language-Action Models
+2401.02797,4.2R,skip,C,abs,False,True,65,,33,4.2.3 PEFT 분석·응용,PeFoMed: Parameter Efficient Fine-tuning of Multimodal Large Language Models for Medical Imaging
+2401.16160,4.2R,skip,C,abs,True,False,,,105,4.2.1 LoRA 변형,LLaVA-MoLE: Sparse Mixture of LoRA Experts for Mitigating Data Conflicts in Instruction Finetuning MLLMs
+2402.09353,4.2R,star,A,ft,True,True,999,ICML,1041,4.2.1 LoRA 변형,DoRA: Weight-Decomposed Low-Rank Adaptation
+2402.15896,4.2R,skip,C,abs,True,True,32,ACL,49,4.2.1 LoRA 변형,Multimodal Instruction Tuning with Conditional Mixture of LoRA
+2404.00656,4.2R,skip,C,abs,False,False,,EMNLP,157,4.2.x 응용,WavLLM: Towards Robust and Adaptive Speech Large Language Model
+2404.01959,4.2R,skip,C,abs,False,True,34,Expert Syst. J. Knowl. Eng.,42,4.2.x 응용,Bi-LORA: A Vision-Language Approach for Synthetic Image Detection
+2404.04883,4.2R,skip,C,abs,False,True,25,,36,4.2.x 응용,Mixture of Low-rank Experts for Transferable AI-Generated Image Detection
+2404.13425,4.2R,skip,C,abs,False,False,,International Conference on Multimedia Retrieval,9,4.2.x 응용,Enhancing Adversarial Robustness of Vision-Language Models through Low-Rank Adaptation
+2405.18541,4.2R,keep,C,ft,True,True,299,CVPR 2024,166,4.2.1 LoRA 변형,Low-Rank Few-Shot Adaptation of Vision-Language Models
+2406.05130,4.2R,skip,C,abs,True,True,,ACL,49,4.2.3 PEFT 분석·응용,An Empirical Study on Parameter-Efficient Fine-Tuning for MultiModal Large Language Models
+2406.11909,4.2R,keep,C,ft,True,True,126,EMNLP,63,4.2.1 LoRA 변형,Mixture-of-Subspaces in Low-Rank Adaptation
+2406.13807,4.2R,skip,A,abs,False,True,34,EMNLP,28,4.2.x 응용,AlanaVLM: A Multimodal Embodied AI Foundation Model for Egocentric Video Understanding
+2407.02157,4.2R,skip,C,abs,False,False,,ACM MM,54,4.2.x 응용,FineCLIPER: Multi-modal Fine-grained CLIP for Dynamic Facial Expression Recognition with AdaptERs
+2407.03056,4.2R,keep,A,ft,False,True,62,ECCV,29,4.2.2 어댑터·프롬프트,Improving Zero-shot Generalization of Learned Prompts via Unsupervised Knowledge Distillation
+2407.05342,4.2R,skip,C,abs,False,True,56,ECCV,59,4.2.5 병합·연합·연속,Mind the Interference: Retaining Pre-trained Knowledge in Parameter Efficient Continual Learning of Vision-Language Models
+2408.08093,4.2R,skip,C,abs,False,False,,,14,4.2.x 응용,When Video Coding Meets Multimodal Large Language Models: A Unified Paradigm for Video Coding
+2408.10280,4.2R,skip,C,abs,False,False,,,20,4.2.1 LoRA 변형,NoRA: Nested Low-Rank Adaptation for Efficient Fine-Tuning Large Models
+2408.11795,4.2R,skip,B,abs,False,False,,,12,4.2.4 데이터 효율·선별,EE-MLLM: A Data-Efficient and Compute-Efficient Multimodal Large Language Model
+2409.07267,4.2R,skip,B,ft,False,False,,Chinese Conference on Pattern Recognition and Computer Vision,20,4.2.x 타가지,MiniDrive: More Efficient Vision-Language Models with Multi-Level 2D Features as Text Tokens for Autonomous Driving
+2410.11201,4.2R,skip,C,abs,False,True,20,ICLR,13,4.2.2 어댑터·프롬프트,Tree of Attributes Prompt Learning for Vision-Language Models
+2410.13733,4.2R,skip,C,abs,False,False,,,14,4.2.1 LoRA 변형,Improving Multi-modal Large Language Model through Boosting Vision Capabilities
+2410.15074,4.2R,skip,C,abs,False,False,,ACM MM,37,4.2.x 응용,LLaVA-Ultra: Large Chinese Language and Vision Assistant for Ultrasound
+2410.23822,4.2R,skip,C,abs,False,False,,IEEE International Symposium on Biomedical Imaging,18,4.2.3 PEFT 분석·응용,Parameter-Efficient Fine-Tuning Medical Multimodal Large Language Models for Medical Visual Grounding
+2411.01106,4.2R,skip,C,abs,False,False,,ICLR,29,4.2.x 응용,SV-RAG: LoRA-Contextualizing Adaptation of MLLMs for Long Document Understanding
+2411.15232,4.2R,keep,C,ft,False,True,129,CVPR,41,4.2.2 어댑터·프롬프트,BiomedCoOp: Learning to Prompt for Biomedical Vision-Language Models
+2411.15231,4.2R,skip,C,abs,False,False,,CVPR,14,4.2.5 병합·연합·연속,IterIS: Iterative Inference-Solving Alignment for LoRA Merging
+2412.05148,4.2R,skip,C,abs,False,False,,ICCV,21,4.2.x 응용,LoRA.rar: Learning to Merge LoRAs via Hypernetworks for Subject-Style Conditioned Image Generation
+2412.09936,4.2R,skip,C,abs,False,True,50,,9,4.2.x 응용,CaLoRAify: Calorie Estimation with Visual-Text Pairing and LoRA-Driven Visual Language Models
+2412.14424,4.2R,skip,C,abs,False,False,,AAAI 2025,11,4.2.5 병합·연합·연속,FedPIA -- Permuting and Integrating Adapters leveraging Wasserstein Barycenters for Finetuning Foundation Models in Multi-Modal Federated Learning
+2501.00654,4.2R,skip,C,abs,True,True,22,,31,4.2.4 데이터 효율·선별,ICONS: Influence Consensus for Vision-Language Data Selection
+2502.11740,4.2R,skip,C,abs,False,False,,EMNLP,16,4.2.4 데이터 효율·선별,Mitigating Visual Knowledge Forgetting in MLLM Instruction-tuning via Modality-decoupled Gradient Descent
+2503.06362,4.2R,skip,C,abs,False,False,,Automatic Speech Recognition & Understanding,15,4.2.x 응용,Adaptive Audio-Visual Speech Recognition via Matryoshka-Based Multimodal LLMs
+2503.16945,4.2R,skip,C,abs,False,True,1,ACM Trans. Multim. Comput. Commun. Appl.,9,4.2.x 응용,PE-CLIP: A Parameter-Efficient Fine-Tuning of Vision Language Models for Dynamic Facial Expression Recognition
+2504.01666,4.2R,skip,C,abs,False,False,,CVPR 2025,9,4.2.x 응용,CLIP-SLA: Parameter-Efficient CLIP Adaptation for Continuous Sign Language Recognition
+2504.09426,4.2R,skip,C,abs,False,False,,ICCV,8,4.2.4 데이터 효율·선별,BabyVLM: Data-Efficient Pretraining of VLMs Inspired by Infant Learning
+2504.14117,4.2R,skip,C,abs,False,False,,,25,4.2.3 PEFT 분석·응용,PEFT A2Z: Parameter-Efficient Fine-Tuning Survey for Large Language and Vision Models
+2505.15130,4.2R,skip,C,abs,False,False,,,11,4.2.1 LoRA 변형,Few-Shot Adversarial Low-Rank Fine-Tuning of Vision-Language Models
+2505.23271,4.2R,skip,C,abs,False,True,40,ICML,14,4.2.x 응용,LADA: Scalable Label-Specific CLIP Adapter for Continual Learning
+2506.06600,4.2R,skip,B,abs,False,False,,,10,4.2.x 응용,RARL: Improving Medical VLM Reasoning and Generalization with Reinforcement Learning and LoRA under Data and Hardware Constraints
+2506.11672,4.2R,skip,C,abs,False,False,,ICML,32,4.2.5 병합·연합·연속,Dynamic Mixture of Curriculum LoRA Experts for Continual Multimodal Instruction Tuning
+2506.23903,4.2R,skip,C,abs,False,False,,"IEEE Transactions on Ultrasonics, Ferroelectrics and Frequency Control",8,4.2.x 응용,Grounding DINO-US-SAM: Text-Prompted Multi-Organ Segmentation in Ultrasound with LoRA-Tuned Vision-Language Models
+2507.02859,4.2R,skip,C,abs,False,False,,ICCV,13,4.2.4 데이터 효율·선별,Bootstrapping Grounded Chain-of-Thought in Multimodal LLMs for Data-Efficient Model Adaptation
+2508.00230,4.2R,keep,C,ft,True,False,,ICCV,14,4.2.1 LoRA 변형,Towards Higher Effective Rank in Parameter-efficient Fine-tuning using Khatri--Rao Product
+2508.06202,4.2R,skip,C,abs,False,True,7,AAAI,20,4.2.5 병합·연합·연속,LoRA in LoRA: Towards Parameter-Efficient Architecture Expansion for Continual Visual Instruction Tuning
+2512.24551,4.2R,skip,C,abs,False,True,72,,15,4.2.x 응용,PhyGDPO: Physics-Aware Groupwise Direct Preference Optimization for Physically Consistent Text-to-Video Generation
+2608.07088,4.4,skip,A,abs,False,True,7,,0,시각토큰압축,RoRA: Role-Oriented Regional Allocation for Visual Token Pruning in MLLMs
+2607.22200,4.4,skip,C,abs,False,False,,,0,시각토큰압축,LayoutLite: Token-Level Implicit Layout Analysis for Efficient Document OCR
+2602.04657,4.4,skip,C,abs,False,True,44,,0,시각토큰압축,TRIO: Token Reduction via Inference-Objective Guidance for Efficient Vision-Language Models
+2503.18278,4.4,keep,B,ft,False,False,,CVPR,64,시각토큰압축,TopV: Compatible Token Pruning with Inference Time Optimization for Fast and Low-Memory Multimodal Vision Language Model
+2608.24063,4.4,skip,C,abs,False,True,3,,0,시각토큰압축,VisCache: Visual KV Cache Pruning for Efficient Vision Large Language Model Inference
+2608.10489,4.4,skip,C,abs,False,False,,,0,시각토큰압축,When Vision Becomes Text: Visual Token Pruning via Cross-Modal Residual Guidance in VLMs
+2606.11576,4.4,skip,C,abs,False,False,,,1,시각토큰압축,AVIS: Adaptive Test-Time Scaling for Vision-Language Models
+2607.22586,4.4,skip,C,abs,False,True,0,ACL,0,시각토큰압축,MM-ShiftKV: Decode-Aware Prefill-Stage KV Selection for Multimodal Large Language Models
+2605.29535,4.4,skip,C,abs,False,False,,,0,시각토큰압축,AsymVLM: Asymmetric Token Pruning for Efficient Vision-Language Model Inference
+2605.28115,4.4,skip,C,abs,False,False,,,0,시각토큰압축,CIVIC: End-to-End Sequence Compactness for Efficient Vision-Language Models
+2605.17447,4.4,skip,B,abs,False,False,,,1,시각토큰압축,FastOCR: Dynamic Visual Fixation via KV Cache Pruning for Efficient Document Parsing
+2604.17320,4.4,skip,C,abs,False,False,,,0,시각토큰압축,Towards Joint Quantization and Token Pruning of Vision-Language Models
+2602.15318,4.4,skip,B,abs,False,False,,ACL,4,시각토큰압축,Sparrow: Text-Anchored Window Attention with Visual-Semantic Glimpsing for Speculative Decoding in Video LLMs
+2602.12618,4.4,skip,B,abs,False,False,,BigData Congress [Services Society],1,시각토큰압축,Vision Token Reduction via Attention-Driven Self-Compression for Efficient Multimodal Large Language Models
+2602.01901,4.4,skip,C,abs,False,False,,AAAI,0,시각토큰압축,Q Cache: Visual Attention is Valuable in Less than Half of Decode Layers for Multimodal Large Language Model
+2602.00946,4.4,skip,C,abs,False,False,,,0,시각토큰압축,ConsensusDrop: Fusing Visual and Cross-Modal Saliency for Efficient Vision Language Models
+2510.18269,4.4,skip,C,abs,False,False,,CVPR 2026,41,시각토큰압축,StreamingTOM: Streaming Token Compression for Efficient Video Understanding
+2509.00419,4.4,skip,C,abs,False,False,,,7,시각토큰압축,LightVLM: Acceleraing Large Multimodal Models with Pyramid Token Merging and KV Cache Compression
+2506.01097,4.4,skip,C,abs,False,False,,ICLR 2026,2,시각토큰압축,Task-Related Token Compression in Multimodal Large Language Models from an Explainability Perspective
+2412.04652,4.4,skip,C,abs,False,True,10,,11,시각토큰압축,Cross-Self KV Cache Pruning for Efficient Vision-Language Inference
+2608.01985,4.4,skip,B,abs,False,False,,,1,시각토큰압축,DiffPrune: differentiable information throttling for token pruning in vision-language models
+2606.16067,4.4,skip,B,abs,False,False,,,4,시각토큰압축,Stepwise Token Selection for Efficient Multimodal Large Language Models
+2603.14892,4.4,skip,B,abs,False,False,,,0,시각토큰압축,Balancing Saliency and Coverage: Semantic Prominence-Aware Budgeting for Visual Token Compression in VLMs
+2603.07135,4.4,star,A,ft,False,True,1,,12,시각토큰압축,The Model Knows Which Tokens Matter: Automatic Token Selection via Noise Gating
+2602.23699,4.4,keep,A,ft,False,True,17,ICLR 2026,18,시각토큰압축,"HiDrop: Hierarchical Vision Token Reduction in MLLMs via Late Injection, Concave Pyramid Pruning, and Early Exit"
+2511.12201,4.4,skip,B,abs,False,False,,AAAI,1,KV캐시,OmniSparse: Training-Aware Fine-Grained Sparse Attention for Long-Video MLLMs
+2510.16598,4.4,keep,A,ft,False,True,66,,10,시각토큰압축,VisionSelector: End-to-End Learnable Visual Token Compression for Efficient Multimodal LLMs
+2509.11815,4.4,skip,C,abs,False,True,8,,6,시각토큰압축,SpecVLM: Fast Speculative Decoding in Vision-Language Models
+2508.13305,4.4,skip,A,abs,False,True,,CVPR 2026,16,시각토큰압축,Prune2Drive: A Plug-and-Play Framework for Accelerating Vision-Language Models in Autonomous Driving
+2608.21247,4.4,skip,C,abs,False,False,,,0,시각토큰압축,Just Noticeable Difference Modeling for Token Compression in Vision-Language-Action Models
+2608.02134,4.4,skip,B,abs,False,False,,,0,시각토큰압축,"Messages, Not Tokens: Grounded Coresets for Faithful VLM Compression"
+2608.00345,4.4,skip,C,abs,False,True,3,,1,시각토큰압축,ORCA: ORgan-Centroid Aggregation for Training-Free 3D CT Visual Token Compression
+2607.28627,4.4,skip,C,abs,False,True,17,,0,시각토큰압축,ReToken: One Token to Improve Vision-Language Models for Visual Retrieval
+2607.20981,4.4,skip,C,abs,False,False,,,0,시각토큰압축,"Beyond Independent Optimization: Compression, MoE Routing, and Quantization Interactions in Multimodal Edge Intelligence"
+2606.24165,4.4,skip,C,abs,False,False,,ECCV 2026,1,시각토큰압축,Spectral Evolution-Guided Token Pruning in Multimodal Large Language Models
+2606.12412,4.4,skip,C,abs,False,True,22,,0,시각토큰압축,"Reroute, Don't Remove: Recoverable Visual Token Routing for Vision-Language Models"
+2606.14783,4.4,skip,C,abs,False,False,,,1,시각토큰압축,The Vision Encoder as a Privacy Boundary: Visual-Token Side Channels in Encoder-Free Vision-Language Models
+2606.10759,4.4,skip,C,abs,False,False,,,2,시각토큰압축,miniReranker: Efficient Multimodal Reranking through Visual Cache Reuse and Interaction Sparsity
+2606.00543,4.4,skip,C,abs,False,False,,,0,시각토큰압축,ETC: Extreme Token Compression via Task-aware Visual Information Distillation in VLMs
+2605.31557,4.4,skip,C,abs,False,False,,,1,시각토큰압축,EGOSTREAM: A Diagnostic Benchmark for Streaming Episodic Memory in Egocentric Vision
+2605.19218,4.4,skip,C,abs,False,False,,,0,시각토큰압축,Rotation-Aligned Key Channel Pruning for Efficient Vision-Language Model Inference
+2605.13080,4.4,skip,B,abs,False,False,,,0,시각토큰압축,Learning to See What You Need: Gaze Attention for Multimodal Large Language Models
+2605.04075,4.4,skip,C,abs,False,False,,ACL,3,시각토큰압축,RetentiveKV: State-Space Memory for Uncertainty-Aware Multimodal KV Cache Eviction
+2604.11627,4.4,skip,C,abs,False,False,,,0,시각토큰압축,POINTS-Long: Adaptive Dual-Mode Visual Reasoning in MLLMs
+2603.14549,4.4,skip,C,abs,False,False,,,2,시각토큰압축,ASAP: Attention-Shift-Aware Pruning for Efficient LVLM Inference
+2602.02197,4.4,skip,C,abs,False,False,,,0,시각토큰압축,Hierarchical Adaptive Eviction for KV Cache Management in Multimodal Language Models
+2511.15098,4.4,skip,C,abs,False,True,2,Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognitio,3,시각토큰압축,A Comprehensive Study on Visual Token Redundancy for Discrete Diffusion-based Multimodal Large Language Models
+2510.22765,4.4,skip,C,abs,False,False,,,3,시각토큰압축,Jarvis: Towards Personalized AI Assistant via Personal KV-Cache Retrieval
+2510.00536,4.4,skip,B,abs,False,False,,,11,시각토큰압축,GUI-KV: Efficient GUI Agents via KV Cache with Spatio-Temporal Awareness
+2509.24791,4.4,skip,C,abs,False,False,,NeurIPS,18,시각토큰압축,Vision Function Layer in Multimodal LLMs
+2508.15717,4.4,skip,C,abs,False,False,,,55,시각토큰압축,StreamMem: Query-Agnostic KV Cache Memory for Streaming Video Understanding
+2505.17132,4.4,skip,C,abs,False,True,1,,2,시각토큰압축,Dynamic Token Reweighting for Robust Vision-Language Models
+2504.00557,4.4,skip,C,abs,False,False,,CVPR 2025,16,시각토큰압축,Efficient LLaMA-3.2-Vision by Trimming Cross-attended Visual Features
+2503.23956,4.4,skip,B,abs,False,False,,ICCV,4,시각토큰압축,AirCache: Activating Inter-modal Relevancy KV Cache Compression for Efficient Large Vision-Language Model Inference
+2503.21817,4.4,skip,C,abs,False,False,,ICCV,12,시각토큰압축,Skip-Vision: Efficient and Scalable Acceleration of Vision-Language Models via Adaptive Token Skipping
+2503.10501,4.4,keep,A,ft,False,True,25,,21,시각토큰압축,TokenCarve: Information-Preserving Visual Token Compression in Multimodal Large Language Models
+2502.14504,4.4,skip,C,abs,False,False,,,4,시각토큰압축,PLPHP: Per-Layer Per-Head Vision Token Pruning for Efficient Large Vision-Language Models
+2412.20105,4.4,skip,C,abs,False,False,,,26,시각토큰압축,ST$^3$: Accelerating Multimodal Large Language Model by Spatial-Temporal Visual Token Trimming
+2608.26806,4.4,skip,C,abs,False,True,0,EMNLP 2026,0,시각토큰압축,Multi-Image Visual Token Pruning in Large Visual Language Models
+2608.25332,4.4,skip,C,abs,False,False,,,0,시각토큰압축,Not All Attention Heads Contribute to Critical Visual Token Selection: Head-Aware Pruning Matters More
+2502.11494,4.4,star,A,ft,False,True,122,EMNLP,144,시각토큰압축,Stop Looking for Important Tokens in Multimodal Language Models: Duplication Matters More
+2410.04417,4.4,star,A,ft,False,True,277,ICML,408,시각토큰압축,SparseVLM: Visual Token Sparsification for Efficient Vision-Language Model Inference
+2409.10197,4.4,keep,A,ft,False,True,70,AAAI,146,시각토큰압축,Fit and Prune: Fast and Training-free Visual Token Pruning for Multi-modal Large Language Models
+2406.18139,4.4,star,A,ft,False,True,103,EMNLP,112,KV캐시,LOOK-M: Look-Once Optimization in KV Cache for Efficient Multimodal Long-Context Inference
+2509.22548,4.4,keep,B,ft,False,False,,ICLR 2026,114,KV캐시,JanusVLN: Decoupling Semantics and Spatiality with Dual Implicit Memory for Vision-Language Navigation
+2506.17218,4.4,keep,C,ft,False,True,299,,115,시각토큰압축,Machine Mental Imagery: Empower Multimodal Reasoning with Latent Visual Tokens
+2506.10967,4.4,star,A,ft,False,True,110,NeurIPS,95,시각토큰압축,Beyond Attention or Similarity: Maximizing Conditional Diversity for Token Pruning in MLLMs
+2501.12386,4.4,keep,C,ft,False,True,2389,,219,시각토큰압축,InternVideo2.5: Empowering Video MLLMs with Long and Rich Context Modeling
+2501.00574,4.4,keep,A,ft,False,True,530,,215,시각토큰압축,VideoChat-Flash: Hierarchical Compression for Long-Context Video Modeling
+2412.13303,4.4,star,A,ft,False,True,7418,CVPR,96,시각토큰압축,FastVLM: Efficient Vision Encoding for Vision Language Models
+2412.07679,4.4,skip,C,abs,False,False,,CVPR,99,시각토큰압축,RADIOv2.5: Improved Baselines for Agglomerative Vision Foundation Models
+2412.01818,4.4,star,A,ft,False,True,85,ICCV,150,시각토큰압축,Beyond Text-Visual Attention: Exploiting Visual Cues for Effective Token Pruning in VLMs
+2410.17434,4.4,keep,A,ft,False,True,433,ICML,372,시각토큰압축,LongVU: Spatiotemporal Adaptive Compression for Long Video-Language Understanding
+2403.18293,4.4,keep,B,ft,False,False,,CVPR,182,KV캐시,Efficient Test-Time Adaptation of Vision-Language Models
+2403.06764,4.4,star,A,ft,False,True,599,ECCV,695,시각토큰압축,An Image is Worth 1/2 Tokens After Layer 2: Plug-and-Play Inference Acceleration for Large Vision-Language Models
+2601.22709,4.3,keep,A,ft,False,True,210,ICML 2026,5,양자화,Gated Relational Alignment via Confidence-based Distillation for Efficient VLMs
+2512.08524,4.3,skip,C,abs,False,False,,WACV,0,양자화,Beyond Real Weights: Hypercomplex Representations for Stable Quantization
+2506.13038,4.3,skip,C,abs,False,False,,ACM MM,4,양자화,HKD4VLM: A Progressive Hybrid Knowledge Distillation Framework for Robust Multimodal Hallucination and Factuality Detection in VLMs
+2408.15305,4.3,skip,C,abs,False,False,,ICML 2024,1,양자화,Parameter-Efficient Quantized Mixture-of-Experts Meets Vision-Language Instruction Tuning for Semiconductor Electron Micrograph Analysis
+2608.21487,4.3,skip,C,abs,False,False,,,0,증류,TASSO: TAsk-Specific Subspace Optimization for Continual Learning of Vision-Language Models
+2606.15920,4.3,skip,C,abs,False,False,,,4,증류,OmniOPSD: Rationale-Privileged On-Policy Self-Distillation for Affective Computing
+2606.12018,4.3,skip,C,abs,False,True,0,,1,증류,MODF-SIR: A Multi-agent Omni-modal Distilled Framework for Social Intelligence Reasoning
+2606.00573,4.3,skip,C,abs,False,False,,,0,양자화,LASER: Loss-Aware Singular-value Decomposition and Rank Allocation for Efficient Low-Precision Vision-Language Models
+2605.26533,4.3,skip,B,abs,False,False,,,0,양자화,A Hybrid Vision-Language Architecture for Automated Defect Reasoning and Report Generation in Industrial Inspection
+2604.24380,4.3,skip,A,ft,False,True,,International Journal of Computer Vision,2,증류,"Structural Pruning of Large Vision Language Models: A Comprehensive Study on Pruning Dynamics, Recovery, and Data Efficiency"
+2604.06912,4.3,skip,C,abs,False,False,,,3,증류,Q-Zoom: Query-Aware Adaptive Perception for Efficient Multimodal Large Language Models
+2604.02570,4.3,skip,C,abs,False,True,4,,2,양자화,WSVD: Weighted Low-Rank Approximation for Fast and Efficient Execution of Low-Precision Vision-Language Models
+2603.23914,4.3,skip,C,abs,False,False,,,0,양자화,Attention-aware Inference Optimizations for Large Vision-Language Models with Memory-efficient Decoding
+2603.21010,4.3,skip,B,abs,False,False,,,4,양자화,SkinCLIP-VL: Consistency-Aware Vision-Language Learning for Multimodal Skin Cancer Diagnosis
+2603.04800,4.3,keep,A,ft,False,True,52,CVPR 2026,3,양자화,MASQuant: Modality-Aware Smoothing Quantization for Multimodal Large Language Models
+2602.12936,4.3,skip,C,abs,False,False,,,1,증류,Unleashing MLLMs on the Edge: A Unified Framework for Cross-Modal ReID via Adaptive SVD Distillation
+2601.21187,4.3,skip,C,abs,False,False,,ICML 2026,0,증류,FRISM: Fine-Grained Reasoning Injection via Subspace-Level Model Merging for Vision-Language Models
+2601.18765,4.3,skip,C,abs,False,False,,,2,증류,Goal-oriented Communication for Fast and Robust Robotic Fault Detection and Recovery
+2601.11464,4.3,skip,C,abs,False,False,,AAAI,0,양자화,MHA2MLA-VLM: Enabling DeepSeek's Economical Multi-Head Latent Attention across Vision-Language Models
+2511.12079,4.3,skip,C,abs,False,False,,AAAI,0,양자화,Point Cloud Quantization through Multimodal Prompting for 3D Understanding
+2511.07957,4.3,skip,C,abs,False,False,,Research in Astronomy and Astrophysics,1,양자화,In-Orbit GRB Identification Using LLM-based model for the CXPD CubeSat
+2510.16292,4.3,star,A,ft,False,True,29,NeurIPS,11,양자화,QSVD: Efficient Low-rank Approximation for Unified Query-Key-Value Weight Compression in Low-Precision Vision-Language Models
+2509.21173,4.3,skip,C,abs,False,False,,ICML 2026,2,양자화,Less Precise Can Be More Reliable: A Systematic Evaluation of Quantization's Impact on VLMs Beyond Accuracy
+2501.01709,4.3,keep,C,ft,False,True,55,CVPR,38,증류,MoVE-KD: Knowledge Distillation for VLMs with Mixture of Visual Encoders
+2410.19552,4.3,skip,C,abs,False,False,,,18,양자화,GeoLLaVA: Efficient Fine-Tuned Vision-Language Models for Temporal Change Detection in Remote Sensing
+2511.19518,4.3,skip,B,abs,False,False,,,2,저랭크,Towards Efficient VLMs: Information-Theoretic Driven Compression via Adaptive Structural Pruning
+2503.16843,4.3,skip,C,abs,False,False,,CVPR,19,저랭크,LoRASculpt: Sculpting LoRA for Harmonizing General and Specialized Knowledge in Multimodal Large Language Models
+2608.30935,4.3,skip,C,abs,False,False,,,0,양자화,LightNav-0: Eliciting VLM Spatial Intelligence for Generalist Embodied Navigation
+2609.01657,4.3,skip,A,abs,False,True,,,0,양자화,NeoMME: A Single-Tower Multimodal-Native Multilingual Foundation Encoder for Efficient Fine-Tuning and Inference
+2608.30510,4.3,skip,C,abs,False,True,0,ECCV 2026,0,양자화,Lot Machine: Multimodal Lot Extraction from Auction Catalogs
+2608.28145,4.3,skip,C,abs,False,True,0,,0,증류,Dual-Stream Semantic Guidance with Prototype Anchor Calibration for Source-Fully-Free Adaptation of Vision-Language Models
+2608.26581,4.3,skip,C,abs,False,False,,,0,양자화,Activation Outliers Matter: Robust Recovery for Quantized Multimodal LLMs
+2608.25356,4.3,skip,C,abs,False,False,,,1,증류,Where to Look Matters: On-Policy Self-Distillation for Long-Video Understanding
+2608.22963,4.3,skip,C,abs,False,False,,,0,증류,Buried in Textual Debt: Context Pruning with Visual Evidence Preservation for MLLM Agents
+2608.24935,4.3,skip,A,abs,False,True,0,,0,양자화,A Lightweight Multimodal Vision-Language Framework for Early-Stage Anatomical Green Fruit Classification in Commercial Orchards
+2608.22359,4.3,skip,C,abs,False,True,0,,0,양자화,Pre-Decoding Acoustic Triage for Budgeted Vision-Language Captioning of Untrimmed Egocentric Video
+2608.21134,4.3,skip,B,abs,False,False,,,0,양자화,Llama-Mobile: Efficient 2.7-Bit Quantization of VLMs
+2608.21445,4.3,skip,C,abs,False,False,,,0,증류,ViTexSZ: Heterogeneous Vision-Text Knowledge Distillation for EEG Seizure Detection
+2608.16284,4.3,skip,C,abs,False,False,,,0,증류,TransAnyText: Translating Arbitrary Text in E-commerce Images via Structured Visual Generation
+2608.14260,4.3,skip,C,abs,False,False,,,0,양자화,Personalized Digital Semantic Communication for Image Transmission with Vision-Language Models
+2608.14016,4.3,skip,B,abs,False,False,,,0,양자화,Content Based Video Narration of Gameplay with Vision Language Models
+2608.10864,4.3,skip,C,abs,False,False,,,0,증류,Multi-View Relational Distillation for Spatial Reasoning with Vision-Language Models
+2608.10484,4.3,skip,C,abs,False,False,,,0,양자화,Lost in Reconstruction: Aligning Action Representations with Language in Vision-Language-Action Models
+2608.10932,4.3,skip,C,abs,False,False,,,0,증류,Temporally Grounded Compositional Camera Motion Understanding via Geometric Knowledge Distillation
+2608.09931,4.3,skip,C,abs,False,False,,,1,증류,Perception Before Supervision: Self-Contained Visual Distillation from Counterfactual Blind Spots
+2608.06959,4.3,skip,C,abs,False,False,,,0,양자화,"Summarize First, Download Later: Onboard VLMs for Bandwidth-Efficient Earth Observation"
+2608.05131,4.3,skip,C,abs,False,True,25,,2,증류,OPD-V: Visual On-Policy Self-Distillation with Modality Balance
+2608.04175,4.3,skip,B,abs,False,False,,,0,양자화,TriCLE: Tri-Modal Vision-Language Reasoning for Edge-Deployed Fine-Grained Clustering
+2608.02449,4.3,skip,B,abs,False,False,,,0,양자화,MoRAL: Sensor-Grounded BEV Reasoning for Compact VLMs toward Edge-Oriented Autonomous Driving
+2607.29052,4.3,skip,C,abs,False,False,,,0,증류,Outcome-Guided Distillation: A Teacher-Student Framework to Advance VLM Reasoning in Autonomous Driving
+2607.25527,4.3,skip,C,abs,False,False,,,0,양자화,Argus-Unified: Towards A Compact and Economical Unified Model for Image Understanding and Generation
+2607.24440,4.3,skip,C,abs,False,True,0,,0,양자화,Bigger or Cheaper? Scale and Quantization Effects on Uncertainty Signals in Vision-Language Models Under Image Degradation
+2607.24447,4.3,skip,C,abs,False,False,,,0,증류,RP-OPSD: Resolution-Privileged On-Policy Self-Distillation for Multimodal Large Language Models
+2607.23125,4.3,skip,C,abs,False,False,,,0,증류,Self-Boosting Vision-Language Models with Noisy Student On-Policy Self-Distillation
+2607.21670,4.3,skip,C,abs,False,False,,,1,양자화,Ordered Action Tokens for Visuomotor Policy Learning
+2607.18850,4.3,skip,C,abs,False,False,,,1,증류,OPD-IAD: From Language Judgment to Industrial Anomaly Detection via On-Policy Self-Distillation
+2607.12787,4.3,keep,A,ft,False,True,33,MM2026,1,증류,Do We Really Need Multimodal Emotion Language Models Larger Than 1B Parameters?
+2607.03624,4.3,skip,C,abs,False,False,,ICML 2026,0,증류,RADIO1D: Elastic Representations for Condensed Vision Modeling
+2607.02907,4.3,skip,C,abs,False,False,,ECCV 2026,1,증류,ProLaViT: Learning Progressive Latent Visual Thoughts in Structured Latent Space
+2607.01115,4.3,skip,C,abs,False,False,,2025 28th International Conference on Computer and Information Technology (ICCIT,0,양자화,Towards Developing a Multimodal Chat Assistant for University Stakeholders: RAG-based Approach
+2510.12798,4.3,skip,C,abs,False,False,,,73,양자화,Detect Anything via Next Point Prediction
+2504.17432,4.3,skip,C,abs,False,False,,ACM MM,85,증류,Breaking the Modality Barrier: Universal Embedding Learning with Multimodal LLMs
+2504.07934,4.3,keep,C,ft,False,True,105,NeurIPS,151,증류,SoTA with Less: MCTS-Guided Sample Selection for Data-Efficient Visual Reasoning Self-Improvement
+2503.12067,4.3,skip,C,abs,False,True,81,TMLR,97,증류,A Comprehensive Survey on Knowledge Distillation
+2503.10631,4.3,skip,C,abs,False,False,,,203,양자화,HybridVLA: Collaborative Diffusion and Autoregression in a Unified Vision-Language-Action Model
+2502.20321,4.3,skip,C,abs,False,True,532,NeurIPS,155,양자화,UniTok: A Unified Tokenizer for Visual Generation and Understanding
+2502.14786,4.3,skip,C,abs,False,True,3541,,1268,증류,"SigLIP 2: Multilingual Vision-Language Encoders with Improved Semantic Understanding, Localization, and Dense Features"
+2412.08635,4.3,skip,C,abs,False,False,,,58,양자화,Multimodal Latent Language Modeling with Next-Token Diffusion
+2411.19650,4.3,skip,C,abs,False,False,,,446,양자화,CogACT: A Foundational Vision-Language-Action Model for Synergizing Cognition and Action in Robotic Manipulation
+2411.07184,4.3,skip,C,abs,False,False,,,103,증류,SAMPart3D: Segment Any Part in 3D Objects
+2410.08119,4.3,keep,A,ft,False,True,103,NeurIPS,51,양자화,Q-VLM: Post-training Quantization for Large Vision-Language Models
+2408.09251,4.3,skip,C,abs,False,False,,Transportation Research Part C: Emerging Technologies,63,증류,V2X-VLM: End-to-End V2X Cooperative Autonomous Driving Through Large Vision-Language Models
+2408.05517,4.3,keep,C,ft,False,True,15691,AAAI,440,양자화,SWIFT:A Scalable lightWeight Infrastructure for Fine-Tuning
+2406.00510,4.3,skip,C,abs,False,False,,CVPR,51,증류,Learning Background Prompts to Discover Implicit Knowledge for Open Vocabulary Object Detection
+2403.02781,4.3,skip,C,abs,False,True,347,CVPR,138,증류,PromptKD: Unsupervised Prompt Distillation for Vision-Language Models
+2607.22708,4.5,skip,B,abs,False,False,,,1,실단말,StepX-Edge: An On-Device UI Vision-Language Model via Architecture-Training-Deployment Co-Design
+2606.27906,4.5,skip,B,abs,False,False,,MobiSys Workshops,0,실단말,Phase Matters: Characterizing Heterogeneous Vision-Language Inference on a Mobile SoC
+2512.16531,4.5,skip,C,abs,False,False,,,3,실단말,Scaling Laws for Energy Efficiency of Local LLMs
+2509.15076,4.5,skip,C,abs,False,False,,ICCV Workshop 2025,2,실단말,Forecasting and Visualizing Air Quality from Sky Images with Vision-Language Models
+2511.18151,4.5,skip,C,abs,False,False,,,4,실단말,AVERY: Intent-Driven Adaptive VLM Split Computing via Embodied Self-Awareness for Efficient Disaster Response Systems
+2510.11496,4.5,skip,A,abs,False,True,,,6,실단말,AndesVL Technical Report: An Efficient Mobile-side Multimodal Large Language Model
+2508.01540,4.5,skip,B,abs,False,False,,,1,실단말,MagicVL-2B: Empowering Vision-Language Models on Mobile Devices with Lightweight Visual Encoders via Curriculum Learning
+2607.08029,4.5,skip,C,abs,False,False,,ICML 2026,0,실단말,Rethinking Small VLM Quantization: From Component-Wise Analysis to Hardware-Aware Edge Deployment
+2509.04162,4.5,skip,C,abs,False,False,,,2,가속기,Real Time FPGA Based Transformers & VLMs for Vision Tasks: SOTA Designs and Optimizations
+2507.15428,4.5,skip,B,abs,False,False,,,5,실단말,EgoPrune: Efficient Token Pruning for Egomotion Video Reasoning in Embodied Agent
+2503.06019,4.5,skip,C,abs,False,False,,ICCV,3,실단말,GenieBlue: Integrating both Linguistic and Multimodal Capabilities for Large Language Models on Mobile Devices
+2608.29208,4.5,skip,C,abs,False,False,,IROS 2026,0,실단말,AdaVLA: Adaptive Step Flow Matching for Training-free Acceleration of Vision-Language-Action Models
+2608.15614,4.5,skip,B,abs,False,False,,ECCV 2026,0,실단말,EgoGazeLite: On-Device Egocentric Gaze Prediction for Token-Efficient Multimodal LLM Video Input
+2608.07861,4.5,skip,C,abs,False,False,,,0,실단말,How Much Does It Cost to Answer My Question? Benchmarking Cloud VLM-based VQA Systems
+2606.27871,4.5,skip,B,abs,False,False,,,1,실단말,LocalNav: Distilling Frontier VLMs and Embodied RL for On-Device Object Goal Navigation
+2606.11106,4.5,skip,A,abs,False,True,2,,0,실단말,FADA: Accessible fetal ultrasound interpretation and annotation with a selectively distilled unified vision-language model
+2605.29534,4.5,skip,C,abs,False,False,,,1,실단말,UI-KOBE: Knowledge-Oriented Behavior Exploration for Lightweight Graph-Guided GUI Agents
+2605.29299,4.5,skip,B,abs,False,False,,,0,실단말,Pocket-Dentist: On-Device Dental Image Understanding via Efficient Multimodal Large Language Models
+2605.26546,4.5,skip,C,abs,False,False,,,0,실단말,MobileExplorer: Accelerating On-Device Inference for Mobile GUI Agents via Online Exploration
+2605.21421,4.5,skip,B,abs,False,False,,,0,실단말,"AIGaitor: Privacy-preserving and cloud-free motion analysis for everyone, using edge computing"
+2604.27476,4.5,skip,C,abs,False,False,,,1,실단말,EdgeFM: Efficient Edge Inference for Vision-Language Models
+2604.23941,4.5,skip,B,abs,False,False,,,0,실단말,GoClick: Lightweight Element Grounding Model for Autonomous GUI Interaction
+2603.29777,4.5,skip,C,abs,False,False,,,0,실단말,From Skeletons to Semantics: Design and Deployment of a Hybrid Edge-Based Action Detection System for Public Safety
+2603.29631,4.5,skip,C,abs,False,False,,,0,실단말,"Storing Less, Finding More: How Novelty Filtering Improves Cross-Modal Retrieval on Edge Cameras"
+2603.06569,4.5,keep,C,ft,False,True,211,,4,실단말,Penguin-VL: Exploring the Efficiency Limits of VLM with LLM-based Vision Encoders
+2603.05421,4.5,skip,B,abs,False,False,,,0,실단말,DARK: Diagonal-Anchored Repulsive Knowledge Distillation for Vision-Language Models under Extreme Compression
+2601.20262,4.5,skip,C,abs,False,False,,,6,실단말,Shallow-π: Knowledge Distillation for Flow-based VLAs
+2512.14052,4.5,skip,C,abs,False,False,,,2,온디바이스,HyperVL: An Efficient and Dynamic Multimodal Large Language Model for Edge Devices
+2601.19908,4.5,skip,B,abs,False,False,,"Design, Automation and Test in Europe",5,실단말,CHIME: Chiplet-based Heterogeneous Near-Memory Acceleration for Edge Multimodal LLM Inference
+2512.04763,4.5,skip,C,abs,False,False,,,6,실단말,MemLoRA: Distilling Expert Adapters for On-Device Memory Systems
+2511.20795,4.5,skip,C,abs,False,False,,,0,실단말,Revisiting KRISP: A Lightweight Reproduction and Analysis of Knowledge-Enhanced Vision-Language Models
+2511.18692,4.5,skip,C,abs,False,False,,NeurIPS,0,실단말,VLM in a flash: I/O-Efficient Sparsification of Vision-Language Model via Neuron Chunking
+2511.08914,4.5,star,A,ft,False,True,30,,4,실단말,SPEED-Q: Staged Processing with Enhanced Distillation towards Efficient Low-bit On-device VLM Quantization
+2510.25122,4.5,keep,B,ft,False,False,,,14,실단말,NanoVLA: Routing Decoupled Vision-Language Understanding for Nano-sized Generalist Robotic Policies
+2509.21259,4.5,keep,B,ft,False,False,,IEEE Transactions on Network Science and Engineering,11,실단말,Semantic Edge-Cloud Communication for Real-Time Urban Traffic Surveillance with ViT and LLMs over Mobile Networks
+2508.13439,4.5,skip,B,abs,False,False,,,0,실단말,Structured Prompting and Multi-Agent Knowledge Distillation for Traffic Video Interpretation and Risk Inference
+2508.11690,4.5,skip,C,abs,False,False,,2025 International Conference on Intelligent Systems: Theories and Applications ,3,실단말,Real Time Child Abduction And Detection System
+2508.04469,4.5,skip,C,abs,False,False,,ICCV Workshop 2025,3,실단말,FrEVL: Leveraging Frozen Pretrained Embeddings for Efficient Vision-Language Understanding
+2508.01057,4.5,skip,C,abs,False,False,,,5,실단말,Edge-Based Multimodal Sensor Data Fusion with Vision Language Models (VLMs) for Real-time Autonomous Vehicle Accident Avoidance
+2507.08505,4.5,skip,C,abs,False,False,,,4,가속기,Efficient Deployment of Vision-Language Models on Mobile Devices: A Case Study on OnePlus 13R
+2505.21594,4.5,keep,B,ft,False,False,,TMLR,17,실단말,Fast and Cost-effective Speculative Edge-Cloud Decoding with Early Exits
+2504.05299,4.5,skip,B,abs,False,False,,,290,온디바이스,SmolVLM: Redefining small and efficient multimodal models
+2503.06029,4.5,skip,C,abs,False,True,7,EMNLP,2,실단말,SmartBench: Is Your LLM Truly a Good Chinese Smartphone Assistant?
+2502.14780,4.5,skip,B,abs,False,False,,IJCNLP-AACL,8,실단말,ReVision: A Dataset and Baseline VLM for Privacy-Preserving Task-Oriented Visual Instruction Rewriting
+2411.10234,4.5,skip,C,abs,False,False,,,22,실단말,"Generative AI in Multimodal User Interfaces: Trends, Challenges, and Cross-Platform Adaptability"
+2608.07427,4.5,skip,C,abs,False,False,,,0,온디바이스,A Picture is Worth a Thousand Tokens: How Vision Language Models Cut AI Energy Costs While Improving Accuracy
+2604.24447,4.5,skip,B,abs,False,False,,,5,온디바이스,Characterizing Vision-Language-Action Models across XPUs: Constraints and Acceleration for On-Robot Deployment
+2510.27256,4.5,skip,C,abs,False,False,,,2,온디바이스,ECVL-ROUTER: Scenario-Aware Routing for Vision-Language Models
+2502.10419,4.5,skip,B,abs,False,False,,Computer Communications,18,온디바이스,A Hybrid Swarm Intelligence Approach for Optimizing Multimodal Large Language Models Deployment in Edge-Cloud-based Federated Learning Environments
+2408.15518,4.5,skip,A,abs,False,True,,,8,온디바이스,Squid: Long Context as a New Modality for Energy-Efficient On-Device Language Models
+2608.30649,4.5,skip,C,abs,False,False,,Findings of the,0,실단말,"Where Identity Lives: Localized, Retain-Free Identity Unlearning in Multimodal Large Language Models"
+2608.25037,4.5,skip,C,abs,False,False,,,0,실단말,"Retrieve, Match, Escalate: Accurate and Scalable Product Linking with VLM-Distilled Cross-Encoders and Agentic VLMs"
+2608.14015,4.5,skip,C,abs,False,False,,,1,실단말,MedClaw: Heuristic Agent Harness for Long-Horizon Surgical Video Reasoning
+2608.06938,4.5,skip,C,abs,False,False,,,0,실단말,"Debias in Text, Believe Your Eyes: Text-Anchored Cross-Modal Transfer for Visual Counter-Commonsense Reasoning"
+2607.23702,4.5,skip,C,abs,False,False,,,0,실단말,"Try Once, Then Optimal: De-Redundified Procedure Memory for Cross-Episode Exploration Amortization"
+2607.13429,4.5,skip,C,abs,False,True,33,,2,실단말,Generalizable VLA Finetuning via Representation Anchoring and Language-Action Alignment
+2607.16303,4.5,skip,C,abs,False,True,,,1,실단말,Med-OPD: Improving Medical Vision-Language Models via Evidence-Aware On-Policy Distillation
+2607.12659,4.5,star,A,ft,False,True,37,,2,실단말,Jetson-PI: Towards Onboard Real-Time Robot Control via Foresight-Aligned Asynchronous Inference
+2607.03245,4.5,skip,C,abs,False,False,,,0,실단말,PhenoNEST: A Neuro-Symbolic Framework for Ontology-Aware Multimodal Plant Phenotyping and Trait Discovery
+2606.27608,4.5,skip,C,abs,False,False,,,2,실단말,Qwen-Image-2.0-RL Technical Report
+2509.07666,4.5,skip,C,abs,False,True,27,EMNLP,24,실단말,MoLoRAG: Bootstrapping Document Understanding via Multi-modal Logic-aware Retrieval
+2504.14239,4.5,skip,C,abs,False,True,66,,142,실단말,InfiGUI-R1: Advancing Multimodal GUI Agents from Reactive Actors to Deliberative Reasoners
+2408.01800,4.5,skip,A,ft,False,True,26478,,1276,실단말,MiniCPM-V: A GPT-4V Level MLLM on Your Phone
+2404.09011,4.5,skip,C,abs,False,False,,CVPR,27,실단말,PracticalDG: Perturbation Distillation on Vision-Language Models for Hybrid Domain Generalization
+2402.17766,4.5,skip,C,abs,False,False,,ECCV,181,실단말,ShapeLLM: Universal 3D Object Understanding for Embodied Interaction
+2604.27393,4.5,star,B,ft,False,True,26483,,34,온디바이스,MiniCPM-o 4.5: Towards Real-Time Full-Duplex Omni-Modal Interaction
+2512.15431,4.5,skip,C,abs,False,False,,,35,온디바이스,Step-GUI Technical Report
+2508.11737,4.5,skip,B,abs,False,False,,,89,온디바이스,Ovis2.5 Technical Report
+2505.00693,4.5,skip,C,abs,False,False,,CVPR,25,온디바이스,Robotic Visual Instruction
+2503.12533,4.5,skip,C,abs,False,False,,,26,온디바이스,Being-0: A Humanoid Robotic Agent with Vision-Language Models and Modular Skills
+2410.16261,4.5,keep,C,ft,False,True,10160,Visual Intelligence,138,온디바이스,Mini-InternVL: A Flexible-Transfer Pocket Multimodal Model with 5% Parameters and 90% Performance
+2410.14803,4.5,skip,B,abs,False,False,,ICLR,70,온디바이스,DistRL: An Asynchronous Distributed Reinforcement Learning Framework for On-Device Control Agents
+2409.05865,4.5,skip,C,abs,False,False,,ICRA,57,온디바이스,Robot Utility Models: General Policies for Zero-Shot Deployment in New Environments
+2407.11771,4.5,skip,C,abs,False,True,4,Information Fusion,27,온디바이스,XEdgeAI: A Human-centered Industrial Inspection Framework with Data-centric Explainable Edge AI Approach
+2510.17111,4.5,skip,C,abs,False,False,,,26,메모리,Efficient Vision-Language-Action Models for Embodied Manipulation: A Systematic Survey
+2503.20384,4.1,skip,C,abs,False,False,,AAAI,81,MoE,MoLe-VLA: Dynamic Layer-skipping Vision Language Action Model via Mixture-of-Layers for Efficient Robot Manipulation
+2603.21232,4.1,skip,C,abs,False,False,,,3,MoE,QMoP: Query Guided Mixture-of-Projector for Efficient Visual Token Compression
+2603.20492,4.1,skip,B,abs,False,False,,,0,MoE,AE-LLM: Adaptive Efficiency Optimization for Large Language Models
+2608.17402,4.1,star,A,ft,False,True,28,ECCV 2026,1,MoE,MoE-ViE: Mixture of Experts Vision Encoder for Efficient Image and Video Understanding
+2608.16188,4.1,skip,C,abs,False,False,,"ACM SIGMOBILE International Conference on Mobile Systems, Applications, and Serv",0,MoE,AdaSprite: Resource-efficient Online Co-Adaptation for V2I Systems Under Large-scale Data Drifts
+2608.00232,4.1,skip,B,abs,False,False,,,0,조기종료,Real-Time Visual Obstruction Detection in Surgical Augmented Reality
+2607.28269,4.1,skip,B,abs,False,False,,,0,MoE,Theia: Large-Scale Multimodal Captioning and Automated Validation of the Incidents1M Dataset for Data-Free Distillation
+2607.16742,4.1,skip,C,abs,False,False,,TCSVT,4,MoE,Multi-Dimensional Quality Assessment for AI-Generated Human-Centric Videos: Dataset and Model
+2607.02930,4.1,skip,C,abs,False,True,6,,1,MoE,CL-Anomaly: Layer-Adaptive Mixture-of-Experts with Multimodal Large Language Model for Continual Learning in Anomaly Detection
+2607.02010,4.1,skip,C,abs,False,False,,,0,MoE,InduceKV: Fixed-Footprint Continual Adaptation of Multimodal LLMs via Inducing KV Memories
+2607.01436,4.1,skip,B,abs,False,False,,,0,MoE,Discrete Diffusion Language Models for Interactive Radiology Report Drafting
+2606.17118,4.1,skip,C,abs,False,False,,EMNLP 2026,0,MoE,MODE: Modality-Decomposed Expert-Level Mixed-Precision Quantization for MoE Multimodal LLMs
+2606.02951,4.1,skip,C,abs,False,True,7,IEEE/ACM International Conference on Human-Robot Interaction,0,MoE,SCOPE: Real-Time Natural Language Camera Agent at the Edge
+2605.26415,4.1,skip,B,abs,False,False,,,0,조기종료,The Rescue Effect: Spatio-Semantic Early Exit Bypasses Quantization Collapse in CLIP
+2605.23477,4.1,skip,C,abs,False,False,,Robotics,1,MoE,Semantically Structured Mixture-of-Experts for Compositional Robotic Manipulation
+2605.19301,4.1,skip,C,abs,False,True,0,,0,MoE,iGSP:Implicit Gradient Subspace Projection for Efficient Continual Learning of Vision-Language Models
+2605.20247,4.1,skip,C,abs,False,False,,,3,MoE,CP-MoE: Consistency-Preserving Mixture-of-Experts for Continual Learning
+2605.08560,4.1,skip,C,abs,False,True,,,1,MoE,ZAYA1-VL-8B Technical Report
+2605.05225,4.1,skip,C,abs,False,False,,ACL,2,MoE,MACS: Modality-Aware Capacity Scaling for Efficient Multimodal MoE Inference
+2604.02710,4.1,skip,C,abs,False,True,11,,5,MoE,"V2X-QA: A Comprehensive Reasoning Dataset and Benchmark for Multimodal Large Language Models in Autonomous Driving Across Ego, Infrastructure, and Cooperative Views"
+2603.04772,4.1,skip,C,abs,False,False,,,4,MoE,TSEmbed: Unlocking Task Scaling in Universal Multimodal Embeddings
+2602.01037,4.1,skip,C,abs,False,True,8,,2,MoE,VEQ: Modality-Adaptive Quantization for MoE Vision-Language Models
+2601.13020,4.1,skip,C,abs,False,True,0,ACL,4,MoE,PASs-MoE: Mitigating Misaligned Co-drift among Router and Experts via Pathway Activation Subspaces for Continual Learning
+2601.03011,4.1,skip,C,abs,False,False,,,0,MoE,ReCCur: A Recursive Corner-Case Curation Framework for Robust Vision-Language Understanding in Open and Edge Scenarios
+2512.14757,4.1,skip,C,abs,False,False,,,6,MoE,SocialNav-MoE: A Mixture-of-Experts Vision Language Model for Socially Compliant Navigation with Reinforcement Fine-Tuning
+2511.17885,4.1,skip,C,abs,False,False,,,1,MoE,FastMMoE: Accelerating Multimodal Large Language Models through Dynamic Expert Activation and Routing-Aware Token Pruning
+2511.14099,4.1,skip,C,abs,False,False,,,3,MoE,FAPE-IR: Frequency-Aware Planning and Execution Framework for All-in-One Image Restoration
+2511.01463,4.1,skip,C,abs,False,False,,,4,MoE,HMVLM: Human Motion-Vision-Lanuage Model via MoE LoRA
+2510.10962,4.1,skip,C,abs,False,False,,TPAMI,1,MoE,MC#: Mixture Compressor for Mixture-of-Experts Large Models
+2510.01795,4.1,keep,B,ft,False,False,,IEEE International Conference on Embedded and Real-Time Computing Systems and Ap,0,조기종료,Nav-EE: Navigation-Guided Early Exiting for Efficient Vision-Language Models in Autonomous Driving
+2509.11662,4.1,skip,C,abs,False,False,,,2,MoE,MindVL: Towards Efficient and Effective Training of Multimodal Large Language Models on Ascend NPUs
+2508.17595,4.1,skip,B,abs,False,False,,ICCV Workshop 2025,1,MoE,TinyGiantVLM: A Lightweight Vision-Language Architecture for Spatial Reasoning under Resource Constraints
+2508.17467,4.1,skip,C,abs,False,False,,SC25-W: Workshops of the International Conference for High Performance Computing,12,MoE,MoE-Inference-Bench: Performance Evaluation of Mixture of Expert Large Language and Vision Models
+2508.17205,4.1,skip,C,abs,False,False,,Applied Computing and Intelligence,4,MoE,Multi-Agent Visual-Language Reasoning for Comprehensive Highway Scene Understanding
+2508.02134,4.1,skip,C,abs,False,True,3,ICCV,3,MoE,Free-MoRef: Instantly Multiplexing Context Perception Capabilities of Video-MLLMs within Single Inference
+2506.14009,4.1,skip,C,abs,False,False,,RA-L,21,MoE,GRaD-Nav++: Vision-Language Model Enabled Visual Drone Navigation with Gaussian Radiance Fields and Differentiable Dynamics
+2506.09638,4.1,skip,C,abs,False,False,,,4,인코더경량화,FedVLMBench: Benchmarking Federated Fine-Tuning of Vision-Language Models
+2506.02041,4.1,skip,C,abs,False,False,,ACL,18,MoE,Enhancing Multimodal Continual Instruction Tuning with BranchLoRA
+2504.21831,4.1,skip,C,abs,False,False,,,1,조기종료,Early Exit and Multi Stage Knowledge Distillation in VLMs for Video Summarization
+2504.07491,4.1,keep,C,ft,False,True,1227,,331,MoE,Kimi-VL Technical Report
+2503.12446,4.1,skip,C,abs,False,False,,WACV,6,인코더경량화,BREEN: Bridge Data-Efficient Encoder-Free Multimodal Learning with Learnable Queries
+2412.13180,4.1,skip,C,abs,False,False,,ICCV,43,조기종료,Feather the Throttle: Revisiting Visual Token Pruning for Vision-Language Model Acceleration
+2412.10302,4.1,keep,A,ft,False,True,5374,,695,MoE,DeepSeek-VL2: Mixture-of-Experts Vision-Language Models for Advanced Multimodal Understanding
+2412.03324,4.1,skip,C,abs,False,False,,CVPR,47,조기종료,A Stitch in Time Saves Nine: Small VLM is a Precise Guidance for Accelerating Large VLMs
+2409.07267,4.1,keep,B,ft,False,False,,Chinese Conference on Pattern Recognition and Computer Vision,20,MoE,MiniDrive: More Efficient Vision-Language Models with Multi-Level 2D Features as Text Tokens for Autonomous Driving
+2408.15881,4.1,skip,C,ft,False,True,227,ICLR,54,MoE,LLaVA-MoD: Making LLaVA Tiny via MoE Knowledge Distillation
+2405.11273,4.1,keep,C,ft,False,True,1116,TPAMI,174,MoE,Uni-MoE: Scaling Unified Multimodal LLMs with Mixture of Experts
+2404.04883,4.1,skip,C,abs,False,True,25,,36,MoE,Mixture of Low-rank Experts for Transferable AI-Generated Image Detection
+2401.16160,4.1,skip,C,abs,False,False,,,105,MoE,LLaVA-MoLE: Sparse Mixture of LoRA Experts for Mitigating Data Conflicts in Instruction Finetuning MLLMs
+2608.01614,4.1,skip,B,abs,False,False,,,0,SSM,Linear Multi-Timescale Retention as a Memory-Efficient Vision-Language Bridge
+2607.09029,4.1,skip,C,abs,False,False,,,0,SSM,MOSAIC: Adaptive Inter-layer Composition for Efficient Heterogeneous Vision-Language Models
+2606.31383,4.1,skip,C,abs,False,False,,,0,커넥터설계,MS-Resampler: Multi-Scope Visual Resampling for Efficient Multimodal LLMs
+2606.00390,4.1,skip,C,abs,False,True,,,0,SSM,Zamba2-VL Technical Report
+2605.17093,4.1,skip,C,abs,False,False,,,0,SSM,HEED: Density-Weighted Residual Alignment for Hybrid Vision-Language Model Distillation
+2605.15300,4.1,skip,A,abs,False,True,10,ICML 2026,0,커넥터설계,Deep Pre-Alignment for VLMs
+2603.09632,4.1,skip,C,abs,False,False,,,0,커넥터설계,X-GS: An Extensible Framework for Perceiving and Thinking via 3D Gaussian Splatting
+2509.18154,4.1,star,A,ft,False,True,26432,,163,커넥터설계,"MiniCPM-V 4.5: Cooking Efficient MLLMs via Architecture, Data, and Training Recipe"
+2407.19832,4.1,skip,C,abs,False,False,,,17,SSM,ML-Mamba: Efficient Multi-Modal Large Language Model Utilizing Mamba-2
+2403.14520,4.1,star,A,ft,False,True,294,AAAI,138,SSM,Cobra: Extending Mamba to Multi-Modal Large Language Model for Efficient Inference
+2510.14543,4.2,skip,C,abs,False,False,,,5,LoRA,Exploring Cross-Modal Flows for Few-Shot Learning
+2501.15040,4.2,skip,C,abs,False,False,,,3,LoRA,Complementary Subspace Low-Rank Adaptation of Vision-Language Models for Few-Shot Classification
+2405.18541,4.2,keep,C,ft,False,True,299,CVPR 2024,166,LoRA,Low-Rank Few-Shot Adaptation of Vision-Language Models
+2608.17514,4.2,skip,C,abs,False,False,,,0,LoRA,SE-MoLoRA: Shared-Expert LoRA Adapters for Domain-Specific Photographic Assessment
+2606.29579,4.2,skip,C,abs,False,False,,ECCV 2026,0,LoRA,ScAle: Attention Head Scaling as a Minimal Adapter for Spatial Reasoning in Vision Language Models
+2603.26008,4.2,skip,C,abs,False,True,7,CVPR 2026,0,LoRA,FairLLaVA: Fairness-Aware Parameter-Efficient Fine-Tuning for Large Vision-Language Assistants
+2512.21508,4.2,skip,B,abs,False,False,,2025 28th International Conference on Computer and Information Technology (ICCIT,0,LoRA,Fixed-Budget Parameter-Efficient Training with Frozen Encoders Improves Multimodal Chest X-Ray Classification
+2512.19219,4.2,skip,C,abs,False,False,,,0,LoRA,Selective LoRA for Visual Tokens and Attention Heads
+2508.07819,4.2,skip,C,abs,False,True,10,ICASSP,1,LoRA,ACD-CLIP: Decoupling Representation and Dynamic Fusion for Zero-Shot Anomaly Detection
+2507.19679,4.2,skip,B,abs,False,False,,ICCV Workshop 2025,1,LoRA,Efficient Learning for Product Attributes with Compact Multimodal Models
+2504.01666,4.2,skip,C,abs,False,False,,CVPR 2025,9,LoRA,CLIP-SLA: Parameter-Efficient CLIP Adaptation for Continuous Sign Language Recognition
+2603.25841,4.2,skip,C,abs,False,True,4,,0,LoRA,GazeQwen: Lightweight Gaze-Conditioned LLM Modulation for Streaming Video Understanding
+2511.06225,4.2,skip,C,abs,False,False,,,5,LoRA,MoRA: Missing Modality Low-Rank Adaptation for Visual Recognition
+2509.20792,4.2,skip,C,abs,False,False,,,1,LoRA,DAC-LoRA: Dynamic Adversarial Curriculum for Efficient and Robust Few-Shot Adaptation
+2507.21521,4.2,skip,C,abs,False,False,,IEEE International Joint Conference on Neural Network,0,LoRA,Optimizing Active Learning in Vision-Language Models via Parameter-Efficient Uncertainty Calibration
+2505.15130,4.2,skip,C,abs,False,False,,,11,LoRA,Few-Shot Adversarial Low-Rank Fine-Tuning of Vision-Language Models
+2608.28138,4.2,skip,C,abs,False,False,,,0,LoRA,Token-Budget Distillation: Transferring Full-Token Semantics to Compressed Video Vision-Language Models
+2608.27867,4.2,skip,C,abs,False,True,2,Findings of EMNLP 2026,0,LoRA,CoRe-MoE: Compact Reusable MoE for Continual Multimodal Instruction Tuning
+2608.19355,4.2,skip,C,abs,False,False,,,1,PEFT,GRACE: Grounded Reasoning via Adapter Composition and Evidence-Aware Calibration for Educational Visual Question Answering
+2608.17723,4.2,skip,B,abs,False,False,,,0,LoRA,"Vision-Language Models for Analog Gauge Reading: An Empirical Study of Specialization, Transfer and Reliability"
+2608.03428,4.2,skip,C,abs,False,True,,,0,LoRA,OliveGemma: A 3 Billion Visual Language Model for Recognising the Mediterranean & European Diet
+2607.15661,4.2,skip,C,abs,False,True,1,,0,LoRA,Model Merging for Medical LVLMs: A Benchmark and a Winner-Take-All Approach
+2607.02158,4.2,skip,B,abs,False,False,,,1,LoRA,Efficient PEFT Methods with Adaptive Checkpointing for Vision Models and VLMs on Resource Constrained Consumer-GPUs
+2606.23487,4.2,skip,C,abs,False,False,,,0,LoRA,"CADRE: Stable, Parameter Efficient Adaptation of Medical Vision Language Models with Bounded Forgetting and Prior Drift"
+2606.11854,4.2,skip,C,abs,False,False,,,0,LoRA,Fine-tuning Multi-modal LLMs with ART: Art-based Reinforcement Training
+2606.02002,4.2,skip,C,abs,False,False,,,0,LoRA,Parameter-Efficient Adaptation of a Multi-Stream Vision-Language Framework for Blind Image Quality Assessment
+2605.28642,4.2,skip,B,abs,False,False,,,0,PEFT,Parameter- and Bandwidth-Efficient Edge--cloud Many-to-Many Speech-to-Text Translation
+2605.24792,4.2,skip,C,abs,False,False,,2025 IEEE EMBS International Conference on Biomedical and Health Informatics (BH,0,LoRA,Parameter-Efficient VLMs for Gastrointestinal Endoscopy: Medical Image Generation and Clinical Visual Question Answering
+2605.22487,4.2,skip,C,abs,False,True,3,,1,LoRA,"Polite on the Surface, Broken in Practice: A Curated Dataset for Fixing Generation and Register Failures in Low-Resource Bangla Text Generation"
+2605.22869,4.2,skip,C,abs,False,True,1,,0,LoRA,FuRA: Full-Rank Parameter-Efficient Fine-Tuning with Spectral Preconditioning
+2605.09384,4.2,skip,A,abs,False,True,0,,0,LoRA,LiteMedCoT-VL: Parameter-Efficient Adaptation for Medical Visual Question Answering
+2605.07562,4.2,skip,C,abs,False,False,,,1,LoRA,Beyond GSD-as-Token: Continuous Scale Conditioning for Remote Sensing VLMs
+2605.06173,4.2,skip,C,abs,False,False,,,0,LoRA,Retina-RAG: Retrieval-Augmented Vision-Language Modeling for Joint Retinal Diagnosis and Clinical Report Generation
+2605.06175,4.2,keep,C,ft,False,True,21,,1,LoRA,VLA-GSE: Boosting Parameter-Efficient Fine-Tuning in VLA with Generalized and Specialized Experts
+2604.13710,4.2,skip,C,abs,False,True,2,ICML,0,LoRA,SLQ: Bridging Modalities via Shared Latent Queries for Retrieval with Frozen MLLMs
+2604.05839,4.2,skip,C,abs,False,False,,ICLR 2026,3,LoRA,Vision-Guided Iterative Refinement for Frontend Code Generation
+2604.03476,4.2,skip,C,abs,False,False,,ACS Omega,2,LoRA,Fine-tuning DeepSeek-OCR-2 for Molecular Structure Recognition
+2604.03157,4.2,skip,B,abs,False,False,,KDD 2026,0,LoRA,Chart-RL: Policy Optimization Reinforcement Learning for Enhanced Visual Reasoning in Chart Question Answering with Vision Language Models
+2604.01310,4.2,skip,C,abs,False,False,,,2,LoRA,Sparse Spectral LoRA: Routed Experts for Medical VLMs
+2603.26330,4.2,skip,C,abs,False,False,,,2,LoRA,Mitigating the Reasoning Tax in Vision-Language Fine-Tuning with Input-Adaptive Depth Aggregation
+2603.22276,4.2,skip,A,abs,False,True,4,,0,LoRA,Scaling DoRA: High-Rank Adaptation via Factored Norms and Fused Kernels
+2603.17079,4.2,skip,C,abs,False,True,8,,1,LoRA,ACE-LoRA: Graph-Attentive Context Enhancement for Parameter-Efficient Adaptation of Medical Vision-Language Models
+2603.14228,4.2,skip,C,abs,False,False,,ACL,13,LoRA,Not All Directions Matter: Towards Structured and Task-Aware Low-Rank Model Adaptation
+2603.00720,4.2,skip,C,abs,False,False,,,0,LoRA,MARS: Harmonizing Multimodal Convergence via Adaptive Rank Search
+2602.22462,4.2,skip,C,abs,False,False,,,0,LoRA,MammoWise: Multi-Model Local RAG Pipeline for Mammography Report Generation
+2602.03822,4.2,skip,C,abs,False,False,,The Web Conference,2,LoRA,"They Said Memes Were Harmless-We Found the Ones That Hurt: Decoding Jokes, Symbols, and Cultural References"
+2602.01522,4.2,skip,C,abs,False,False,,,0,LoRA,When Is Rank-1 Enough? Geometry-Guided Initialization for Parameter-Efficient Fine-Tuning
+2601.22828,4.2,star,B,ft,False,True,5,AAAI,2,LoRA,Decomposing and Composing: Towards Efficient Vision-Language Continual Learning via Rank-1 Expert Pool in a Single LoRA
+2601.18493,4.2,skip,C,abs,False,False,,ECCV 2026,1,LoRA,DisasterInsight: A Multimodal Benchmark for Function-Aware and Grounded Disaster Assessment
+2601.16895,4.2,skip,C,abs,False,False,,,1,LoRA,Evaluating Large Vision-language Models for Surgical Tool Detection
+2601.16549,4.2,skip,C,abs,False,False,,2026 International Conference on Advances in Artificial Intelligence and Machine,6,LoRA,LLM is Not All You Need: A Systematic Evaluation of ML vs. Foundation Models for text and image based Medical Classification
+2601.09116,4.2,skip,C,abs,False,False,,,1,LoRA,LP-LLM: End-to-End Real-World Degraded License Plate Text Recognition via Large Multimodal Models
+2601.03915,4.2,skip,C,abs,False,False,,,1,LoRA,HemBLIP: A Vision-Language Model for Interpretable Leukemia Cell Morphology Analysis
+2512.23073,4.2,skip,C,abs,False,True,1,,0,LoRA,Rethinking Fine-Tuning: Unlocking Hidden Capabilities in Vision-Language Models
+2512.20674,4.2,skip,C,abs,False,False,,IEEE International Joint Conference on Neural Network,0,LoRA,HyDRA: Hierarchical and Dynamic Rank Adaptation for Mobile Vision Language Model
+2512.10750,4.2,skip,C,abs,False,False,,,1,LoRA,LDP: Parameter-Efficient Fine-Tuning of Multimodal LLM for Medical Report Generation
+2512.02584,4.2,skip,C,abs,False,False,,IEEE International Conference on Multimedia and Expo,3,LoRA,Stepwise Schema-Guided Prompting Framework with Parameter Efficient Instruction Tuning for Multimedia Event Extraction
+2512.00878,4.2,skip,C,abs,False,False,,,,LoRA,Less is More: Resource-Efficient Low-Rank Adaptation
+2512.00597,4.2,skip,B,abs,False,False,,,0,LoRA,Scaling Down to Scale Up: Towards Operationally-Efficient and Deployable Clinical Models via Cross-Modal Low-Rank Adaptation for Medical Vision-Language Models
+2511.21760,4.2,skip,C,abs,False,True,10,,11,LoRA,fMRI-LM: Towards a Universal Foundation Model for Language-Aligned fMRI Understanding
+2412.12359,4.2,skip,C,abs,False,False,,ACL,58,LoRA,LLaVA Steering: Visual Instruction Tuning with 500x Fewer Parameters through Modality Linear Representation-Steering
+2405.01413,4.2,star,A,ft,False,True,134,ACM MM,69,LoRA,MiniGPT-3D: Efficiently Aligning 3D Point Clouds with Large Language Models using 2D Priors
+2404.00656,4.2,skip,C,abs,False,False,,EMNLP,157,LoRA,WavLLM: Towards Robust and Adaptive Speech Large Language Model
+2402.09353,4.2,keep,A,ft,False,True,999,ICML,1041,LoRA,DoRA: Weight-Decomposed Low-Rank Adaptation
+2502.09838,4.2,skip,C,abs,False,True,1662,ICML,132,LoRA,HealthGPT: A Medical Large Vision-Language Model for Unifying Comprehension and Generation via Heterogeneous Knowledge Adaptation
+2409.12319,4.2,skip,C,abs,False,True,67,ICASSP,71,LoRA,Large Language Models are Strong Audio-Visual Speech Recognition Learners
+2407.05342,4.2,skip,C,abs,False,True,56,ECCV,59,PEFT,Mind the Interference: Retaining Pre-trained Knowledge in Parameter Efficient Continual Learning of Vision-Language Models
+2407.03320,4.2,skip,C,abs,False,True,2928,,209,LoRA,InternLM-XComposer-2.5: A Versatile Large Vision Language Model Supporting Long-Contextual Input and Output
+2407.02157,4.2,skip,C,abs,False,False,,ACM MM,54,PEFT,FineCLIPER: Multi-modal Fine-grained CLIP for Dynamic Facial Expression Recognition with AdaptERs
+2406.11909,4.2,keep,C,ft,False,True,126,EMNLP,63,LoRA,Mixture-of-Subspaces in Low-Rank Adaptation
+2404.14047,4.2,keep,A,ft,False,True,200,Visual Intelligence,100,LoRA,An empirical study of LLaMA3 quantization: from LLMs to MLLMs
+2405.10948,4.2,skip,C,abs,False,False,,ICLR 2025,52,LoRA,Surgical-LVLM: Learning to Adapt Large Vision-Language Model for Grounded Visual Question Answering in Robotic Surgery
+2401.16420,4.2,keep,C,ft,False,True,2928,,392,LoRA,InternLM-XComposer2: Mastering Free-form Text-Image Composition and Comprehension in Vision-Language Large Model
+2503.07065,4.2,skip,B,abs,False,False,,,79,데이터효율,Boosting the Generalization and Reasoning of Vision Language Models with Curriculum Reinforcement Learning
+2403.03174,4.2,skip,C,abs,False,False,,Robotics: Science and Systems Conference,161,프롬프트튜닝,MOKA: Open-World Robotic Manipulation through Mark-Based Visual Prompting

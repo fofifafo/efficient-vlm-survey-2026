@@ -1,0 +1,78 @@
+{
+ "n": 100,
+ "ttft_ms_median": 1187.4770619999708,
+ "ttft_ms_p90": 1197.7551319996564,
+ "total_ms_median": 1416.8323699998382,
+ "peak_alloc_gb": 4.592726230621338,
+ "peak_sys_used_gb": 6.897930145263672,
+ "energy_j_per_sample": 26.54826892707134,
+ "mean_power_w": 17.489311718056612,
+ "n_vis_tokens": 128.0,
+ "method": "vispruner4",
+ "setting": "default",
+ "meta": {
+  "name": "VisPruner",
+  "setting": "default",
+  "visual_token_num": 128,
+  "important_ratio": 0.5,
+  "quant": "nf4-4bit (bnb)"
+ },
+ "device": "Orin",
+ "torch": "2.11.0",
+ "idle_power_w": 3.879904,
+ "load_s": 189.21482987699983,
+ "power_mode": "NV Power Mode: MAXN_SUPER",
+ "runs": [
+  {
+   "run": 0,
+   "n": 95,
+   "ttft_ms_median": 1182.1509840001454,
+   "ttft_ms_p90": 1191.9920340001227,
+   "total_ms_median": 1414.143103999777,
+   "peak_alloc_gb": 4.592726230621338,
+   "peak_sys_used_gb": 6.911640167236328,
+   "energy_j_per_sample": 27.76023616485968,
+   "mean_power_w": 17.091467658577486,
+   "rail_mean_w": {
+    "VDD_IN": 17.091467658577486,
+    "VDD_CPU_GPU_CV": 8.213745348383716,
+    "VDD_SOC": 4.360392067649609
+   },
+   "n_vis_tokens": 128
+  },
+  {
+   "run": 1,
+   "n": 100,
+   "ttft_ms_median": 1187.4770619999708,
+   "ttft_ms_p90": 1197.7551319996564,
+   "total_ms_median": 1418.3297475001382,
+   "peak_alloc_gb": 4.592726230621338,
+   "peak_sys_used_gb": 6.893978118896484,
+   "energy_j_per_sample": 26.54278176493393,
+   "mean_power_w": 17.489311718056612,
+   "rail_mean_w": {
+    "VDD_IN": 17.489311718056612,
+    "VDD_CPU_GPU_CV": 8.439034200540894,
+    "VDD_SOC": 4.464890481683323
+   },
+   "n_vis_tokens": 128.0
+  },
+  {
+   "run": 2,
+   "n": 100,
+   "ttft_ms_median": 1188.8963304998015,
+   "ttft_ms_p90": 1199.596491000193,
+   "total_ms_median": 1416.8323699998382,
+   "peak_alloc_gb": 4.592726230621338,
+   "peak_sys_used_gb": 6.897930145263672,
+   "energy_j_per_sample": 26.54826892707134,
+   "mean_power_w": 17.509669062441475,
+   "rail_mean_w": {
+    "VDD_IN": 17.509669062441475,
+    "VDD_CPU_GPU_CV": 8.465682680445017,
+    "VDD_SOC": 4.469840510757461
+   },
+   "n_vis_tokens": 128.0
+  }
+ ]
+}

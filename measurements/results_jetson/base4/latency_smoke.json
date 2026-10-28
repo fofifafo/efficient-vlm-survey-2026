@@ -1,0 +1,43 @@
+{
+ "n": 5,
+ "ttft_ms_median": 1942.8760159999001,
+ "ttft_ms_p90": 1948.8344070005041,
+ "total_ms_median": 2168.5300930002995,
+ "peak_alloc_gb": 5.014151573181152,
+ "peak_sys_used_gb": 7.119464874267578,
+ "energy_j_per_sample": 91.24412165662248,
+ "mean_power_w": 14.93040303253097,
+ "n_vis_tokens": 576,
+ "method": "base4",
+ "setting": "smoke",
+ "meta": {
+  "name": "LLaVA-1.5-7B",
+  "setting": "smoke",
+  "quant": "nf4-4bit (bnb)",
+  "prompt": "vicuna_v1"
+ },
+ "device": "Orin",
+ "torch": "2.11.0",
+ "idle_power_w": 3.620096,
+ "load_s": 191.67481949100056,
+ "power_mode": "NV Power Mode: MAXN_SUPER",
+ "runs": [
+  {
+   "run": 0,
+   "n": 5,
+   "ttft_ms_median": 1942.8760159999001,
+   "ttft_ms_p90": 1948.8344070005041,
+   "total_ms_median": 2168.5300930002995,
+   "peak_alloc_gb": 5.014151573181152,
+   "peak_sys_used_gb": 7.119464874267578,
+   "energy_j_per_sample": 91.24412165662248,
+   "mean_power_w": 14.93040303253097,
+   "rail_mean_w": {
+    "VDD_IN": 14.93040303253097,
+    "VDD_CPU_GPU_CV": 7.073604296964284,
+    "VDD_SOC": 3.776384340651392
+   },
+   "n_vis_tokens": 576
+  }
+ ]
+}

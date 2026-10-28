@@ -1,0 +1,77 @@
+{
+ "n": 500,
+ "ttft_ms_median": 55.29804599996169,
+ "ttft_ms_p90": 91.17390999995223,
+ "total_ms_median": 91.32373850002296,
+ "peak_vram_gb": 13.52430772781372,
+ "energy_j_per_sample": 22.176605083816444,
+ "mean_power_w": 189.73910477726434,
+ "n_vis_tokens": 64.0,
+ "method": "vispruner",
+ "setting": "r889",
+ "meta": {
+  "name": "VisPruner",
+  "setting": "r889",
+  "visual_token_num": 64,
+  "important_ratio": 0.5
+ },
+ "gpu": "NVIDIA GeForce RTX 5080",
+ "torch": "2.11.0+cu128",
+ "runs": [
+  {
+   "run": 0,
+   "n": 495,
+   "ttft_ms_median": 54.91843599997992,
+   "ttft_ms_p90": 84.83842700002242,
+   "total_ms_median": 91.47295900004337,
+   "peak_vram_gb": 13.52430772781372,
+   "energy_j_per_sample": 21.995949851551806,
+   "mean_power_w": 185.1632791261646,
+   "n_vis_tokens": 64
+  },
+  {
+   "run": 1,
+   "n": 500,
+   "ttft_ms_median": 55.01260600004798,
+   "ttft_ms_p90": 80.58312999992268,
+   "total_ms_median": 86.29371649999484,
+   "peak_vram_gb": 13.52430772781372,
+   "energy_j_per_sample": 21.928944576131933,
+   "mean_power_w": 192.6807776640958,
+   "n_vis_tokens": 64.0
+  },
+  {
+   "run": 2,
+   "n": 500,
+   "ttft_ms_median": 55.73966050002355,
+   "ttft_ms_p90": 96.98975699996026,
+   "total_ms_median": 91.32373850002296,
+   "peak_vram_gb": 13.52430772781372,
+   "energy_j_per_sample": 22.326977406230572,
+   "mean_power_w": 189.73910477726434,
+   "n_vis_tokens": 64.0
+  },
+  {
+   "run": 3,
+   "n": 500,
+   "ttft_ms_median": 55.394863000174155,
+   "ttft_ms_p90": 91.17390999995223,
+   "total_ms_median": 87.14837950003584,
+   "peak_vram_gb": 13.52430772781372,
+   "energy_j_per_sample": 22.176605083816444,
+   "mean_power_w": 193.22253352499217,
+   "n_vis_tokens": 64.0
+  },
+  {
+   "run": 4,
+   "n": 500,
+   "ttft_ms_median": 55.29804599996169,
+   "ttft_ms_p90": 109.2129640001076,
+   "total_ms_median": 94.32508550003149,
+   "peak_vram_gb": 13.52430772781372,
+   "energy_j_per_sample": 22.440981919294178,
+   "mean_power_w": 187.54721444478366,
+   "n_vis_tokens": 64.0
+  }
+ ]
+}
