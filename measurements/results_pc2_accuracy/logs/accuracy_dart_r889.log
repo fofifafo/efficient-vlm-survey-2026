@@ -1,0 +1,17 @@
+You are using a model of type llava to instantiate a model of type llava_llama. This is not supported for all configurations of models and can yield errors.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.30s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.25it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.14it/s]
+Using the latest cached version of the dataset since lmms-lab/GQA couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'testdev_balanced_instructions' at /home/yc2008/vlmbench/models/hf/datasets/lmms-lab___gqa/testdev_balanced_instructions/0.0.0/a6e72d6e1b912da88af8b2f9eba05d5ea8ec2dd8 (last modified on Fri Oct  2 03:54:04 2026).
+Using the latest cached version of the dataset since lmms-lab/GQA couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'testdev_balanced_images' at /home/yc2008/vlmbench/models/hf/datasets/lmms-lab___gqa/testdev_balanced_images/0.0.0/a6e72d6e1b912da88af8b2f9eba05d5ea8ec2dd8 (last modified on Fri Oct  2 03:54:16 2026).
+gqa: +12578 preds in 22.6 min -> /home/yc2008/vlmbench/results_acc16/dart/acc_r889/preds_gqa.jsonl
+Using the latest cached version of the dataset since lmms-lab/POPE couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'default' at /home/yc2008/vlmbench/models/hf/datasets/lmms-lab___pope/default/0.0.0/4db1276663dfa5eb8ad16a52d24c31a09e470896 (last modified on Fri Oct  2 03:54:55 2026).
+pope: +9000 preds in 14.8 min -> /home/yc2008/vlmbench/results_acc16/dart/acc_r889/preds_pope.jsonl
+Using the latest cached version of the dataset since lmms-lab/MME couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'default' at /home/yc2008/vlmbench/models/hf/datasets/lmms-lab___mme/default/0.0.0/d6c9023f017b564f7b3ccccf5348166bce8fdbcd (last modified on Fri Oct  2 04:10:33 2026).
+mme: +2374 preds in 4.8 min -> /home/yc2008/vlmbench/results_acc16/dart/acc_r889/preds_mme.jsonl
+gqa {'acc': 0.5637, 'n': 12578}
+pope {'acc': 0.7908, 'f1': 0.7421, 'yes_ratio': 0.3112, 'n': 9000}
+mme {'perception_total': 1420.4, 'cognition_total': 354.3}
+saved /home/yc2008/vlmbench/results_acc16/dart/acc_r889/accuracy.json

@@ -1,0 +1,292 @@
+{
+ "unfilled_A": [],
+ "kappa_A_Q1": 1.0,
+ "agree_A_Q1": 100.0,
+ "kappa_A_Q2": 1.0,
+ "agree_A_Q2": 100.0,
+ "kappa_B_loose": 1.0,
+ "agree_B_loose": 100.0,
+ "kappa_B_strict": 1.0,
+ "agree_B_strict": 100.0,
+ "n_disagreements": 0,
+ "precision": {
+  "4.1.2024": {
+   "strict_prec": 84.6,
+   "strict_ci": [
+    57.8,
+    95.7
+   ],
+   "strict_n": 13,
+   "loose_prec": 96.0,
+   "loose_n": 25
+  },
+  "4.1.2026": {
+   "strict_prec": 69.2,
+   "strict_ci": [
+    42.4,
+    87.3
+   ],
+   "strict_n": 13,
+   "loose_prec": 75.5,
+   "loose_n": 25
+  },
+  "4.1.all": {
+   "strict_prec": 76.9,
+   "strict_ci": [
+    57.9,
+    89.0
+   ],
+   "strict_n": 26,
+   "loose_prec": 82.0,
+   "loose_n": 50
+  },
+  "4.2.2024": {
+   "strict_prec": 84.6,
+   "strict_ci": [
+    57.8,
+    95.7
+   ],
+   "strict_n": 13,
+   "loose_prec": 81.6,
+   "loose_n": 25
+  },
+  "4.2.2026": {
+   "strict_prec": 69.2,
+   "strict_ci": [
+    42.4,
+    87.3
+   ],
+   "strict_n": 13,
+   "loose_prec": 79.0,
+   "loose_n": 25
+  },
+  "4.2.all": {
+   "strict_prec": 76.9,
+   "strict_ci": [
+    57.9,
+    89.0
+   ],
+   "strict_n": 26,
+   "loose_prec": 80.0,
+   "loose_n": 50
+  },
+  "4.3.2024": {
+   "strict_prec": 15.4,
+   "strict_ci": [
+    4.3,
+    42.2
+   ],
+   "strict_n": 13,
+   "loose_prec": 29.2,
+   "loose_n": 25
+  },
+  "4.3.2026": {
+   "strict_prec": 46.2,
+   "strict_ci": [
+    23.2,
+    70.9
+   ],
+   "strict_n": 13,
+   "loose_prec": 44.8,
+   "loose_n": 25
+  },
+  "4.3.all": {
+   "strict_prec": 30.8,
+   "strict_ci": [
+    16.5,
+    50.0
+   ],
+   "strict_n": 26,
+   "loose_prec": 40.8,
+   "loose_n": 50
+  },
+  "4.4.2024": {
+   "strict_prec": 92.3,
+   "strict_ci": [
+    66.7,
+    98.6
+   ],
+   "strict_n": 13,
+   "loose_prec": 84.2,
+   "loose_n": 25
+  },
+  "4.4.2026": {
+   "strict_prec": 100.0,
+   "strict_ci": [
+    77.2,
+    100.0
+   ],
+   "strict_n": 13,
+   "loose_prec": 85.0,
+   "loose_n": 25
+  },
+  "4.4.all": {
+   "strict_prec": 96.2,
+   "strict_ci": [
+    81.1,
+    99.3
+   ],
+   "strict_n": 26,
+   "loose_prec": 84.9,
+   "loose_n": 50
+  },
+  "4.5.2024": {
+   "strict_prec": 15.4,
+   "strict_ci": [
+    4.3,
+    42.2
+   ],
+   "strict_n": 13,
+   "loose_prec": 43.7,
+   "loose_n": 17
+  },
+  "4.5.2026": {
+   "strict_prec": 53.8,
+   "strict_ci": [
+    29.1,
+    76.8
+   ],
+   "strict_n": 13,
+   "loose_prec": 56.7,
+   "loose_n": 20
+  },
+  "4.5.all": {
+   "strict_prec": 34.6,
+   "strict_ci": [
+    19.4,
+    53.8
+   ],
+   "strict_n": 26,
+   "loose_prec": 53.3,
+   "loose_n": 37
+  },
+  "4.6.2024": {
+   "strict_prec": 69.2,
+   "strict_ci": [
+    42.4,
+    87.3
+   ],
+   "strict_n": 13,
+   "loose_prec": 81.0,
+   "loose_n": 14
+  },
+  "4.6.2026": {
+   "strict_prec": 92.3,
+   "strict_ci": [
+    66.7,
+    98.6
+   ],
+   "strict_n": 13,
+   "loose_prec": 86.7,
+   "loose_n": 19
+  },
+  "4.6.all": {
+   "strict_prec": 80.8,
+   "strict_ci": [
+    62.1,
+    91.5
+   ],
+   "strict_n": 26,
+   "loose_prec": 85.8,
+   "loose_n": 33
+  }
+ },
+ "recall_pool": {
+  "4.1.loose": {
+   "n_pos": 7,
+   "recall": 42.9,
+   "ci": [
+    15.8,
+    75.0
+   ]
+  },
+  "4.1.strict": {
+   "n_pos": 4,
+   "recall": 25.0,
+   "ci": [
+    4.6,
+    69.9
+   ]
+  },
+  "4.2.loose": {
+   "n_pos": 30,
+   "recall": 90.0,
+   "ci": [
+    74.4,
+    96.5
+   ]
+  },
+  "4.2.strict": {
+   "n_pos": 13,
+   "recall": 69.2,
+   "ci": [
+    42.4,
+    87.3
+   ]
+  },
+  "4.3.loose": {
+   "n_pos": 14,
+   "recall": 64.3,
+   "ci": [
+    38.8,
+    83.7
+   ]
+  },
+  "4.3.strict": {
+   "n_pos": 7,
+   "recall": 42.9,
+   "ci": [
+    15.8,
+    75.0
+   ]
+  },
+  "4.4.loose": {
+   "n_pos": 26,
+   "recall": 80.8,
+   "ci": [
+    62.1,
+    91.5
+   ]
+  },
+  "4.4.strict": {
+   "n_pos": 21,
+   "recall": 61.9,
+   "ci": [
+    40.9,
+    79.2
+   ]
+  },
+  "4.5.loose": {
+   "n_pos": 8,
+   "recall": 87.5,
+   "ci": [
+    52.9,
+    97.8
+   ]
+  },
+  "4.5.strict": {
+   "n_pos": 0,
+   "recall": null,
+   "ci": [
+    null,
+    null
+   ]
+  },
+  "4.6.loose": {
+   "n_pos": 29,
+   "recall": 51.7,
+   "ci": [
+    34.4,
+    68.6
+   ]
+  },
+  "4.6.strict": {
+   "n_pos": 26,
+   "recall": 19.2,
+   "ci": [
+    8.5,
+    37.9
+   ]
+  }
+ }
+}

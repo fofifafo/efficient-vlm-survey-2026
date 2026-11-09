@@ -1,0 +1,68 @@
+== PC2 FastV start 10/04 16:14  BENCH=/home/yc2008/bench_pc1
+
+[notice] A new release of pip is available: 24.0 -> 26.2.1
+[notice] To update, run: python -m pip install --upgrade pip
+/home/yc2008/miniconda3/envs/vlmbench/lib/python3.11/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+tokenizers 0.13.3 torch 2.11.0+cu128
+  import pynvml  # type: ignore[import]
+transformers 4.31.0 /home/yc2008/vlmbench/repos/FastV/src/transformers/src/transformers/__init__.py
+streamer ok
+llava ok /home/yc2008/vlmbench/repos/FastV/src/LLaVA/llava/__init__.py True
+fast_v hooks in modeling_llama: 30
+tokenizer ok 32000
+/home/yc2008/miniconda3/envs/vlmbench/lib/python3.11/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+shared env: patched lines found 0
+shared env restored; original lines: 3
+[notice] A new release of pip is available: 24.0 -> 26.2.1
+[notice] To update, run: python -m pip install --upgrade pip
+/home/yc2008/miniconda3/envs/vlmbench/lib/python3.11/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+venv transformers at: /home/yc2008/venv_fastv/lib/python3.11/site-packages/transformers/models/llama/modeling_llama.py
+venv occurrences: 3
+venv patched: 3
+/home/yc2008/miniconda3/envs/vlmbench/lib/python3.11/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+venv ok 4.37.2 0.15.1
+FastV_kv built
+119:                K = getattr(self.config, 'fastv_k', 3)            # bench: config 로 조정 (저자 기본 3)
+120:                rank = getattr(self.config, 'fastv_rank', 288)      # bench: 유지 토큰 수 (기본 576*0.5)
+125:                    top_attention_rank_index = image_attention_score.topk(rank).indices + 35
+133:                if decoder_layer.self_attn.layer_idx == K - 1 and seq_length > 1:   # bench: 프리필에서만, 캐시 미사용 탐침
+138:                        past_key_value=None,
+34:from .fastv_kvcache import FastVLlamaModel
+35:class LlavaLlamaModel(LlavaMetaModel, FastVLlamaModel):   # FastV kv-cache (저자 README 4단계)
+/home/yc2008/miniconda3/envs/vlmbench/lib/python3.11/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/yc2008/miniconda3/envs/vlmbench/lib/python3.11/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+patch check: shared env 0 (must be 0) | venv 3 (must be 3) | venv file /home/yc2008/venv_fastv/lib/python3.11/site-packages/transformers/models/llama/modeling_llama.py
+== smoke fastv default 16:14
+   smoke OK: SUMMARY {'n': 15, 'ttft_ms_median': 94.695, 'ttft_ms_p90': 95.751, 'total_ms_median': 125.387, 'peak_vram_gb': 13.685, 'energy_j_per_sample': 35.842, 'mean_power_w': 146.997, 'n_vis_tokens': 288, 'met
+== full fastv default 16:14
+SUMMARY {'n': 500, 'ttft_ms_median': 92.756, 'ttft_ms_p90': 94.575, 'total_ms_median': 123.182, 'peak_vram_gb': 13.692, 'energy_j_per_sample': 33.376, 'mean_power_w': 237.9, 'n_vis_tokens': 288.0, 'method': 'fastv', 'set
+== full fastv r889 16:20
+SUMMARY {'n': 500, 'ttft_ms_median': 58.126, 'ttft_ms_p90': 66.969, 'total_ms_median': 94.104, 'peak_vram_gb': 13.469, 'energy_j_per_sample': 23.544, 'mean_power_w': 220.593, 'n_vis_tokens': 64.0, 'method': 'fastv', 'set
+DONE queue
+== latency done 10/04 16:25
+== acc fastv default 10/04 16:25
+gqa: +12578 preds in 29.6 min -> /home/yc2008/vlmbench/results/fastv/acc_default/preds_gqa.jsonl
+pope: +9000 preds in 19.5 min -> /home/yc2008/vlmbench/results/fastv/acc_default/preds_pope.jsonl
+textvqa: +5000 preds in 16.7 min -> /home/yc2008/vlmbench/results/fastv/acc_default/preds_textvqa.jsonl
+mme: +2374 preds in 6.1 min -> /home/yc2008/vlmbench/results/fastv/acc_default/preds_mme.jsonl
+gqa {'acc': 0.6024, 'n': 12578}
+pope {'acc': 0.8509, 'f1': 0.8323, 'yes_ratio': 0.3889, 'n': 9000}
+textvqa {'acc': 0.6033, 'n': 5000}
+mme {'perception_total': 1518.3, 'cognition_total': 315.7}
+== acc fastv r889 10/04 17:37
+gqa: +12578 preds in 22.7 min -> /home/yc2008/vlmbench/results/fastv/acc_r889/preds_gqa.jsonl
+pope: +9000 preds in 14.2 min -> /home/yc2008/vlmbench/results/fastv/acc_r889/preds_pope.jsonl
+textvqa: +5000 preds in 14.1 min -> /home/yc2008/vlmbench/results/fastv/acc_r889/preds_textvqa.jsonl
+mme: +2374 preds in 5.0 min -> /home/yc2008/vlmbench/results/fastv/acc_r889/preds_mme.jsonl
+gqa {'acc': 0.536, 'n': 12578}
+pope {'acc': 0.7546, 'f1': 0.6823, 'yes_ratio': 0.2726, 'n': 9000}
+textvqa {'acc': 0.5588, 'n': 5000}
+mme {'perception_total': 1302.6, 'cognition_total': 337.1}
+DONE accq
+== accuracy done 10/04 18:33

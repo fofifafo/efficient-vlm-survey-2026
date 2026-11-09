@@ -1,0 +1,1313 @@
+[
+ {
+  "id": "2407.11771",
+  "title": "XEdgeAI: A Human-centered Industrial Inspection Framework with Data-centric Explainable Edge AI Approach",
+  "mark": "keep",
+  "chars": 110436,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 2,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 0,
+   "CMP": 0,
+   "BIT": 1,
+   "PARAM": 0,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [
+    "iPhone 11 "
+   ],
+   "BASE": [],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "This combination of visual and textual explanations enhances 14 Figure 7: The iOS user interface of the mobile application for end-users, designed for iPhone 11 Pro.",
+    "Figure 7 illustrates the iOS user interface of the mobile ap- plication designed for iPhone 11 Pro."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [],
+   "CMP": [],
+   "BIT": [
+    "We considerably reduce the model size by quantizing these layers’ parameters to 8-bit integers using the dynamic quantization function from Py- Torch, making it more suitable for deployment on devices with limited storage and processing capabilities."
+   ],
+   "PARAM": [],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2408.01800",
+  "title": "MiniCPM-V: A GPT-4V Level MLLM on Your Phone",
+  "mark": "star",
+  "chars": 66657,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 1,
+   "LAT": 2,
+   "MEM": 2,
+   "THR": 3,
+   "TOK": 0,
+   "HW": 8,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 0,
+   "BIT": 1,
+   "PARAM": 1,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "CPU",
+    "NVIDIA 4090",
+    "Snapdragon 8 Gen 3",
+    "Snapdragon 8 Gen3 "
+   ],
+   "BASE": [
+    "BLIP-2",
+    "IDEFICS",
+    "IDEFICS2",
+    "Idefics2",
+    "InternVL",
+    "LLaVA",
+    "LLaVA-NeXT",
+    "LLaVA-Next",
+    "Mini-Gemini",
+    "MiniCPM-V",
+    "PaliGemma",
+    "Phi-3-Vision",
+    "Phi-3-vision",
+    "Qwen-VL"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "AI2D",
+    "ChartQA",
+    "DocVQA",
+    "GQA",
+    "MME",
+    "MMMU",
+    "MathVista",
+    "OCRBench",
+    "RealWorldQA",
+    "RefCOCO",
+    "ScienceQA",
+    "TextVQA",
+    "VQAv2",
+    "VizWiz"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [
+    "For example, Qualcomm Adreno 750 only has 6 TFLOPS, while NVIDIA 4090 can reach 83 TFLOPS."
+   ],
+   "LAT": [
+    "Combining quantization and llama.cpp on Xiaomi 14 Pro (Snapdragon 8 Gen 3), the model achieves a text encoding latency of 64.2s and a text decoding speed of 1.3 tokens/s (as depicted in Fig.",
+    "Encoding latency shows a notable reduction from 50.5s to 17.0s, while decoding throughput experiences a significant boost from 1.3 tokens/s to 3.2 tokens/s."
+   ],
+   "MEM": [
+    "High-performance servers typically boast extensive memory capacities, often exceeding 100GB or even 1TB.",
+    "In contrast, the memory available on mobile phones typically ranges from 12GB to 16GB, which can be insufficient for MLLM deployment."
+   ],
+   "THR": [
+    "Combining quantization and llama.cpp on Xiaomi 14 Pro (Snapdragon 8 Gen 3), the model achieves a text encoding latency of 64.2s and a text decoding speed of 1.3 tokens/s (as depicted in Fig.",
+    "Encoding latency shows a notable reduction from 50.5s to 17.0s, while decoding throughput experiences a significant boost from 1.3 tokens/s to 3.2 tokens/s.",
+    "Specifically, decoding throughput surged from 3.2 tokens/s to an impressive 8.2 tokens/s, surpassing the typical human reading speed."
+   ],
+   "TOK": [],
+   "HW": [
+    "9 NPU GPU CPU llama.cpp MLC-LLM MNN MediaPipe QNN generality across phones latency (s/img) ideal current 0.3 5 8 4 2 0.2 Figure 5: An overview of end-side deployment.",
+    "Current end-side chips for computation acceleration include CPU, GPU and NPU.",
+    "CPU/GPU Speed Restriction.",
+    "For instance, the Snapdragon 8 Gen3 features 8 CPU cores 2, whereas high-performance server like Intel Xeon Platinum 8580 has 60 CPU cores 3.",
+    "For example, Qualcomm Adreno 750 only has 6 TFLOPS, while NVIDIA 4090 can reach 83 TFLOPS.",
+    "5, we make a thorough investigation of different frameworks for different chip types including CPU, GPU, and NPU.",
+    "Given the ubiquity of CPU usage across devices, we prioritize this chip type and opt for the llama.cpp [67] framework.",
+    "Combining quantization and llama.cpp on Xiaomi 14 Pro (Snapdragon 8 Gen 3), the model achieves a text encoding latency of 64.2s and a text decoding speed of 1.3 tokens/s (as depicted in Fig."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "MiniCPM-V: A GPT-4V Level MLLM on Your Phone Yuan Yao∗† Tianyu Yu∗ Ao Zhang∗ Chongyi Wang∗ Junbo Cui∗ Hongji Zhu∗ Tianchi Cai∗ Haoyu Li Weilin Zhao Zhihui He Qianyu Chen Huarong Zhou Zhensheng Zou Haoye Zhang Shengding Hu Zhi Zheng Jie Zhou Jie Cai Xu Han Guoyang Zeng Dahai Li Zhiyuan Liu Maosong Sun‡ MiniCPM-V Team, OpenBMB [email removed] https://github.com/OpenBMB/MiniCPM-V time model size GPT-4V (2023.11.16) InternVL 1.5 QwenVL-Max Gemini Pro LLaVA-Next-Yi-34B Claude3 Opus DeepSeek-VL 7B MiniCPM-V 2.0 26B 8.5B Nov.",
+    "2024 34B OpenCompass score GPT-4V (2024.04.09) mplug-owl2 CogVLM-Chat MiniCPM-Llama3-V 2.5 unkown OmniLMM-12B Yi-VL-34B Yi-VL-6B GPT-4V level performance end-side computation before Qwen-VL Chat IDEFICS-80B Instruct LLaVA 1.5 13B LLaVA 1.5 7B ShareGPT4V MiniCPM-V 1.0 DeepSeek-VL 1.3B Emu-Chat 2 GPT-4o IDEFICS2-8B 10B Figure 1: Moore’s Law for MLLM?",
+    "In this work, we present MiniCPM-V, a series of efficient MLLMs deployable on end-side devices.",
+    "More importantly, MiniCPM-V can be viewed as a representative example of a promising trend (Fig.",
+    "In this work, we present MiniCPM-V, a series of efficient MLLMs deployable on end-side devices.",
+    "The philosophy of MiniCPM-V is to achieve a good balance between performance and efficiency, a more important objective in real-world applications.",
+    "To date in 2024, we have unveiled three models: (1) In February, we launched MiniCPM-V 1.0 2B, one of the first MLLMs designed for mobile phones. (2) In April, MiniCPM-V 2.0 2B was introduced, outperforming strong larger MLLMs such as Qwen-VL 9B [7], CogVLM 17B [102], and Yi-VL 34B [108].",
+    "More importantly, MiniCPM-V can be viewed as a representative example of a promising trend."
+   ],
+   "CMP": [],
+   "BIT": [
+    "We opt for the Q4_K_M mode 4-bit quantization strategy within GGML4 framework."
+   ],
+   "PARAM": [
+    "In addition, MiniCPM-Llama3-V 2.5 also achieves lower hallucination rates than GPT-4V-1106 on Object HalBench, indicating its trustworthiness for real-world applications. (3) The smaller MiniCPM-V 2.0 with 2B parameters achieves significantly better performance compared with other 2B~3B models, and is even comparable with Llama3-based 8B MLLMs such as Bunny-Llama-3-8B."
+   ],
+   "BENCH": [
+    "MiniCPM-Llama3-V 2.5 outperforms GPT-4V, Gemini Pro and Qwen-VL-Max on OCRBench.",
+    "Chat FSVQA [90], Visual-Dialog [28] 780K Part-2 Part-1 sample from Part-1 data 400K OCR DocVQA, TextVQA, OCR-VQA, VisualMRC, ChartQA, AI2D 690K ArxivQA [56], LLaVAR [118], TextOCR-GPT4V [16], etc.",
+    "RW QA: RealWorldQA, Obj HalBench (Res./Men.) : Object HalBench with response/mention-level hallucination rates, *: our tested results with official checkpoints.",
+    "We adopt OpenCompass [26] as the general evaluation indicator, which is a comprehensive collection over 11 popular multimodal benchmarks, including MME [33], MM- Bench [63], MMMU [113], MathVista [71], LLaVA Bench [62], etc.",
+    "We also report the results on RealWorldQA for real-world spatial understanding capabilities. (2) OCR benchmarks.",
+    "We adopt three widely used benchmarks for OCR capability evaluation, including including OCR- Bench [64], TextVQA [91] and DocVQA [74]. (3) Hallucination benchmarks.",
+    "As shown in Table 5, MiniCPM-Llama3-V 2.5 outperforms open-source MLLMs ranging 1.7B~34B on OCRBench, TextVQA, and DocVQA, and even performs comparably to proprietary models such as GPT-4V-1106 and Gemini Pro.",
+    "Method Open- MME MMB MMB MMMU Math- LLaVA Object Compass dev(en) dev(zh) val Vista Bench HalBench w/o RLAIF-V 64.5 2039.8 77.7 73.5 46.2 54.1 85.4 86.9 / 93.6 w RLAIF-V 65.1 2024.6 77.2 74.2 45.8 54.3 86.7 89.7 / 95.0 Table 7: The influence of multilingual generalization."
+   ]
+  }
+ },
+ {
+  "id": "2410.14803",
+  "title": "DistRL: An Asynchronous Distributed Reinforcement Learning Framework for On-Device Control Agents",
+  "mark": "keep",
+  "chars": 42336,
+  "counts": {
+   "SPEED": 1,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 3,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 0,
+   "CMP": 0,
+   "BIT": 1,
+   "PARAM": 1,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [
+    "CPU",
+    "NVIDIA V100",
+    "T4"
+   ],
+   "BASE": [],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [
+    "Our experiments show that, on average, DISTRL delivers a 3× improvement in training efficiency and enables training data collection 2.4× faster than the leading synchronous multi-machine methods."
+   ],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "By decoupling trajectory collection from policy learning and doing both in parallel, it leverages distributed working machines for CPU-intense agent-environment interac- tions and GPU servers for policy training.",
+    "6.1 EVALUATION ENVIRONMENT Our evaluation environment consists of a host learner with 4 NVIDIA V100 GPUs for intensive policy training and two worker machines with 8 NVIDIA Tesla T4 GPUs and 96 vCPUs each, sup- 7 Published as a conference paper at ICLR 2025 porting parallel emulation.",
+    "This ideal upper bound is determined by assuming each CPU operates independently and continuously with a stable speed, profiled by measuring the collection speed when a single CPU handles the task."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [],
+   "CMP": [],
+   "BIT": [
+    "Instead of directly regressing on scalar returns, we train the value network to predict the probability that the Monte Carlo return Gt is positive, transforming value estimation into a binary classification task."
+   ],
+   "PARAM": [
+    "In practice, we validate our framework using a T5-based multimodal generation architecture with 1.3B parameters (details in Appendix A.5.1) to efficiently handle both vision and language inputs."
+   ],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2410.16261",
+  "title": "Mini-InternVL: A Flexible-Transfer Pocket Multimodal Model with 5% Parameters and 90% Performance",
+  "mark": "star",
+  "chars": 51535,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 2,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 3,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "A100"
+   ],
+   "BASE": [
+    "InternVL",
+    "InternVL2",
+    "LLaVA",
+    "LLaVA-NeXT",
+    "LLaVA-OneVision",
+    "MiniCPM-V",
+    "Qwen-VL",
+    "Qwen2-VL"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "AI2D",
+    "ChartQA",
+    "DocVQA",
+    "GQA",
+    "MMBench",
+    "MME",
+    "MMMU",
+    "MMbench",
+    "MathVista",
+    "OCRBench",
+    "ScienceQA"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "Finally, we conduct full-parameter fine-tuning of Mini-InternVL using 8 A100 GPUs, training the model for 1 epoch with a learning rate of 1e-5.",
+    "Our experiment use ZeRO1 [151] and is conducted on 8 A100 GPUs."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "In this work, we introduce Mini-InternVL, a series of MLLMs with parameters ranging from 1B to 4B, which achieves 90% of the performance with only 5% of the parameters.",
+    "To further promote the adoption of our models, we develop a unified adaptation framework for Mini-InternVL, which enables our models to transfer and outperform specialized models in downstream tasks, including autonomous driving, medical images, and remote sensing.",
+    "In this work, we introduce Mini-InternVL, a series of powerful pocket-sized MLLMs that can be easily transferred to various specialized domains.",
+    "Subsequently, we develop Mini-InternVL series with 1 billion, 2 billion, and 4 billion parameters, by integrating the vision encoder with the pre-trained LLMs such as Qwen2-0.5B [16], InternLM2-1.8B [14], and Phi-3- Mini [28], respectively.",
+    "Benefiting from the robust vision encoder, Mini-InternVL exhibits excellent multimodal performance on general multimodal benchmarks like MMBench [29], ChartQA [30], and MathVista [31].",
+    "Remarkably, compared with InternVL2-76B, the proposed Mini-InternVL-4B achieves 90% of the performance of larger counterparts while using only 5% of the parameters, significantly reducing computational overhead.",
+    "In summary, our contribution has three folds: (1) We propose Mini-InternVL, a powerful pocket multimodal model, that not only achieves robust multimodal performance with only 4 billion parameters but also easily transfers to downstream tasks across various domains at low marginal cost. (2) We develop several design features for Mini-InternVL, including a lightweight vision encoder— InternViT-300M, that is robust for various visual domains.",
+    "InternViT-6B InternViT-300M CLIP-ViT 300M Initialization Feature Distillation Figure 1: Training method and architecture of Mini-InternVL."
+   ],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [
+    "In this work, we introduce Mini-InternVL, a series of MLLMs with parameters ranging from 1B to 4B, which achieves 90% of the performance with only 5% of the parameters.",
+    "Remarkably, compared with InternVL2-76B, the proposed Mini-InternVL-4B achieves 90% of the performance of larger counterparts while using only 5% of the parameters, significantly reducing computational overhead.",
+    "Notably, compared to InternVL2-Llama3-76B, which utilizes the larger InternViT-6B, Mini-InternVL achieves approximately 90% of its performance while using 5% parameters."
+   ],
+   "BENCH": [
+    "Benefiting from the robust vision encoder, Mini-InternVL exhibits excellent multimodal performance on general multimodal benchmarks like MMBench [29], ChartQA [30], and MathVista [31].",
+    "AI2D [90], ChartQA [30], DocVQA [84], InfoVQA [92], and MMBench [29] are tested with InternVL, while MathVista [31] and OCR- Bench [116] use VLMEvalKit.",
+    "For MMMU [117], we report scores from the OpenCompass leader- board.",
+    "Score is the average of the scores from all tested benchmarks, with the OCRBench score divided by 10.",
+    "The values in parentheses represent the relative parameters and performance of Mini-InternVL compared to InternVL2-Llama3-76B [2], which is considered as 100%. model open- #param MMMU MathVista AI2D ChartQA DocVQA InfoVQA OCR- MMB- MMB- Avg.",
+    "The benchmarks used in our study are categorized into four distinct types: OCR-related tasks, including DocVQA [84], OCR- Bench [116] and InfographicVQA [92]; chart and diagram understanding, including AI2D [90] and ChartQA [30]; general multimodal tasks, such as MMBench [29]; and multimodal reasoning, including MMMU [117] and MathVista [31].",
+    "Additionally, we calculate the average score across these benchmarks, with the OCRBench score divided by 10.",
+    "Data Source Size Data Type ShareGPT4V [123] 767K Captioning AllSeeingV2 [62] 127K Grounding VQA LLaVA-Instruct-ZH3 158K VQA DVQA [124] 200K Diagram VQA ChartQA [125] 18K Diagram VQA AI2D [126] 12K Diagram VQA DocVQA [84] 10K Document VQA GeoQA+ [127] 72K Geometric VQA SynthDoG-EN [128] 30K OCR Table 4: The results on driving with language official leaderboard [114]. “DA” means model after domain adaptation on DriveLM."
+   ]
+  }
+ },
+ {
+  "id": "2411.10640",
+  "title": "BlueLM-V-3B: Algorithm and System Co-Design for Multimodal Large Language Models on Mobile Devices",
+  "mark": "keep",
+  "chars": 39142,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 1,
+   "MEM": 3,
+   "THR": 4,
+   "TOK": 0,
+   "HW": 5,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 0,
+   "BIT": 5,
+   "PARAM": 7,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "CPU"
+   ],
+   "BASE": [
+    "InternVL",
+    "InternVL2",
+    "LLaVA",
+    "LLaVA-NeXT",
+    "MiniCPM-V",
+    "Phi-3-Vision",
+    "Qwen2-VL"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "AI2D",
+    "ChartQA",
+    "DocVQA",
+    "MMBench",
+    "MMMU",
+    "MMbench",
+    "MathVista",
+    "OCRBench",
+    "RealWorldQA",
+    "TextVQA",
+    "VQAv2"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [
+    "5, where we need 1.9 + 0.16 = 2.06s to encode the image and can hide a total latency of 200ms."
+   ],
+   "MEM": [
+    "For example, a 4-bit quantized LLaMA 7B model requires approximately 4.5 GB of memory, which can impact system fluency due to high memory usage.",
+    "Take the MediaTek Dimensity 9300 processor as an example, with a memory requirement of just 2.2GB, it can encode images with a resolution of 768×1536 in approximately 2.1 seconds and achieves a token throughput speed of 24.4 token/s.",
+    "6, reduces the waiting time for the first token genera- tion, improves overall responsiveness, and limits the peak memory usage of BlueLM-V-3B to 2.2GB."
+   ],
+   "THR": [
+    "BlueLM-V-3B boasts the follow- ing key highlights: (1) Small Size: BlueLM-V-3B features a language model with 2.7B parameters and a vision en- coder with 400M parameters. (2) Fast Speed: BlueLM- V-3B achieves a generation speed of 24.4 token/s on the MediaTek Dimensity 9300 processor with 4-bit LLM weight quantization. (3) Strong Performance: BlueLM-V-3B has attained the highest average score of 66.1 on the OpenCom- pass benchmark among models with ≤4B parameters and surpassed a series of models with much larger parameter sizes (e.g., MiniCPM-V-2.6, InternVL2-8B).",
+    "For instance, on the Medi- aTek Dimensity 9300 processor, a 4-bit quantized LLaMA 7B model generates around 10-15 tokens per second, limit- ing its suitability for real-time applications.",
+    "Take the MediaTek Dimensity 9300 processor as an example, with a memory requirement of just 2.2GB, it can encode images with a resolution of 768×1536 in approximately 2.1 seconds and achieves a token throughput speed of 24.4 token/s.",
+    "OpenCompass Benchmark: To evaluate the overall performance of BlueLM-V-3B, we use the OpenCompass benchmark [26], including MMbench [75], MMStar [18], 7 Model Name Params Processor Solution Image Processing LLM Prefilling Throughput MiniCPM-V 2.5 [134] 8B MediaTek Dimensity 9300 CPU (llama.cpp) / 4.0s 13.9s 4.9 token/s BlueLM-V-3B (Ours) 3B MediaTek Dimensity 9300 NPU , 2.53s (0.47+2.06) 2.7s 24.4 token/s Table 5."
+   ],
+   "TOK": [],
+   "HW": [
+    "The Conv2D layer in the vision embedding module of SigLIP (on the CPU) and the vision transformer blocks (on the NPU) for different image patches run parallel to improve inference speed.",
+    "Specifically, for different patches extracted from a single image, we design a parallel pipeline for the Conv2D layer in SigLIP’s vision embedding module (on the CPU) and the vision transformer blocks (on the NPU).",
+    "OpenCompass Benchmark: To evaluate the overall performance of BlueLM-V-3B, we use the OpenCompass benchmark [26], including MMbench [75], MMStar [18], 7 Model Name Params Processor Solution Image Processing LLM Prefilling Throughput MiniCPM-V 2.5 [134] 8B MediaTek Dimensity 9300 CPU (llama.cpp) / 4.0s 13.9s 4.9 token/s BlueLM-V-3B (Ours) 3B MediaTek Dimensity 9300 NPU , 2.53s (0.47+2.06) 2.7s 24.4 token/s Table 5.",
+    "MiniCPM-V deploys an 8B model on the CPU, leading to longer image processing latency, LLM prefilling latency, and lower throughput. †MiniCPM-V calculates encoding latency by including both model loading time and encoding time.",
+    "Compasison with MiniCPM-V: The MiniCPM-V pa- per [134] only reports the deployment statistics for the 8B MiniCPM-V 2.5 model, which is deployed on the CPU of the MediaTek Dimensity 9300 using llama.cpp6."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "BlueLM-V-3B boasts the follow- ing key highlights: (1) Small Size: BlueLM-V-3B features a language model with 2.7B parameters and a vision en- coder with 400M parameters. (2) Fast Speed: BlueLM- V-3B achieves a generation speed of 24.4 token/s on the MediaTek Dimensity 9300 processor with 4-bit LLM weight quantization. (3) Strong Performance: BlueLM-V-3B has attained the highest average score of 66.1 on the OpenCom- pass benchmark among models with ≤4B parameters and surpassed a series of models with much larger parameter sizes (e.g., MiniCPM-V-2.6, InternVL2-8B).",
+    "BlueLM-V-3B (Ours) MiniCPM-V-2 InternVL2-4B Qwen2-VL-2B Phi-3-Vision 61.8 85.3 66.7 48 829 83.1 82.3 60.8 80.4 62.3 32.7 87.8 45.1 MMMU (Val) MMVet RealWorldQA OCRBench MMBench v1.1 (Test_EN) MMBench v1.1 (Test_CN) MMStar MTVQA DocVQA (Test) ChartQA (Test) HallusionBench MathVista (TestMini) AI2D (Test) Figure 1.",
+    "2) State-of-the-art MLLM Performance: BlueLM-V- 3B achieves SOTA performance (e.g., 66.1 on the Open- Compass benchmark) among models with similar parame- ter sizes, even surpassing a series of MLLMs with much more parameters (e.g., MiniCPM-V-2.6, InternVL2-8B).",
+    "The architec- ture of BlueLM-V-3B follows the classical LLaVA approach.",
+    "We integrate a dynamic resolution processing module (as in LLaVA- NeXT [70] and InternVL 1.5 [22]) to enhance model capabilities and apply token downsampling to reduce deployment complexity. veloping smaller LLMs and MLLMs with higher perfor- mance, recent studies from a system perspective have also introduced various methods for deploying these SLMs on user devices, such as personal computers [129], and mobile phones [58, 134].",
+    "Basic Network Components Model Architecture: Our architecture is modified from the classical LLaVA approach [71], as it has been shown effective in prior works such as InternVL 1.5 [22] and LLaVA-NeXT [70].",
+    "We reflect on the exaggerated image enlargement issue observed in InternVL 1.5 [22] and LLaVA-NeXT [70], then introduce a new approach that improves both training and deployment efficiency.",
+    "Dynamic Image Resolution The original ViT of LLaVA [71] directly resizes the input images to a fixed resolution (e.g., 336×336 or 384×384), which is not well-suited for high-resolution images."
+   ],
+   "CMP": [],
+   "BIT": [
+    "BlueLM-V-3B boasts the follow- ing key highlights: (1) Small Size: BlueLM-V-3B features a language model with 2.7B parameters and a vision en- coder with 400M parameters. (2) Fast Speed: BlueLM- V-3B achieves a generation speed of 24.4 token/s on the MediaTek Dimensity 9300 processor with 4-bit LLM weight quantization. (3) Strong Performance: BlueLM-V-3B has attained the highest average score of 66.1 on the OpenCom- pass benchmark among models with ≤4B parameters and surpassed a series of models with much larger parameter sizes (e.g., MiniCPM-V-2.6, InternVL2-8B).",
+    "For example, a 4-bit quantized LLaMA 7B model requires approximately 4.5 GB of memory, which can impact system fluency due to high memory usage.",
+    "For instance, on the Medi- aTek Dimensity 9300 processor, a 4-bit quantized LLaMA 7B model generates around 10-15 tokens per second, limit- ing its suitability for real-time applications.",
+    "We employ INT8 precision for the ViT and the MLP projector weights, and INT4 precision for the LLM weights.",
+    "During inference, we store the KV cache in INT8 precision."
+   ],
+   "PARAM": [
+    "BlueLM-V-3B boasts the follow- ing key highlights: (1) Small Size: BlueLM-V-3B features a language model with 2.7B parameters and a vision en- coder with 400M parameters. (2) Fast Speed: BlueLM- V-3B achieves a generation speed of 24.4 token/s on the MediaTek Dimensity 9300 processor with 4-bit LLM weight quantization. (3) Strong Performance: BlueLM-V-3B has attained the highest average score of 66.1 on the OpenCom- pass benchmark among models with ≤4B parameters and surpassed a series of models with much larger parameter sizes (e.g., MiniCPM-V-2.6, InternVL2-8B).",
+    "Specifically, we train a state-of-the-art MLLM with only 3B parameters and effectively deploy it on the NPU of smart- phones.",
+    "The compact size of these models (2-3B parameters) enables deployment on user devices, such as personal computers and mobile phones.",
+    "Image Encoder: To process multimodal (image and language) inputs, we utilize the SigLIP [141] ViT for 384×384 input images, as described in [64, 134], which has 400M parameters.",
+    "The MiniCPM-2B model has 2.7B parame- ters, matching the parameter count of BlueLM-3B.",
+    "We also compare BlueLM-V-3B to models with up to 10B parameters, with detailed results presented in Tab.",
+    "With only 3B parameters, BlueLM-V- 3B outperforms a series of MLLMs with significantly more parameters, such as InternVL2-8B [22], MiniCPM-V-2.6 (8B) [134]."
+   ],
+   "BENCH": [
+    "BlueLM-V-3B (Ours) MiniCPM-V-2 InternVL2-4B Qwen2-VL-2B Phi-3-Vision 61.8 85.3 66.7 48 829 83.1 82.3 60.8 80.4 62.3 32.7 87.8 45.1 MMMU (Val) MMVet RealWorldQA OCRBench MMBench v1.1 (Test_EN) MMBench v1.1 (Test_CN) MMStar MTVQA DocVQA (Test) ChartQA (Test) HallusionBench MathVista (TestMini) AI2D (Test) Figure 1.",
+    "We provide 9 candidate aspect ratios (from 1:1 to 3:3) for 4https://github.com/matplotlib/matplotlib 5https://github.com/csquared/IMGKit 6 Language Model Vision Model Params Method VQAv2val TextVQAval DocVQAval OCRBench ChartQAtest MiniCPM-2B [39] SigLIP-400M [141] 3B InternVL 1.5 70.5 46.9 26.2 327 15.7 LLaVA-NeXT 70.1 44.2 24.3 324 14.8 Ours 71.8 49.4 27.3 343 16.9 BlueLM-3B SigLIP-400M [141] 3B InternVL 1.5 78.3 52.7 28.7 338 16.8 LLaVA-NeXT 77.7 51.4 29.6 351 16.4 Ours 79.5 56.2 31.3 360 17.5 Ours (fully-trained) 82.7 78.4 86.6 829 80.4 Table 2.",
+    "MMBench MMStar MMMU MathVista HallusionBench AI2D OCRBench MMVet Qwen2-VL [125] 8B 67 81 60.7 53.7 61.4 50.4 83 843 61.8 MiniCPM-V-2.6 [134] 8B 65.2 78 57.5 49.8 60.6 48.1 82.1 852 60 InternVL2 [22] 8B 64.1 79.4 61.5 51.2 58.3 45 83.6 794 54.3 POINTS-Qwen2.5 [74] 8.3B 62.5 78 60.9 51.4 63 45.6 81.2 717 47.9 BlueLM-V (Ours) 3B 66.1 82.7 62.3 45.1 60.8 48 85.3 829 61.8 Table 3.",
+    "Comparison on text- centric/OCR benchmarks shows that BlueLM-V-3B achieves per- formance comparable to SOTA MLLMs with similar parameter sizes, while significantly enhancing multilingual capability. †We evaluate TextVQA and MTVQA on VLMEvalKit [29] for a fair comparison.",
+    "OCRBench has been included in OpenCompass.",
+    "For evaluation, we use VQAv2 [31] for general vision question answering.",
+    "For OCR tasks, we include TextVQA [107], DocVQA [84], and OCRBench [73].",
+    "Additionally, we eval- uate on ChartQA [83] dataset for multimodal mathemati- cal reasoning."
+   ]
+  }
+ },
+ {
+  "id": "2501.04322",
+  "title": "Eve: Efficient Multimodal Vision Language Models with Elastic Visual Experts",
+  "mark": "keep",
+  "chars": 54000,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 1,
+   "HW": 1,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 4,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "Ascend AI "
+   ],
+   "BASE": [
+    "BLIP-2",
+    "LLAVA",
+    "LLAva",
+    "LLaVA",
+    "LLaVA-1.5",
+    "Mini-Gemini",
+    "Qwen-VL"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "AI2D",
+    "ChartQA",
+    "DocVQA",
+    "GQA",
+    "MMBench",
+    "MME",
+    "POPE",
+    "ScienceQA",
+    "TextVQA",
+    "VQAV2",
+    "VQAv2"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [
+    "When employing the random token distribution mechanism, approximately 25% of tokens were discarded at layers 11 and 21."
+   ],
+   "HW": [
+    "Acknowledgments We gratefully acknowledge the support of MindSpore, CANN (Compute Architecture for Neural Networks) and Ascend AI Processor used for this research."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "Additionally, its multimodal accuracy outstrips that of the larger 7B LLaVA-1.5 model.",
+    "MoE-LLAVA (Lin et al.",
+    "This fusion signifi- cantly elevates the model’s ability to process and merge visual and textual data, thereby markedly enhancing its multi-modal performance; • Eve stands out in multimodal tasks with less than 3 bil- lion parameters, achieving top performance in VLM and language benchmarks, and is on par with the larger 7B LLaVA-1.5 in terms of multimodal accuracy.",
+    "BLIP-2 (Li et al.",
+    "Qwen-VL (Bai et al.",
+    "2023) integrates training data from tasks such as image caption- ing, visual question answering, OCR, and document under- standing, incorporating visual foundational capabilities into Qwen-VL.",
+    "For instance, LLaVA- Phi (Zhu et al.",
+    "MoE-LLaVA (Lin et al."
+   ],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [
+    "This balanced approach results in a versatile model with only 1.8B parameters that delivers significant improvements in both multimodal and linguistic tasks.",
+    "Notably, in config- urations below 3B parameters, Eve distinctly outperforms in language benchmarks and achieves state-of-the-art results 68.87% in VLM Benchmarks.",
+    "Within a model size of 3B parameters, Eve achieves state-of-the-art perfor- mance, and compared to other multimodal models, our lan- guage capabilities are better preserved.",
+    "1, Eve notably outper- forms existing VLM with fewer than 3B parameters, espe- cially in maintaining full language task capabilities."
+   ],
+   "BENCH": [
+    "2023, 2024), we employ a comprehensive suite of VLM benchmarks for multimodal assessment, comprising GQA (Hudson and Manning 2019), SQA (Lu et al.",
+    "2022), TextVQA (Singh et al.",
+    "2019), MME (Guo et al.",
+    "2023), MMBench (Liu et al.",
+    "2023d) and POPE (Li et al.",
+    "GQA SQAI VQAT POPE MMEP MMBdev AVG GPU-days 12578 2017 5000 8910 2374 4329 LLaVA-1.5 (Liu et al.",
+    "These datasets encompass ScienceQA, TextVQA, VSR, OKVQA, KVQA, VQAV2, TVQA and Train Paradigm Vision Encoder Pre-training Dataset VLM AVG Language AVG SL ResNet50 ImageNet-1K 49.06 51.73 SSL-MOCOv2 ResNet50 ImageNet-1K 50.34 51.92 SSL-SWAV ResNet50 ImageNet-1K 50.82 52.30 SSL-DINO ResNet50 ImageNet-1K 50.95 52.48 Table 7: Performance of vision encoder pre-trained on diverse methodology in VLM and language benchmarks. ”SL” denotes supervised learning, ”SSL” denotes self-supervised Learning.",
+    "Image Question Answering Benchmark Toolkit Frist Expert Second Expert GQA SQAI VQAT POPE MMEP MMBdev AVG 12578 2017 5000 8910 2374 4329 Fixed Trainable 58.94 60.59 43.93 84.41 1261.57 57.04 61.33 Trainable Fixed 59.41 59.63 44.23 84.66 1252.47 56.53 61.18 Trainable Trainable 59.83 60.24 44.61 84.8 1321.22 58.68 62.37 Table 8: Effect of fixing experts at different positions on the accuracy of multimodal tasks. ”AVG” stands for the weighted mean of 6 VLM benchmarks."
+   ]
+  }
+ },
+ {
+  "id": "2504.14239",
+  "title": "InfiGUI-R1: Advancing Multimodal GUI Agents from Reactive Actors to Deliberative Reasoners",
+  "mark": "keep",
+  "chars": 43409,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 1,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 5,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 1,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [
+    "NVIDIA H800"
+   ],
+   "BASE": [
+    "BLIP-2",
+    "LLaVA",
+    "Qwen-VL",
+    "Qwen2-VL",
+    "Qwen2.5-VL"
+   ],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "All experiments were conducted using 16 NVIDIA H800 GPUs."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "These methods have facilitated the development of high-performing MLLMs, such as Qwen-VL [7], GPT-4 Vision [36], BLIP-2 [23] and InfiMM [32], thus opening new avenues for LLMs in processing GUI tasks.",
+    "ILu- vUI [20] fine-tuned LLaVA to enhance general GUI comprehen- sion, while AppAgent [58] explored mobile app usage through au- tonomous interactions.",
+    "We use a base MLLM such as Qwen2.5-VL-3B-Instruct for this filtering process.",
+    "A powerful MLLM (e.g., Qwen2.5-VL-32B- Instruct) is then employed to compress this processed information into a concise textual description 𝐷spatial, which consists of a de- tailed description of the GUI page, including all relevant elements’ coordinate information and descriptions for the specific step, cap- turing the essential spatial layout and key element details.",
+    "Our model, InfiGUI-R1-3B, is built upon Qwen2.5-VL-3B-Instruct and trained using the proposed Ac- tor2Reasoner Framework, which consists of two main stages."
+   ],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [
+    "Our Ac- tor2Reasoner framework, combining Spatial Reasoning Distillation and RL-based Deliberation Enhancement (Sub-goal Guidance, Er- ror Recovery), successfully transforms a base MLLM into a more effective Deliberative Reasoner, achieving state-of-the-art among models with similar parameter counts in trajectory-based tasks and element grounding across different platforms and resolutions, even with a relatively small 3B parameter model."
+   ],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2507.14049",
+  "title": "EdgeVLA: Efficient Vision-Language-Action Models",
+  "mark": "keep",
+  "chars": 12066,
+  "counts": {
+   "SPEED": 1,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 1,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 6,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 0,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 4,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [
+    "A100",
+    "CPU",
+    "Jetson Nano presents "
+   ],
+   "BASE": [],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [
+    "We achieve this through two key innovations: 1) Eliminating the autoregressive requirement for end-effector position prediction, leading to a 7x speedup in inference, and 2) Leveraging the efficiency of Small Language Models (SLMs), demonstrating comparable training performance to larger models with significantly re- duced computational demands."
+   ],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [
+    "Table I compares the inference time and memory requirements of EVLA and OpenVLA on an A100-40GB GPU."
+   ],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "However, deploying these large- scale VLMs, often exceeding billions of parameters, on resource-constrained mobile platforms with edge devices like the Jetson Nano presents significant challenges.",
+    "BridgeData V2 training characteristics Initial experiments on the BridgeData V2 dataset con- ducted on a single node with 8 A100-80GB GPUs, validate that EVLA can achieve similar training performance to its 7.5B parameters counterpart.",
+    "OpenX training characteristics We further evaluate EVLA on the full OpenX dataset, uti- lizing 80 A100-40GB GPUs for approximately 5 days.",
+    "Table I compares the inference time and memory requirements of EVLA and OpenVLA on an A100-40GB GPU.",
+    "These results show the path for the deployment of mobile manipu- lation systems on CPU architectures.",
+    "Future work will focus on further optimizing EVLA’s architecture and exploring its deployment on a wider range of edge devices, including CPU-based platforms."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [
+    "Our proposed architecture EVLA comprises of a pretrained language model Qwen2-0.5B fused with two visual encoders SigLIP [19] and DINOv2 [12] adding to 1B parameters.",
+    "These systems typically train models from scratch with model sizes from 10 to 100M parameters which limits their ability to generalize to novel environments [20], [3].",
+    "For language processing, we utilize Qwen2 [17] with 0.5B parameters as it demon- strates the effectiveness of SLMs in achieving comparable performance to that of larger models.",
+    "BridgeData V2 training characteristics Initial experiments on the BridgeData V2 dataset con- ducted on a single node with 8 A100-80GB GPUs, validate that EVLA can achieve similar training performance to its 7.5B parameters counterpart."
+   ],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2509.07666",
+  "title": "MoLoRAG: Bootstrapping Document Understanding via Multi-modal Logic-aware Retrieval",
+  "mark": "keep",
+  "chars": 34902,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 0,
+   "ACC": 0,
+   "FREE": 4,
+   "BASE": 7,
+   "CMP": 0,
+   "BIT": 1,
+   "PARAM": 0,
+   "BENCH": 1
+  },
+  "sets": {
+   "HW": [],
+   "BASE": [
+    "LLaVA-Next",
+    "Qwen2.5-VL"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "DocVQA"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [],
+   "ACC": [],
+   "FREE": [
+    "To enhance flexibility, MoLoRAG offers two variants: a training-free solution for easy deployment and a fine-tuned version to improve logical rele- vance checking.",
+    "The first is a training-free variant, which leverages a pre-trained VLM, e.g., Qwen2.5- VL-3B (Bai et al., 2025), to perform graph traver- sal and retrieval directly, providing an off-the-shelf solution that is easy to deploy.",
+    "The fine-tuned variant, MoLoRAG+, outperforms the training-free ver- sion, demonstrating the benefits of task-specific optimization.",
+    "For example, with DeepSeek-VL- 16B, MoLoRAG+ achieves 5.04% improvement on MMLongBench compared to the training-free MoLoRAG."
+   ],
+   "BASE": [
+    "Nevertheless, LVLMs, such as LLaMA-Vision (Grattafiori et al., 2024) and LLaVA-Next (Li et al., 2024a), are constrained to single-image inputs, rendering them ineffective for long, multi-page documents.",
+    "Choices of LVLMs We classify LVLMs into three categories based on their input capacity: (1) Large Input Size models, such as Qwen2.5-VL-3B and Qwen2.5-VL-7B, which can process extensive con- text sizes, e.g., 30 images. (2) Medium Input Size models, such as DeepSeek-VL-16B (Lu et al., 2024), which can handle a moderate number of in- puts, e.g., 5 images. (3) Single Input models, such as LLaVA-Next-7B, which are limited to process- ing one image at a time.",
+    "LVLMs with extensive context support (e.g., Qwen2.5-VL series) benefit from retrieving more pages, improving performance with higher K.",
+    "In contrast, LVLMs with limited context capacity (e.g., LLaVA-Next-7B) perform best with K = 1.",
+    "For LVLMs with extensive context sup- port, such as the Qwen2.5-VL series, increasing K (i.e., providing more pages) improves performance across all scenarios.",
+    "However, for LVLMs with limited context capacity, such as DeepSeek-VL- 16B and LLaVA-Next-7B, additional pages often exceed their processing capabilities, leading to de- graded performance.",
+    "Qwen2.5-VL-7B Direct Unanswerable w."
+   ],
+   "CMP": [],
+   "BIT": [
+    "Specifically, it evaluates Binary Correctness by determining whether the generated answer matches the ground-truth answer, assigning a binary score of 0 or 1."
+   ],
+   "PARAM": [],
+   "BENCH": [
+    "Other benchmarks like DocVQA (Mathew et al., 2021; Tanaka et al., 2023; Masry Table 1: Statistics of experimental datasets."
+   ]
+  }
+ },
+ {
+  "id": "2509.21259",
+  "title": "Semantic Edge-Cloud Communication for Real-Time Urban Traffic Surveillance with ViT and LLMs over Mobile Networks",
+  "mark": "keep",
+  "chars": 76332,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 1,
+   "MEM": 7,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 0,
+   "ACC": 1,
+   "FREE": 1,
+   "BASE": 8,
+   "CMP": 0,
+   "BIT": 8,
+   "PARAM": 2,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [],
+   "BASE": [
+    "BLIP-2",
+    "LLaVA",
+    "LLaVA-1.5",
+    "LLaVa"
+   ],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [
+    "For each frame, Region of Interest (RoI) extraction requires 0.023 seconds, embedding generation using a ViT takes 0.16 seconds, and image reconstruction through a custom decoder incurs a negligible latency of 1×10−3 seconds."
+   ],
+   "MEM": [
+    "Moreover, in order to run LLaMA with proper efficiency, 24 GB VRAM is required, and it is 14.2 GB in the LLaVA 1.5 model.",
+    "On the other hand, each RoI area, cropped from the overall images is 224x224 RGB square image form that consumes around 0.14 MB, so the total memory consumption from 1 camera image, after cropping the highlighted parts, is Nx0.14 MB, where N is the total number of cars located by the YOLOv11 model.",
+    "Furthermore, each image embedding representation is formed into a 1×768 float32 type vector data structure and occupies much less memory, around 29x10−4 MB, and just like cropped images, the total memory requirement is Nx29x10−4 MB for transmitting the embedding representation of one image frame to the cloud.",
+    "Among the evaluated methods, the cropped image-based approach achieves memory savings ranging from approximately 93% to a peak of 98.5%.",
+    "In contrast, converting cropped images into embedding vectors offers a consistent memory saving of around 99.9% across all cases.",
+    "Despite the added computational cost, the embedding-based approach yields superior memory efficiency, achieving up to 99.9% data reduction during transmission.",
+    "TABLE V: Memory Requirements For Each Data Type Dimensions Data Type Memory Size Original Image 2048x2048x3 Pixel 12.01 MB Cropped Image 224x224x3 Pixel 0.143 MB Embedded Vector Representation of Cropped Image 1x768 Float 29x10−4 MB comparative summary of the memory requirements for original images, cropped images, and embedding vectors is provided in Table V."
+   ],
+   "THR": [],
+   "TOK": [],
+   "HW": [],
+   "ACC": [
+    "However, this extreme compression introduced a modest accuracy drop to 89%, highlighting the inherent trade-off that greater bandwidth savings come at the expense of a slight reduction in model performance."
+   ],
+   "FREE": [
+    "On the other hand, LoRA provides a quick way to adapt the model without retraining it."
+   ],
+   "BASE": [
+    "The reconstructed images are then processed by a fine-tuned multimodal LLM, LLaVA 1.5 7B [21]–[23], for generating traffic-related responses.",
+    "The primary contributions of this work are summarized as follows: • This study presents a comprehensive end-to-end pipeline that integrates YOLOv11 for vehicle detection, ViT for embedding generation, a custom image decoder for image reconstruction, and LLaVA for language-based traffic description.",
+    "The results demonstrate that the quantization technique offers greater robustness to bit errors while significantly reducing transmission data size. • A lightweight multimodal large language model, LLaVA 1.5 (7B), is fine-tuned to support real-time urban traffic monitoring by generating accurate and timely responses based on vehicle-centric cropped images.",
+    "Researchers in [61] propose a task-oriented semantic communication frame- work for vehicle networks leveraging LMMs such as LLaVA.",
+    "In [64], an LLM-supported semantic communication system for image transmission is studied, where LLaVA serves as the semantic encoder and CLIP as the decoder to reduce data size while preserving contextual meaning over wireless chan- nels with QAM modulation; performance is measured using compression ratio and image quality.",
+    "Their system employs LLaVA, Vision Transformers, and CLIP on the encoder side, and a resource-adaptive decoder built with a Variational Autoencoder and conditional diffusion model for image reconstruction.",
+    "Research in [50] introduces a task-oriented semantic communication framework for vehicle networks built upon the LLaVA model to facilitate efficient interaction between users and cloud servers.",
+    "The reconstructed images are then forwarded to the multimodal LLM, LLaVA, which generates responses to the corresponding traffic observation queries."
+   ],
+   "CMP": [],
+   "BIT": [
+    "The second encoding scheme is IEEE 754 Format, where each float32 type value, V, of embedding is converted into a 32-bit binary representation using the IEEE 754 standard, consisting of 1 sign bit, S, 8 exponent bits, E, and 23 fraction bits, M, also referred to as the mantissa.",
+    "2) Modulation Scheme and Communication Channel: We have considered two modulation schemes: Binary Phase shift Keying (BPSK) and 16-Quadrature Amplitude Modulation (16-QAM).",
+    "Alternatively, if each element in the bitstream is a 32- bit IEEE 754 representation of a floating-point value, the reconstruction is done using a binary-to-float conversion that follows the IEEE 754 standard.",
+    "In Figures 8, the performance of Quantization encoding is evaluated using 8-bit, 16-bit, and 32-bit precision levels.",
+    "Even 8-bit quantization maintains low MSE at higher SNR values, resulting in further reducing the transmission data size and bandwidth saving.",
+    "Figure 11 presents a visual comparison of original and reconstructed images transmitted using two different bitstream encoding methods, 8-bit Quantization and IEEE 754 floating- point encoding, under varying SNR conditions ranging from 1 dB to 12 dB.",
+    "The middle section illustrates the performance of 8-bit quantization encoding.",
+    "Thus, with 8-bit quantization, we can further reduce the transmission data size by 75% compared to IEEE754 bitstream encoding."
+   ],
+   "PARAM": [
+    "LLaMA 3.2-11B Vision-Instruct represents a state-of- the-art instruction-tuned vision–language model with a large 11B parameters for high-quality reasoning, while LLaVA 1.5 7B is a smaller, widely used multimodal model with lower computational requirements, making it suitable for resource- constrained environments.",
+    "LLaVA 1.5 with 7B and LLaMA 3.2 with 11B parameters are compared in table III."
+   ],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2510.25122",
+  "title": "NanoVLA: Routing Decoupled Vision-Language Understanding for Nano-sized Generalist Robotic Policies",
+  "mark": "keep",
+  "chars": 33524,
+  "counts": {
+   "SPEED": 1,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 1,
+   "THR": 2,
+   "TOK": 0,
+   "HW": 4,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 0,
+   "CMP": 0,
+   "BIT": 3,
+   "PARAM": 5,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [
+    "Jetson Orin",
+    "Jetson Orin Nano",
+    "Jetson Orin Nano "
+   ],
+   "BASE": [],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [
+    "Experimental results on several bench- marks, as well as real-world deployments, demonstrate that NanoVLA achieves up to 52x faster inference on edge devices compared to previous state-of-the-art VLA models, with 98% less parameters while maintaining or surpassing their task accuracy and generalization."
+   ],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [
+    "4.3 INFERENCE LATENCY ANALYSIS To validate the effectiveness of the edge-side deployment for NanoVLA family, we deployed them on the Jetson Orin Nano Super Developer Kit, which has 8GB memory with CUDA support and a computation performance for up to 67 TOPS."
+   ],
+   "THR": [
+    "0 5 10 15 20 25 30 35 FPS 75 80 85 90 95 100 SR OpenVLA 7.5B SmolVLA 0.45B NanoVLA-S 0.161B NanoVLA-L 0.52B NanoVLA-R 0.296B NanoVLA-AC50 0.296B (a) Inference performance.",
+    "0 20 40 60 80 100 Steps 10 20 30 40 FPS FPS Long-short AC Fixed AC 70 80 90 SR (b) Long-short AC ablation."
+   ],
+   "TOK": [],
+   "HW": [
+    "However, their deployment on resource-constrained edge devices, such as mobile robots or embedded systems (e.g., Jetson Orin Nano), re- mains challenging due to high computational demands, especially in real-world scenarios where power, latency, and computational resources are critical.",
+    "4.2 REAL-WORLD VALIDATION We evaluate NanoVLA on the easy to access and low cost LeRobot and edge-side device Jetson Orin Nano (8GB).",
+    "4.3 INFERENCE LATENCY ANALYSIS To validate the effectiveness of the edge-side deployment for NanoVLA family, we deployed them on the Jetson Orin Nano Super Developer Kit, which has 8GB memory with CUDA support and a computation performance for up to 67 TOPS.",
+    "Figure 4: Inference analysis on Jetson Orin Nano (left) and long-short action chunking ablations."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [],
+   "CMP": [],
+   "BIT": [
+    "We train a text-conditioned binary classifier fθ on serialized inputs (l, i, j) to predict Pr(i ≻j | l).",
+    "The win probabilities provide soft, calibrated supervision targets for training a text-conditioned binary classifier fθ to predict Pr(i ≻ j | l).",
+    "It’s 1Note that even 4-bit OpenVLA will result in out-of-memory, we report the frames per second (FPS) of OpenVLA using the data from the 4-bit Llama2 model, which is the text backbone of OpenVLA 8 Under review also more flexible in real-world deployment as it only need to train once."
+   ],
+   "PARAM": [
+    "This approach does enables better per- formance with less overhead and latency, which informs NanoVLA, small scale VLA that achieves better performance across both simulation and real-world tasks with only ∼2% of the parameter of models like OpenVLA, as shown in the Radar plot (right).",
+    "RT-1 (Brohan et al., 2022) pioneered the generalist robotic models with only 35M parameters.",
+    "NanoVLA shows significant performance gains, with improvements ranging from 6.0% to 12.3% in average success rates while only using less than 10% total parameters.",
+    "Especially, the proposed NanoVLA-R can further improve the precision by 3.7% while reducing 43% of the parameters of OpenVLA-L.",
+    "Notably, in easier pick-place tasks, NanoVLA-S (161M parameters) can even outperform OpenVLA (7B parameters), which has 43.5x more parameters."
+   ],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2511.08914",
+  "title": "SPEED-Q: Staged Processing with Enhanced Distillation towards Efficient Low-bit On-device VLM Quantization",
+  "mark": "keep",
+  "chars": 33469,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 3,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 0,
+   "ACC": 2,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 8,
+   "BIT": 8,
+   "PARAM": 4,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [],
+   "BASE": [
+    "InternVL2.5",
+    "InternVL3",
+    "LLaVA",
+    "Qwen2-VL"
+   ],
+   "CMP": [
+    "FastVLM"
+   ],
+   "BENCH": [
+    "AI2D",
+    "DocVQA",
+    "MMBench",
+    "MMMU",
+    "OCRBench",
+    "RealWorldQA",
+    "SEED-Bench",
+    "ScienceQA"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [
+    "For example, InternVL3-2B consumes over 4 GB of memory, pushing memory usage close to system lim- its and causing application instability.",
+    "For example, 2-bit quan- tized InternVL3-1B consumes less than 400 MB of run- ning memory while achieving accuracy comparable to the best 0.6B model of FastVLM that requires almost 1.5GB of memory.",
+    "SPEED-Q successfully limits qcom_8elite 1789.5 485.0 315.0 1304.5 MB 170.0 MB Model File Size (MB) FP16 4-bit 2-bit qcom_8elite 1855.0 527.0 388.0 1328.0 MB 139.0 MB Memory Footprint (MB) FP16 4-bit 2-bit Figure 5: On-device efficiency evaluation of FP16 and low- bit InternVL2.5-1B on Samsung Galaxy S25 Ultra. the performance drop to 4.78% and 15.06% under 4-bit and 2-bit quantization respectively."
+   ],
+   "THR": [],
+   "TOK": [],
+   "HW": [],
+   "ACC": [
+    "Specifically, by utilizing the proposed SPEED-Q, the quantized 4-bit model exhibits a marginal performance decrease of 3% compared to their original BF16 counterpart.",
+    "SPEED-Q successfully limits qcom_8elite 1789.5 485.0 315.0 1304.5 MB 170.0 MB Model File Size (MB) FP16 4-bit 2-bit qcom_8elite 1855.0 527.0 388.0 1328.0 MB 139.0 MB Memory Footprint (MB) FP16 4-bit 2-bit Figure 5: On-device efficiency evaluation of FP16 and low- bit InternVL2.5-1B on Samsung Galaxy S25 Ultra. the performance drop to 4.78% and 15.06% under 4-bit and 2-bit quantization respectively."
+   ],
+   "FREE": [],
+   "BASE": [
+    "0 1000 2000 3000 4000 Model File Size (MB) 40 50 60 70 Average score of 8 benchmarks 0.25B 0.5B 0.6B 1.5B 0.8B 2B 1B 2B Low-bit quantization 2B(4-bit) 2B(2-bit) 1B(4-bit) 1B(2-bit) BF16 SmolVLM FastVLM H2OVL InternVL3 InternVL3 SPEED-Q (Ours) Figure 1: Comparison with SOTA on-device VLMs.",
+    "The proposed quantized version of InternVL3 outperforms the existing on-device VLMs with a smaller model file size. (Galib et al.",
+    "Recently, several advanced large model series have re- leased relatively small variants ranging from 1B to 2B pa- rameters, such as InternVL3-2B (Chen et al.",
+    "2024f) and Qwen2-VL-2B (Wang et al.",
+    "For example, InternVL3-2B consumes over 4 GB of memory, pushing memory usage close to system lim- its and causing application instability.",
+    "2024) focus on 8/4-bit quantization and have restricted quantization to lan- guage modules, leaving the problem of unified quantiza- arXiv:2511.08914v1 [cs.CV] 12 Nov 2025 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 Layer Index 0.00 0.05 0.10 0.15 0.20 0.25 0.30 0.35 Average Absolute Gradient Vision module Language module Figure 2: The average absolute gradients of vision (ViT) and language (LLM) module in the InternVL2.5-1B quantization-aware training process. tion for both vision and language components largely un- explored.",
+    "Tak- ing InternVL3-1B as an example, the ViT encoder contains 304M out of its 938M total parameters.",
+    "For example, 2-bit quan- tized InternVL3-1B consumes less than 400 MB of run- ning memory while achieving accuracy comparable to the best 0.6B model of FastVLM that requires almost 1.5GB of memory."
+   ],
+   "CMP": [
+    "2025), FastVLM (Vasu et al.",
+    "0 1000 2000 3000 4000 Model File Size (MB) 40 50 60 70 Average score of 8 benchmarks 0.25B 0.5B 0.6B 1.5B 0.8B 2B 1B 2B Low-bit quantization 2B(4-bit) 2B(2-bit) 1B(4-bit) 1B(2-bit) BF16 SmolVLM FastVLM H2OVL InternVL3 InternVL3 SPEED-Q (Ours) Figure 1: Comparison with SOTA on-device VLMs.",
+    "For example, 2-bit quan- tized InternVL3-1B consumes less than 400 MB of run- ning memory while achieving accuracy comparable to the best 0.6B model of FastVLM that requires almost 1.5GB of memory.",
+    "2025) BF16 41.06 38.33 31.44 29.43 59.52 61.0 62.03 76.73 49.94 FastVLM-600M (Vasu et al.",
+    "2024) BF16 48.14 38.93 30.78 28.60 53.47 75.0 60.18 66.48 50.20 Quantized: InternVL2.5-1B SPEED-Q 4-bit 66.41 50.27 36.89 41.41 68.36 75.8 71.47 89.08 62.46 InternVL2.5-1B SPEED-Q 2-bit 53.68 43.6 33.33 37.04 59.42 61.2 66.78 61.18 52.03 FastVLM-600M SPEED-Q 4-bit 51.70 42.4 32.22 31.71 64.70 53.4 61.43 77.68 51.91 FastVLM-600M SPEED-Q 2-bit 41.99 39.53 29.56 31.93 54.86 50.2 60.72 61.66 46.31 Table 4: Main results on on-device VLMs.",
+    "4-bit InternVL2.5-1B (485 MB, model file size) outperforms BF16 FastVLM (1517 MB) by +7.94 points, while the 2-bit InternVL2.5-1B (315 MB) matches its performance at 1/5 size.",
+    "5.3 Comparison with Lightweight VLMs As shown in Table 4, we first compare the quantized models with the existing VLMs designed for edge deployment, such as SmolVLM, FastVLM, and H2OVL, which typically have fewer than 1B parameters.",
+    "Furthermore, the 2-bit quantized InternVL2.5-1B ex- hibits comparable accuracy to FastVLM, which exhibits a favorable trade-off between model size and performance."
+   ],
+   "BIT": [
+    "Exten- sive experiments across multiple benchmarks demonstrate that SPEED-Q achieves up to 6× higher accuracy than existing quantization methods under 2-bit settings and con- sistently outperforms prior on-device VLMs under both 2- bit and 4-bit settings.",
+    "0 1000 2000 3000 4000 Model File Size (MB) 40 50 60 70 Average score of 8 benchmarks 0.25B 0.5B 0.6B 1.5B 0.8B 2B 1B 2B Low-bit quantization 2B(4-bit) 2B(2-bit) 1B(4-bit) 1B(2-bit) BF16 SmolVLM FastVLM H2OVL InternVL3 InternVL3 SPEED-Q (Ours) Figure 1: Comparison with SOTA on-device VLMs.",
+    "2024) focus on 8/4-bit quantization and have restricted quantization to lan- guage modules, leaving the problem of unified quantiza- arXiv:2511.08914v1 [cs.CV] 12 Nov 2025 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 Layer Index 0.00 0.05 0.10 0.15 0.20 0.25 0.30 0.35 Average Absolute Gradient Vision module Language module Figure 2: The average absolute gradients of vision (ViT) and language (LLM) module in the InternVL2.5-1B quantization-aware training process. tion for both vision and language components largely un- explored.",
+    "To the best of our knowledge, SPEED-Q is the first quantiza- tion framework to enable 2/4-bit weight-only quantization of both vision and language modules in small-scale billion- parameter VLMs, achieving superior accuracy–efficiency trade-offs.",
+    "For example, 2-bit quan- tized InternVL3-1B consumes less than 400 MB of run- ning memory while achieving accuracy comparable to the best 0.6B model of FastVLM that requires almost 1.5GB of memory.",
+    "2024), em- ploys group-wise scaling and multimodal warm-up, but only quantizes the language component to 4-bit and leaves the vi- sion module at its original precision (i.e., FP16).",
+    "For 4-bit quantization, the first-level group size is 32 and the second-level group size is 128.",
+    "For 2-bit quantization, both levels use a group size of 16."
+   ],
+   "PARAM": [
+    "However, existing research has rarely ex- plored aggressive quantization on VLMs, particularly for the models ranging from 1B to 2B parameters, which are more suitable for resource-constrained edge devices.",
+    "This limitation poses a significant challenge for deploying VLMs with 1–2B parameters, as the visual mod- ule accounts for a substantial portion of the parameters.",
+    "5.3 Comparison with Lightweight VLMs As shown in Table 4, we first compare the quantized models with the existing VLMs designed for edge deployment, such as SmolVLM, FastVLM, and H2OVL, which typically have fewer than 1B parameters.",
+    "6 Conclusion In order to further unleash the potential of VLMs deploy- ment on edge devices, we have presented SPEED-Q, a novel quantization framework for 1-2B parameter VLMs."
+   ],
+   "BENCH": [
+    "Specif- ically, we use MMBench (Liu et al.",
+    "2024c) for comprehensive multimodal eval- uation, ScienceQA (Lu et al.",
+    "2022) and MMMU (Yue et al.",
+    "2024) to evaluate visual reasoning, AI2D (Kembhavi et al.",
+    "2016) and OCRBench (Liu et al.",
+    "2024c) for text recognition and comprehension, SEED-Bench (Li et al.",
+    "Generally speaking, Model Bitwidth Method MMBench MMStar MMMU Hallusion.",
+    "Com- pared to other methods that only quantize the LLM mod- Model Bitwidth Method DocVQA RealWorldQA LLaVA-13B BF16 - 14.46 48.49 4-bit QSLAW 3.46 40.65 SPEED-Q‡ 13.54 55.16 Table 3: Comparison with QSLAW (Xie et al."
+   ]
+  }
+ },
+ {
+  "id": "2603.06569",
+  "title": "Penguin-VL: Exploring the Efficiency Limits of VLM with LLM-based Vision Encoders",
+  "mark": "keep",
+  "chars": 92098,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 1,
+   "TOK": 0,
+   "HW": 0,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 3,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [],
+   "BASE": [
+    "Gemma 3",
+    "Gemma3",
+    "InternVL",
+    "InternVL3.5",
+    "LLaVA",
+    "LLaVA-Video",
+    "Qwen-VL"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "AI2D",
+    "ChartQA",
+    "DocVQA",
+    "EgoSchema",
+    "LongVideoBench",
+    "MMMU",
+    "MVBench",
+    "MathVista",
+    "OCRBench",
+    "RealWorldQA",
+    "RealworldQA",
+    "VideoMME"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [
+    "Video Building upon the deterministic inference settings established for images, we introduce additional configurations for video inputs: specifically, we cap the maximum number of frames at 300 and set the frame rate up to 3 FPS."
+   ],
+   "TOK": [],
+   "HW": [],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "LLaVA) (b) LLM Supervision (e.g.",
+    "Qwen-VL, Contrastive Init) (c) Synergistic Vision Encoder Training (Ours: LLM as Init) Contrastive Loss Language Modeling Loss Feature Reconstruction Loss Language Modeling Loss Figure 2 Comparison of Vision Encoder Training Paradigms for VLMs..",
+    "To support variable-resolution inputs, we further equip the encoder with 2D rotary positional embeddings (2D-RoPE), as commonly adopted in recent multimodal models such as VideoLLaMA [12, 82, 83] series and Qwen-VL series [4, 5, 61].",
+    "The mixture comprises four distinct pillars: • General Video Understanding (77.6%): Serving as the cornerstone of our corpus, this category integrates massive-scale datasets such as LLaVA-Video-178K [85] and VIDAL-10M [88].",
+    "For the 2B configuration, we select several widely adopted models designed for on-device and efficient multimodal understanding, including Gemma3n-E2B-it [16], SmolVLM2 [44], InternVL3.5-2B [63], and Qwen3-VL-2B [4].",
+    "Due to the limited context length of Gemma3n-E2B-it, we cap the input to 32 video frames using uniform (linspace) sampling, which doubles the 16-frame context reported in the Gemma3 technical report [58].",
+    "Although it underperforms Qwen3-VL and InternVL3.5 on OCRBench, it still surpasses earlier baselines such as Gemma3n- E2B-it and SmolVLM2 by a margin of 81–110 points.",
+    "For LogicVista, Penguin achieves a score of 41.29, outperforming Qwen3-VL but falling short of InternVL3.5."
+   ],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [
+    "2 Methodology 2.1 Model Architecture Our Penguin series comprises Penguin-Encoder and Penguin-VL, built upon Qwen3 LLM backbones [59] and available in 2B and 8B parameter variants (Penguin-Encoder maintains a fixed parameter size, independent of the VLM backbone.).",
+    "If required by future scenarios, this framework can be readily extended to train vision encoders with substantially larger model capacities (e.g., 1.5B parameters), compared to alternative approaches such as contrastive learning.",
+    "After removing parameters unrelated to visual processing, the model uses approximately 400M parameters for visual modeling, which is broadly consistent with SigLIP."
+   ],
+   "BENCH": [
+    "DocVQA [47] measures the model’s ability to extract and reason over textual information from scanned documents, placing strong emphasis on accurate OCR and layout understanding.",
+    "To evaluate data-centric reasoning in graphical formats, we further include ChartQA [46] and InfoVQA [47], which require the interpretation of bar charts, line plots, and complex infographics through the integration of visual cues and numerical reasoning.",
+    "In addition, scene text understanding is examined using OCRBench [40], which focuses on recognizing and comprehending text appearing in unconstrained, cluttered real-world environments.",
+    "General visual mathematical problem solving is evaluated using MathVista [42], which include tasks such as geometry reasoning, function interpretation, and visually grounded numerical analysis.",
+    "MMMU-Pro [79] measures expert-level reasoning in professional and academic contexts, frequently demanding the synthesis of general knowledge and information distributed across multiple figures or slides.",
+    "To examine robustness in everyday visual reasoning, RealWorldQA [70] evaluates spatial, physical, and common-sense reasoning in realistic scenarios.",
+    "Scientific diagram understanding is assessed using AI2D [29], which requires structured reasoning over textbook-style diagrams with arrows, labels, and schematic layouts.",
+    "Although it underperforms Qwen3-VL and InternVL3.5 on OCRBench, it still surpasses earlier baselines such as Gemma3n- E2B-it and SmolVLM2 by a margin of 81–110 points."
+   ]
+  }
+ },
+ {
+  "id": "2604.27393",
+  "title": "MiniCPM-o 4.5: Towards Real-Time Full-Duplex Omni-Modal Interaction",
+  "mark": "keep",
+  "chars": 50266,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 1,
+   "THR": 4,
+   "TOK": 1,
+   "HW": 4,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 8,
+   "CMP": 0,
+   "BIT": 5,
+   "PARAM": 4,
+   "BENCH": 8
+  },
+  "sets": {
+   "HW": [
+    "NVIDIA RTX 4090",
+    "RTX 4090"
+   ],
+   "BASE": [
+    "InternVL3.5",
+    "LLaVA",
+    "MiniCPM-V"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "AI2D",
+    "DocVQA",
+    "LongVideoBench",
+    "MLVU",
+    "MMBench",
+    "MMMU",
+    "MathVista",
+    "OCRBench",
+    "TextVQA",
+    "Video-MME"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [
+    "In BF16, Qwen3-Omni-30B- A3B runs out of memory, while MiniCPM-o 4.5 achieves 154.3 tokens/s with 19 GB memory usage."
+   ],
+   "THR": [
+    "When backbones are instead required to directly generate speech tokens (typically about 25 tokens per second), as in recent works [11, 12], the efficiency can be significantly impeded, and the core language capabilities also tend to degrade [13, 14].",
+    "To enable flexible quality-efficiency trade-offs during inference, we augment omni-modal data with varying resolutions and frame rates, randomly setting the maximum frame resolution to 0.2–0.4 megapixels and sampling the frame rate uniformly from 1–5 FPS.",
+    "In BF16, Qwen3-Omni-30B- A3B runs out of memory, while MiniCPM-o 4.5 achieves 154.3 tokens/s with 19 GB memory usage.",
+    "In INT4, MiniCPM-o 4.5 further achieves 212.3 tokens/s, lower first-token latency, and nearly half the memory usage compared with Qwen3-Omni-30B-A3B."
+   ],
+   "TOK": [
+    "Specifically, each image is first divided into slices, and each slice is then encoded into 1024 tokens by a SigLIP ViT [6] (0.4B) and compressed into 64 tokens by the resampler module."
+   ],
+   "HW": [
+    "Fixed-text interleaving achieves the best CER/WER, suggesting that chunked streaming generation can improve pro- 13 Table 11: Inference efficiency comparison between MiniCPM-o 4.5 and Qwen3-Omni-30B-A3B on a single NVIDIA RTX 4090 using vLLM.",
+    "Framework Dtype RTX 4090 DGX Spark RTF ↓ Memory (GB) ↓ RTF ↓ Memory (GB) ↓ PyTorch BF16 OOM OOM 2.43 26 PyTorch INT4 1.26 14 1.27 14 llama.cpp-omni (Ours) FP16 0.27 19 0.46 19 llama.cpp-omni (Ours) INT4 0.21 11 0.20 11 nunciation accuracy over synthesizing speech after the full text is generated.",
+    "As shown in Table 11, compared with Qwen3-Omni-30B-A3B, MiniCPM-o 4.5 shows clear advantages in both throughput and memory usage on a single NVIDIA RTX 4090.",
+    "Compared with the PyTorch implementation, llama.cpp-omni substantially reduces RTF on both RTX 4090 and DGX Spark while maintaining a lower memory footprint under INT4 quantization, demonstrating its effectiveness for efficient real-time deployment."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "Qwen32025 ChatGPT2022 Claude 4.52025 LLaMA32024 DeepSeek-R12025 Gemini 32025 Qwen3.5VL2026 MiniCPM-o 2.62025 MiniCPM-o 4.52026 + Multimodal Capability + Omni Live Streaming + Full-Duplex GPT-4o2024 GPT-4V2023 Claude 32024 Human-like Interaction Gemma22024 Pixtral 12B2023 Text Interaction Qwen3-Omni2025 Gemini Live2025 MiniCPM-V 4.52025 Figure 2: Evolution of AI interaction paradigms.",
+    "For better compatibility with existing infrastructure and applications, MiniCPM-o 4.5 also supports traditional turn-based interaction and can be flexibly switched between the full-duplex omni-modal streaming mode and the traditional usage mode (like MiniCPM-o 2.6 and MiniCPM-V 4.5, with upgraded performance).",
+    "MiniCPM-o 4.5 adopts the LLaVA-UHD [5] image partitioning strategy to encode any aspect high-resolution images and improve compression rate with a resampler module [1].",
+    "Building upon the data system of MiniCPM-V 4.5, we further expand the scale and improve the quality to cover broader task types and real-world scenarios.",
+    "To better utilize document knowledge, we extend the unified document knowledge and OCR learning approach of MiniCPM-V 4.5 with a relevance-aware masking strategy.",
+    "Based on a pretraining checkpoint of MiniCPM-V 4.5.",
+    "5.1 Speech Pretraining MiniCPM-o 4.5 is initialized with a pretrained Whisper encoder and the pretraining checkpoint of MiniCPM-V 4.5, together with randomly initialized speech-related modules, including an audio projector, an LLM-to-speech projector, and a speech decoder.",
+    "With only 9B parameters, it consistently outperforms models of similar scale, such as InternVL3.5-8B [85] and Qwen3-VL-8B [4], as well as larger models like Qwen3-Omni-30B [7], while close to leading proprietary models including Gemini 2.5 Flash [86] and GPT-5 [87]."
+   ],
+   "CMP": [],
+   "BIT": [
+    "Control formulation specifies how the model decides whether to speak: in the Listen-Speak (LS) formulation, the model first predicts a binary listen/speak control token before content generation; in the Listen-Text (LT) formulation, the model directly predicts either [listen] or normal text tokens in a shared output space.",
+    "Model Dtype Throughput ↑ First-token Latency ↓ Memory ↓ (tokens/s) (s) (GB) Qwen3-Omni-30B-A3B BF16 OOM OOM OOM MiniCPM-o 4.5 BF16 154.3 0.59 19 Qwen3-Omni-30B-A3B INT4 147.8 0.98 20 MiniCPM-o 4.5 INT4 212.3 0.58 11 Table 12: Inference efficiency comparison of different inference frameworks for MiniCPM-o 4.5.",
+    "Framework Dtype RTX 4090 DGX Spark RTF ↓ Memory (GB) ↓ RTF ↓ Memory (GB) ↓ PyTorch BF16 OOM OOM 2.43 26 PyTorch INT4 1.26 14 1.27 14 llama.cpp-omni (Ours) FP16 0.27 19 0.46 19 llama.cpp-omni (Ours) INT4 0.21 11 0.20 11 nunciation accuracy over synthesizing speech after the full text is generated.",
+    "In INT4, MiniCPM-o 4.5 further achieves 212.3 tokens/s, lower first-token latency, and nearly half the memory usage compared with Qwen3-Omni-30B-A3B.",
+    "Compared with the PyTorch implementation, llama.cpp-omni substantially reduces RTF on both RTX 4090 and DGX Spark while maintaining a lower memory footprint under INT4 quantization, demonstrating its effectiveness for efficient real-time deployment."
+   ],
+   "PARAM": [
+    "With a total of 9B parameters, MiniCPM-o 4.5 approaches Gemini 2.5 Flash in vision-language capabilities, delivering state-of-the-art open-source performance at its scale.",
+    "With a total of 9B parameters, it approaches Gemini 2.5 Flash in vision-language capabilities, delivering state-of-the-art open-source performance at its scale.",
+    "All learnable components—from multimodal encoders through the LLM backbone to the speech token decoder, totaling approximately 9B parameters—are differentiably connected in token-level, enabling end-to-end gradient propagation and joint optimization across modalities during training.",
+    "With only 9B parameters, it consistently outperforms models of similar scale, such as InternVL3.5-8B [85] and Qwen3-VL-8B [4], as well as larger models like Qwen3-Omni-30B [7], while close to leading proprietary models including Gemini 2.5 Flash [86] and GPT-5 [87]."
+   ],
+   "BENCH": [
+    "For general vision-language com- prehension, we include OpenCompass [32], MMBench V1.1 [33], MMVet [34], and MMStar [35], which cover diverse multimodal tasks.",
+    "For STEM-oriented reasoning, we include MMMU [36], MathVista [37], and AI2D [38], covering scientific knowledge, mathematical reasoning, and diagram understanding.",
+    "We use OCRBench [41], TextVQA [42], DocVQA [43], and OmniDocBench [44], which require joint modeling of textual content, visual layout, and document structure. (3) Multi-image understanding.",
+    "We use Video-MME [50], LVBench [51], MLVU [52], LongVideoBench [53], and MotionBench [54], covering both varying video lengths.",
+    "We evaluate omni-modal understanding on benchmarks where video and audio input streams are naturally time-aligned, including Daily-Omni [79], World- Sense [80], Video-Holmes [81], JointAVBench [82], AVUT-Human [83], FutureOmni [84], and Video-MME-Short with audio [50].",
+    "On OCRBench [41], TextVQA [42], and DocVQA [43], MiniCPM-o 4.5 is on par with top-tier models.",
+    "Despite its small parameter-size, it remains competitive on FutureOmni and Video-MME-Short (w/ audio).",
+    "Benchmark Gemini 2.5 Flash Qwen3-Omni MiniCPM-o 4.5 Size - 30B-A3B 9B Daily-Omni 79.3 70.7 80.2 WorldSense 52.6 54.0 55.7 Video-Holmes 51.3 50.4 64.3 JointAVBench 55.6 53.1 60.0 AVUT-Human 65.4 74.2 78.6 FutureOmni 55.6 62.1 56.1 Video-MME-Short (w/ audio) 85.5 81.3 84.7 Table 9: Performance of different Length reward strategies."
+   ]
+  }
+ },
+ {
+  "id": "2607.12659",
+  "title": "Jetson-PI: Towards Onboard Real-Time Robot Control via Foresight-Aligned Asynchronous Inference",
+  "mark": "keep",
+  "chars": 33246,
+  "counts": {
+   "SPEED": 3,
+   "FLOP": 0,
+   "LAT": 2,
+   "MEM": 1,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 8,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 0,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 0
+  },
+  "sets": {
+   "HW": [
+    "4090",
+    "A6000",
+    "CPU",
+    "Jetson",
+    "Jetson Orin",
+    "Jetson Orin Method ",
+    "Jetson Orin and have ",
+    "Jetson Orin show ",
+    "Jetson Thor",
+    "Jetson Thor Method ",
+    "NVIDIA Jetson Orin",
+    "NVIDIA RTX 4090",
+    "Orin",
+    "RTX 4090"
+   ],
+   "BASE": [],
+   "CMP": [],
+   "BENCH": []
+  },
+  "evidence": {
+   "SPEED": [
+    "Compared to π0.5 inference on naive PyTorch, our schedul- ing optimization achieves 2.11× and 1.87× reductions in reaction time on Orin and Thor, because action prediction no longer requires invoking the VLM every time.",
+    "Our graph reuse method achieves a 2.96× reduction in reaction time on Orin by eliminating per-inference graph construction over- head.",
+    "Our GPU-resident intermediate buffering and flow matching unrolling achieve 1.50× and 1.59× acceleration for the action expert on the two devices, by avoiding KV communication and repeated graph invocation across multiple denoising steps."
+   ],
+   "FLOP": [],
+   "LAT": [
+    "As shown in Figure 1(b), state-of-the-art VLA models such as π0.5 [3] achieve an inference latency of approximately 1.4 seconds on a Jetson Orin, resulting in a control frequency around 0.7 Hz.",
+    "Compared with vla.cpp, which has a latency of 893.0ms on the Orin platform [31], Jetson-PI achieves a 5.41× improvement in control frequency through scheduling and system opti- mizations."
+   ],
+   "MEM": [
+    "RTX 4090 RTX A6000 Orin 32GB Orin 64GB Thor Max Power (W) 450 300 50 50 130 TOPS 309 309 200 275 510 Memory 24GB GDDR6X 48GB GDDR6 48GB LPDDR5 48GB LPDDR5 48GB LPDDR5X Bandwidth (GB/s) 1024 768 204.8 204.8 273 Balance Computational Intensity 618 804 1953 2685 3736 (TOPS/Bandwidth ×1000) VLM Compute Bound Compute Bound Bandwidth Bound Bandwidth Bound Bandwidth Bound Action Expert Bandwidth Bound Bandwidth Bound Bandwidth Bound Bandwidth Bound Bandwidth Bound threshold θ, we consider the predicted future environment information to be sufficiently accurate."
+   ],
+   "THR": [],
+   "TOK": [],
+   "HW": [
+    "Jetson-PI: Towards Onboard Real-Time Robot Control via Foresight-Aligned Asynchronous Inference Zebin Yang1,2 Qi Wang1 Yunhe Wang1 Xiurui Guo4 Bo Yu3 Shaoshan Liu3 Jiafeng Xu1 Hao Dong1 Meng Li1,2∗ 1Peking University 2TLAIC 3AIRS 4PrimeBot Research Institute ∗Corresponding author.",
+    "However, deploying VLA models on low- power onboard devices, such as the Jetson Orin, remains challenging due to their high computational complexity, which leads to substantial inference latency and low control frequency.",
+    "In this pa- per, we propose Jetson-PI, a method for efficient VLA deployment on onboard de- vices via Foresight-Aligned Asynchronous Correction.",
+    "Extensive experiments demonstrate that Jetson-PI achieves 8.66× and 5.41× im- provements in control frequency compared with naive PyTorch and vla.cpp on NVIDIA Jetson Orin, while outperforming VLASH by 14.8% in average suc- cess rate on the LIBERO benchmark.",
+    "The code of our asynchronous algorithm is available on https://github.com/PKU-SEC-Lab/Jetson-PI, and our effi- cient llama.cpp-based inference engine is available on https://github.com/ PKU-SEC-Lab/Jetson-PI-Edge.",
+    "To achieve low inference latency and high control frequency, existing works often deploy VLA models on high-end GPUs such as NVIDIA RTX 4090 [1, 3, 9, 10, 11, 12], which provide substantial compute and bandwidth resources.",
+    "As shown in Figure 1(a), using an RTX 4090 can reduce battery life by 6.0× arXiv:2607.12659v5 [cs.RO] 5 Sep 2026 Mycobot 280 Koch v1.1 kit Realman ECO 6.0x 4.0x 2.9x (a) (b) Figure 1: (a) Battery life of three robots equipped with four different computing devices.",
+    "We use a 500 Wh WILLQ AGV lithium battery pack, and robot’s mechanical power consumption is included. (b) Power consumption and control frequency of different VLA inference on four computing de- vices: Jetson Orin, Jetson Thor, RTX A6000, and RTX 4090. compared to onboard devices like Jetson Orin, significantly limiting robot working time."
+   ],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": []
+  }
+ },
+ {
+  "id": "2607.13429",
+  "title": "Generalizable VLA Finetuning via Representation Anchoring and Language-Action Alignment",
+  "mark": "keep",
+  "chars": 40474,
+  "counts": {
+   "SPEED": 0,
+   "FLOP": 0,
+   "LAT": 0,
+   "MEM": 0,
+   "THR": 0,
+   "TOK": 0,
+   "HW": 0,
+   "ACC": 0,
+   "FREE": 0,
+   "BASE": 2,
+   "CMP": 0,
+   "BIT": 0,
+   "PARAM": 0,
+   "BENCH": 3
+  },
+  "sets": {
+   "HW": [],
+   "BASE": [
+    "Qwen2.5-VL"
+   ],
+   "CMP": [],
+   "BENCH": [
+    "GQA"
+   ]
+  },
+  "evidence": {
+   "SPEED": [],
+   "FLOP": [],
+   "LAT": [],
+   "MEM": [],
+   "THR": [],
+   "TOK": [],
+   "HW": [],
+   "ACC": [],
+   "FREE": [],
+   "BASE": [
+    "We additionally evaluate StarVLA (StarVLA Community, 2026), which pairs Qwen2.5-VL (Bai et al., 2025) with a flow-matching GR00T FM-DiT (Bjorck et al., 2025) action head, in our real-world experiments.",
+    "We compare Anchor-Align against standard BC using VLA- Adapter (Wang et al., 2025), which pairs a Prismatic-Qwen2.5-0.5B backbone with a Bridge- Attention regression head, and StarVLA (StarVLA Community, 2026), which pairs a Qwen2.5-VL backbone with a GR00T FM-DiT flow-matching action head."
+   ],
+   "CMP": [],
+   "BIT": [],
+   "PARAM": [],
+   "BENCH": [
+    "GQA (Hudson & Manning, 2019) tests this ability through compositional questions spanning object, attribute, and spatial understanding.",
+    "Here, we quantify visual reasoning in standard BC and Anchor-Align, through GQA accuracy over the course of finetuning with the frozen VLM (same VLM used as backbone for VLA model) as an upper bound.",
+    "5, standard BC degrades mono- tonically, losing 94% of its GQA accuracy within 10K steps (catastrophic forgetting), whereas Anchor-Align retains roughly 65% of the pretrained accuracy."
+   ]
+  }
+ }
+]

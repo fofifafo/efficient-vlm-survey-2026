@@ -1,0 +1,13 @@
+{
+ "method": "base4",
+ "setting": "default",
+ "n": 500,
+ "gqa500_acc": 0.596,
+ "meta": {
+  "name": "LLaVA-1.5-7B",
+  "setting": "default",
+  "quant": "nf4-4bit (bnb)",
+  "prompt": "vicuna_v1"
+ },
+ "max_new_tokens": 16
+}

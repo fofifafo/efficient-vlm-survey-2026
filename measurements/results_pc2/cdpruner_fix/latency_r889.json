@@ -1,0 +1,77 @@
+{
+ "n": 500,
+ "ttft_ms_median": 53.467129499949806,
+ "ttft_ms_p90": 62.35610700014149,
+ "total_ms_median": 84.48597749998044,
+ "peak_vram_gb": 13.623307704925537,
+ "energy_j_per_sample": 20.319889894972402,
+ "mean_power_w": 213.95577410748407,
+ "n_vis_tokens": 64.0,
+ "method": "cdpruner_fix",
+ "setting": "r889",
+ "meta": {
+  "name": "CDPruner(fix)",
+  "setting": "r889",
+  "visual_token_num": 64,
+  "patch": "no side CUDA streams in CLIP tower; device-resident DPP index"
+ },
+ "gpu": "NVIDIA GeForce RTX 5070 Ti",
+ "torch": "2.11.0+cu128",
+ "runs": [
+  {
+   "run": 0,
+   "n": 495,
+   "ttft_ms_median": 53.87343999973382,
+   "ttft_ms_p90": 62.609470000097645,
+   "total_ms_median": 84.6253450004042,
+   "peak_vram_gb": 13.623307704925537,
+   "energy_j_per_sample": 21.032750895027018,
+   "mean_power_w": 196.22714383533085,
+   "n_vis_tokens": 64
+  },
+  {
+   "run": 1,
+   "n": 500,
+   "ttft_ms_median": 53.62539799989463,
+   "ttft_ms_p90": 62.65766299975439,
+   "total_ms_median": 84.48597749998044,
+   "peak_vram_gb": 13.623307704925537,
+   "energy_j_per_sample": 20.30862574580179,
+   "mean_power_w": 213.5938355402161,
+   "n_vis_tokens": 64.0
+  },
+  {
+   "run": 2,
+   "n": 500,
+   "ttft_ms_median": 53.44007550002061,
+   "ttft_ms_p90": 62.35610700014149,
+   "total_ms_median": 84.5796569999493,
+   "peak_vram_gb": 13.623307704925537,
+   "energy_j_per_sample": 20.312143063256677,
+   "mean_power_w": 213.95577410748407,
+   "n_vis_tokens": 64.0
+  },
+  {
+   "run": 3,
+   "n": 500,
+   "ttft_ms_median": 53.26266449992545,
+   "ttft_ms_p90": 62.33081200025481,
+   "total_ms_median": 84.45517049995033,
+   "peak_vram_gb": 13.623307704925537,
+   "energy_j_per_sample": 20.319889894972402,
+   "mean_power_w": 214.32106912555736,
+   "n_vis_tokens": 64.0
+  },
+  {
+   "run": 4,
+   "n": 500,
+   "ttft_ms_median": 53.467129499949806,
+   "ttft_ms_p90": 62.266989999898215,
+   "total_ms_median": 84.28823299982469,
+   "peak_vram_gb": 13.623307704925537,
+   "energy_j_per_sample": 20.33513322795256,
+   "mean_power_w": 214.2486252697968,
+   "n_vis_tokens": 64.0
+  }
+ ]
+}

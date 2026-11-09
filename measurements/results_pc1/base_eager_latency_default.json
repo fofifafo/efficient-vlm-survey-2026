@@ -1,0 +1,77 @@
+{
+ "n": 500,
+ "ttft_ms_median": 114.40809599844215,
+ "ttft_ms_p90": 128.84426500022528,
+ "total_ms_median": 154.0015009995841,
+ "peak_vram_gb": 13.968265533447266,
+ "energy_j_per_sample": 46.30912352376804,
+ "mean_power_w": 265.07603266484836,
+ "n_vis_tokens": 576.0,
+ "method": "base",
+ "setting": "default",
+ "meta": {
+  "name": "LLaVA-1.5-7B",
+  "setting": "default",
+  "attn": "eager",
+  "prompt": "vicuna_v1"
+ },
+ "gpu": "NVIDIA GeForce RTX 5080",
+ "torch": "2.11.0+cu128",
+ "runs": [
+  {
+   "run": 0,
+   "n": 495,
+   "ttft_ms_median": 116.4001430006465,
+   "ttft_ms_p90": 128.93439500112436,
+   "total_ms_median": 153.5213749994,
+   "peak_vram_gb": 13.968265533447266,
+   "energy_j_per_sample": 46.30912352376804,
+   "mean_power_w": 232.27397775738726,
+   "n_vis_tokens": 576
+  },
+  {
+   "run": 1,
+   "n": 500,
+   "ttft_ms_median": 114.35895649810845,
+   "ttft_ms_p90": 128.81262999871979,
+   "total_ms_median": 154.0015009995841,
+   "peak_vram_gb": 13.968265533447266,
+   "energy_j_per_sample": 46.18612416887611,
+   "mean_power_w": 265.05427248099267,
+   "n_vis_tokens": 576.0
+  },
+  {
+   "run": 2,
+   "n": 500,
+   "ttft_ms_median": 114.40809599844215,
+   "ttft_ms_p90": 128.84426500022528,
+   "total_ms_median": 155.043642000237,
+   "peak_vram_gb": 13.968265533447266,
+   "energy_j_per_sample": 46.29996764235517,
+   "mean_power_w": 266.85109220438466,
+   "n_vis_tokens": 576.0
+  },
+  {
+   "run": 3,
+   "n": 500,
+   "ttft_ms_median": 114.02131950126204,
+   "ttft_ms_p90": 128.51733400020748,
+   "total_ms_median": 153.32245949866774,
+   "peak_vram_gb": 13.968265533447266,
+   "energy_j_per_sample": 46.36335831654421,
+   "mean_power_w": 269.25368413933046,
+   "n_vis_tokens": 576.0
+  },
+  {
+   "run": 4,
+   "n": 500,
+   "ttft_ms_median": 114.5526410000457,
+   "ttft_ms_p90": 129.12834599774214,
+   "total_ms_median": 154.2844409996178,
+   "peak_vram_gb": 13.968265533447266,
+   "energy_j_per_sample": 46.66350304697079,
+   "mean_power_w": 265.07603266484836,
+   "n_vis_tokens": 576.0
+  }
+ ]
+}

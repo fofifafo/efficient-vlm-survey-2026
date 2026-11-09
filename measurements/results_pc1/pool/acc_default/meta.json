@@ -1,0 +1,12 @@
+{
+ "meta": {
+  "name": "Pooling",
+  "setting": "default",
+  "visual_token_num": 144,
+  "selection": "2x2 average pooling of the 24x24 projector output grid",
+  "attn": "sdpa(default)",
+  "prompt": "vicuna_v1"
+ },
+ "max_new_tokens": 16,
+ "prompt": "vicuna_v1+single-word; textvqa with OCR reference tokens"
+}

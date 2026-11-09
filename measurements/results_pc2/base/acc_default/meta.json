@@ -1,0 +1,10 @@
+{
+ "meta": {
+  "name": "LLaVA-1.5-7B",
+  "setting": "default",
+  "attn": "sdpa(default)",
+  "prompt": "vicuna_v1"
+ },
+ "max_new_tokens": 16,
+ "prompt": "vicuna_v1+single-word; textvqa with OCR reference tokens"
+}

@@ -1,0 +1,182 @@
+{
+ "reproduce": {
+  "step1": 794,
+  "step2": 382,
+  "step3": 190,
+  "saved_pool": 190,
+  "identical": true
+ },
+ "curated": {
+  "n": 61,
+  "unique": 61,
+  "in_190": 59,
+  "outside_190": [
+   "2604.17320",
+   "2606.00573"
+  ],
+  "outside_190_detail": {
+   "2604.17320": {
+    "title": "Towards Joint Quantization and Token Pruning of Vision-Language Models",
+    "in_earlier_244": true,
+    "other_cards": [
+     "4.4"
+    ],
+    "step1": true,
+    "step2": true
+   },
+   "2606.00573": {
+    "title": "LASER: Loss-Aware Singular-value Decomposition and Rank Allocation for Efficient Low-Precision Vision-Language Models",
+    "in_earlier_244": true,
+    "other_cards": [
+     "4.3"
+    ],
+    "step1": true,
+    "step2": false
+   }
+  },
+  "sub": {
+   "4.3.1 양자화": 24,
+   "4.3.2 저랭크": 4,
+   "4.3.5 프루닝": 13,
+   "4.3.3 증류": 10,
+   "4.3.6 VLA 압축": 6,
+   "4.3.x 응용": 2,
+   "4.3.x 분석": 2
+  },
+  "recommended": 18
+ },
+ "unselected": {
+  "n": 131,
+  "carded_elsewhere": 35,
+  "never_carded": 96,
+  "carded_sheets": {
+   "4.3": 10,
+   "4.1R": 3,
+   "4.1": 4,
+   "4.2": 7,
+   "4.5R2": 3,
+   "4.5R": 6,
+   "4.5": 3,
+   "4.4": 5,
+   "4.2R": 3
+  },
+  "carded_marks": {
+   "skip": 40,
+   "keep": 4
+  },
+  "carded_kept_ids": [
+   "2404.14047",
+   "2405.18541",
+   "2407.03056"
+  ]
+ },
+ "cards_total": {
+  "cards": 618,
+  "unique": 475,
+  "marks_rows": 618
+ },
+ "sheet_4.3R_verdicts": {
+  "skip": 45,
+  "keep": 10,
+  "star": 6
+ },
+ "profile": {
+  "190": {
+   "n": 190,
+   "strict43_v21": 67,
+   "loose43_v21": 92,
+   "in_vlm_corpus": 161,
+   "in_eff_pool": 135,
+   "year": {
+    "2024": 28,
+    "2025": 77,
+    "2026": 85
+   },
+   "title_term": {
+    "low-rank/SVD": 21,
+    "quantization": 49,
+    "distillation": 48,
+    "pruning/sparsity": 44,
+    "compression (general)": 14,
+    "other title term": 14
+   }
+  },
+  "61_in_190": {
+   "n": 59,
+   "strict43_v21": 38,
+   "loose43_v21": 46,
+   "in_vlm_corpus": 53,
+   "in_eff_pool": 45,
+   "year": {
+    "2024": 9,
+    "2025": 18,
+    "2026": 32
+   },
+   "title_term": {
+    "quantization": 28,
+    "low-rank/SVD": 3,
+    "pruning/sparsity": 13,
+    "distillation": 10,
+    "compression (general)": 5
+   }
+  },
+  "unselected": {
+   "n": 131,
+   "strict43_v21": 29,
+   "loose43_v21": 46,
+   "in_vlm_corpus": 108,
+   "in_eff_pool": 90,
+   "year": {
+    "2024": 19,
+    "2025": 59,
+    "2026": 53
+   },
+   "title_term": {
+    "low-rank/SVD": 18,
+    "distillation": 38,
+    "pruning/sparsity": 31,
+    "compression (general)": 9,
+    "quantization": 21,
+    "other title term": 14
+   }
+  }
+ },
+ "earlier_244_list": {
+  "n": 244,
+  "overlap_190": 78,
+  "overlap_61": 45
+ },
+ "final": {
+  "entries": 71,
+  "papers": 69,
+  "from_190": 19,
+  "from_61": 16,
+  "from_unselected": [
+   "2404.14047",
+   "2405.18541",
+   "2407.03056"
+  ],
+  "compression_table": 20,
+  "compression_from_61": 16,
+  "compression_not_from_61": [
+   "2404.14047",
+   "2408.05517",
+   "2602.24059",
+   "2607.12787"
+  ],
+  "compression_not_from_61_cards": {
+   "2404.14047": [
+    "4.2"
+   ],
+   "2408.05517": [
+    "4.3"
+   ],
+   "2602.24059": [
+    "4.1R"
+   ],
+   "2607.12787": [
+    "4.3"
+   ]
+  }
+ }
+}

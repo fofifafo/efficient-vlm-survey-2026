@@ -1,0 +1,77 @@
+{
+ "n": 100,
+ "ttft_ms_median": 1954.065772999968,
+ "ttft_ms_p90": 2129.3202079999674,
+ "total_ms_median": 2340.866634499946,
+ "peak_alloc_gb": 5.021674156188965,
+ "peak_sys_used_gb": 7.199836730957031,
+ "energy_j_per_sample": 45.71038803237256,
+ "mean_power_w": 19.382705574443683,
+ "n_vis_tokens": 576.0,
+ "method": "base4",
+ "setting": "sweep576",
+ "meta": {
+  "name": "LLaVA-1.5-7B",
+  "setting": "sweep576",
+  "quant": "nf4-4bit (bnb)",
+  "prompt": "vicuna_v1"
+ },
+ "device": "Orin",
+ "torch": "2.11.0",
+ "idle_power_w": 3.622944,
+ "load_s": 190.80956849,
+ "power_mode": "NV Power Mode: MAXN_SUPER",
+ "runs": [
+  {
+   "run": 0,
+   "n": 95,
+   "ttft_ms_median": 1949.5601030000103,
+   "ttft_ms_p90": 2126.5082670000197,
+   "total_ms_median": 2341.8241450000323,
+   "peak_alloc_gb": 5.021674156188965,
+   "peak_sys_used_gb": 7.175373077392578,
+   "energy_j_per_sample": 47.805722124222214,
+   "mean_power_w": 18.84637170310408,
+   "rail_mean_w": {
+    "VDD_IN": 18.84637170310408,
+    "VDD_CPU_GPU_CV": 9.296615122472085,
+    "VDD_SOC": 4.7060731398404085
+   },
+   "n_vis_tokens": 576
+  },
+  {
+   "run": 1,
+   "n": 100,
+   "ttft_ms_median": 1954.4028605000108,
+   "ttft_ms_p90": 2129.3202079999674,
+   "total_ms_median": 2340.866634499946,
+   "peak_alloc_gb": 5.021674156188965,
+   "peak_sys_used_gb": 7.199836730957031,
+   "energy_j_per_sample": 45.61638607255596,
+   "mean_power_w": 19.382705574443683,
+   "rail_mean_w": {
+    "VDD_IN": 19.382705574443683,
+    "VDD_CPU_GPU_CV": 9.608785119555012,
+    "VDD_SOC": 4.837834045870366
+   },
+   "n_vis_tokens": 576.0
+  },
+  {
+   "run": 2,
+   "n": 100,
+   "ttft_ms_median": 1954.065772999968,
+   "ttft_ms_p90": 2131.031552999957,
+   "total_ms_median": 2335.067449500059,
+   "peak_alloc_gb": 5.021674156188965,
+   "peak_sys_used_gb": 7.201389312744141,
+   "energy_j_per_sample": 45.71038803237256,
+   "mean_power_w": 19.42043484809489,
+   "rail_mean_w": {
+    "VDD_IN": 19.42043484809489,
+    "VDD_CPU_GPU_CV": 9.628558683159328,
+    "VDD_SOC": 4.844922812229581
+   },
+   "n_vis_tokens": 576.0
+  }
+ ]
+}

@@ -1,0 +1,411 @@
+USE_VERSION: 1_0
+2026-10-17 17:03:46,842 - llava.model.builder - INFO - Start Sparse Inference...
+You are using a model of type llava to instantiate a model of type llava_llama. This is not supported for all configurations of models and can yield errors.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.03s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.55s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.62s/it]
+2026-10-17 17:04:00,610 - numexpr.utils - INFO - NumExpr defaulting to 12 threads.
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 1107.06, TFLOPs:1.80
+                  Total Time (ms): 1235.85
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 2039.91, TFLOPs:1.80
+                  Total Time (ms): 2171.27
+0/100 wall 3046.6 ms busy 1440.9 ms
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 2463.15, TFLOPs:1.78
+                  Total Time (ms): 2599.16
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 2862.84, TFLOPs:1.78
+                  Total Time (ms): 3004.15
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 3046.58, TFLOPs:1.78
+                  Total Time (ms): 3192.81
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 3112.88, TFLOPs:1.78
+                  Total Time (ms): 3261.42
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 3177.67, TFLOPs:1.77
+                  Total Time (ms): 3328.63
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 3250.27, TFLOPs:1.77
+                  Total Time (ms): 3403.98
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 3318.81, TFLOPs:1.77
+                  Total Time (ms): 3475.12
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 3394.58, TFLOPs:1.77
+                  Total Time (ms): 3553.43
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 3478.05, TFLOPs:1.77
+                  Total Time (ms): 3640.25
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 3565.26, TFLOPs:1.77
+                  Total Time (ms): 3730.42
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 3650.57, TFLOPs:1.77
+                  Total Time (ms): 3819.67
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 3716.49, TFLOPs:1.77
+                  Total Time (ms): 3888.62
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 3783.58, TFLOPs:1.77
+                  Total Time (ms): 3958.11
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 3849.29, TFLOPs:1.77
+                  Total Time (ms): 4026.23
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 3913.30, TFLOPs:1.77
+                  Total Time (ms): 4092.68
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 3985.16, TFLOPs:1.77
+                  Total Time (ms): 4168.73
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 4049.57, TFLOPs:1.77
+                  Total Time (ms): 4236.64
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 4112.42, TFLOPs:1.77
+                  Total Time (ms): 4301.91
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 4197.04, TFLOPs:1.77
+                  Total Time (ms): 4389.32
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 4266.33, TFLOPs:1.78
+                  Total Time (ms): 4460.88
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 4342.61, TFLOPs:1.78
+                  Total Time (ms): 4540.37
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 4411.62, TFLOPs:1.78
+                  Total Time (ms): 4611.74
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 4504.49, TFLOPs:1.78
+                  Total Time (ms): 4707.30
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 4580.65, TFLOPs:1.78
+                  Total Time (ms): 4785.86
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 4641.36, TFLOPs:1.78
+                  Total Time (ms): 4848.85
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 4710.90, TFLOPs:1.78
+                  Total Time (ms): 4920.72
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 4776.69, TFLOPs:1.78
+                  Total Time (ms): 4988.82
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 4837.31, TFLOPs:1.78
+                  Total Time (ms): 5052.63
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 4910.94, TFLOPs:1.78
+                  Total Time (ms): 5130.28
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 4978.53, TFLOPs:1.78
+                  Total Time (ms): 5200.06
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 5048.66, TFLOPs:1.77
+                  Total Time (ms): 5272.42
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 5140.61, TFLOPs:1.77
+                  Total Time (ms): 5368.92
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 5205.77, TFLOPs:1.77
+                  Total Time (ms): 5436.53
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 5272.30, TFLOPs:1.77
+                  Total Time (ms): 5505.58
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 5333.35, TFLOPs:1.77
+                  Total Time (ms): 5569.13
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 5408.59, TFLOPs:1.77
+                  Total Time (ms): 5647.09
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 5471.18, TFLOPs:1.77
+                  Total Time (ms): 5711.98
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 5534.35, TFLOPs:1.77
+                  Total Time (ms): 5777.54
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 5601.79, TFLOPs:1.77
+                  Total Time (ms): 5847.15
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 5669.79, TFLOPs:1.77
+                  Total Time (ms): 5917.72
+20/100 wall 80.9 ms busy 53.1 ms
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 5741.63, TFLOPs:1.78
+                  Total Time (ms): 5991.86
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 5827.83, TFLOPs:1.78
+                  Total Time (ms): 6083.42
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 5889.97, TFLOPs:1.78
+                  Total Time (ms): 6149.56
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 5974.53, TFLOPs:1.78
+                  Total Time (ms): 6238.24
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 6044.22, TFLOPs:1.78
+                  Total Time (ms): 6312.22
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 6113.10, TFLOPs:1.78
+                  Total Time (ms): 6383.47
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 6177.62, TFLOPs:1.78
+                  Total Time (ms): 6456.79
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 6250.96, TFLOPs:1.78
+                  Total Time (ms): 6532.93
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 6317.02, TFLOPs:1.78
+                  Total Time (ms): 6601.33
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 6378.25, TFLOPs:1.78
+                  Total Time (ms): 6664.92
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 6440.03, TFLOPs:1.78
+                  Total Time (ms): 6730.08
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 6508.90, TFLOPs:1.78
+                  Total Time (ms): 6801.64
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 6575.87, TFLOPs:1.78
+                  Total Time (ms): 6873.34
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 6671.47, TFLOPs:1.78
+                  Total Time (ms): 6971.47
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 6734.75, TFLOPs:1.78
+                  Total Time (ms): 7037.02
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 6801.93, TFLOPs:1.78
+                  Total Time (ms): 7106.64
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 6875.30, TFLOPs:1.78
+                  Total Time (ms): 7182.39
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 6942.68, TFLOPs:1.78
+                  Total Time (ms): 7252.06
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 7017.99, TFLOPs:1.78
+                  Total Time (ms): 7332.82
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 7086.88, TFLOPs:1.78
+                  Total Time (ms): 7405.82
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 7153.63, TFLOPs:1.78
+                  Total Time (ms): 7475.49
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 7215.76, TFLOPs:1.78
+                  Total Time (ms): 7540.04
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 7280.02, TFLOPs:1.78
+                  Total Time (ms): 7606.54
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 7351.32, TFLOPs:1.78
+                  Total Time (ms): 7680.14
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 7422.67, TFLOPs:1.78
+                  Total Time (ms): 7754.86
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 7517.83, TFLOPs:1.78
+                  Total Time (ms): 7852.36
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 7579.06, TFLOPs:1.78
+                  Total Time (ms): 7916.08
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 7646.94, TFLOPs:1.78
+                  Total Time (ms): 7986.29
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 7718.17, TFLOPs:1.78
+                  Total Time (ms): 8061.66
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 7792.59, TFLOPs:1.78
+                  Total Time (ms): 8140.52
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 7856.92, TFLOPs:1.78
+                  Total Time (ms): 8207.36
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 7926.03, TFLOPs:1.78
+                  Total Time (ms): 8278.87
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 7986.09, TFLOPs:1.78
+                  Total Time (ms): 8347.09
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 8051.59, TFLOPs:1.77
+                  Total Time (ms): 8414.87
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 8122.70, TFLOPs:1.78
+                  Total Time (ms): 8488.31
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 8186.45, TFLOPs:1.78
+                  Total Time (ms): 8555.01
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 8246.80, TFLOPs:1.78
+                  Total Time (ms): 8617.71
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 8310.44, TFLOPs:1.77
+                  Total Time (ms): 8683.69
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 8375.06, TFLOPs:1.78
+                  Total Time (ms): 8751.26
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 8436.82, TFLOPs:1.78
+                  Total Time (ms): 8815.73
+40/100 wall 100.1 ms busy 52.9 ms
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 8497.51, TFLOPs:1.78
+                  Total Time (ms): 8878.59
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 8559.96, TFLOPs:1.78
+                  Total Time (ms): 8943.29
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 8623.42, TFLOPs:1.78
+                  Total Time (ms): 9009.83
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 8691.79, TFLOPs:1.78
+                  Total Time (ms): 9080.62
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 8760.91, TFLOPs:1.77
+                  Total Time (ms): 9152.78
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 8826.44, TFLOPs:1.77
+                  Total Time (ms): 9220.59
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 8892.95, TFLOPs:1.77
+                  Total Time (ms): 9289.38
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 8966.94, TFLOPs:1.77
+                  Total Time (ms): 9365.82
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 9030.70, TFLOPs:1.77
+                  Total Time (ms): 9431.88
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 9096.93, TFLOPs:1.77
+                  Total Time (ms): 9500.56
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 9157.30, TFLOPs:1.77
+                  Total Time (ms): 9563.53
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 9217.53, TFLOPs:1.77
+                  Total Time (ms): 9626.12
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 9289.41, TFLOPs:1.77
+                  Total Time (ms): 9700.83
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 9372.62, TFLOPs:1.78
+                  Total Time (ms): 9789.00
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 9438.13, TFLOPs:1.77
+                  Total Time (ms): 9856.72
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 9503.47, TFLOPs:1.77
+                  Total Time (ms): 9924.48
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 9571.37, TFLOPs:1.77
+                  Total Time (ms): 9994.81
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 9665.27, TFLOPs:1.77
+                  Total Time (ms): 10091.00
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 9730.51, TFLOPs:1.77
+                  Total Time (ms): 10158.79
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 9800.40, TFLOPs:1.77
+                  Total Time (ms): 10232.08
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 9869.82, TFLOPs:1.77
+                  Total Time (ms): 10303.91
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 9937.76, TFLOPs:1.77
+                  Total Time (ms): 10374.21
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 10011.99, TFLOPs:1.77
+                  Total Time (ms): 10450.75
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 10074.59, TFLOPs:1.77
+                  Total Time (ms): 10515.64
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 10151.15, TFLOPs:1.77
+                  Total Time (ms): 10594.56
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 10225.55, TFLOPs:1.77
+                  Total Time (ms): 10671.91
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 10306.94, TFLOPs:1.77
+                  Total Time (ms): 10757.79
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 10389.10, TFLOPs:1.77
+                  Total Time (ms): 10842.75
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 10461.09, TFLOPs:1.77
+                  Total Time (ms): 10917.44
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 10530.13, TFLOPs:1.77
+                  Total Time (ms): 10988.79
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 10593.89, TFLOPs:1.77
+                  Total Time (ms): 11055.02
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 10671.96, TFLOPs:1.77
+                  Total Time (ms): 11136.58
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 10732.39, TFLOPs:1.77
+                  Total Time (ms): 11199.29
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 10797.46, TFLOPs:1.77
+                  Total Time (ms): 11266.61
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 10889.07, TFLOPs:1.77
+                  Total Time (ms): 11362.44
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 10949.85, TFLOPs:1.77
+                  Total Time (ms): 11425.66
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 11022.83, TFLOPs:1.77
+                  Total Time (ms): 11502.02
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 11091.37, TFLOPs:1.77
+                  Total Time (ms): 11573.30
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 11161.23, TFLOPs:1.77
+                  Total Time (ms): 11645.36
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 11233.08, TFLOPs:1.77
+                  Total Time (ms): 11721.67
+60/100 wall 86.6 ms busy 51.8 ms
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 11297.68, TFLOPs:1.77
+                  Total Time (ms): 11788.73
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 11374.24, TFLOPs:1.77
+                  Total Time (ms): 11869.57
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 11449.76, TFLOPs:1.77
+                  Total Time (ms): 11948.26
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 11517.21, TFLOPs:1.77
+                  Total Time (ms): 12018.10
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 11588.50, TFLOPs:1.77
+                  Total Time (ms): 12091.95
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 11663.95, TFLOPs:1.77
+                  Total Time (ms): 12170.58
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 11734.56, TFLOPs:1.77
+                  Total Time (ms): 12243.56
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 11815.38, TFLOPs:1.78
+                  Total Time (ms): 12328.52
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 11892.66, TFLOPs:1.77
+                  Total Time (ms): 12408.12
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 11953.30, TFLOPs:1.77
+                  Total Time (ms): 12471.11
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 12018.84, TFLOPs:1.78
+                  Total Time (ms): 12539.54
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 12087.69, TFLOPs:1.78
+                  Total Time (ms): 12610.72
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 12151.05, TFLOPs:1.78
+                  Total Time (ms): 12676.58
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 12218.99, TFLOPs:1.78
+                  Total Time (ms): 12746.96
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 12281.40, TFLOPs:1.78
+                  Total Time (ms): 12811.52
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 12348.97, TFLOPs:1.78
+                  Total Time (ms): 12881.54
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 12416.10, TFLOPs:1.78
+                  Total Time (ms): 12951.03
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 12486.68, TFLOPs:1.78
+                  Total Time (ms): 13024.83
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 12561.17, TFLOPs:1.78
+                  Total Time (ms): 13101.84
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 12628.09, TFLOPs:1.78
+                  Total Time (ms): 13172.19
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 12695.30, TFLOPs:1.78
+                  Total Time (ms): 13241.75
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 12762.57, TFLOPs:1.78
+                  Total Time (ms): 13311.38
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 12823.28, TFLOPs:1.78
+                  Total Time (ms): 13374.38
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 12886.41, TFLOPs:1.78
+                  Total Time (ms): 13440.24
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 12955.86, TFLOPs:1.78
+                  Total Time (ms): 13512.16
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 13022.94, TFLOPs:1.78
+                  Total Time (ms): 13581.96
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 13085.16, TFLOPs:1.78
+                  Total Time (ms): 13646.49
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 13166.19, TFLOPs:1.78
+                  Total Time (ms): 13729.86
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 13232.38, TFLOPs:1.78
+                  Total Time (ms): 13799.01
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 13303.54, TFLOPs:1.78
+                  Total Time (ms): 13874.57
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 13370.01, TFLOPs:1.78
+                  Total Time (ms): 13943.70
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 13457.99, TFLOPs:1.78
+                  Total Time (ms): 14033.93
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 13520.91, TFLOPs:1.78
+                  Total Time (ms): 14099.30
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 13608.38, TFLOPs:1.78
+                  Total Time (ms): 14189.17
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 13679.95, TFLOPs:1.78
+                  Total Time (ms): 14264.96
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 13747.77, TFLOPs:1.78
+                  Total Time (ms): 14337.17
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 13814.17, TFLOPs:1.78
+                  Total Time (ms): 14405.74
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 13876.74, TFLOPs:1.78
+                  Total Time (ms): 14470.82
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 13939.25, TFLOPs:1.78
+                  Total Time (ms): 14537.46
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 14019.43, TFLOPs:1.78
+                  Total Time (ms): 14619.93
+80/100 wall 77.8 ms busy 51.9 ms
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 14103.28, TFLOPs:1.78
+                  Total Time (ms): 14705.97
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 14191.80, TFLOPs:1.78
+                  Total Time (ms): 14796.73
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 14254.03, TFLOPs:1.78
+                  Total Time (ms): 14861.38
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 14317.40, TFLOPs:1.78
+                  Total Time (ms): 14927.01
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 14385.08, TFLOPs:1.78
+                  Total Time (ms): 14997.19
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 14453.77, TFLOPs:1.78
+                  Total Time (ms): 15068.70
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 14519.92, TFLOPs:1.78
+                  Total Time (ms): 15137.24
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 14590.49, TFLOPs:1.78
+                  Total Time (ms): 15210.16
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 14652.28, TFLOPs:1.78
+                  Total Time (ms): 15274.69
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 14742.85, TFLOPs:1.78
+                  Total Time (ms): 15367.67
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 14807.06, TFLOPs:1.78
+                  Total Time (ms): 15434.63
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 14879.26, TFLOPs:1.78
+                  Total Time (ms): 15510.05
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 14947.33, TFLOPs:1.78
+                  Total Time (ms): 15580.42
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 15021.38, TFLOPs:1.78
+                  Total Time (ms): 15657.47
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 15082.88, TFLOPs:1.78
+                  Total Time (ms): 15721.40
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 15150.17, TFLOPs:1.78
+                  Total Time (ms): 15790.93
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 15212.41, TFLOPs:1.78
+                  Total Time (ms): 15855.49
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 15275.55, TFLOPs:1.78
+                  Total Time (ms): 15921.15
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 15345.47, TFLOPs:1.78
+                  Total Time (ms): 15993.40
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 15427.86, TFLOPs:1.78
+                  Total Time (ms): 16078.44
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 15490.82, TFLOPs:1.78
+                  Total Time (ms): 16144.44
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 15560.86, TFLOPs:1.78
+                  Total Time (ms): 16216.94
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 15621.67, TFLOPs:1.78
+                  Total Time (ms): 16280.10
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 15690.59, TFLOPs:1.78
+                  Total Time (ms): 16351.49
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 15764.05, TFLOPs:1.78
+                  Total Time (ms): 16427.40
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 15839.80, TFLOPs:1.78
+                  Total Time (ms): 16505.71
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 15913.44, TFLOPs:1.78
+                  Total Time (ms): 16583.75
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 15978.34, TFLOPs:1.78
+                  Total Time (ms): 16650.96
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 16047.78, TFLOPs:1.78
+                  Total Time (ms): 16722.99
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 16121.19, TFLOPs:1.78
+                  Total Time (ms): 16799.09
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 16198.66, TFLOPs:1.78
+                  Total Time (ms): 16879.27
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 16270.99, TFLOPs:1.78
+                  Total Time (ms): 16955.24
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 16351.83, TFLOPs:1.78
+                  Total Time (ms): 17040.96
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 16431.71, TFLOPs:1.78
+                  Total Time (ms): 17125.83
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 16498.64, TFLOPs:1.78
+                  Total Time (ms): 17195.41
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 16569.24, TFLOPs:1.78
+                  Total Time (ms): 17268.62
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 16635.98, TFLOPs:1.78
+                  Total Time (ms): 17337.62
+[32m[Efficiency INFO][0m Equal Tokens: 192, Prefill Time (ms): 16704.67, TFLOPs:1.78
+                  Total Time (ms): 17408.72
+SUMMARY {"method": "sparsevlm", "setting": "default", "n": 95, "wall_ms": 84.25, "gpu_busy_ms": 52.9, "host_ms": 30.93, "host_share": 0.37, "kernels": 2635, "gpu": "NVIDIA GeForce RTX 5080", "torch": "2.11.0+cu128", "note": "wall = TTFT without profiler (max_new_tokens=1, same window as harness); gpu_busy = union of CUDA kernel/memcpy intervals in a second, profiled run"}

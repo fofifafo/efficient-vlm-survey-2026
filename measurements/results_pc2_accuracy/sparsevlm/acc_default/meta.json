@@ -1,0 +1,11 @@
+{
+ "meta": {
+  "name": "SparseVLM",
+  "setting": "default",
+  "retain_tokens": 192,
+  "version": "1_0",
+  "freed_dup_attn_gb": 4.0
+ },
+ "max_new_tokens": 16,
+ "prompt": "vicuna_v1+single-word; textvqa with OCR reference tokens"
+}

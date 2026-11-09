@@ -1,0 +1,77 @@
+{
+ "n": 500,
+ "ttft_ms_median": 71.85051800001929,
+ "ttft_ms_p90": 78.88791599998513,
+ "total_ms_median": 100.95219849995374,
+ "peak_vram_gb": 13.694478988647461,
+ "energy_j_per_sample": 23.730613543184578,
+ "mean_power_w": 209.24510069066622,
+ "n_vis_tokens": 128.0,
+ "method": "cdpruner_fix",
+ "setting": "default",
+ "meta": {
+  "name": "CDPruner(fix)",
+  "setting": "default",
+  "visual_token_num": 128,
+  "patch": "no side CUDA streams in CLIP tower; device-resident DPP index"
+ },
+ "gpu": "NVIDIA GeForce RTX 5070 Ti",
+ "torch": "2.11.0+cu128",
+ "runs": [
+  {
+   "run": 0,
+   "n": 495,
+   "ttft_ms_median": 72.10844900009761,
+   "ttft_ms_p90": 79.44038100004036,
+   "total_ms_median": 101.20970499974646,
+   "peak_vram_gb": 13.694478988647461,
+   "energy_j_per_sample": 24.471370607428,
+   "mean_power_w": 194.97270430483064,
+   "n_vis_tokens": 128
+  },
+  {
+   "run": 1,
+   "n": 500,
+   "ttft_ms_median": 71.42573400005858,
+   "ttft_ms_p90": 78.88791599998513,
+   "total_ms_median": 100.95219849995374,
+   "peak_vram_gb": 13.694478988647461,
+   "energy_j_per_sample": 23.68760133642599,
+   "mean_power_w": 209.24510069066622,
+   "n_vis_tokens": 128.0
+  },
+  {
+   "run": 2,
+   "n": 500,
+   "ttft_ms_median": 71.68631499985167,
+   "ttft_ms_p90": 78.68882399998256,
+   "total_ms_median": 100.70146549992387,
+   "peak_vram_gb": 13.694478988647461,
+   "energy_j_per_sample": 23.730613543184578,
+   "mean_power_w": 209.67232833083943,
+   "n_vis_tokens": 128.0
+  },
+  {
+   "run": 3,
+   "n": 500,
+   "ttft_ms_median": 72.02542549998725,
+   "ttft_ms_p90": 79.27281100000982,
+   "total_ms_median": 101.16412799993668,
+   "peak_vram_gb": 13.694478988647461,
+   "energy_j_per_sample": 23.77847955240916,
+   "mean_power_w": 208.8914969407207,
+   "n_vis_tokens": 128.0
+  },
+  {
+   "run": 4,
+   "n": 500,
+   "ttft_ms_median": 71.85051800001929,
+   "ttft_ms_p90": 78.77747900010945,
+   "total_ms_median": 100.90078600001107,
+   "peak_vram_gb": 13.694478988647461,
+   "energy_j_per_sample": 23.728143747455572,
+   "mean_power_w": 209.29075743269055,
+   "n_vis_tokens": 128.0
+  }
+ ]
+}

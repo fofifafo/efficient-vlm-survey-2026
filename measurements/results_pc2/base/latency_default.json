@@ -1,0 +1,77 @@
+{
+ "n": 500,
+ "ttft_ms_median": 121.39059800000496,
+ "ttft_ms_p90": 132.25739500001055,
+ "total_ms_median": 156.0315479999872,
+ "peak_vram_gb": 13.952966690063477,
+ "energy_j_per_sample": 42.882880775813675,
+ "mean_power_w": 258.83559671077523,
+ "n_vis_tokens": 576.0,
+ "method": "base",
+ "setting": "default",
+ "meta": {
+  "name": "LLaVA-1.5-7B",
+  "setting": "default",
+  "attn": "sdpa(default)",
+  "prompt": "vicuna_v1"
+ },
+ "gpu": "NVIDIA GeForce RTX 5070 Ti",
+ "torch": "2.11.0+cu128",
+ "runs": [
+  {
+   "run": 0,
+   "n": 495,
+   "ttft_ms_median": 121.39059800000496,
+   "ttft_ms_p90": 132.15013799998587,
+   "total_ms_median": 156.07641799999783,
+   "peak_vram_gb": 13.952966690063477,
+   "energy_j_per_sample": 42.63995796441056,
+   "mean_power_w": 252.09512265737104,
+   "n_vis_tokens": 576
+  },
+  {
+   "run": 1,
+   "n": 500,
+   "ttft_ms_median": 121.26609800000665,
+   "ttft_ms_p90": 132.16772300000912,
+   "total_ms_median": 155.69271999999046,
+   "peak_vram_gb": 13.952966690063477,
+   "energy_j_per_sample": 42.7421892452309,
+   "mean_power_w": 257.7782605670246,
+   "n_vis_tokens": 576.0
+  },
+  {
+   "run": 2,
+   "n": 500,
+   "ttft_ms_median": 121.37728400003311,
+   "ttft_ms_p90": 132.25739500001055,
+   "total_ms_median": 156.0315479999872,
+   "peak_vram_gb": 13.952966690063477,
+   "energy_j_per_sample": 42.882880775813675,
+   "mean_power_w": 258.83559671077523,
+   "n_vis_tokens": 576.0
+  },
+  {
+   "run": 3,
+   "n": 500,
+   "ttft_ms_median": 121.44009650003795,
+   "ttft_ms_p90": 132.30036600003814,
+   "total_ms_median": 155.99757449999174,
+   "peak_vram_gb": 13.952966690063477,
+   "energy_j_per_sample": 43.0244729559794,
+   "mean_power_w": 259.59616300907925,
+   "n_vis_tokens": 576.0
+  },
+  {
+   "run": 4,
+   "n": 500,
+   "ttft_ms_median": 121.60816249996742,
+   "ttft_ms_p90": 132.5392630000124,
+   "total_ms_median": 156.55231799996727,
+   "peak_vram_gb": 13.952966690063477,
+   "energy_j_per_sample": 43.13689441710862,
+   "mean_power_w": 259.21820060169415,
+   "n_vis_tokens": 576.0
+  }
+ ]
+}

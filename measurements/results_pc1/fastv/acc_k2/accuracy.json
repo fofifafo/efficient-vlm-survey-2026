@@ -1,0 +1,90 @@
+{
+ "gqa": {
+  "acc": 0.6006519319446653,
+  "n": 12578
+ },
+ "pope": {
+  "acc": 0.8456666666666667,
+  "f1": 0.8252610391244182,
+  "yes_ratio": 0.38322222222222224,
+  "n": 9000
+ },
+ "textvqa": {
+  "acc": 0.607466666666667,
+  "n": 5000
+ },
+ "mme": {
+  "code_reasoning": {
+   "acc": 0.5,
+   "acc_plus": 0.15,
+   "score": 65.0
+  },
+  "artwork": {
+   "acc": 0.7125,
+   "acc_plus": 0.49,
+   "score": 120.25000000000001
+  },
+  "celebrity": {
+   "acc": 0.7735294117647059,
+   "acc_plus": 0.5529411764705883,
+   "score": 132.64705882352942
+  },
+  "numerical_calculation": {
+   "acc": 0.475,
+   "acc_plus": 0.15,
+   "score": 62.5
+  },
+  "text_translation": {
+   "acc": 0.575,
+   "acc_plus": 0.25,
+   "score": 82.5
+  },
+  "count": {
+   "acc": 0.85,
+   "acc_plus": 0.7666666666666667,
+   "score": 161.66666666666666
+  },
+  "color": {
+   "acc": 0.9,
+   "acc_plus": 0.8,
+   "score": 170.00000000000003
+  },
+  "commonsense_reasoning": {
+   "acc": 0.7142857142857143,
+   "acc_plus": 0.4857142857142857,
+   "score": 120.0
+  },
+  "position": {
+   "acc": 0.75,
+   "acc_plus": 0.5333333333333333,
+   "score": 128.33333333333331
+  },
+  "OCR": {
+   "acc": 0.825,
+   "acc_plus": 0.65,
+   "score": 147.5
+  },
+  "landmark": {
+   "acc": 0.8875,
+   "acc_plus": 0.78,
+   "score": 166.75
+  },
+  "scene": {
+   "acc": 0.8375,
+   "acc_plus": 0.69,
+   "score": 152.75
+  },
+  "existence": {
+   "acc": 0.95,
+   "acc_plus": 0.9,
+   "score": 185.0
+  },
+  "posters": {
+   "acc": 0.7891156462585034,
+   "acc_plus": 0.5850340136054422,
+   "score": 137.41496598639455
+  },
+  "perception_total": 1502.312024809924,
+  "cognition_total": 330.0
+ }
+}

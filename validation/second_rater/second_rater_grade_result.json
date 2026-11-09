@@ -1,0 +1,89 @@
+{
+ "code_kappa": 0.47,
+ "code_agree": 80.0,
+ "measured_kappa": 0.5,
+ "measured_agree": 85.0,
+ "grade_kappa": 0.47,
+ "grade_agree": 70.0,
+ "n": 20,
+ "disagreements": [
+  {
+   "n": 2,
+   "name": "Rank-1 Expert Pool LoRA",
+   "arxiv": "2601.22828",
+   "ours": "A",
+   "ours_code": true,
+   "ours_meas": true,
+   "r2_code": false,
+   "r2_meas": true,
+   "r2_grade": "B",
+   "r2_code_note": "논문 페이지에 저장소 링크 없음. 외부에서 확인한 동일 논문 저장소: https://github.com/Fazhan-cs/DAC",
+   "r2_note": "Q1은 ‘논문에 저장소 링크가 있어야 예’라는 시트 기준을 적용. 외부 저장소에는 실제 코드가 있으나 논문 페이지에서 직접 연결되지 않음."
+  },
+  {
+   "n": 6,
+   "name": "SWIFT",
+   "arxiv": "2408.05517",
+   "ours": "C",
+   "ours_code": true,
+   "ours_meas": false,
+   "r2_code": false,
+   "r2_meas": true,
+   "r2_grade": "B",
+   "r2_code_note": "논문 페이지에 자체 저장소 링크 없음. 외부 프로젝트 저장소: https://github.com/modelscope/ms-swift",
+   "r2_note": "Q1은 논문 페이지의 직접 링크 여부를 기준으로 아니오 판정. 외부 공개 저장소에는 실행 코드가 있음."
+  },
+  {
+   "n": 10,
+   "name": "AutoSelect",
+   "arxiv": "2603.07135",
+   "ours": "B",
+   "ours_code": false,
+   "ours_meas": true,
+   "r2_code": true,
+   "r2_meas": true,
+   "r2_grade": "A",
+   "r2_code_note": "https://github.com/MedHK23/AutoSelect",
+   "r2_note": ""
+  },
+  {
+   "n": 15,
+   "name": "VideoChat-Flash",
+   "arxiv": "2501.00574",
+   "ours": "A",
+   "ours_code": true,
+   "ours_meas": true,
+   "r2_code": false,
+   "r2_meas": true,
+   "r2_grade": "B",
+   "r2_code_note": "논문 페이지에 저장소 링크 없음. 외부에서 확인한 공식 저장소: https://github.com/OpenGVLab/VideoChat-Flash",
+   "r2_note": "Q1은 논문 페이지에 직접 링크가 있어야 한다는 시트 기준을 적용. 저장소는 외부에서 별도로 확인됨."
+  },
+  {
+   "n": 18,
+   "name": "MiniDrive",
+   "arxiv": "2409.07267",
+   "ours": "C",
+   "ours_code": false,
+   "ours_meas": false,
+   "r2_code": false,
+   "r2_meas": true,
+   "r2_grade": "B",
+   "r2_code_note": "확인된 저장소는 README.md만 있고 실행 코드 파일이 보이지 않음: https://github.com/EMZucas/minidrive",
+   "r2_note": "Q1의 ‘링크가 README만 있으면 아니오’ 규칙을 적용."
+  },
+  {
+   "n": 19,
+   "name": "Eve",
+   "arxiv": "2501.04322",
+   "ours": "C",
+   "ours_code": true,
+   "ours_meas": false,
+   "r2_code": true,
+   "r2_meas": true,
+   "r2_grade": "A",
+   "r2_code_note": "https://github.com/rangmiao/Eve",
+   "r2_note": ""
+  }
+ ]
+}

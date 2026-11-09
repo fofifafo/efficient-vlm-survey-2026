@@ -1,0 +1,132 @@
+﻿id,date,title,title_term,strict43_v21,in_vlm_corpus,in_eff_pool,cards,marks
+2403.09296,2024-03-14,Select and Distill: Selective Dual-Teacher Knowledge Transfer for Continual Learning on Vision-Language Models,distillation,0,1,1,,
+2404.11249,2024-04-17,A Progressive Framework of Vision-language Knowledge Distillation and Alignment for Multilingual Scene,distillation,0,1,1,,
+2404.13425,2024-04-20,Enhancing Adversarial Robustness of Vision-Language Models through Low-Rank Adaptation,low-rank/SVD,0,1,1,4.2R,4.2R:skip
+2404.14047,2024-04-22,An empirical study of LLaMA3 quantization: from LLMs to MLLMs,quantization,1,1,1,4.2,4.2:keep
+2405.18541,2024-05-28,Low-Rank Few-Shot Adaptation of Vision-Language Models,low-rank/SVD,0,1,1,4.2R;4.2,4.2R:keep;4.2:keep
+2405.20606,2024-05-31,Vision-Language Meets the Skeleton: Progressively Distillation with Cross-Modal Knowledge for 3D Action Representation Learning,distillation,0,0,0,,
+2406.12275,2024-06-18,VoCo-LLaMA: Towards Vision Compression with Large Language Models,compression (general),0,1,1,,
+2407.03056,2024-07-03,Improving Zero-shot Generalization of Learned Prompts via Unsupervised Knowledge Distillation,distillation,0,1,1,4.2R,4.2R:keep
+2407.15913,2024-07-22,Test-Time Low Rank Adaptation via Confidence Maximization for Zero-Shot Generalization of Vision-Language Models,low-rank/SVD,0,1,0,,
+2409.00084,2024-08-25,"Vision-Language and Large Language Model Performance in Gastroenterology: GPT, Claude, Llama, Phi, Mistral, Gemma, and Quantized Models",quantization,1,1,1,,
+2408.15305,2024-08-27,Parameter-Efficient Quantized Mixture-of-Experts Meets Vision-Language Instruction Tuning for Semiconductor Electron Micrograph Analysis,quantization,1,1,1,4.3,4.3:skip
+2408.16930,2024-08-29,VLM-KD: Knowledge Distillation from VLM for Long-Tail Visual Recognition,distillation,0,1,1,,
+2409.14096,2024-09-21,VLM-Vac: Enhancing Smart Vacuums through VLM Knowledge Distillation and Language-Guided Experience Replay,distillation,0,1,1,,
+2411.02722,2024-11-05,Multimodal Commonsense Knowledge Distillation for Visual Question Answering,distillation,0,1,1,,
+2411.14164,2024-11-21,FoPru: Focal Pruning for Efficient Large Vision-Language Models,pruning/sparsity,0,1,1,,
+2412.01034,2024-12-02,Quantization-Aware Imitation-Learning for Resource-Efficient Robotic Control,quantization,1,0,0,,
+2412.01282,2024-12-02,Align-KD: Distilling Cross-Modal Alignment Knowledge for Mobile Vision-Language Model Enhancement,distillation,0,1,1,,
+2412.03324,2024-12-04,A Stitch in Time Saves Nine: Small VLM is a Precise Guidance for Accelerating Large VLMs,other title term,0,1,1,4.1,4.1:skip
+2412.06458,2024-12-09,Pruning All-Rounder: Rethinking and Improving Inference Efficiency for Large Vision Language Models,pruning/sparsity,0,1,0,,
+2501.15040,2025-01-25,Complementary Subspace Low-Rank Adaptation of Vision-Language Models for Few-Shot Classification,low-rank/SVD,0,1,1,4.2,4.2:skip
+2502.05928,2025-02-09,ClinKD: Cross-Modal Clinical Knowledge Distiller For Multi-Task Medical Images,distillation,0,1,1,,
+2502.12119,2025-02-17,PRISM: Self-Pruning Intrinsic Selection Method for Training-Free Multimodal Data Selection,pruning/sparsity,0,1,0,,
+2502.14149,2025-02-19,PitVQA++: Vector Matrix-Low-Rank Adaptation for Open-Ended Visual Question Answering in Pituitary Surgery,low-rank/SVD,0,1,1,,
+2503.06003,2025-03-08,Integrating Frequency-Domain Representations with Low-Rank Adaptation in Vision-Language Models,low-rank/SVD,0,1,1,,
+2503.10665,2025-03-09,Small Vision-Language Models: A Survey on Compact Architectures and Techniques,other title term,0,1,1,,
+2503.09313,2025-03-12,xVLM2Vec: Adapting LVLM-based embedding models to multilinguality using Self-Knowledge Distillation,distillation,0,1,1,,
+2503.14075,2025-03-18,Growing a Multi-head Twig via Distillation and Reinforcement Learning to Accelerate Large Vision-Language Models,distillation,0,1,1,,
+2503.15369,2025-03-19,EfficientLLaVA:Generalizable Auto-Pruning for Large Vision-language Models,pruning/sparsity,0,1,0,,
+2504.12436,2025-04-16,Sparsity Outperforms Low-Rank Projections in Few-Shot Adaptation,low-rank/SVD,0,1,0,,
+2505.07164,2025-05-12,EmoVLM-KD: Fusing Distilled Expertise with Vision-Language Models for Visual Emotion Analysis,distillation,0,1,1,,
+2505.07675,2025-05-12,Simple yet Effective Semi-supervised Knowledge Distillation from Vision-Language Models via Dual-Head Optimization,distillation,0,1,1,,
+2505.15304,2025-05-21,Saliency-Aware Quantized Imitation Learning for Efficient Robotic Control,quantization,1,0,0,,
+2505.21382,2025-05-27,DeCAF: Decentralized Consensus-And-Factorization for Low-Rank Adaptation of Foundation Models,low-rank/SVD,0,1,1,4.5R,4.5R:skip
+2505.21567,2025-05-27,EaqVLA: Encoding-aligned Quantization for Vision-Language-Action Models,quantization,1,0,0,,
+2505.22517,2025-05-28,Multi-MLLM Knowledge Distillation for Out-of-Context News Detection,distillation,0,1,1,,
+2506.00910,2025-06-01,PCoreSet: Effective Active Learning through Knowledge Distillation from Vision-Language Models,distillation,0,1,1,,
+2506.03229,2025-06-03,Bridging Weakly-Supervised Learning and VLM Distillation: Noisy Partial Label Learning for Efficient Downstream Adaptation,distillation,0,1,1,,
+2506.10100,2025-06-11,EfficientVLA: Training-Free Acceleration and Compression for Vision-Language-Action Models,compression (general),0,0,0,,
+2506.10182,2025-06-11,Improving Personalized Search with Regularized Low-Rank Parameter Updates,low-rank/SVD,0,1,0,,
+2506.12826,2025-06-15,LOP: Learning Optimal Pruning for Efficient On-Demand MLLMs Scaling,pruning/sparsity,0,1,1,,
+2506.13038,2025-06-16,HKD4VLM: A Progressive Hybrid Knowledge Distillation Framework for Robust Multimodal Hallucination and Factuality Detection in VLMs,distillation,0,1,1,4.3,4.3:skip
+2507.08064,2025-07-10,PUMA: Layer-Pruned Language Model for Efficient Unified Multimodal Retrieval with Modality-Adaptive Learning,pruning/sparsity,0,1,1,,
+2507.15542,2025-07-21,HOLa: Zero-Shot HOI Detection with Low-Rank Decomposed VLM Feature Adaptation,low-rank/SVD,1,1,0,,
+2507.15680,2025-07-21,Visual-Language Model Knowledge Distillation Method for Image Quality Assessment,distillation,0,1,1,,
+2507.19679,2025-07-25,Efficient Learning for Product Attributes with Compact Multimodal Models,other title term,0,1,1,4.2,4.2:skip
+2508.01236,2025-08-02,Mitigating Information Loss under High Pruning Rates for Efficient Large Vision Language Models,pruning/sparsity,0,1,0,,
+2508.08644,2025-08-12,AME: Aligned Manifold Entropy for Robust Vision-Language Distillation,distillation,0,1,1,,
+2508.13305,2025-08-18,Prune2Drive: A Plug-and-Play Framework for Accelerating Vision-Language Models in Autonomous Driving,pruning/sparsity,0,1,1,4.4,4.4:skip
+2508.18177,2025-08-25,Scene-Aware Vectorized Memory Multi-Agent Framework with Cross-Modal Differentiated Quantization VLMs for Visually Impaired Assistance,quantization,1,1,1,,
+2508.20830,2025-08-28,Estimating 2D Keypoints of Surgical Tools Using Vision-Language Models with Low-Rank Adaptation,low-rank/SVD,0,1,1,,
+2508.21046,2025-08-28,CogVLA: Cognition-Aligned Vision-Language-Action Model via Instruction-Driven Routing & Sparsification,pruning/sparsity,0,1,0,,
+2509.03740,2025-09-03,CLIP-SVD: Efficient and Interpretable Vision-Language Adaptation via Singular Values,low-rank/SVD,1,1,0,,
+2509.05614,2025-09-06,SpecPrune-VLA: Accelerating Vision-Language-Action Models via Action-Aware Self-Speculative Pruning,pruning/sparsity,0,0,0,,
+2509.07436,2025-09-09,SA-OOSC: A Multimodal LLM-Distilled Semantic Communication Framework for Enhanced Coding Efficiency with Scenario Understanding,distillation,0,1,1,,
+2509.16633,2025-09-20,When Big Models Train Small Ones: Label-Free Model Parity Alignment for Efficient Visual Question Answering using Small VLMs,other title term,0,1,1,,
+2509.22093,2025-09-26,Action-aware Dynamic Pruning for Efficient Vision-Language-Action Manipulation,pruning/sparsity,0,0,0,,
+2509.22615,2025-09-26,GaussianVision: Vision-Language Alignment from Compressed Image Representations using 2D Gaussian Splatting,compression (general),0,0,0,,
+2509.23931,2025-09-28,AutoPrune: Each Complexity Deserves a Pruning Policy,pruning/sparsity,0,1,1,,
+2509.26235,2025-09-30,"Interpret, prune and distill Donut : towards lightweight VLMs for VQA on document",pruning/sparsity,0,1,1,,
+2510.00681,2025-10-01,Adaptive Event Stream Slicing for Open-Vocabulary Event-Based Object Detection via Vision-Language Knowledge Distillation,distillation,0,1,1,,
+2510.04547,2025-10-06,Activation Quantization of Vision Encoders Needs Prefixing Registers,quantization,1,1,1,,
+2510.10962,2025-10-13,MC#: Mixture Compressor for Mixture-of-Experts Large Models,compression (general),1,1,1,4.1R;4.1,4.1R:skip;4.1:skip
+2510.16753,2025-10-19,ELMM: Efficient Lightweight Multimodal Large Language Models for Multimodal Knowledge Graph Completion,other title term,0,1,1,,
+2510.26271,2025-10-30,Distilling Multilingual Vision-Language Models: When Smaller Models Stay Multilingual,distillation,0,1,1,,
+2511.06256,2025-11-09,VLDrive: Vision-Augmented Lightweight MLLMs for Efficient Language-grounded Autonomous Driving,other title term,0,1,1,,
+2511.06496,2025-11-09,A Low-Rank Method for Vision Language Model Hallucination Mitigation in Autonomous Driving,low-rank/SVD,0,1,0,,
+2511.06225,2025-11-09,MoRA: Missing Modality Low-Rank Adaptation for Visual Recognition,low-rank/SVD,0,1,1,4.2,4.2:skip
+2511.10615,2025-11-13,Towards Blind and Low-Vision Accessibility of Lightweight VLMs and Custom LLM-Evals,other title term,0,1,1,4.5R,4.5R:skip
+2511.10518,2025-11-13,SemanticVLA: Semantic-Aligned Sparsification and Enhancement for Efficient Robotic Manipulation,pruning/sparsity,0,0,0,,
+2511.11421,2025-11-14,BOFA: Bridge-Layer Orthogonal Low-Rank Fusion for CLIP-Based Class-Incremental Learning,low-rank/SVD,0,1,0,,
+2511.17448,2025-11-21,MMT-ARD: Multimodal Multi-Teacher Adversarial Distillation for Robust Vision-Language Models,distillation,0,1,1,,
+2511.19518,2025-11-24,Towards Efficient VLMs: Information-Theoretic Driven Compression via Adaptive Structural Pruning,pruning/sparsity,1,1,1,4.3,4.3:skip
+2512.00597,2025-11-29,Scaling Down to Scale Up: Towards Operationally-Efficient and Deployable Clinical Models via Cross-Modal Low-Rank Adaptation for Medical Vision-Language Models,low-rank/SVD,0,1,1,4.2,4.2:skip
+2512.08524,2025-12-09,Beyond Real Weights: Hypercomplex Representations for Stable Quantization,quantization,1,1,1,4.3,4.3:skip
+2512.09619,2025-12-10,GLaD: Geometric Latent Distillation for Vision-Language-Action Models,distillation,0,0,0,,
+2512.15701,2025-12-17,VLIC: Vision-Language Models As Perceptual Judges for Human-Aligned Image Compression,compression (general),0,1,1,,
+2512.18747,2025-12-21,IPCV: Information-Preserving Compression for MLLM Visual Encoders,compression (general),0,1,1,,
+2512.21576,2025-12-25,Towards Long-window Anchoring in Vision-Language Model Distillation,distillation,0,1,1,,
+2601.17818,2026-01-25,ViTCoP: Accelerating Large Vision-Language Models via Visual and Textual Semantic Collaborative Pruning,pruning/sparsity,0,1,1,,
+2601.20107,2026-01-27,Structural Anchor Pruning: Training-Free Multi-Vector Compression for Visual Document Retrieval,pruning/sparsity,0,1,0,,
+2601.20262,2026-01-28,Shallow-π: Knowledge Distillation for Flow-based VLAs,distillation,1,1,1,4.5R2;4.5R;4.5,4.5R2:skip;4.5R:skip;4.5:skip
+2602.00247,2026-01-30,CAPA: Contribution-Aware Pruning and FFN Approximation for Efficient Large Vision-Language Models,pruning/sparsity,0,1,0,,
+2602.00780,2026-01-31,Environment-Aware Adaptive Pruning with Interleaved Inference Orchestration for Vision-Language-Action Models,pruning/sparsity,0,0,0,,
+2602.03295,2026-02-03,POP: Prefill-Only Pruning for Efficient Large Model Inference,pruning/sparsity,0,1,0,,
+2602.07849,2026-02-08,LQA: A Lightweight Quantized-Adaptive Framework for Vision-Language Models on the Edge,quantization,1,1,1,4.5R2;4.5R,4.5R2:skip;4.5R:skip
+2602.12936,2026-02-13,Unleashing MLLMs on the Edge: A Unified Framework for Cross-Modal ReID via Adaptive SVD Distillation,low-rank/SVD,1,1,1,4.3,4.3:skip
+2602.13710,2026-02-14,HBVLA: Pushing 1-Bit Post-Training Quantization for Vision-Language-Action Models,quantization,1,0,0,,
+2602.21397,2026-02-24,MMLoP: Multi-Modal Low-Rank Prompting for Efficient Vision-Language Adaptation,low-rank/SVD,0,1,1,,
+2603.03380,2026-03-03,LiteVLA-Edge: Quantized On-Device Multimodal Control for Embedded Robotics,quantization,1,0,0,,
+2603.07904,2026-03-09,DyQ-VLA: Temporal-Dynamic-Aware Quantization for Embodied Vision-Language-Action Models,quantization,1,0,0,,
+2603.14549,2026-03-15,ASAP: Attention-Shift-Aware Pruning for Efficient LVLM Inference,pruning/sparsity,0,1,1,4.4,4.4:skip
+2603.14219,2026-03-15,Safety-Potential Pruning for Enhancing Safety Prompts Against VLM Jailbreaking Without Retraining,pruning/sparsity,0,1,0,,
+2603.15166,2026-03-16,DAIT: Distillation from Vision-Language Models to Lightweight Classifiers with Adaptive Intermediate Teacher Transfer,distillation,0,1,1,,
+2603.16590,2026-03-17,BATQuant: Outlier-resilient MXFP4 Quantization via Learnable Block-wise Optimization,quantization,1,1,1,,
+2603.21426,2026-03-22,Uncertainty-Aware Knowledge Distillation for Multimodal Large Language Models,distillation,0,1,1,,
+2603.22815,2026-03-24,"Focus, Don't Prune: Identifying Instruction-Relevant Regions for Information-Rich Image Understanding",pruning/sparsity,0,1,0,,
+2604.04972,2026-04-04,RCP: Representation Consistency Pruner for Mitigating Distribution Shift in Large Vision-Language Models,pruning/sparsity,0,1,1,,
+2604.18610,2026-04-13,SpikeMLLM: Spike-based Multimodal Large Language Models via Modality-Specific Temporal Scales and Temporal Compression,compression (general),1,1,1,,
+2604.11572,2026-04-13,DA-PTQ: Drift-Aware Post-Training Quantization for Efficient Vision-Language-Action Models,quantization,1,0,0,,
+2604.12767,2026-04-14,CLASP: Class-Adaptive Layer Fusion and Dual-Stage Pruning for Multimodal Large Language Models,pruning/sparsity,0,1,1,,
+2604.13488,2026-04-15,Towards Scalable Lightweight GUI Agents via Multi-role Orchestration,other title term,0,1,1,,
+2605.07505,2026-05-08,LiteGUI: Distilling Compact GUI Agents with Reinforcement Learning,distillation,0,0,0,,
+2605.11817,2026-05-12,See What Matters: Differentiable Grid Sample Pruning for Generalizable Vision-Language-Action Model,pruning/sparsity,0,0,0,,
+2605.13375,2026-05-13,GRIP-VLM: Group-Relative Importance Pruning for Efficient Vision-Language Models,pruning/sparsity,0,1,1,,
+2605.24011,2026-05-19,ActQuant: Sub-4-bit Action-Guided Quantization for Vision-Language-Action Models,quantization,1,0,0,,
+2605.19218,2026-05-19,Rotation-Aligned Key Channel Pruning for Efficient Vision-Language Model Inference,pruning/sparsity,0,1,1,4.4,4.4:skip
+2605.25393,2026-05-25,Decision-Making with Lightweight Confidence-Aware Language Model for Autonomous Driving,other title term,0,1,1,,
+2605.26415,2026-05-26,The Rescue Effect: Spatio-Semantic Early Exit Bypasses Quantization Collapse in CLIP,quantization,1,1,1,4.1R;4.1,4.1R:skip;4.1:skip
+2605.28115,2026-05-27,CIVIC: End-to-End Sequence Compactness for Efficient Vision-Language Models,other title term,0,1,1,4.4,4.4:skip
+2605.28803,2026-05-27,HoloQ-VLA: Uniform W4A4 Quantization of Vision-Language-Action Models,quantization,1,0,0,,
+2606.04434,2026-06-03,Hyper-ICL: Attention Calibration with Hyperbolic Anchor Distillation for Multimodal In-Context Learning,distillation,0,1,1,,
+2606.11106,2026-06-09,FADA: Accessible fetal ultrasound interpretation and annotation with a selectively distilled unified vision-language model,distillation,0,1,1,4.5,4.5:skip
+2606.14010,2026-06-12,RT-VLA: Real-Time Vision-Language-Action Models via Knowledge Distillation,distillation,0,0,0,,
+2606.15898,2026-06-14,VL2Spike: Spike-driven Distillation from VLMs for Low-Power Visual Perception in Embodied AI,distillation,1,1,1,4.5R,4.5R:skip
+2606.27871,2026-06-26,LocalNav: Distilling Frontier VLMs and Embodied RL for On-Device Object Goal Navigation,distillation,0,1,1,4.5R2;4.5R;4.5,4.5R2:skip;4.5R:skip;4.5:skip
+2607.03751,2026-07-04,Look Before You Leap: Distilling Tree Search into Action Evaluation for Frozen VLA Models,distillation,0,0,0,,
+2607.04171,2026-07-05,Teaching Tiny VLA Models Where to Look and How to Move,other title term,0,0,0,,
+2607.17052,2026-07-19,Searching for Task-Specific Vision Paths: Evolutionary Block Pruning Across Vision-Language Models,pruning/sparsity,0,1,0,,
+2607.20981,2026-07-23,"Beyond Independent Optimization: Compression, MoE Routing, and Quantization Interactions in Multimodal Edge Intelligence",quantization,1,1,1,4.4,4.4:skip
+2607.24440,2026-07-27,Bigger or Cheaper? Scale and Quantization Effects on Uncertainty Signals in Vision-Language Models Under Image Degradation,quantization,1,1,1,4.3,4.3:skip
+2607.25818,2026-07-28,SepPrune:A Separator-based Pruning Framework for Efficient Multimodal Large Language Models,pruning/sparsity,0,1,1,,
+2607.27122,2026-07-29,Towards Grounded GI Endoscopy VQA via Multi-Task Learning on Small VLMs,other title term,0,1,1,,
+2607.28269,2026-07-30,Theia: Large-Scale Multimodal Captioning and Automated Validation of the Incidents1M Dataset for Data-Free Distillation,distillation,0,1,1,4.1,4.1:skip
+2607.29637,2026-07-31,CodeShrink: Adaptive Visual Compression for Efficient Multimodal Code Understanding,compression (general),0,1,1,,
+2608.08630,2026-08-09,VLZip: Unified Visual and Textual Compression for Interleaved Long-Context Modeling,compression (general),0,1,1,,
+2608.10932,2026-08-11,Temporally Grounded Compositional Camera Motion Understanding via Geometric Knowledge Distillation,distillation,0,1,1,4.3,4.3:skip
+2608.18386,2026-08-18,TTSD-FAR: Test-Time Self-Distillation with Fisher-Anchored Restoration for Missing-Modality Emotion Recognition in LVLMs,distillation,0,0,0,,
+2608.24935,2026-08-23,A Lightweight Multimodal Vision-Language Framework for Early-Stage Anatomical Green Fruit Classification in Commercial Orchards,other title term,0,1,1,4.3,4.3:skip
+2608.22963,2026-08-24,Buried in Textual Debt: Context Pruning with Visual Evidence Preservation for MLLM Agents,pruning/sparsity,0,1,1,4.3,4.3:skip
+2608.26581,2026-08-27,Activation Outliers Matter: Robust Recovery for Quantized Multimodal LLMs,quantization,1,1,1,4.3,4.3:skip
+2608.27867,2026-08-28,CoRe-MoE: Compact Reusable MoE for Continual Multimodal Instruction Tuning,other title term,0,1,1,4.1R;4.2,4.1R:skip;4.2:skip

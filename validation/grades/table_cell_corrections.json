@@ -1,0 +1,77 @@
+{
+ "cells": [
+  {
+   "arxiv": "2502.11494",
+   "column": "flops",
+   "before": "paper Table 2",
+   "after": "12.8% (LLaVA-NeXT-7B)",
+   "evidence": "DART Table 2: + DART | 320 | 18:13 | 7:38 | 12.8% | 168.0 (Vanilla LLaVA-Next-7B 2880 tokens, 100%, 1512.1 MB)"
+  },
+  {
+   "arxiv": "2502.11494",
+   "column": "memory",
+   "before": "KV cache (paper Table 2)",
+   "after": "KV cache 1,512→168 MB (LLaVA-NeXT-7B, 320 tokens)",
+   "evidence": "DART Table 2: KV Cache (MB) 1512.1 vanilla, 168.0 with DART at 320 tokens"
+  },
+  {
+   "arxiv": "2506.10967",
+   "column": "flops",
+   "before": "−95% (NeXT-7B)",
+   "after": "−95% (LLaVA-NeXT-7B)",
+   "evidence": "When applied to LLaVA-NeXT-7B, it reduces FLOPs by 95%, CUDA latency by 78%, and GPU memory by 17%"
+  },
+  {
+   "arxiv": "2403.18293",
+   "column": "speed_latency",
+   "before": "efficiency vs TPT (table)",
+   "after": "test time 12 h 50 min→16 min vs TPT (ImageNet)",
+   "evidence": "It reduces the testing time dramatically from 12h 50min by TPT ... down to just 16 minutes."
+  },
+  {
+   "arxiv": "2507.14049",
+   "column": "speed_latency",
+   "before": "7× inference",
+   "after": "5 vs 20 ms for OpenVLA (A100)",
+   "evidence": "TABLE I: Inference Time (ms) OpenVLA 20, EVLA 5 (A100-40GB GPU)"
+  },
+  {
+   "arxiv": "2507.14049",
+   "column": "memory",
+   "before": "table (A100)",
+   "after": "4 vs 16 GB for OpenVLA (A100)",
+   "evidence": "TABLE I: Memory Usage (GB) OpenVLA 16, EVLA 4 (A100-40GB GPU)"
+  },
+  {
+   "arxiv": "2405.11273",
+   "column": "reduction",
+   "before": "variable number of experts",
+   "after": "n/s",
+   "evidence": "no reduction ratio stated"
+  },
+  {
+   "arxiv": "2504.07491",
+   "column": "hardware",
+   "before": "n/s (Ascend mentioned)",
+   "after": "n/s",
+   "evidence": "hardware of measurements not stated"
+  },
+  {
+   "arxiv": "2608.17402",
+   "column": "flops",
+   "before": "GFLOPs (figure)",
+   "after": "in a figure",
+   "evidence": "GFLOPs shown only in a figure"
+  }
+ ],
+ "claim_mismatch_grade_A_dagger": [
+  "DeepSeek-VL2 (4.1)",
+  "LLaVA-MoD (4.1)",
+  "LLaVA-MoD (4.3)",
+  "QA-IG PTQ (4.3)",
+  "Mirage (4.4)",
+  "Eve (4.5)",
+  "VLA-GSE (4.2)"
+ ],
+ "note": "A† = grade A on a measured cost of another kind than the one the paper claims to reduce (training vs inference); grade itself unchanged"
+}

@@ -1,0 +1,258 @@
+{
+ "cap": 60,
+ "cite_cap": 15,
+ "pool": 1947,
+ "citations_cached": 3248,
+ "round1": {
+  "4.1": {
+   "assigned": 59,
+   "cards": 59,
+   "by_score": 59,
+   "by_citation": 0
+  },
+  "4.2": {
+   "assigned": 445,
+   "cards": 75,
+   "by_score": 60,
+   "by_citation": 15
+  },
+  "4.3": {
+   "assigned": 310,
+   "cards": 75,
+   "by_score": 60,
+   "by_citation": 15
+  },
+  "4.4": {
+   "assigned": 482,
+   "cards": 75,
+   "by_score": 60,
+   "by_citation": 15
+  },
+  "4.5": {
+   "assigned": 187,
+   "cards": 75,
+   "by_score": 60,
+   "by_citation": 15
+  }
+ },
+ "cards_unique": 475,
+ "cards_in_pool": 461,
+ "cards_outside_pool": 14,
+ "pool_never_carded": 1486,
+ "patterns": [
+  {
+   "branch": "4.1",
+   "label": "설계 시점 — 구조",
+   "pattern": "mixture[- ]of[- ]experts|\\bMoE\\b",
+   "weight": 3,
+   "name": "MoE"
+  },
+  {
+   "branch": "4.1",
+   "label": "설계 시점 — 구조",
+   "pattern": "early exit|layer skip|depth pruning|layer pruning",
+   "weight": 3,
+   "name": "조기종료/층축소"
+  },
+  {
+   "branch": "4.1",
+   "label": "설계 시점 — 구조",
+   "pattern": "encoder[- ]free|lightweight (vision|visual) encoder|small(er)? (vision|visual) encoder",
+   "weight": 3,
+   "name": "인코더경량화"
+  },
+  {
+   "branch": "4.1",
+   "label": "설계 시점 — 구조",
+   "pattern": "state space model|\\bMamba\\b|linear attention|efficient attention",
+   "weight": 2,
+   "name": "SSM/선형어텐션"
+  },
+  {
+   "branch": "4.1",
+   "label": "설계 시점 — 구조",
+   "pattern": "\\bQ[- ]?Former\\b|resampler|perceiver|projector design",
+   "weight": 2,
+   "name": "커넥터설계"
+  },
+  {
+   "branch": "4.2",
+   "label": "학습 시점 — PEFT·데이터",
+   "pattern": "\\bLoRA\\b|\\bQLoRA\\b|\\bDoRA\\b|low[- ]rank adapt",
+   "weight": 3,
+   "name": "LoRA"
+  },
+  {
+   "branch": "4.2",
+   "label": "학습 시점 — PEFT·데이터",
+   "pattern": "parameter[- ]efficient|\\bPEFT\\b",
+   "weight": 3,
+   "name": "PEFT"
+  },
+  {
+   "branch": "4.2",
+   "label": "학습 시점 — PEFT·데이터",
+   "pattern": "\\badapter\\b",
+   "weight": 2,
+   "name": "어댑터"
+  },
+  {
+   "branch": "4.2",
+   "label": "학습 시점 — PEFT·데이터",
+   "pattern": "prompt tuning|prompt learning|visual prompt",
+   "weight": 1,
+   "name": "프롬프트튜닝"
+  },
+  {
+   "branch": "4.2",
+   "label": "학습 시점 — PEFT·데이터",
+   "pattern": "data[- ]efficient|data selection|data curation|curriculum",
+   "weight": 1,
+   "name": "데이터효율"
+  },
+  {
+   "branch": "4.3",
+   "label": "압축 시점 — 양자화·저랭크·증류",
+   "pattern": "quantiz|\\bPTQ\\b|\\bQAT\\b|\\bINT[48]\\b|W4A16|W8A8|binariz|ternary",
+   "weight": 3,
+   "name": "양자화"
+  },
+  {
+   "branch": "4.3",
+   "label": "압축 시점 — 양자화·저랭크·증류",
+   "pattern": "knowledge distillation|self[- ]distill|teacher[- ]student",
+   "weight": 3,
+   "name": "증류"
+  },
+  {
+   "branch": "4.3",
+   "label": "압축 시점 — 양자화·저랭크·증류",
+   "pattern": "low[- ]rank|matrix factoriz|\\bSVD\\b",
+   "weight": 2,
+   "name": "저랭크"
+  },
+  {
+   "branch": "4.3",
+   "label": "압축 시점 — 양자화·저랭크·증류",
+   "pattern": "sparsity|sparse (model|weight)|structured pruning|weight pruning",
+   "weight": 2,
+   "name": "희소/가중치프루닝"
+  },
+  {
+   "branch": "4.4",
+   "label": "실행 시점 — 토큰·캐시·디코딩",
+   "pattern": "visual token|token pruning|token reduction|token compress|token merg|token packer",
+   "weight": 3,
+   "name": "시각토큰압축"
+  },
+  {
+   "branch": "4.4",
+   "label": "실행 시점 — 토큰·캐시·디코딩",
+   "pattern": "KV[- ]cache|key[- ]value cache|cache (compress|evict|reuse|prun)",
+   "weight": 3,
+   "name": "KV캐시"
+  },
+  {
+   "branch": "4.4",
+   "label": "실행 시점 — 토큰·캐시·디코딩",
+   "pattern": "token selection|token sampling|prune \\w+ token",
+   "weight": 2,
+   "name": "토큰선택"
+  },
+  {
+   "branch": "4.4",
+   "label": "실행 시점 — 토큰·캐시·디코딩",
+   "pattern": "prefill",
+   "weight": 2,
+   "name": "prefill"
+  },
+  {
+   "branch": "4.4",
+   "label": "실행 시점 — 토큰·캐시·디코딩",
+   "pattern": "speculative decoding|flash[- ]?attention|\\bvLLM\\b|paged attention|prefix cach|continuous batching",
+   "weight": 2,
+   "name": "디코딩/서빙"
+  },
+  {
+   "branch": "4.5",
+   "label": "배포 시점 — 온디바이스·하드웨어",
+   "pattern": "Jetson|Raspberry|Snapdragon|smartphone|mobile phone|\\biPhone\\b|Orin",
+   "weight": 3,
+   "name": "실단말"
+  },
+  {
+   "branch": "4.5",
+   "label": "배포 시점 — 온디바이스·하드웨어",
+   "pattern": "\\bNPU\\b|\\bDSP\\b|\\bFPGA\\b|\\bASIC\\b|hardware accelerator",
+   "weight": 3,
+   "name": "가속기"
+  },
+  {
+   "branch": "4.5",
+   "label": "배포 시점 — 온디바이스·하드웨어",
+   "pattern": "on[- ]device|edge device|edge deploy",
+   "weight": 2,
+   "name": "온디바이스"
+  },
+  {
+   "branch": "4.5",
+   "label": "배포 시점 — 온디바이스·하드웨어",
+   "pattern": "energy consumption|power consumption|energy[- ]efficient",
+   "weight": 2,
+   "name": "전력"
+  },
+  {
+   "branch": "4.5",
+   "label": "배포 시점 — 온디바이스·하드웨어",
+   "pattern": "memory footprint|\\bVRAM\\b|memory usage",
+   "weight": 1,
+   "name": "메모리"
+  }
+ ],
+ "never_screened_96": {
+  "n": 96,
+  "where": {
+   "pool_assigned_4.3": 31,
+   "outside_pool": 41,
+   "pool_no_branch_score": 4,
+   "pool_assigned_4.4": 13,
+   "pool_assigned_4.2": 6,
+   "pool_assigned_4.5": 1
+  },
+  "outside_pool": 41,
+  "strict43": 16,
+  "rank_in_compression_round1": [
+   98,
+   100,
+   114,
+   120,
+   121,
+   155,
+   167,
+   173,
+   181,
+   182,
+   183,
+   190,
+   192,
+   194,
+   198,
+   207,
+   209,
+   217,
+   219,
+   224,
+   225,
+   236,
+   239,
+   260,
+   268,
+   275,
+   277,
+   278,
+   290,
+   292,
+   304
+  ]
+ }
+}

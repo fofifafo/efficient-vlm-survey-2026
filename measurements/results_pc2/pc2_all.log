@@ -1,0 +1,81 @@
+== PC2 run_all start 10/04 03:48  BENCH=/home/yc2008/bench_pc1
+backup -> /home/yc2008/vlmbench/results_pc2_v1
+== smoke base default 03:48
+   smoke OK: SUMMARY {'n': 15, 'ttft_ms_median': 122.793, 'ttft_ms_p90': 132.981, 'total_ms_median': 149.141, 'peak_vram_gb': 13.946, 'energy_j_per_sample': 46.922, 'mean_power_w': 172.265, 'n_vis_tokens': 576, 'm
+== full base default 03:48
+SUMMARY {'n': 500, 'ttft_ms_median': 121.391, 'ttft_ms_p90': 132.257, 'total_ms_median': 156.032, 'peak_vram_gb': 13.953, 'energy_j_per_sample': 42.883, 'mean_power_w': 258.836, 'n_vis_tokens': 576.0, 'method': 'base', '
+DONE queue
+== smoke vispruner default 03:55
+   smoke OK: SUMMARY {'n': 15, 'ttft_ms_median': 59.112, 'ttft_ms_p90': 66.668, 'total_ms_median': 84.847, 'peak_vram_gb': 13.524, 'energy_j_per_sample': 22.897, 'mean_power_w': 119.201, 'n_vis_tokens': 128, 'meth
+== full vispruner default 03:56
+SUMMARY {'n': 500, 'ttft_ms_median': 59.677, 'ttft_ms_p90': 66.873, 'total_ms_median': 88.92, 'peak_vram_gb': 13.524, 'energy_j_per_sample': 22.716, 'mean_power_w': 225.746, 'n_vis_tokens': 128.0, 'method': 'vispruner', 
+== full vispruner r889 04:00
+SUMMARY {'n': 500, 'ttft_ms_median': 50.513, 'ttft_ms_p90': 59.506, 'total_ms_median': 81.231, 'peak_vram_gb': 13.524, 'energy_j_per_sample': 19.919, 'mean_power_w': 218.048, 'n_vis_tokens': 64.0, 'method': 'vispruner', 
+DONE queue
+== smoke dart default 04:04
+   smoke OK: SUMMARY {'n': 15, 'ttft_ms_median': 72.253, 'ttft_ms_p90': 74.292, 'total_ms_median': 102.511, 'peak_vram_gb': 13.492, 'energy_j_per_sample': 27.68, 'mean_power_w': 143.66, 'n_vis_tokens': 128, 'metho
+== full dart default 04:04
+SUMMARY {'n': 500, 'ttft_ms_median': 72.681, 'ttft_ms_p90': 74.251, 'total_ms_median': 102.736, 'peak_vram_gb': 13.496, 'energy_j_per_sample': 25.546, 'mean_power_w': 214.792, 'n_vis_tokens': 128.0, 'method': 'dart', 'se
+== full dart r889 04:10
+SUMMARY {'n': 500, 'ttft_ms_median': 64.124, 'ttft_ms_p90': 65.79, 'total_ms_median': 94.877, 'peak_vram_gb': 13.432, 'energy_j_per_sample': 23.604, 'mean_power_w': 213.678, 'n_vis_tokens': 64.0, 'method': 'dart', 'setti
+DONE queue
+== smoke sparsevlm default 04:14
+   smoke OK: SUMMARY {'n': 15, 'ttft_ms_median': 86.587, 'ttft_ms_p90': 91.653, 'total_ms_median': 119.224, 'peak_vram_gb': 13.544, 'energy_j_per_sample': 55.397, 'mean_power_w': 104.661, 'n_vis_tokens': 192, 'met
+== full sparsevlm default 04:15
+SUMMARY {'n': 500, 'ttft_ms_median': 82.308, 'ttft_ms_p90': 85.934, 'total_ms_median': 114.845, 'peak_vram_gb': 13.555, 'energy_j_per_sample': 28.391, 'mean_power_w': 215.299, 'n_vis_tokens': 192.0, 'method': 'sparsevlm'
+== full sparsevlm r889 04:21
+SUMMARY {'n': 500, 'ttft_ms_median': 65.288, 'ttft_ms_p90': 69.65, 'total_ms_median': 97.969, 'peak_vram_gb': 13.486, 'energy_j_per_sample': 22.716, 'mean_power_w': 198.038, 'n_vis_tokens': 64.0, 'method': 'sparsevlm', '
+DONE queue
+== smoke cdpruner_fix default 04:26
+   smoke OK: SUMMARY {'n': 15, 'ttft_ms_median': 79.883, 'ttft_ms_p90': 470.687, 'total_ms_median': 106.844, 'peak_vram_gb': 13.692, 'energy_j_per_sample': 47.116, 'mean_power_w': 92.872, 'n_vis_tokens': 128, 'met
+== full cdpruner_fix default 04:26
+SUMMARY {'n': 500, 'ttft_ms_median': 71.851, 'ttft_ms_p90': 78.888, 'total_ms_median': 100.952, 'peak_vram_gb': 13.694, 'energy_j_per_sample': 23.731, 'mean_power_w': 209.245, 'n_vis_tokens': 128.0, 'method': 'cdpruner_f
+== full cdpruner_fix r889 04:31
+SUMMARY {'n': 500, 'ttft_ms_median': 53.467, 'ttft_ms_p90': 62.356, 'total_ms_median': 84.486, 'peak_vram_gb': 13.623, 'energy_j_per_sample': 20.32, 'mean_power_w': 213.956, 'n_vis_tokens': 64.0, 'method': 'cdpruner_fix'
+DONE queue
+== latency done 10/04 04:36
+== acc base default 10/04 04:36
+textvqa: +5000 preds in 18.6 min -> /home/yc2008/vlmbench/results/base/acc_default/preds_textvqa.jsonl
+textvqa {'acc': 0.6063, 'n': 5000}
+== acc vispruner default 10/04 04:54
+textvqa: +5000 preds in 12.7 min -> /home/yc2008/vlmbench/results/vispruner/acc_default/preds_textvqa.jsonl
+textvqa {'acc': 0.5885, 'n': 5000}
+== acc vispruner r889 10/04 05:07
+textvqa: +5000 preds in 12.1 min -> /home/yc2008/vlmbench/results/vispruner/acc_r889/preds_textvqa.jsonl
+textvqa {'acc': 0.5824, 'n': 5000}
+== acc dart default 10/04 05:19
+textvqa: +5000 preds in 14.7 min -> /home/yc2008/vlmbench/results/dart/acc_default/preds_textvqa.jsonl
+textvqa {'acc': 0.5901, 'n': 5000}
+== acc dart r889 10/04 05:34
+textvqa: +5000 preds in 13.8 min -> /home/yc2008/vlmbench/results/dart/acc_r889/preds_textvqa.jsonl
+textvqa {'acc': 0.5697, 'n': 5000}
+== acc sparsevlm default 10/04 05:48
+textvqa: +5000 preds in 16.2 min -> /home/yc2008/vlmbench/results/sparsevlm/acc_default/preds_textvqa.jsonl
+textvqa {'acc': 0.5962, 'n': 5000}
+== acc sparsevlm r889 10/04 06:04
+textvqa: +5000 preds in 14.6 min -> /home/yc2008/vlmbench/results/sparsevlm/acc_r889/preds_textvqa.jsonl
+textvqa {'acc': 0.5559, 'n': 5000}
+== acc cdpruner_fix default 10/04 06:19
+textvqa: +5000 preds in 13.9 min -> /home/yc2008/vlmbench/results/cdpruner_fix/acc_default/preds_textvqa.jsonl
+textvqa {'acc': 0.5883, 'n': 5000}
+== acc cdpruner_fix r889 10/04 06:33
+textvqa: +5000 preds in 12.5 min -> /home/yc2008/vlmbench/results/cdpruner_fix/acc_r889/preds_textvqa.jsonl
+textvqa {'acc': 0.5784, 'n': 5000}
+DONE accq
+== textvqa done 10/04 06:46
+# Table 8 — PC2 RTX 5070 Ti, LLaVA-1.5-7B FP16, vicuna_v1 prompt, greedy; latency = median of 5 runs × 500 GQA samples; accuracy = full benchmarks
+
+| Method | Vis. tokens | TTFT ms (×base) | p90 | End-to-end ms | Peak VRAM GB | Energy J/sample | GQA | POPE F1 | TextVQA | MME-P | MME-C |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| LLaVA-1.5-7B (base) | 576 | 121.4 (1.00×) | 132.3 | 156.0 | 13.95 | 42.9 |  |  | 60.6 |  |  |
+| VisPruner | 128 | 59.7 (2.03×) | 66.9 | 88.9 | 13.52 | 22.7 |  |  | 58.8 |  |  |
+| VisPruner | 64 | 50.5 (2.40×) | 59.5 | 81.2 | 13.52 | 19.9 |  |  | 58.2 |  |  |
+| CDPruner (fix) | 128 | 71.9 (1.69×) | 78.9 | 101.0 | 13.69 | 23.7 |  |  | 58.8 |  |  |
+| CDPruner (fix) | 64 | 53.5 (2.27×) | 62.4 | 84.5 | 13.62 | 20.3 |  |  | 57.8 |  |  |
+| SparseVLM | 192 | 82.3 (1.47×) | 85.9 | 114.8 | 13.56 | 28.4 |  |  | 59.6 |  |  |
+| SparseVLM | 64 | 65.3 (1.86×) | 69.7 | 98.0 | 13.49 | 22.7 |  |  | 55.6 |  |  |
+| DART | 128 | 72.7 (1.67×) | 74.3 | 102.7 | 13.50 | 25.5 |  |  | 59.0 |  |  |
+| DART | 64 | 64.1 (1.89×) | 65.8 | 94.9 | 13.43 | 23.6 |  |  | 57.0 |  |  |
+
+Notes: CDPruner (as released) numbers are unstable on 16 GB (host paging caused by per-call side CUDA streams); the fix variant removes the streams only. FastV uses the authors' kv-cache variant (original in-place variant has no KV cache). SparseVLM is measured after deleting an unused 4 GiB flash_attn weight copy that its builder creates (computation path unchanged); as released it peaks at 17.6 GB and pages to host memory on 16 GB GPUs.
+8.6M	/home/yc2008/bench_pc1/results_pc2_v2

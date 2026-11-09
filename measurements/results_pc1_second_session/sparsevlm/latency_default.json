@@ -1,0 +1,78 @@
+{
+ "n": 500,
+ "ttft_ms_median": 82.07072050004172,
+ "ttft_ms_p90": 98.36013799986176,
+ "total_ms_median": 131.6911144998585,
+ "peak_vram_gb": 13.555314064025879,
+ "energy_j_per_sample": 29.990503327210163,
+ "mean_power_w": 196.41610700079795,
+ "n_vis_tokens": 192.0,
+ "method": "sparsevlm",
+ "setting": "default",
+ "meta": {
+  "name": "SparseVLM",
+  "setting": "default",
+  "retain_tokens": 192,
+  "version": "1_0",
+  "freed_dup_attn_gb": 4.0
+ },
+ "gpu": "NVIDIA GeForce RTX 5080",
+ "torch": "2.11.0+cu128",
+ "runs": [
+  {
+   "run": 0,
+   "n": 495,
+   "ttft_ms_median": 81.34142800008703,
+   "ttft_ms_p90": 95.78443199984576,
+   "total_ms_median": 132.3664189999363,
+   "peak_vram_gb": 13.555314064025879,
+   "energy_j_per_sample": 30.413961539371098,
+   "mean_power_w": 187.25307994059855,
+   "n_vis_tokens": 192
+  },
+  {
+   "run": 1,
+   "n": 500,
+   "ttft_ms_median": 82.07072050004172,
+   "ttft_ms_p90": 98.36013799986176,
+   "total_ms_median": 131.6911144998585,
+   "peak_vram_gb": 13.555314064025879,
+   "energy_j_per_sample": 29.990503327210163,
+   "mean_power_w": 196.63342079883705,
+   "n_vis_tokens": 192.0
+  },
+  {
+   "run": 2,
+   "n": 500,
+   "ttft_ms_median": 80.81848500000888,
+   "ttft_ms_p90": 96.75794599979781,
+   "total_ms_median": 130.52206599991223,
+   "peak_vram_gb": 13.555314064025879,
+   "energy_j_per_sample": 29.874576961292828,
+   "mean_power_w": 197.84451672194996,
+   "n_vis_tokens": 192.0
+  },
+  {
+   "run": 3,
+   "n": 500,
+   "ttft_ms_median": 85.05095050009004,
+   "ttft_ms_p90": 100.65337300011379,
+   "total_ms_median": 132.8125684999577,
+   "peak_vram_gb": 13.555314064025879,
+   "energy_j_per_sample": 30.30868739823733,
+   "mean_power_w": 194.82451006797587,
+   "n_vis_tokens": 192.0
+  },
+  {
+   "run": 4,
+   "n": 500,
+   "ttft_ms_median": 83.1925710001542,
+   "ttft_ms_p90": 98.82880899976954,
+   "total_ms_median": 127.01525750003384,
+   "peak_vram_gb": 13.555314064025879,
+   "energy_j_per_sample": 29.867806414297103,
+   "mean_power_w": 196.41610700079795,
+   "n_vis_tokens": 192.0
+  }
+ ]
+}

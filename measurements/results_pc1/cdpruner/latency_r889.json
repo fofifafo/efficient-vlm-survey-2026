@@ -1,0 +1,76 @@
+{
+ "n": 500,
+ "ttft_ms_median": 1614.7397570020985,
+ "ttft_ms_p90": 1790.6321589980507,
+ "total_ms_median": 1699.6323405001021,
+ "peak_vram_gb": 13.908463954925537,
+ "energy_j_per_sample": 127.10569355658807,
+ "mean_power_w": 84.67345576648113,
+ "n_vis_tokens": 64.0,
+ "method": "cdpruner",
+ "setting": "r889",
+ "meta": {
+  "name": "CDPruner",
+  "setting": "r889",
+  "visual_token_num": 64
+ },
+ "gpu": "NVIDIA GeForce RTX 5080",
+ "torch": "2.11.0+cu128",
+ "runs": [
+  {
+   "run": 0,
+   "n": 495,
+   "ttft_ms_median": 678.7699470005464,
+   "ttft_ms_p90": 911.67070800293,
+   "total_ms_median": 732.7695790008875,
+   "peak_vram_gb": 13.908463954925537,
+   "energy_j_per_sample": 78.23187687495596,
+   "mean_power_w": 91.36224648726036,
+   "n_vis_tokens": 64
+  },
+  {
+   "run": 1,
+   "n": 500,
+   "ttft_ms_median": 685.9971505000431,
+   "ttft_ms_p90": 917.0748899996397,
+   "total_ms_median": 738.968975500029,
+   "peak_vram_gb": 13.908463954925537,
+   "energy_j_per_sample": 78.28712959107256,
+   "mean_power_w": 91.18392911148595,
+   "n_vis_tokens": 64.0
+  },
+  {
+   "run": 2,
+   "n": 500,
+   "ttft_ms_median": 1615.4020024987403,
+   "ttft_ms_p90": 1790.6321589980507,
+   "total_ms_median": 1700.1067144992703,
+   "peak_vram_gb": 13.908463954925537,
+   "energy_j_per_sample": 127.10569355658807,
+   "mean_power_w": 84.56126597640451,
+   "n_vis_tokens": 64.0
+  },
+  {
+   "run": 3,
+   "n": 500,
+   "ttft_ms_median": 1614.7397570020985,
+   "ttft_ms_p90": 1808.9878339960705,
+   "total_ms_median": 1699.6323405001021,
+   "peak_vram_gb": 13.908463954925537,
+   "energy_j_per_sample": 127.34328000270168,
+   "mean_power_w": 84.53799289342854,
+   "n_vis_tokens": 64.0
+  },
+  {
+   "run": 4,
+   "n": 500,
+   "ttft_ms_median": 1619.625161998556,
+   "ttft_ms_p90": 1808.2614079976338,
+   "total_ms_median": 1702.2915675006516,
+   "peak_vram_gb": 13.908463954925537,
+   "energy_j_per_sample": 127.3548859073053,
+   "mean_power_w": 84.67345576648113,
+   "n_vis_tokens": 64.0
+  }
+ ]
+}

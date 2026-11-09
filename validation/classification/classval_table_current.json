@@ -1,0 +1,126 @@
+{
+ "missing_papers": [],
+ "recall": {
+  "4.1.loose": {
+   "n_pos": 7,
+   "hit": 3,
+   "recall": 42.9,
+   "ci": [
+    15.8,
+    75.0
+   ],
+   "old_rule_hit": 3
+  },
+  "4.1.strict": {
+   "n_pos": 4,
+   "hit": 1,
+   "recall": 25.0,
+   "ci": [
+    4.6,
+    69.9
+   ],
+   "old_rule_hit": 1
+  },
+  "4.2.loose": {
+   "n_pos": 30,
+   "hit": 27,
+   "recall": 90.0,
+   "ci": [
+    74.4,
+    96.5
+   ],
+   "old_rule_hit": 27
+  },
+  "4.2.strict": {
+   "n_pos": 13,
+   "hit": 9,
+   "recall": 69.2,
+   "ci": [
+    42.4,
+    87.3
+   ],
+   "old_rule_hit": 9
+  },
+  "4.3.loose": {
+   "n_pos": 14,
+   "hit": 7,
+   "recall": 50.0,
+   "ci": [
+    26.8,
+    73.2
+   ],
+   "old_rule_hit": 9
+  },
+  "4.3.strict": {
+   "n_pos": 7,
+   "hit": 2,
+   "recall": 28.6,
+   "ci": [
+    8.2,
+    64.1
+   ],
+   "old_rule_hit": 3
+  },
+  "4.4.loose": {
+   "n_pos": 26,
+   "hit": 21,
+   "recall": 80.8,
+   "ci": [
+    62.1,
+    91.5
+   ],
+   "old_rule_hit": 21
+  },
+  "4.4.strict": {
+   "n_pos": 21,
+   "hit": 13,
+   "recall": 61.9,
+   "ci": [
+    40.9,
+    79.2
+   ],
+   "old_rule_hit": 13
+  },
+  "4.5.loose": {
+   "n_pos": 8,
+   "hit": 7,
+   "recall": 87.5,
+   "ci": [
+    52.9,
+    97.8
+   ],
+   "old_rule_hit": 7
+  },
+  "4.5.strict": {
+   "n_pos": 0,
+   "hit": 0,
+   "recall": null,
+   "ci": [
+    null,
+    null
+   ],
+   "old_rule_hit": 0
+  },
+  "4.6.loose": {
+   "n_pos": 29,
+   "hit": 15,
+   "recall": 51.7,
+   "ci": [
+    34.4,
+    68.6
+   ],
+   "old_rule_hit": 15
+  },
+  "4.6.strict": {
+   "n_pos": 26,
+   "hit": 5,
+   "recall": 19.2,
+   "ci": [
+    8.5,
+    37.9
+   ],
+   "old_rule_hit": 5
+  }
+ },
+ "changed_vs_key": 0
+}

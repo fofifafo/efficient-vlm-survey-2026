@@ -1,0 +1,72 @@
+branch,id,sub,reduction,flops,speed_latency,memory,hardware
+4.1,2403.14520,4.1.4 State-space backbone,3.5B total,—,3–4× vs MobileVLM v2-3B,—,A100
+4.1,2502.13145,"4.1.4 State-space, encoder-free linear",linear / hybrid,—,"20.6× (linear), 13.5× (hybrid) at 103K tokens; ~4× vs transformer",GPU memory −75.8% / −60.2%,"A800, RTX 4090"
+4.1,2412.10302,4.1.1 MoE VLM,1.0–4.5B active,—,training 7/10/14 days on 16/33/42 nodes of 8 A100 GPUs,—,A100
+4.1,2504.07491,4.1.1 MoE VLM,2.8B active,—,—,—,n/s
+4.1,2405.11273,4.1.1 Unified MoE,n/s,—,—,—,"A100, A800"
+4.1,2408.15881,4.1.1 MoE student (distillation),23% trainable parameters,—,"mimic distillation 960 vs 1,536 GPU hours (D2D+D2S vs D2S)",—,A100
+4.1,2608.17402,4.1.1 MoE vision encoder,1.1B active,in a figure,MoE kernel >2.5×; batch-16 latency 318.76→82.59 ms (SigLIP2-g 76.39),—,"H100, CPU"
+4.1,2509.18154,4.1.5 Connector (3D-Resampler),12–24× fewer tokens,—,8.7% of Qwen2.5-VL-7B inference time (Video-MME),46.7% GPU memory,A100
+4.1,2603.06569,4.1.3 LLM-based vision encoder,—,—,—,—,n/s
+4.1,2510.01795,4.1.2 Early exit (navigation prior),—,—,real vehicle (Autoware) 600→300 ms; LLaVA-7B 0.030→0.025 s,—,"RTX 3090, vehicle"
+4.1,2409.07267,"4.1.3 Lightweight encoder (driving, large-kernel CNN)",83M parameters,5.9B FLOPs,—,GPU memory 1.03 GB (MiniDrive224),RTX 4090
+4.2,2402.09353,4.2.1 LoRA variant,same parameters as LoRA,—,—,training memory −24.4% (LLaMA) / −12.4% (VL-BART),n/s
+4.2,2406.11909,4.2.1 LoRA variant,—,—,"training 8.2 h (LLaMA-3 8B, commonsense)",GPU memory 31 GB,A100
+4.2,2405.18541,4.2.1 LoRA (CLIP few-shot),—,—,training 50 min vs 2 h for CoOp (16-shot ImageNet),—,A100
+4.2,2407.03056,4.2.2 Prompt learning (unsupervised distillation),—,18/14 GFLOPs (light) vs 381 (ViT-H),—,—,n/s
+4.2,2411.15232,4.2.2 Prompt learning (biomedical),—,—,—,—,A100
+4.2,2504.07934,4.2.4 Data efficiency (MCTS sample selection),—,—,—,—,A100
+4.2,2601.22828,4.2.5 Continual-learning PEFT,trainable parameters −96.7%,—,—,peak GPU memory −66.7%,A6000
+4.2,2405.01413,4.2.3 PEFT for 3D alignment,47.8M trainable parameters,—,26.8 h on RTX 3090 (6× vs 8×A800),—,RTX 3090
+4.2,2508.00230,4.2.1 PEFT (Khatri–Rao),—,—,"training per epoch 16.5 min (ViT-B/32), 137.5 min (ViT-L/14), 220.1 min (ViT-H/14); 247.6 min (LLaMA3-8B)",—,n/s
+4.2,2401.16420,4.2.1 Partial LoRA (model report),—,—,—,—,n/s
+4.2,2605.06175,4.2.1 PEFT (VLA general/specialist experts),114.04M trainable (2.51%),—,"action-chunk latency at batch 1, mean of 120 runs (values only in a figure of the paper)",—,"A100, RTX 5080"
+4.3,2410.08119,4.3.1 PTQ (weights/activations),"W6A6, W4A4",—,generation 1.44×,2.78× memory compression,n/s
+4.3,2412.19509,4.3.1 PTQ (modality-balanced),"W3A16, W4A16, W4A8, W8A8",—,"W3A16 fused kernel 1.4× (OneVision-7B, RTX 4090); GEMV 1.2–5.0×",—,"A100, RTX 4090"
+4.3,2502.00425,4.3.1 PTQ (fully static),W4A8,—,latency up to −30%; prefill 23% and decode 100% faster; multi-turn 38.7%,memory efficiency 152.9% (as stated),RTX 6000
+4.3,2603.04800,4.3.1 PTQ (modality-aware smoothing),"W8A8, W4A8, W4A6, W4A4",—,2.5× vs FP16; 5–10% overhead vs MBQ,—,RTX 4090
+4.3,2603.17809,4.3.1 PTQ (sensitivity estimation),"W4A8, W3A16",—,quantization time 0.58 vs 0.55 GPU h for MBQ (InternVL2-8B),—,A800
+4.3,2511.08914,4.3.1 Low-bit QAT/distillation (on-device),"2-bit, 4-bit weight-only",—,—,"2-bit InternVL3-1B <400 MB (vs FastVLM 0.6B 1.5 GB); on S25 Ultra: file 1789→315 MB, footprint 1855→388 MB",Galaxy S25 Ultra (Snapdragon 8 Elite)
+4.3,2601.22709,4.3.2 QAT + distillation (INT4),"INT4, INT8",—,3× throughput with real INT4 kernel,−54%,"A100, H100, L40"
+4.3,2510.16292,4.3.3 Low-rank (joint QKV SVD),"W8A8, W8A4, W4A4 + rank 30–40%",—,"up to 2.1× on low-end GPU (no quantization), up to 13.1× with INT8","KV cache at 9.38%, close to FP16 (W8A4)","RTX 4070 (12 GB), A6000, CPU"
+4.3,2604.24380,4.3.4 Structural pruning (analysis),15/30/45/60% compression,—,30% compression: 80.7 ms (layer) vs 84.4 ms (width),13.2→9.4 GiB (30%); +INT8 5.4 GiB,n/s
+4.3,2408.03735,4.3.5 Quantization-aware adaptation (QLoRA),4-bit,—,"training 5.76 h (QLoRA 6.12, full 8.75)","66.52 GB (QLoRA 66.92, full 71.54)","A100, A800"
+4.3,2408.15881,4.3.6 Distillation (small MoE student),"0.3% training data, 23% trainable parameters",—,"mimic distillation 960 vs 1,536 GPU hours (D2D+D2S vs D2S)",—,A100
+4.3,2407.19409,4.3.6 Distillation (analysis),13B→2.7B,—,—,—,n/s
+4.3,2501.01709,4.3.6 Distillation (multiple encoders),—,—,—,—,A800
+4.3,2506.07530,4.3.7 1-bit (VLA),1.58-bit W / INT8 A,—,"73 ms, 341 Hz (4.4× vs OpenVLA-OFT+ 321 ms)",1.4 GB (11× smaller); encoder 0.8→0.1 GB,"A100, H800, RTX 3050 Ti (4 GB)"
+4.3,2602.24059,4.3.1 PTQ (MoE error reconstruction),"W4A6, W4A8, W3A16",—,—,—,"A800, RTX 4090"
+4.3,2404.14047,4.3.1 Quantization study (LLaMA3→LLaVA-NeXT),1–8 bit,—,50–80 tok/s; AWQ kernel 89.8 tok/s,"SmoothQuant 13.5 GB, 7 min (LLaMA2-7B)",8× A800
+4.3,2509.23729,"4.3.1 PTQ (<4-bit, layer-wise)",<4-bit (2.75 bit/param avg.),—,—,−40% / −31% vs 4-bit; 2.5 GB budget,RTX 5000 (32 GB)
+4.3,2602.03782,"4.3.1 PTQ (VLA, per-channel bits)","mixed precision, W4A4",—,1.49× (LIBERO),VRAM 29.2% (15.2→7.0 GB),"A100, RTX 4090, Jetson AGX Orin"
+4.3,2607.12787,4.3.6 Distillation (<1B student),11× fewer parameters and FLOPs,11× fewer,4.6→3.1 s (−32.8%); direct mode 0.5 s,20.04→2.54 GB (7.9×),n/s
+4.3,2408.05517,"Toolkit (fine-tuning, quantization, deployment)",—,—,"training speed LoRA 0.95, full 1.43, LISA 2.66 samples/s","training memory LoRA 32.35, full 73.53, LISA 31.11 GiB (Qwen-7B-chat)","A100, CPU"
+4.4,2403.06764,"4.4.1 Tokens, in-LLM",R = 50% (K = 2) / 75%,−45% (13B); 52%→33% by setting,"0.344→0.230 s/example (7B, A-OKVQA); 13B 0.539→0.341 s","GPU 19→16 GB (7B), 38→30 GB (13B)",A40
+4.4,2409.10197,"4.4.1 Tokens, in-LLM",budget-dependent (e.g. 75% at layer 28),−54.9% (NeXT),recipe search ≈5 min; throughput +22.2% at 50% pruning,—,A100
+4.4,2410.04417,"4.4.1 Tokens, in-LLM",576→192 (66.7%),−62.8%,CUDA time −43.1%; latency −37.0%,cache 302.4→100.8 MB (−67%),A100
+4.4,2412.01818,"4.4.1 Tokens, encoder-side",94.4% removed (160 tokens kept),−91% (7B) / >95%,latency −75%,—,A100
+4.4,2503.18278,4.4.2 Prefill optimization,50% (LLaVA) / 70% (InternVL2),visual FLOPs −35% / −47%,1.08–1.23× vs base; 1.68–2.1× vs FastV; 2 ms optimization,dynamic memory −49% / −61% vs FastV,"A100, A6000"
+4.4,2603.07135,"4.4.1 Tokens, learned gate",88.9% pruned,—,prefill 2.85×; TTFT 72.73 ms; 0.69 ms selection overhead,—,A6000
+4.4,2502.11494,"4.4.1 Tokens, duplication-based",88.9% removed (64 tokens),12.8% (LLaVA-NeXT-7B),1.99× total; 2.99× prefill,"KV cache 1,512→168 MB (LLaVA-NeXT-7B, 320 tokens)",n/s
+4.4,2506.10967,"4.4.1 Tokens, conditional diversity",77.8–94.4%,−95% (LLaVA-NeXT-7B),CUDA latency −78%; <10 ms extra,GPU memory −17%,A100
+4.4,2602.23699,"4.4.1 Tokens, hierarchical (learned)",~90% (88.9/91.7%),—,prefill 63.6→32.6 ms (→28.8 ms); training 1.72×,—,A100
+4.4,2406.18139,4.4.3 KV cache,KV budget 20% / 5%,—,decoding 28.16→20.98→18.22 ms/token (1.3–1.5×),1.52→0.32→0.13 GiB (−80–95%),"A100, RTX 3090"
+4.4,2410.17434,"4.4.1 Tokens, video spatiotemporal","144→64→~2 tokens/frame (1 fps, 1 h)",—,—,—,H100
+4.4,2501.00574,"4.4.1 Tokens, video hierarchical",196→16 tokens/frame,"LLM only: 14.8 T (64 frames) to 9,969.5 T (10,000 frames)",2.6→1.9 s with visual dropout,—,A100
+4.4,2501.12386,"4.4.1 Tokens, video","64–512 frames, 16 tokens/frame",—,—,—,A100
+4.4,2412.13303,4.4.2 Prefill (encoder bottleneck),fewer encoder output tokens,—,TTFT 85× (vs OneVision 1152²); 3.2× vs SigLIP,—,H100
+4.4,2403.18293,"Test-time adaptation (CLIP, boundary)",—,—,test time 12 h 50 min→16 min vs TPT (ImageNet),—,RTX 6000
+4.4,2506.17218,"Latent visual tokens (reasoning, boundary)",—,—,training ≈3.5 h (stage 1) and ≈7.2 h (stage 2) vs 5.5 h for text-only CoT SFT,—,H100
+4.4,2509.22548,4.4.3 Cache memory (navigation),—,—,82–244 ms (cache) vs 268–1549 ms (VGGT),—,n/s
+4.4,2505.21594,4.4.4 Decoding (edge–cloud speculative + early exit),—,—,latency −35% (+11%); 1.34× on Jetson,—,"Jetson Nano/Orin, A100, RTX 2080 Ti, Unitree Go2"
+4.4,2503.10501,"4.4.1 Tokens, 2-stage information-preserving",576→128 (22.2%),—,1.124→0.911 s (1.23×); 1.33× at 64 tokens,KV cache −64% (100→36%),V100
+4.4,2510.16598,"4.4.1 Tokens, learned selector",20% kept (down to 5%),—,prefill 1.73–1.86× (760.82 ms); end-to-end 1.74× (924.57 ms); 2× at 5%,peak 17.57 GB (−32.3%),A800
+4.5,2408.01800,4.5.1 Smartphone,4-bit,—,encoding 64.2→50.5→17.0 s; decoding 1.3→3.2→8.2 tok/s,—,"Xiaomi 14 Pro (Snapdragon 8 Gen 3), CPU, RTX 4090"
+4.5,2511.08914,4.5.1 Smartphone (low-bit),2/4-bit,—,—,file 1789→315 MB; footprint 1855→388 MB,Galaxy S25 Ultra
+4.5,2501.04322,4.5.2 Edge (elastic experts),1.8B,—,training 15 GPU-days,—,Ascend AI
+4.5,2507.14049,4.5.5 VLA on-board,1B (vs 7.5B),—,5 vs 20 ms for OpenVLA (A100),4 vs 16 GB for OpenVLA (A100),"A100, Jetson Nano (mentioned)"
+4.5,2607.12659,4.5.5 VLA on-board (system),—,—,reaction time 2.11× / 1.87× (Orin/Thor); graph reuse 2.96×; 5.41× control rate vs vla.cpp (893 ms),—,"Jetson Orin, Jetson Thor, RTX 4090, A6000"
+4.5,2411.10640,4.5.1 Smartphone NPU (co-design),INT4/INT8,—,24.4 tok/s; 2.1 s encoding at 768×1536; 200 ms latency hidden,peak 2.2 GB,MediaTek Dimensity 9300 NPU
+4.5,2604.27393,"4.5.1 Consumer GPU / edge (omni, real time)",INT4,—,212.3 tok/s (INT4); TTFT 0.58 s; RTF 0.21,11 GB (INT4) / 19 GB (BF16),"RTX 4090, DGX Spark"
+4.5,2509.21259,4.5.3 Edge–cloud (semantic communication),8-bit embedding transfer,—,RoI 0.023 s + ViT 0.16 s per frame,VRAM 14.2 GB (LLaVA) / 24 GB (LLaMA),n/s (edge device)
+4.5,2510.25122,4.5.5 VLA on-board (Jetson Orin Nano),parameters −98%,—,up to 52× on edge (FPS vs 4-bit OpenVLA),—,Jetson Orin Nano Super (67 TOPS)

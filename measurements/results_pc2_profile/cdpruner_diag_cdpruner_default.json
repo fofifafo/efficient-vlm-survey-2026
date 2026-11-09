@@ -1,0 +1,129 @@
+{
+ "method": "cdpruner",
+ "setting": "default",
+ "gpu": "NVIDIA GeForce RTX 5070 Ti",
+ "torch": "2.11.0+cu128",
+ "mem": [
+  {
+   "tag": "before_load",
+   "alloc_gb": 0.0,
+   "reserved_gb": 0.0,
+   "reserved_peak_gb": 0.0,
+   "free_gb": 14.66,
+   "total_gb": 15.92,
+   "alloc_retries": 0,
+   "device_allocs": 0,
+   "smi_used_gb": 0.78,
+   "smi_total_gb": 15.92
+  },
+  {
+   "tag": "after_load",
+   "alloc_gb": 13.45,
+   "reserved_gb": 15.5,
+   "reserved_peak_gb": 15.5,
+   "free_gb": 0.0,
+   "total_gb": 15.92,
+   "alloc_retries": 0,
+   "device_allocs": 415,
+   "smi_used_gb": 15.49,
+   "smi_total_gb": 15.92
+  },
+  {
+   "tag": "after_empty_cache",
+   "alloc_gb": 13.45,
+   "reserved_gb": 13.81,
+   "reserved_peak_gb": 15.5,
+   "free_gb": 0.64,
+   "total_gb": 15.92,
+   "alloc_retries": 0,
+   "device_allocs": 415,
+   "smi_used_gb": 13.8,
+   "smi_total_gb": 15.92
+  },
+  {
+   "tag": "after_10_questions",
+   "alloc_gb": 13.64,
+   "reserved_gb": 14.73,
+   "reserved_peak_gb": 15.5,
+   "free_gb": 0.0,
+   "total_gb": 15.92,
+   "alloc_retries": 0,
+   "device_allocs": 506,
+   "smi_used_gb": 14.95,
+   "smi_total_gb": 15.92
+  },
+  {
+   "tag": "after_20_questions",
+   "alloc_gb": 13.75,
+   "reserved_gb": 15.28,
+   "reserved_peak_gb": 15.5,
+   "free_gb": 0.0,
+   "total_gb": 15.92,
+   "alloc_retries": 0,
+   "device_allocs": 560,
+   "smi_used_gb": 15.54,
+   "smi_total_gb": 15.92
+  },
+  {
+   "tag": "after_30_questions",
+   "alloc_gb": 13.75,
+   "reserved_gb": 15.28,
+   "reserved_peak_gb": 15.5,
+   "free_gb": 0.0,
+   "total_gb": 15.92,
+   "alloc_retries": 0,
+   "device_allocs": 560,
+   "smi_used_gb": 15.5,
+   "smi_total_gb": 15.92
+  },
+  {
+   "tag": "after_40_questions",
+   "alloc_gb": 13.75,
+   "reserved_gb": 15.28,
+   "reserved_peak_gb": 15.5,
+   "free_gb": 0.0,
+   "total_gb": 15.92,
+   "alloc_retries": 0,
+   "device_allocs": 560,
+   "smi_used_gb": 15.5,
+   "smi_total_gb": 15.92
+  },
+  {
+   "tag": "after_50_questions",
+   "alloc_gb": 13.75,
+   "reserved_gb": 15.28,
+   "reserved_peak_gb": 15.5,
+   "free_gb": 0.0,
+   "total_gb": 15.92,
+   "alloc_retries": 0,
+   "device_allocs": 560,
+   "smi_used_gb": 15.5,
+   "smi_total_gb": 15.92
+  },
+  {
+   "tag": "end",
+   "alloc_gb": 13.75,
+   "reserved_gb": 15.28,
+   "reserved_peak_gb": 15.5,
+   "free_gb": 0.0,
+   "total_gb": 15.92,
+   "alloc_retries": 0,
+   "device_allocs": 560,
+   "smi_used_gb": 15.5,
+   "smi_total_gb": 15.92
+  }
+ ],
+ "ttft_ms_median": 283.88337199999114,
+ "ttft_ms_p90": 390.38829499997973,
+ "ttft_ms_max": 434.90545099996325,
+ "n": 45,
+ "clip_direct_default_stream": {
+  "median_ms": 256.46,
+  "max_ms": 261.04
+ },
+ "tower_wrapper_with_text": {
+  "median_ms": 40.48,
+  "max_ms": 41.29
+ },
+ "note": "reserved > total - (smi_used before load) means the allocator pools no longer fit beside other GPU users (display); alloc_retries > 0 means the caching allocator had to free and retry cudaMalloc"
+}

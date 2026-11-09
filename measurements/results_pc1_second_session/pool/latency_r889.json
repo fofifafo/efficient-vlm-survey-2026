@@ -1,0 +1,79 @@
+{
+ "n": 500,
+ "ttft_ms_median": 44.27250250000725,
+ "ttft_ms_p90": 60.66413000007742,
+ "total_ms_median": 73.30331299954196,
+ "peak_vram_gb": 13.392501831054688,
+ "energy_j_per_sample": 21.12611242478874,
+ "mean_power_w": 204.96507260409496,
+ "n_vis_tokens": 64.0,
+ "method": "pool",
+ "setting": "r889",
+ "meta": {
+  "name": "Pooling",
+  "setting": "r889",
+  "visual_token_num": 64,
+  "selection": "3x3 average pooling of the 24x24 projector output grid",
+  "attn": "sdpa(default)",
+  "prompt": "vicuna_v1"
+ },
+ "gpu": "NVIDIA GeForce RTX 5080",
+ "torch": "2.11.0+cu128",
+ "runs": [
+  {
+   "run": 0,
+   "n": 495,
+   "ttft_ms_median": 44.55123099978664,
+   "ttft_ms_p90": 81.42011499967339,
+   "total_ms_median": 72.88913400043384,
+   "peak_vram_gb": 13.392501831054688,
+   "energy_j_per_sample": 21.20170785670162,
+   "mean_power_w": 196.9891164155307,
+   "n_vis_tokens": 64
+  },
+  {
+   "run": 1,
+   "n": 500,
+   "ttft_ms_median": 44.27250250000725,
+   "ttft_ms_p90": 58.242258000063885,
+   "total_ms_median": 73.30331299954196,
+   "peak_vram_gb": 13.392501831054688,
+   "energy_j_per_sample": 20.99222955871423,
+   "mean_power_w": 209.12805716896946,
+   "n_vis_tokens": 64.0
+  },
+  {
+   "run": 2,
+   "n": 500,
+   "ttft_ms_median": 44.16149349981424,
+   "ttft_ms_p90": 58.99225200028013,
+   "total_ms_median": 73.11303649976253,
+   "peak_vram_gb": 13.392501831054688,
+   "energy_j_per_sample": 21.031583889609117,
+   "mean_power_w": 207.93452312820745,
+   "n_vis_tokens": 64.0
+  },
+  {
+   "run": 3,
+   "n": 500,
+   "ttft_ms_median": 44.45596100003968,
+   "ttft_ms_p90": 60.66413000007742,
+   "total_ms_median": 73.30865350013482,
+   "peak_vram_gb": 13.392501831054688,
+   "energy_j_per_sample": 21.12611242478874,
+   "mean_power_w": 204.54245167725907,
+   "n_vis_tokens": 64.0
+  },
+  {
+   "run": 4,
+   "n": 500,
+   "ttft_ms_median": 43.56930250014557,
+   "ttft_ms_p90": 74.83526199939661,
+   "total_ms_median": 73.86335250066622,
+   "peak_vram_gb": 13.392501831054688,
+   "energy_j_per_sample": 21.131369088049965,
+   "mean_power_w": 204.96507260409496,
+   "n_vis_tokens": 64.0
+  }
+ ]
+}

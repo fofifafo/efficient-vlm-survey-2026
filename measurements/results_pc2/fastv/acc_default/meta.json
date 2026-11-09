@@ -1,0 +1,12 @@
+{
+ "meta": {
+  "name": "FastV(kv-cache)",
+  "setting": "default",
+  "rank": 288,
+  "K": 3,
+  "attn": "sdpa(default); probe eager",
+  "transformers": "4.37.2"
+ },
+ "max_new_tokens": 16,
+ "prompt": "vicuna_v1+single-word; textvqa with OCR reference tokens"
+}
