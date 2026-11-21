@@ -1,0 +1,10 @@
+{'tokens': 1, 'fp16_ms': 2.0582, 'nf4_ms': 2.3851, 'overhead_ms': 0.3268}
+{'tokens': 16, 'fp16_ms': 1.5855, 'nf4_ms': 6.2824, 'overhead_ms': 4.6969}
+{'tokens': 64, 'fp16_ms': 1.4146, 'nf4_ms': 5.4885, 'overhead_ms': 4.0739}
+{'tokens': 128, 'fp16_ms': 1.6306, 'nf4_ms': 5.7719, 'overhead_ms': 4.1413}
+{'tokens': 256, 'fp16_ms': 2.9798, 'nf4_ms': 7.1594, 'overhead_ms': 4.1795}
+{'tokens': 384, 'fp16_ms': 4.1005, 'nf4_ms': 8.562, 'overhead_ms': 4.4615}
+{'tokens': 512, 'fp16_ms': 5.459, 'nf4_ms': 9.6281, 'overhead_ms': 4.1691}
+{'tokens': 640, 'fp16_ms': 6.8695, 'nf4_ms': 11.1261, 'overhead_ms': 4.2566}
+{'tokens': 1024, 'fp16_ms': 10.5999, 'nf4_ms': 15.1625, 'overhead_ms': 4.5627}
+saved /home/lab/vlmbench/results_jetson/microbench_nf4.json

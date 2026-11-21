@@ -1,6 +1,8 @@
 {
  "textvqa": {
-  "acc": 0.5882666666666665,
-  "n": 5000
+  "acc": 0.5609,
+  "n": 5000,
+  "scorer": "m4c (LLaVA official)",
+  "prompt": "llava question file"
  }
 }

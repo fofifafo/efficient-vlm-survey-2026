@@ -1,0 +1,4 @@
+[11:58:31] start lat_asis_short
+[12:02:34] watchdog: avail 71 MB, swap +1519 MB, killing
+run_cdpruner_asis_short.sh: line 18:  7676 Killed                  python harness_jetson.py --method cdpruner4 --setting default --n 100 --runs 1 > $L/cdpruner_lat_asis_short.log 2>&1
+[12:02:36] end lat_asis_short rc=0

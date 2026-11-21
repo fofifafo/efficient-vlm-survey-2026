@@ -87,17 +87,18 @@ for fp in ("C:/Windows/Fonts/times.ttf", "C:/Windows/Fonts/timesbd.ttf"):
 K, D, M, L, G = "#111111", "#4a4a4a", "#8c8c8c", "#c8c8c8", "#e6e6e6"
 plt.rcParams.update({
     "font.family": "serif", "font.serif": ["Times New Roman"], "mathtext.fontset": "stix",
-    "font.size": 8, "axes.titlesize": 9.5, "axes.labelsize": 8.5, "xtick.labelsize": 7.5, "ytick.labelsize": 7.5, "legend.fontsize": 7.5,
+    "font.size": 7.5, "axes.titlesize": 8, "axes.labelsize": 7.5, "xtick.labelsize": 7, "ytick.labelsize": 7, "legend.fontsize": 7,
     "axes.edgecolor": D, "axes.linewidth": 0.6, "axes.grid": True, "grid.color": G, "grid.linewidth": 0.6, "axes.axisbelow": True,
     "xtick.direction": "out", "ytick.direction": "out", "xtick.major.size": 2.5, "ytick.major.size": 2.5, "xtick.major.width": 0.6, "ytick.major.width": 0.6,
     "xtick.color": D, "ytick.color": D, "axes.labelcolor": K, "lines.linewidth": 1.2, "lines.markersize": 5,
     "legend.frameon": False, "legend.handlelength": 2.2, "savefig.dpi": 600, "savefig.bbox": "tight", "savefig.pad_inches": 0.02, "pdf.fonttype": 42})
-W2 = 7.16
-fig = plt.figure(figsize=(W2, 5.0))
-gs = fig.add_gridspec(2, 2, height_ratios=[1, 1.05], width_ratios=[1, 1], hspace=0.55, wspace=0.08)
+# 원고 본문 폭(elsarticle 1p, 약 13.5 cm = 5.33 in)에 맞춘 크기 — 축소 없이 실리므로 글자는 인쇄 크기 7 pt 이상(Elsevier 권장)
+FW, FH = 5.33, 5.45
+fig = plt.figure(figsize=(FW, FH))
+box = lambda l, b, w, h: [l / FW, b / FH, w / FW, h / FH]   # 패널 위치(인치) — (d) 행 이름이 (c)와 겹치지 않게 직접 배치
 NAMES = [("4.1", "Design"), ("4.2", "Training"), ("4.3", "Compression"), ("4.4", "Execution"), ("4.5", "Deployment"), ("4.6", "Measurement")]
-SHORT = {"Compression": "Compress.", "Deployment": "Deploy.", "Measurement": "Measure."}
-a0 = fig.add_subplot(gs[0, 0]); a1 = fig.add_subplot(gs[0, 1], sharey=a0)
+SHORT = {"Compression": "Compr.", "Execution": "Exec.", "Deployment": "Deploy.", "Measurement": "Measure."}
+a0 = fig.add_axes(box(0.45, 3.45, 2.3, 1.75)); a1 = fig.add_axes(box(2.9, 3.45, 2.3, 1.75), sharey=a0)
 for ax, (pk, ttl) in zip((a0, a1), (("vlm", f"(a) All VLM papers (n = {NN['corpus.vlm']:,})"), ("pool", f"(b) Efficiency-oriented papers (n = {NN['corpus.pool']:,})"))):
     for kind, off, mfc, lab in (("loose", -0.13, K, "Loose (term appears)"), ("strict", 0.13, "white", "Strict (Section 3.2)")):
         xs, ys, lo, hi, sig = [], [], [], [], []
@@ -116,8 +117,7 @@ plt.setp(a1.get_yticklabels(), visible=False)
 a0.set_ylabel("Relative growth, 2026 / 2024"); a0.legend(loc="lower right", handletextpad=0.3)
 
 # (c) 월별 — monthly_trend.py 그림 S1(a)와 같은 그리기
-gs2 = gs[1, :].subgridspec(1, 2, width_ratios=[1.0, 0.72], wspace=1.0)
-a2 = fig.add_subplot(gs2[0, 0]); a3 = fig.add_subplot(gs2[0, 1])
+a2 = fig.add_axes(box(0.45, 0.45, 1.8, 2.15)); a3 = fig.add_axes(box(3.72, 0.45, 1.48, 2.15))
 MONTHS = sorted({r["period"] for r in MT}); mi = {m: i for i, m in enumerate(MONTHS)}
 qx = lambda q: 3 * (int(q[-1]) - 1) + 12 * (int(q[:4]) - 2024) + (1.0 if q != "2026Q3" else 0.5)
 mr = [r for r in MT if (r["corpus"], r["branch"], r["kind"]) == ("vlm", "4.4", "strict")]
@@ -129,9 +129,11 @@ a2.plot(xs, [float(r["pct"]) for r in qr], color=K, lw=1.0, marker="s", ms=2.8, 
 SPAN = {"2024_jan_aug": (0, 7), "2024_sep_dec": (8, 11), "2025": (12, 23), "2026_jan_aug": (24, 31)}
 for n, (x0, x1) in SPAN.items():
     v = PJ["vlm.4.4.strict"]["periods"][n]["pct"]; a2.plot([x0 - 0.4, x1 + 0.4], [v] * 2, color=D, lw=0.9, ls=(0, (4, 2)), zorder=4)
-t = [i for i, m in enumerate(MONTHS) if m[5:7] in ("01", "07")]
-a2.set_xticks(t); a2.set_xticklabels([MONTHS[i] for i in t], fontsize=7); a2.set_xlim(-0.8, len(MONTHS) - 0.2); a2.set_ylim(bottom=0)
-a2.set_ylabel("Share of VLM papers (%)"); a2.set_title("(c) Execution-time methods (strict) by month", loc="left"); a2.legend(loc="lower right", fontsize=7, handletextpad=0.3)
+t = [i for i, m in enumerate(MONTHS) if m[5:7] == "01"]   # 해마다 1월에 연도 라벨, 7월은 라벨 없는 눈금
+a2.set_xticks(t); a2.set_xticklabels([MONTHS[i][:4] for i in t], fontsize=7)
+a2.set_xticks([i for i, m in enumerate(MONTHS) if m[5:7] == "07"], minor=True); a2.tick_params(axis="x", which="minor", length=1.8, width=0.5)
+a2.set_xlim(-0.8, len(MONTHS) - 0.2); a2.set_ylim(bottom=0)
+a2.set_ylabel("Share of VLM papers (%)"); a2.set_title("(c) Strict execution-time share by month", loc="left"); a2.legend(loc="lower right", fontsize=7, handletextpad=0.3)
 
 # (d) 사양별 상대 성장 — 실행(검은 점)·학습(빈 점)
 ys = list(range(len(R)))[::-1]
@@ -142,10 +144,12 @@ for r, y in zip(R, ys):
         a3.scatter([v["growth"]], [y + off], s=18, facecolor=mfc, edgecolor=K, linewidth=0.9, zorder=3)
 a3.axvline(1, color=M, lw=0.8, ls=(0, (4, 3)), zorder=1)
 a3.set_xscale("log"); a3.set_xticks([0.25, 0.5, 1, 2, 4, 8, 16]); a3.set_xticklabels(["0.25", "0.5", "1", "2", "4", "8", "16"]); a3.minorticks_off()
-a3.set_xlim(0.22, 20); a3.set_yticks(ys); a3.set_yticklabels([r["label"] for r in R], fontsize=6.8); a3.set_ylim(-0.6, len(R) + 0.45)
+a3.set_xlim(0.22, 20); a3.set_yticks(ys); a3.set_yticklabels([r["label"] for r in R], fontsize=7); a3.set_ylim(-0.6, len(R) + 0.6)
 a3.grid(axis="y", visible=False); a3.set_xlabel("Relative growth of the strict share")
-a3.set_title("(d) Robustness across specifications", loc="left")
+a3.set_title("(d) Across specifications", loc="left")
 a3.scatter([], [], s=18, facecolor=K, edgecolor=K, label="Execution"); a3.scatter([], [], s=18, facecolor="white", edgecolor=K, label="Training")
-a3.legend(loc="upper center", ncol=2, fontsize=7, handletextpad=0.1, borderaxespad=0.15, columnspacing=1.0)
+# 범례 칸은 흰 바탕(테두리 없음)으로 — x = 1 점선이 글자 위로 지나가지 않게
+a3.legend(loc="upper center", ncol=2, fontsize=7, handletextpad=0.1, borderaxespad=0.15, columnspacing=1.0,
+          frameon=True, facecolor="white", edgecolor="none", framealpha=1.0, borderpad=0.25)
 for ext in ("pdf", "png"): fig.savefig(f"{OUT}/fig2_trends.{ext}")
 print("saved", f"{OUT}/fig2_trends.pdf/.png")

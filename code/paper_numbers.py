@@ -250,8 +250,8 @@ JR = "bench/results_jetson"
 if os.path.exists(f"{JR}/base4/latency_default.json"):
     import importlib.util as _iu
     _sp = _iu.spec_from_file_location("score", "bench/score.py"); _sc = _iu.module_from_spec(_sp); _sp.loader.exec_module(_sc)
-    # 11/5: 지연·에너지·메모리는 모두 화면 끈 상태(multi-user.target)의 값 — 원본·VisPruner 는 guioff_1105 재측정, CDPruner(fix) 는 11/4–5 측정. 정확도 예측은 화면과 무관해 기존 폴더.
-    JG = f"{JR}/guioff_1105"
+    # 11/5: 지연·에너지·메모리는 모두 화면 끈 상태(multi-user.target)의 값 — 원본·VisPruner 는 screen_off 재측정, CDPruner(fix) 는 11/4–5 측정. 정확도 예측은 화면과 무관해 기존 폴더.
+    JG = f"{JR}/screen_off"
     JL = {"base": json.load(open(f"{JG}/base4/latency_default.json")), "vp128": json.load(open(f"{JG}/vispruner4/latency_default.json")),
           "vp64": json.load(open(f"{JG}/vispruner4/latency_r889.json")),
           "cd128": json.load(open(f"{JR}/cdpruner4_fix/latency_default.json")), "cd64": json.load(open(f"{JR}/cdpruner4_fix/latency_r889.json"))}
@@ -288,7 +288,7 @@ if os.path.exists(f"{JR}/base4/latency_default.json"):
         _lo, _hi = _np.percentile([100 * _dd[_rng.integers(0, len(_dd), len(_dd))].mean() for _ in range(2000)], [2.5, 97.5])
         put(f"jetson.cd_minus_vp_{t}_acc_ci_lo", round(float(_lo), 1), "짝지은 부트스트랩 95% 하한"); put(f"jetson.cd_minus_vp_{t}_acc_ci_hi", round(float(_hi), 1), "같음 상한")
     # CDPruner 공개판(11/5, 100문항 1회, 메모리 감시가 끊음): 1초 간격 메모리 로그의 최저 가용 메모리·최대 스왑 증가
-    _ml = [l.split() for l in open(f"{JR}/logs_cdpruner_1104/cdpruner_asis_short_mem.log", encoding="utf-8") if "avail=" in l]
+    _ml = [l.split() for l in open(f"{JR}/logs_cdpruner/cdpruner_asis_short_mem.log", encoding="utf-8") if "avail=" in l]
     put("jetson.cd_asis.min_avail_gb", round(min(int(x[1].split("=")[1]) for x in _ml) / 1024, 2), "공개판 100문항 실행 중 최저 MemAvailable")
     put("jetson.cd_asis.max_swap_gb", round(max(int(x[2].split("=")[1].replace("+", "")) for x in _ml) / 1024, 1), "같은 실행 스왑 증가 최대")
     if os.path.exists(XC):  # 데스크톱 두 GPU 에서 두 encoder-side 방법(VisPruner, CDPruner fix)의 속도 향상 범위(5.4절 비교용)
@@ -312,7 +312,7 @@ if os.path.exists(f"{JR}/base4/latency_default.json"):
             _r2 = [(jb["ttft_ms_median"] - JL[k]["ttft_ms_median"]) / (fl(xb["pc2_ttft"]) - _x2[s]) for k, s in (("vp128", "default"), ("vp64", "r889"))]
             put("jetson.save_vs_pc2_ratio_min", round(min(_r2)), "Jetson/5070 Ti 원래 모델 대비 TTFT 절약 배수 최소"); put("jetson.save_vs_pc2_ratio_max", round(max(_r2)), "같음 최대")
     # NF4 층 단위 추가 비용(microbench_nf4.py), 토큰 수 스윕(100문항×3회, run_sweep.sh)
-    JS = f"{JR}/guioff_1105/sweep" if os.path.exists(f"{JR}/guioff_1105/sweep/microbench_nf4.json") else f"{JR}/sweep"  # 11/5 화면 끔 재측정
+    JS = f"{JR}/screen_off/sweep" if os.path.exists(f"{JR}/screen_off/sweep/microbench_nf4.json") else f"{JR}/sweep"  # 11/5 화면 끔 재측정
     if os.path.exists(f"{JS}/microbench_nf4.json"):
         _mb = [r for r in json.load(open(f"{JS}/microbench_nf4.json"))["rows"] if r["tokens"] >= 16]
         put("jetson.nf4_overhead_min_ms", round(min(r["overhead_ms"] for r in _mb), 1), "4096×11008 층 NF4−FP16, 16–1024 토큰")

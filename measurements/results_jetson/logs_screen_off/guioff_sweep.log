@@ -1,0 +1,29 @@
+[14:15:58] waiting for run_guioff_jetson.sh
+[17:18:02] start
+inactive
+               total        used        free      shared  buff/cache   available
+Mem:            7619        1338        5719           3         562        6072
+== microbench 17:18:02
+{'tokens': 1, 'fp16_ms': 2.0582, 'nf4_ms': 2.3851, 'overhead_ms': 0.3268}
+{'tokens': 16, 'fp16_ms': 1.5855, 'nf4_ms': 6.2824, 'overhead_ms': 4.6969}
+{'tokens': 64, 'fp16_ms': 1.4146, 'nf4_ms': 5.4885, 'overhead_ms': 4.0739}
+{'tokens': 128, 'fp16_ms': 1.6306, 'nf4_ms': 5.7719, 'overhead_ms': 4.1413}
+{'tokens': 256, 'fp16_ms': 2.9798, 'nf4_ms': 7.1594, 'overhead_ms': 4.1795}
+{'tokens': 384, 'fp16_ms': 4.1005, 'nf4_ms': 8.562, 'overhead_ms': 4.4615}
+{'tokens': 512, 'fp16_ms': 5.459, 'nf4_ms': 9.6281, 'overhead_ms': 4.1691}
+{'tokens': 640, 'fp16_ms': 6.8695, 'nf4_ms': 11.1261, 'overhead_ms': 4.2566}
+{'tokens': 1024, 'fp16_ms': 10.5999, 'nf4_ms': 15.1625, 'overhead_ms': 4.5627}
+saved /home/lab/vlmbench/results_jetson/microbench_nf4.json
+== base4 sweep576 17:18:18
+SUMMARY {'n': 100, 'ttft_ms_median': 1964.904, 'ttft_ms_p90': 2140.871, 'total_ms_median': 2347.679, 'peak_alloc_gb': 5.022, 'peak_sys_used_gb': 7.066, 'energy_j_per_sample': 46.882, 'mean_power_w': 19.838, 'n_vis_tokens': 576.0, 'method': 'base4', 'setting': 'sweep576', 'device': 'Orin', 'torch': '2.11.0', 'idle_power_w': 4.481, 'load_s': 184.331, 'power_mode': 'NV Power Mode: MAXN_SUPER'}
+== vispruner4 t384 17:33:19
+SUMMARY {'n': 100, 'ttft_ms_median': 1633.894, 'ttft_ms_p90': 1643.046, 'total_ms_median': 1871.022, 'peak_alloc_gb': 4.811, 'peak_sys_used_gb': 6.91, 'energy_j_per_sample': 38.416, 'mean_power_w': 19.431, 'n_vis_tokens': 384.0, 'method': 'vispruner4', 'setting': 't384', 'device': 'Orin', 'torch': '2.11.0', 'idle_power_w': 4.562, 'load_s': 185.523, 'power_mode': 'NV Power Mode: MAXN_SUPER'}
+== vispruner4 t256 17:46:30
+SUMMARY {'n': 100, 'ttft_ms_median': 1402.764, 'ttft_ms_p90': 1414.748, 'total_ms_median': 1638.375, 'peak_alloc_gb': 4.669, 'peak_sys_used_gb': 6.758, 'energy_j_per_sample': 32.784, 'mean_power_w': 18.809, 'n_vis_tokens': 256.0, 'method': 'vispruner4', 'setting': 't256', 'device': 'Orin', 'torch': '2.11.0', 'idle_power_w': 4.562, 'load_s': 184.958, 'power_mode': 'NV Power Mode: MAXN_SUPER'}
+== vispruner4 default 17:58:29
+SUMMARY {'n': 100, 'ttft_ms_median': 1198.737, 'ttft_ms_p90': 1209.189, 'total_ms_median': 1431.181, 'peak_alloc_gb': 4.593, 'peak_sys_used_gb': 6.722, 'energy_j_per_sample': 27.435, 'mean_power_w': 17.804, 'n_vis_tokens': 128.0, 'method': 'vispruner4', 'setting': 'default', 'device': 'Orin', 'torch': '2.11.0', 'idle_power_w': 4.562, 'load_s': 185.439, 'power_mode': 'NV Power Mode: MAXN_SUPER'}
+== vispruner4 r889 18:09:29
+SUMMARY {'n': 100, 'ttft_ms_median': 971.999, 'ttft_ms_p90': 1162.051, 'total_ms_median': 1358.401, 'peak_alloc_gb': 4.593, 'peak_sys_used_gb': 6.887, 'energy_j_per_sample': 23.796, 'mean_power_w': 17.327, 'n_vis_tokens': 64.0, 'method': 'vispruner4', 'setting': 'r889', 'device': 'Orin', 'torch': '2.11.0', 'idle_power_w': 4.562, 'load_s': 185.746, 'power_mode': 'NV Power Mode: MAXN_SUPER'}
+== vispruner4 t32 18:19:37
+SUMMARY {'n': 100, 'ttft_ms_median': 950.4, 'ttft_ms_p90': 965.452, 'total_ms_median': 1176.42, 'peak_alloc_gb': 4.593, 'peak_sys_used_gb': 6.896, 'energy_j_per_sample': 21.73, 'mean_power_w': 16.937, 'n_vis_tokens': 32.0, 'method': 'vispruner4', 'setting': 't32', 'device': 'Orin', 'torch': '2.11.0', 'idle_power_w': 4.562, 'load_s': 185.842, 'power_mode': 'NV Power Mode: MAXN_SUPER'}
+[18:29:20] sweep done

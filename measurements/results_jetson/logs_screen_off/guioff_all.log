@@ -1,0 +1,11 @@
+NV Power Mode: MAXN_SUPER
+inactive
+               total        used        free      shared  buff/cache   available
+Mem:            7619        1344        6015           1         259        6070
+[13:27:25] start lat_base_default
+[15:10:11] end lat_base_default rc=0
+[15:10:11] start lat_vis_default
+[16:17:21] end lat_vis_default rc=0
+[16:17:21] start lat_vis_r889
+[17:17:35] end lat_vis_r889 rc=0
+[17:17:35] all done

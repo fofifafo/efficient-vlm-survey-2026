@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """정확도 평가 러너: 플러그인(methods/<m>.py)으로 GQA·POPE·TextVQA·MME 전량 추론 → results/<method>/acc_<setting>/preds_<task>.jsonl → score.py 채점.
    프롬프트는 LLaVA 공식 평가 스크립트와 동일(vicuna_v1 + "Answer the question using a single word or phrase."; TextVQA 는 OCR 참조 토큰 포함).
+   TextVQA 문장은 기본으로 LLaVA 질문 파일(llava_textvqa_val_v051_ocr.jsonl, 질문 → OCR 줄) 그대로(--textvqa_prompt llava). ocrfirst 는 OCR 줄을 질문 앞에 두는 선택 사항(LLaVA 문장보다 약 2점 높게 나옴).
    재개 가능: 이미 기록된 question id 는 건너뜀.  사용: python eval_acc.py --method base --setting default [--tasks gqa,pope,textvqa,mme] [--n 0(전량)]"""
 import argparse, ast, importlib, json, os, sys, time
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -9,6 +10,18 @@ def _lst(v):
     """datasets 가 list 로 주면 그대로, 문자열 표현이면 파싱"""
     if v is None: return []
     return list(v) if isinstance(v, (list, tuple)) else ast.literal_eval(v)
+
+SUFFIX = "\nAnswer the question using a single word or phrase."   # _llava_common.vicuna_prompt 가 붙이므로 LLaVA 문장에서 떼어 낸다
+TVQA = dict(mode="llava", path=os.path.expanduser("~/vlmbench/llava_eval/textvqa/llava_textvqa_val_v051_ocr.jsonl"))
+
+def llava_textvqa():
+    """LLaVA 질문 파일 → {(image_id, 질문 소문자): 단답 지시를 뗀 문장}. question_id 칸이 실제로는 image_id(LLaVA eval_textvqa.py 와 같은 매칭)"""
+    out = {}
+    for l in open(TVQA["path"], encoding="utf-8"):
+        x = json.loads(l); t = x["text"]; assert t.endswith(SUFFIX), t[:200]; t = t[:-len(SUFFIX)]
+        q = [s for s in t.split("\n") if not s.startswith("Reference OCR token:")]; assert len(q) == 1, t[:200]
+        out[(str(x["question_id"]), q[0].lower())] = t
+    return out
 
 def iter_task(task, n):
     from datasets import load_dataset
@@ -23,10 +36,11 @@ def iter_task(task, n):
         for r in (ds if not n else ds.select(range(n))):
             yield f"pope{r['id']}", r["image"], r["question"], dict(answer=r["answer"], category=r["category"], question_id=r["question_id"])   # question_id 는 범주 안에서만 유일 → id 사용
     elif task == "textvqa":
-        ds = load_dataset("lmms-lab/textvqa")["validation"]
+        ds = load_dataset("lmms-lab/textvqa")["validation"]; LL = llava_textvqa() if TVQA["mode"] == "llava" else None
         for r in (ds if not n else ds.select(range(n))):
             ocr = _lst(r["ocr_tokens"])
-            q = (f"Reference OCR token: {', '.join(ocr)}\n" if ocr else "") + r["question"]   # LLaVA 공식 textvqa 평가와 동일
+            if LL is not None: q = LL[(str(r["image_id"]), r["question"].lower())]                   # LLaVA 공식 평가 문장(질문 → OCR 줄)
+            else: q = (f"Reference OCR token: {', '.join(ocr)}\n" if ocr else "") + r["question"]   # ocrfirst
             yield r["question_id"], r["image"], q, dict(answers=_lst(r["answers"]))
     elif task == "mme":
         ds = load_dataset("lmms-lab/MME")["test"]
@@ -40,11 +54,12 @@ def main():
     ap.add_argument("--tasks", default="gqa,pope,textvqa,mme"); ap.add_argument("--n", type=int, default=0)
     ap.add_argument("--model", default=os.path.expanduser("~/vlmbench/models/llava-v1.5-7b"))
     ap.add_argument("--out", default=os.path.expanduser("~/vlmbench/results")); ap.add_argument("--max_new_tokens", type=int, default=16)
-    a = ap.parse_args()
+    ap.add_argument("--textvqa_prompt", choices=["llava", "ocrfirst"], default="llava"); ap.add_argument("--textvqa_questions", default=TVQA["path"])
+    a = ap.parse_args(); TVQA.update(mode=a.textvqa_prompt, path=os.path.expanduser(a.textvqa_questions))
     gen, meta = importlib.import_module(f"methods.{a.method}").load(a.model, setting=a.setting)
     import torch as _t; _t.cuda.empty_cache(); _t.cuda.reset_peak_memory_stats()   # 로드 시 임시 피크(fp32 보조 모델 등)로 예약된 캐시 해제 — 16 GB 카드에서 호스트 페이징 방지 (10/2 CDPruner 진단)
     d = f"{a.out}/{a.method}/acc_{a.setting}"; os.makedirs(d, exist_ok=True)
-    json.dump(dict(meta=meta, max_new_tokens=a.max_new_tokens, prompt="vicuna_v1+single-word; textvqa with OCR reference tokens"), open(f"{d}/meta.json", "w"), indent=1)
+    json.dump(dict(meta=meta, max_new_tokens=a.max_new_tokens, prompt="vicuna_v1+single-word; textvqa with OCR reference tokens", textvqa_prompt=TVQA["mode"]), open(f"{d}/meta.json", "w"), indent=1)
     prog = os.path.expanduser("~/vlmbench/results/progress.json")
     for task in a.tasks.split(","):
         f = f"{d}/preds_{task}.jsonl"

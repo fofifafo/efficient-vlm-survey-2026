@@ -1,0 +1,113 @@
+{
+ "n": 500,
+ "ttft_ms_median": 1272.992973500095,
+ "ttft_ms_p90": 1287.2866210000211,
+ "total_ms_median": 1505.7008079998013,
+ "peak_alloc_gb": 4.771646499633789,
+ "peak_sys_used_gb": 6.940055847167969,
+ "energy_j_per_sample": 28.073198556007803,
+ "mean_power_w": 17.47497355740504,
+ "n_vis_tokens": 128.0,
+ "method": "cdpruner4_fix",
+ "setting": "default",
+ "meta": {
+  "name": "CDPruner(fix)",
+  "setting": "default",
+  "visual_token_num": 128,
+  "quant": "nf4-4bit (bnb)",
+  "clip_load": "fp16 safetensors copy, projection-only kept",
+  "patch": "no side CUDA streams in CLIP tower; device-resident DPP index"
+ },
+ "device": "Orin",
+ "torch": "2.11.0",
+ "idle_power_w": 4.418528,
+ "load_s": 164.43903882899997,
+ "power_mode": "NV Power Mode: MAXN_SUPER",
+ "runs": [
+  {
+   "run": 0,
+   "n": 495,
+   "ttft_ms_median": 1271.5765310001643,
+   "ttft_ms_p90": 1286.7074109999521,
+   "total_ms_median": 1504.145921999907,
+   "peak_alloc_gb": 4.771646499633789,
+   "peak_sys_used_gb": 6.9160919189453125,
+   "energy_j_per_sample": 28.306028471789286,
+   "mean_power_w": 17.301489717894373,
+   "rail_mean_w": {
+    "VDD_IN": 17.301489717894373,
+    "VDD_CPU_GPU_CV": 8.088242328941393,
+    "VDD_SOC": 4.452936136989513
+   },
+   "n_vis_tokens": 128
+  },
+  {
+   "run": 1,
+   "n": 500,
+   "ttft_ms_median": 1273.9245994998782,
+   "ttft_ms_p90": 1287.2866210000211,
+   "total_ms_median": 1506.076204499891,
+   "peak_alloc_gb": 4.771646499633789,
+   "peak_sys_used_gb": 6.974025726318359,
+   "energy_j_per_sample": 28.073198556007803,
+   "mean_power_w": 17.47497355740504,
+   "rail_mean_w": {
+    "VDD_IN": 17.47497355740504,
+    "VDD_CPU_GPU_CV": 8.177525472477246,
+    "VDD_SOC": 4.499928956392886
+   },
+   "n_vis_tokens": 128.0
+  },
+  {
+   "run": 2,
+   "n": 500,
+   "ttft_ms_median": 1272.9683749998912,
+   "ttft_ms_p90": 1287.268436999966,
+   "total_ms_median": 1505.7008079998013,
+   "peak_alloc_gb": 4.771646499633789,
+   "peak_sys_used_gb": 6.931373596191406,
+   "energy_j_per_sample": 28.060612786831605,
+   "mean_power_w": 17.49115324697846,
+   "rail_mean_w": {
+    "VDD_IN": 17.49115324697846,
+    "VDD_CPU_GPU_CV": 8.190871264315586,
+    "VDD_SOC": 4.505089802737147
+   },
+   "n_vis_tokens": 128.0
+  },
+  {
+   "run": 3,
+   "n": 500,
+   "ttft_ms_median": 1273.7023915003647,
+   "ttft_ms_p90": 1289.2496240001492,
+   "total_ms_median": 1505.6737655002053,
+   "peak_alloc_gb": 4.771646499633789,
+   "peak_sys_used_gb": 6.940055847167969,
+   "energy_j_per_sample": 28.074189739132276,
+   "mean_power_w": 17.50069583793861,
+   "rail_mean_w": {
+    "VDD_IN": 17.50069583793861,
+    "VDD_CPU_GPU_CV": 8.19205634880189,
+    "VDD_SOC": 4.506179265261354
+   },
+   "n_vis_tokens": 128.0
+  },
+  {
+   "run": 4,
+   "n": 500,
+   "ttft_ms_median": 1272.992973500095,
+   "ttft_ms_p90": 1287.8899070001353,
+   "total_ms_median": 1506.037937000201,
+   "peak_alloc_gb": 4.771646499633789,
+   "peak_sys_used_gb": 6.953071594238281,
+   "energy_j_per_sample": 28.061662421213175,
+   "mean_power_w": 17.468054963403457,
+   "rail_mean_w": {
+    "VDD_IN": 17.468054963403457,
+    "VDD_CPU_GPU_CV": 8.17599233270154,
+    "VDD_SOC": 4.5005628942419715
+   },
+   "n_vis_tokens": 128.0
+  }
+ ]
+}

@@ -21,22 +21,22 @@ LLaVA-1.5-7B FP16, batch 1, vicuna_v1 prompt, SDPA attention, cache released aft
 
 | Method | Tokens | GQA | POPE F1 | TextVQA | MME-P |
 |---|---|---|---|---|---|
-| LLaVA-1.5-7B | 576 | 61.95 / 61.97 | 85.84 / 85.87 | 60.57 / 60.63 | 1526.7 / 1528.1 |
-| VisPruner | 128 | 58.03 / 57.92 | 84.46 / 84.23 | 58.96 / 58.85 | 1475.1 / 1463.3 |
-| VisPruner | 64 | 56.18 / 55.52 | 80.08 / 80.38 | 58.15 / 58.24 | 1387.1 / 1372.6 |
-| CDPruner (fix) | 128 | 59.82 / 59.80 | 87.38 / 87.51 | 58.67 / 58.83 | 1470.7 / 1465.5 |
-| CDPruner (fix) | 64 | 58.65 / 58.73 | 87.47 / 87.54 | 57.75 / 57.84 | 1407.8 / 1414.7 |
-| SparseVLM | 192 | 59.44 / 59.43 | 85.52 / 85.35 | 59.71 / 59.62 | 1466.0 / 1459.8 |
-| SparseVLM | 64 | 53.73 / 53.63 | 77.85 / 77.63 | 55.55 / 55.59 | 1307.0 / 1296.3 |
-| DART | 128 | 58.84 / 58.97 | 80.51 / 80.36 | 59.10 / 59.01 | 1481.2 / 1482.5 |
-| DART | 64 | 56.40 / 56.37 | 74.34 / 74.21 | 56.89 / 56.97 | 1430.9 / 1420.4 |
-| FastV (kv) | 288 | 60.30 / 60.24 | 83.39 / 83.23 | 60.27 / 60.33 | 1517.3 / 1518.3 |
-| FastV (kv) | 64 | 53.69 / 53.60 | 68.16 / 68.23 | 55.86 / 55.88 | 1318.3 / 1302.6 |
+| LLaVA-1.5-7B | 576 | 61.95 / 61.97 | 85.84 / 85.87 | 58.25 / 58.15 | 1526.7 / 1528.1 |
+| VisPruner | 128 | 58.03 / 57.92 | 84.46 / 84.23 | 57.02 / 57.04 | 1475.1 / 1463.3 |
+| VisPruner | 64 | 56.18 / 55.52 | 80.08 / 80.38 | 55.55 / 55.87 | 1387.1 / 1372.6 |
+| CDPruner (fix) | 128 | 59.82 / 59.80 | 87.38 / 87.51 | 56.06 / 56.09 | 1470.7 / 1465.5 |
+| CDPruner (fix) | 64 | 58.65 / 58.73 | 87.47 / 87.54 | 55.05 / 55.09 | 1407.8 / 1414.7 |
+| SparseVLM | 192 | 59.44 / 59.43 | 85.52 / 85.35 | 57.65 / 57.72 | 1466.0 / 1459.8 |
+| SparseVLM | 64 | 53.73 / 53.63 | 77.85 / 77.63 | 53.10 / 53.31 | 1307.0 / 1296.3 |
+| DART | 128 | 58.84 / 58.97 | 80.51 / 80.36 | 56.47 / 56.53 | 1481.2 / 1482.5 |
+| DART | 64 | 56.40 / 56.37 | 74.34 / 74.21 | 54.50 / 54.40 | 1430.9 / 1420.4 |
+| FastV (kv) | 288 | 60.30 / 60.24 | 83.39 / 83.23 | 57.62 / 57.59 | 1517.3 / 1518.3 |
+| FastV (kv) | 64 | 53.69 / 53.60 | 68.16 / 68.23 | 53.84 / 53.80 | 1318.3 / 1302.6 |
 
 ## Agreement
 
-- Max |PC1 − PC2| accuracy: GQA 0.66, POPE F1 0.30, TextVQA 0.16, MME-P 15.7 (of 2,000).
+- Max |PC1 − PC2| accuracy: GQA 0.66, POPE F1 0.30, TextVQA 0.31, MME-P 15.7 (of 2,000).
 - Spearman ρ of method TTFT between GPUs (10 settings): 0.98.
 - Base TTFT 5080 / 5070 Ti: 106.0 / 121.4 ms (5080 13% faster); compressed settings where 5070 Ti is faster: 8 of 10.
 - Base energy 5080 / 5070 Ti: 43.7 / 42.9 J; max VRAM difference 0.02 GB.
-- All accuracy on both GPUs uses the same settings: max_new_tokens 16, FP16 throughout, CDPruner fix variant (PC2 GQA/POPE/MME re-measured 2026-10-26, results_pc2_accuracy).
+- All accuracy on both GPUs uses the same settings: max_new_tokens 16, FP16 throughout, CDPruner fix variant (PC2 GQA/POPE/MME re-measured 2026-10-26, results_pc2_acc16).

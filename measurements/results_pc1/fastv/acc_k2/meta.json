@@ -8,5 +8,6 @@
   "transformers": "4.37.2"
  },
  "max_new_tokens": 16,
- "prompt": "vicuna_v1+single-word; textvqa with OCR reference tokens"
+ "prompt": "vicuna_v1+single-word; textvqa with OCR reference tokens",
+ "textvqa_prompt": "llava"
 }

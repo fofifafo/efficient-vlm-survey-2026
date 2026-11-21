@@ -10,8 +10,10 @@
   "n": 9000
  },
  "textvqa": {
-  "acc": 0.5814666666666664,
-  "n": 5000
+  "acc": 0.5555400000000007,
+  "n": 5000,
+  "scorer": "m4c (LLaVA official)",
+  "prompt": "llava question file"
  },
  "mme": {
   "code_reasoning": {
